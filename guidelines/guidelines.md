@@ -230,9 +230,9 @@ The file must contain the following three `<nav>` elements:
 
 - `<nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">`
 - `<nav role="doc-pagelist" aria-label="Svartskriftssidor" epub:type="page-list">`
-- `<nav role="directory" aria-label=”Landmarks” epub:type="landmarks">`
+- `<nav role="directory" aria-label="Landmarks" epub:type="landmarks">`
 
-All headings must be included in the `<nav role=”doc-toc”...>` element and the heading levels must be implied through nesting.
+All headings must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting.
 
 For further information about the navigation document and the table of contents, refer to:
 
@@ -328,8 +328,8 @@ https://www.w3.org/TR/dpub-aria-1.0/#roles
 Whenever a `role` attribute is set to a `<section>` element, the `<section>` element is also required to have a label. When the `<section>` has a header, usually `<h1>` or `<h2>`, the header serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
 
 ```html
-<section role=”doc-chapter” aria-labelledby=”hd01” epub:type=”bodymatter chapter”>
-	<h1 id=”hd01”>Chapter 1</h1>
+<section role="doc-chapter" aria-labelledby="hd01" epub:type="bodymatter chapter">
+	<h1 id="hd01">Chapter 1</h1>
 		...
 </section>
 ```
@@ -518,7 +518,7 @@ Unnumbered lists often have some sort of bullet markers for each list item. The 
 
 Lists without any bullet markers are required to have the attribute:
 
-- `class=”plain”`
+- `class="plain"`
 
 Never use `<ol>` elements with this attribute.
 
@@ -580,11 +580,11 @@ Principles for how `<strong>` and `<em>` are used can be found here:
 
 #### 3.3.10 Poetry and Verse
 
-Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class=”poem”>`.
+Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="poem">`.
 
-Each group of lines of text must be contained in a separate `<p class=”linegroup”>` element and each line of text must be marked up with `<span class=”line”>`. Line breaks must be added between consecutive lines within a line group.
+Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. Line breaks must be added between consecutive lines within a line group.
 
-Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with `<span class=”linenum”>`.
+Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with `<span class="linenum">`.
 
 ## 4 Specific Requirements for Advanced Content
 
@@ -603,7 +603,7 @@ The _Presentation_ form of markup must be used (see section 3 in the specificati
 The main container element for any MathML expression, the `<math>` element, is required to contain a namespace declaration:
 
 ```html
-<math xmlns:”http://www.w3.org/1998/Math/MathML”>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
 ```
 
 The `<math>` element is also required to contain the `alttext` attribute. The value of the `alttext` attribute is required to be an ASCIIMath representation of the expression contained within the `<math>` element. For more information about the ASCIIMath notation, please refer to:
@@ -686,7 +686,7 @@ All expressions should be as similar to the source material as possible, when re
 
 MathML should not be used to represent things such as:
 
-- A number with a unit containing superscript, like “1000 m<sup>2</sup>”, unless it is part of an expression that does require MathML notation
+- A number with a unit containing superscript, like "1000 m<sup>2</sup>", unless it is part of an expression that does require MathML notation
 - Temperatures or other expressions using the ° character, unless it is part of an expression that does require MathML notation
 - Single Greek letters, or similar special characters not part of an expression requiring MathML notation
 
