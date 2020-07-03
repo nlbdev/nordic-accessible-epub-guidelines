@@ -144,7 +144,7 @@ Refer to https://idpf.github.io/epub-vocabs/package/item/ for additional informa
 
 #### 2.4.3 Spine
 
-In the `<spine>` all content documents are listed in the correct reading order. This is done by using an `<itemref>` element for each content document and simply list them in the desired order. The `<itemref>` element is associated with the corresponding `<item>` for the content document in the `<manifest> by using the idref attribute and setting the value to the id attribute of the the `<item> element. The idref attribute is a required attribute and the id it refers to must be unique. Here is an example:
+In the `<spine>` all content documents are listed in the correct reading order. This is done by using an `<itemref>` element for each content document and simply list them in the desired order. The `<itemref>` element is associated with the corresponding `<item>` for the content document in the `<manifest>` by using the idref attribute and setting the value to the id attribute of the `<item>` element. The idref attribute is a required attribute and the id it refers to must be unique. Here is an example:
 
 In the `<manifest>`:
 
