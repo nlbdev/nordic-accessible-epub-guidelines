@@ -6,7 +6,7 @@ Participants: To be determined
 
 Open validator issues: https://github.com/nlbdev/epub3-guidelines-update/issues?q=is%3Aopen+label%3Avalidator
 
-__ Gather information
+## Gather information
 
 *Who*: Someone involved with ordering EPUBs from each organization
 
@@ -19,7 +19,7 @@ Issue: [#24](https://github.com/nlbdev/epub3-guidelines-update/issues/24)
 - Running on a server or on personal computers?
 - Use it in an XML editor like oXygen?
 
-__ Pipeline 2
+## Pipeline 2
 
 *Who*: Someone who knows how to work with Pipeline 2. Maybe get help from DAISY.
 
@@ -28,7 +28,7 @@ Updating the Pipeline 2 script(s).
 - [#25](https://github.com/nlbdev/epub3-guidelines-update/issues/25): Make the nordic-epub3-dtbook-validator project build against the newest version of DP2
 - [#26](https://github.com/nlbdev/epub3-guidelines-update/issues/26): Update the "Nordic EPUB3 Validator" script, to allow for validation of the new guidelines. Include the new schemas separately from the old schemas, so that both the 2015-1 guidelines as well as the new guidelines can be validated with the script. For instance by having a `guidelines-version` option.
 
-__ Documentation of validation rules
+## Documentation of validation rules
 
 *Who*: Technical personel familiar with (or able to learn) Schematron and RelaxNG
 
@@ -38,7 +38,7 @@ The documention of the validation rules can be included as an appendix to the gu
 - [#27](https://github.com/nlbdev/epub3-guidelines-update/issues/27): Make it possible to validate EPUBs outside of Pipeline 2
 - [#28](https://github.com/nlbdev/epub3-guidelines-update/issues/28): Write documentation for EPUB producers on how to validate the EPUBs using either Pipeline 2, or an XML editor.
 
-__ In coordination with the "Updated EPUB-guidelines" group
+## In coordination with the "Updated EPUB-guidelines" group
 
 *Who*: The "Updated EPUB-guidelines" group
 
