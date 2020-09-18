@@ -401,7 +401,7 @@ Use of the `<span>` element is only required when a subtitle is present. The fol
 
 #### 3.2.3 Parts
 
-Some publications are divided in parts, each containing a number of chapters. If possible, each part and its chapters should be contained in a single content file. The part heading will be the `<h1>` and the chapter headings `<h2>`. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
+Some publications are divided into parts, each containing a number of chapters. If possible, each part and its chapters should be contained in a single content file. The part heading will be the `<h1>` and the chapter headings `<h2>`. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
 
 In the case of very large publications, where the size of the content files containing the parts and their chapters start to inhibit the performance of reading systems, chapters must be given their own content files. The part heading and any associated contents must then be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must still be `<h2>`, even though they are the first heading of the content file. Semantic attributes are given to both parts and chapters as usual.
 
@@ -458,7 +458,7 @@ title="38">38</div>
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact SPSM.
 
-Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element. If the image have a caption, the caption is required to be marked up with the `<figcaption>` element and placed directly above the `<img>` element, thus being the first child of the `<figure>` element. If no caption is present, the `<img>` element will be the first child.
+Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed directly above the `<img>` element, thus being the first child of the `<figure>` element. If no caption is present, the `<img>` element will be the first child.
 
 Inline images, typically small symbols or other non-typographical content that might occur inline, are required to be represented with `<img>` elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact SPSM.
 
