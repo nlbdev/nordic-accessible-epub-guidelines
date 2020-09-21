@@ -8,7 +8,7 @@ Participants:
 - Anders (SPSM)
 - Lisa (Nota)
 - Sami (Celia)
-- Alfreğ, Gunnar (HBS)
+- AlfreÃ°, Gunnar (HBS)
 - Bart (Dedicon)
 - Gaute, Elise (NLB)
 - Ina, Toril (Statped)
@@ -16,6 +16,8 @@ Participants:
 
 
 Open guidelines issues: https://github.com/nlbdev/epub3-guidelines-update/issues?q=is%3Aopen+label%3Aguidelines
+
+Meeting notes: https://github.com/nlbdev/epub3-guidelines-update/tree/master/guidelines/meeting_notes
 
 ## Activities
 0. [@0] Time plan
