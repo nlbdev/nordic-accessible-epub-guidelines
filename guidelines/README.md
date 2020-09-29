@@ -12,7 +12,7 @@ Participants:
 - Bart (Dedicon)
 - Gaute, Elise (NLB)
 - Ina, Toril (Statped)
-- ? (SBS)
+- Christian (SBS)
 
 
 Open guidelines issues: https://github.com/nlbdev/epub3-guidelines-update/issues?q=is%3Aopen+label%3Aguidelines
