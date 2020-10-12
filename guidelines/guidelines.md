@@ -510,7 +510,7 @@ A list item may either contain inline content or block elements, but not a mixtu
 
 **3.3.3.1 Numbered Lists**
 
-The numbering of an ordered list must not be included as content in the `<li>` elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the `type` attribute. The default starting point is `1` (or whatever the equivalent value for other types of numbering is), but can be changed using the `start` attribute.
+The numbering of an ordered list must not be included as content in the `<li>` elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the `type` attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the `start` attribute.
 
 **3.3.3.2 Unnumbered Lists**
 
