@@ -598,7 +598,7 @@ All mathematical or scientific content, content that contains mathematical opera
 
 https://www.w3.org/TR/MathML3/
 
-For more detail about the MathML structure, please refer to each individual library's requirements.
+For more detail about the MathML structure, please refer to each individual agency's requirements.
 
 ### 4.3 Phonetics and other special characters
 
