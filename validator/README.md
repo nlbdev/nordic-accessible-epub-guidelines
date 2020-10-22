@@ -4,7 +4,9 @@ Update of the Nordic EPUB3 Validator, work items
 Coordinator: Jostein  
 Participants: To be determined
 
-Open validator issues: https://github.com/nlbdev/epub3-guidelines-update/issues?q=is%3Aopen+label%3Avalidator
+Validator repository: https://github.com/nlbdev/nordic-epub3-dtbook-migrator
+
+Open validator issues: https://github.com/nlbdev/nordic-epub3-dtbook-migrator/issues?q=is%3Aissue+is%3Aopen+label%3Avalidator-revision
 
 ## Gather information
 
