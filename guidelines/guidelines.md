@@ -234,8 +234,14 @@ The first required `<nav>` element in the file is:
 ```html
 <nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">
 ```
-
 All headings must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting.
+
+The links must always reference the corresponding section element for the heading in the content file, not the h[x] element directly. Thus, in the example below, the link should point to the id "level3_2" in that content file:
+
+```html
+<section aria-labelledby="h3_2" id="level3_2">
+	<h3 id="h3_2">DET MYTISKA NORDEN</h3>
+```
 
 If the source material contains pagination, the next required `<nav>` element is: 
 
