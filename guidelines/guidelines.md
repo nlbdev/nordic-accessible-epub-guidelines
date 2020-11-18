@@ -470,7 +470,6 @@ https://www.w3schools.com/
 
 All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by SPSM:
 
-
 - Inline: `<span epub:type="pagebreak" role="doc-pagebreak">`
 - Other: `<div epub:type="pagebreak" role="doc-pagebreak">`
 
@@ -498,12 +497,19 @@ The attribute value `page-special` is required for any parts of the book not num
 
 The attribute `id` is simply a unique identifier.
 
-Finally, the `<div>` and `<span>` elements are also required to have the page number in its original form as content, unless indicated otherwise by the ordering agency. For example:
+By default, the pagebreak elements are required to be empty:
+
+- Inline: `<span epub:type="pagebreak" role="doc-pagebreak"/>`
+- Other: `<div epub:type="pagebreak" role="doc-pagebreak"/>`
+
+However, there may be agency specific instructions to place the page number, as it is displayed in the source material, as content in the pagebreak elements. For example:
 
 ```html
 <div class="page-normal" role="doc-pagebreak" id="page-38"
 title="38">38</div>
 ```
+
+This is only to be done if specific instructions are given by the Ordering Agency.
 
 #### 3.3.2 Figures
 
