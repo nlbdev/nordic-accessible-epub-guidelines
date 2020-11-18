@@ -501,19 +501,20 @@ where `id` is a unique identifier. Furthermore, the corresponding `<img>` elemen
 
 with the same value as the id of the `<aside>` placeholder.
 
-
 The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled:
 
 ```html
 <figure>
 	<figcaption>...</figcaption>
 	<img src="images/img0012.jpg" alt="figur" aria-describedby="desc0012" />
-	<aside class="fig- desc" id=" desc0012">
+	<aside class="fig- desc" id="desc0012">
 		<p>...</p>
 
 	</aside>
 </figure>
 ```
+
+Note that this is the construction that is used by several Ordering Agencies for adding image descriptions in post-production.
 **3.3.2.2 Alt-texts**
 
 Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:
