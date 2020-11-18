@@ -521,7 +521,7 @@ Inline images, typically small symbols or other non-typographical content that m
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
-**3.3.2.1 Text Extraction from Images**
+##### 3.3.2.1 Text Extraction from Images
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder within the `<figure>` element of the image. The placeholder should be placed after the `<img>` element, before the closing `</figure>` tag. Suppliers are required to use the `<aside>` element for this placeholder with the following attributes:
 
@@ -548,7 +548,8 @@ The extracted text is then placed inside the placeholder, marked up correctly an
 ```
 
 Note that this is the construction that is used by several Ordering Agencies for adding image descriptions in post-production.
-**3.3.2.2 Alt-texts**
+
+##### 3.3.2.2 Alt-texts
 
 Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:
 
@@ -566,11 +567,11 @@ Lists are a number of connected items (single words, sentences or whole paragrap
 
 A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more `<p>` elements inside every list item of the list.
 
-**3.3.3.1 Numbered Lists**
+##### 3.3.3.1 Numbered Lists
 
 The numbering of an ordered list must not be included as content in the `<li>` elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the `type` attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the `start` attribute.
 
-**3.3.3.2 Unnumbered Lists**
+##### 3.3.3.2 Unnumbered Lists
 
 Unnumbered lists often have some sort of bullet markers for each list item. The default is a solid black circle. The type attribute has been used before, to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
 
