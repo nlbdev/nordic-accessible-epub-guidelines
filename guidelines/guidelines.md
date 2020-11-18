@@ -89,7 +89,7 @@ The following metadata are required to be placed in the `<metadata>`:
 <dc:identifier id="pub-identifier"> _[production UID provided by the ordering agency]_ </dc:identifier>
 <dc:source> _[ISBN of the source material]_ </dc:source>
 <dc:creator> _[author of the source material – one element for each author]_ </dc:creator>
-<dc:format>EPUB3</dc:format>
+<dc:format>application/epub+zip</dc:format>
 <dc:publisher> _[the ordering agency]_ </dc:publisher>
 <dc:date> _[date of completion]_ </dc:date>
 <meta property="dcterms:modified"> _[date of completion]_ </meta>
