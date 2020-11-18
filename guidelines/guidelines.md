@@ -6,6 +6,21 @@
 This guidelines document has been developed by The National Agency for Special Needs Education and Schools (SPSM), a Swedish governmental agency. One of the agency’s missions is to adapt teaching materials for children and adults with special needs.
 
 Fundamental to the process of adapting text-based media is the role of beginning with well-structured digital content. Previously this has been achieved through XML structures as defined by the ANSI/NISO Z39.86 specification for digital talking books (DTBook). The structures specified in these guidelines, however, are based on a profile of HTML5 requiring the use of XML serialization. This ensures that content can be reliably manipulated and rendered. Moreover, the EPUB Content Documents 3.0. specification provides constructs that further ensure semantically meaningful structures.
+
+### 1.2 Situating the Nordic Guidelines in the World of Specifications
+The Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Ordering Agencies. As such, they build on these higher-level specification documents (EPUB 3.2, EPUB Accessibility 1.0, etc.) and provide more detailed instructions for their application in the specific context of production at the Ordering Agencies.
+
+In the other direction, the application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
+
+The different levels of specification can be expressed as the following hierarchy:
+
+1. High-level specifications, e.g. EPUB 3.2, EPUB Accessibility 1.0, etc.
+2. The Nordic Guidelines
+3. General Ordering Agency-specific Guidelines (usually these depart from the Nordic Guidelines, but might also contain some deviations from them)
+4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
+
+Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation are outside the scope of this document.
+
 ## 2 Format Requirements
 
 ### 2.1 Required EPUB Standard
