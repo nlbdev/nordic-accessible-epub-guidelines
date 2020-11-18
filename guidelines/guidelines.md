@@ -600,16 +600,19 @@ https://www.w3.org/TR/MathML3/
 
 For more detail about the MathML structure, please refer to each individual agency's requirements.
 
-### 4.3 Phonetics and other special characters
+### 4.3 Special Characters, Unicode and Phonetics
+If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as "¿" rather than "&#191;", "&#xbf;", or similar.
 
-Special characters, such as phonetic characters, are required to be represented using the correct set of Unicode characters. A visual likeness to the characters used in the printed source material is not enough. In order for assistive technology to present correct information to the user, the correct Unicode characters must be used. Also in various conversions to other types of end-user formats, it is vital to have the correct Unicode characters in the input material.
+Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
 
-Unicode characters are required to be written with hexadecimal notation.
+Unicode character accuracy for special characters, e.g. phonetic characters, is very important. A visual likeness to the characters used in the printed source material is not enough. In order for assistive technology to present correct information to the user, the correct Unicode characters must be used. Also in various conversions to other types of end-user formats, it is vital to have the correct Unicode characters in the input material.
 
 Here are some resources for commonly used special characters:
 
 - Phonetics: https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
 - The Greek alphabet: https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm
+
+
 
 ### 4.4 Placeholders for user input areas
 
