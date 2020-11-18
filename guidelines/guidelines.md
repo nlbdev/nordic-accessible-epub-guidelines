@@ -235,7 +235,7 @@ The first required `<nav>` element in the file is:
 <nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">
 ```
 
-All headings must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting.
+All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
 If the source material contains pagination, the next required `<nav>` element is: 
 
