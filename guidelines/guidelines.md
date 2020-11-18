@@ -545,7 +545,7 @@ Lists without any bullet markers are required to have the attribute:
 
 - `class="plain"`
 
-Never use `<ol>` elements with this attribute.
+By default, `<ul>` should be used here, but Ordering Agencies may give specific instructions to use `<ol>`.
 
 #### 3.3.4 Tables
 
