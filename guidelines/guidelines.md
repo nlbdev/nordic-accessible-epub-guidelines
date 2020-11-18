@@ -412,7 +412,7 @@ The following class attributes must applied to the child `<section>` elements wh
 - `<section class="leftflap">`
 - `<section class="rightflap">`
 
-The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The `properties="cover-image"` attribute must be applied to the manifest item element corresponding to this image.
+The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The `properties="cover-image"` attribute must be applied to the manifest item element corresponding to this image. The `<img>` element referencing the cover image must have `aria-role` set to `"doc-cover"`.
 
 Note that the `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to this content file.
 
