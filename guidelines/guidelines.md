@@ -234,7 +234,8 @@ The first required `<nav>` element in the file is:
 ```html
 <nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">
 ```
-All headings must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting.
+
+All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
 The links must always reference the corresponding section element for the heading in the content file, not the h[x] element directly. Thus, in the example below, the link should point to the id "level3_2" in that content file:
 
@@ -603,7 +604,7 @@ Principles for how `<strong>` and `<em>` are used can be found here:
 
 #### 3.3.10 Poetry and Verse
 
-Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="poem">`.
+Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
 
 Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. Line breaks must be added between consecutive lines within a line group.
 
