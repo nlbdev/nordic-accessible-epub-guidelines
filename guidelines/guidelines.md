@@ -250,6 +250,8 @@ The production UID must match the `dc:identifier` in the package.
 
 The principle navigation document of the EPUB package is the `xhtml` file with the `properties` attribute set to nav in the `<manifest>` section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
+##### 2.6.1.1 The Table Of Contents
+
 The first required `<nav>` element in the file is:
 
 ```html
@@ -265,6 +267,10 @@ The links must always reference the corresponding section element for the headin
 	<h3 id="h3_2">DET MYTISKA NORDEN</h3>
 ```
 
+A section without heading should be referenced using its `aria-label` value.
+
+##### 2.6.1.2 Page List
+
 If the source material contains pagination, the next required `<nav>` element is: 
 
 ```html
@@ -272,6 +278,8 @@ If the source material contains pagination, the next required `<nav>` element is
 ```
 
 If no pagination occurs in the source material this may be omitted.
+
+##### 2.6.1.3 Landmarks
 
 The final required `<nav>` element is:
 
