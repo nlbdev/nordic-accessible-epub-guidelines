@@ -25,15 +25,13 @@ Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, a
 
 ### 2.1 Required EPUB Standard
 
-Suppliers are required to refer to the specifications provided in version 3.0.1 of the EPUB standard. See [http://www.idpf.org/epub/301/spec/epub-contentdocs.html.](http://www.idpf.org/epub/301/spec/epub-contentdocs.html.)
-
-Note that the current release, version 3.1 as maintained by the W3C, is **not** to be utilised! Version 3.1 is not compatible with EPUBCheck and will eventually be superseded by version 3.2. When version 3.2 is available and compatible with EPUBCheck, these guidelines will likely be updated.
+Suppliers are required to refer to the specifications provided in version 3.2 of the EPUB standard. See [https://www.w3.org/publishing/epub32/epub-spec.html](https://www.w3.org/publishing/epub32/epub-spec.html).
 
 #### 2.1.1 Accessible Publishing Knowledge Base
 
 In addition to following the recommended version of the EPUB standard, suppliers are required to follow the recommendations in the Accessible Publishing Knowledge Base that is maintained by the Daisy Consortium: https://kb.daisy.org/publishing/.
 
-The recommendations in the Knowledge Base will differ from the specification, especially as long as version 3.0.1 is still being used. As long as no conflicts occur during validation, the recommendations in the Knowledge Base are to be followed.
+The recommendations in the Knowledge Base may differ from the specification. As long as no conflicts occur during validation, the recommendations in the Knowledge Base are to be followed.
 
 ### 2.2 Container
 
@@ -81,7 +79,7 @@ Suppliers are required to apply the following attributes and values to the `<pac
 
 - `xmlns="http://www.idpf.org/2007/opf"`
 - `xmlns:nordic="http://www.mtm.se/epub/"`
-- `version="3.0"`
+- `version="3.2"`
 - `xml:lang="xx"` (The publication language code)
 - `unique-identifier="pub-identifier"`
 
@@ -187,7 +185,7 @@ If a fall-back ncx navigation document is included, this is required to be refer
 
 #### 2.5.1 XHTML
 
-The XHTML content files specified by the EPUB 3.0.1 specification are based on HTML5. Suppliers are required however to use the extension `.xhtml`.
+The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required however to use the extension `.xhtml`.
 
 
 **2.5.1.1 XML Declaration and Encoding**
@@ -246,7 +244,7 @@ The production UID must match the `dc:identifier` in the package.
 
 ### 2.6 Navigation Documents
 
-#### 2.6.1 EPUB 3.0.1 Navigation Document
+#### 2.6.1 EPUB 3.2 Navigation Document
 
 The principle navigation document of the EPUB package is the `xhtml` file with the `properties` attribute set to nav in the `<manifest>` section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
