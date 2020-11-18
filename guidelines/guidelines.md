@@ -597,7 +597,7 @@ Principles for how `<strong>` and `<em>` are used can be found here:
 
 #### 3.3.10 Poetry and Verse
 
-Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="poem">`.
+Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
 
 Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. Line breaks must be added between consecutive lines within a line group.
 
