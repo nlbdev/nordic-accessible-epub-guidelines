@@ -229,13 +229,27 @@ The production UID must match the `dc:identifier` in the package.
 
 The principle navigation document of the EPUB package is the `xhtml` file with the `properties` attribute set to nav in the `<manifest>` section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
-The file must contain the following three `<nav>` elements:
+The first required `<nav>` element in the file is:
 
-- `<nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">`
-- `<nav role="doc-pagelist" aria-label="Svartskriftssidor" epub:type="page-list">`
-- `<nav role="navigation" aria-label="Landmarks" epub:type="landmarks">`
+```html
+<nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">
+```
 
 All headings must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting.
+
+If the source material contains pagination, the next required `<nav>` element is: 
+
+```html
+<nav role="doc-pagelist" aria-label="Svartskriftssidor" epub:type="page-list">
+```
+
+If no pagination occurs in the source material this may be omitted.
+
+The final required `<nav>` element is:
+
+```html
+<nav role="navigation" aria-label="Landmarks" epub:type="landmarks">
+```
 
 For further information about the navigation document and the table of contents, refer to:
 
