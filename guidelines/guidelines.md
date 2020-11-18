@@ -65,6 +65,7 @@ The following xml declaration must be placed at the first line of the document:
 Suppliers are required to apply the following attributes and values to the `<package>` element:
 
 - `xmlns="http://www.idpf.org/2007/opf"`
+- `xmlns:nordic="http://www.mtm.se/epub/"`
 - `version="3.0"`
 - `xml:lang="xx"` (The publication language code)
 - `unique-identifier="pub-identifier"`
@@ -93,6 +94,7 @@ The following metadata are required to be placed in the `<metadata>`:
 <dc:publisher> _[the ordering agency]_ </dc:publisher>
 <dc:date> _[date of completion]_ </dc:date>
 <meta property="dcterms:modified"> _[date of completion]_ </meta>
+<meta property="nordic:supplier"> _[company name of supplier]_ </meta>
 ```
 
 Also required are schema.org accessibility metadata, [http://kb.daisy.org/publishing/docs/metadata/schema-org.html.](http://kb.daisy.org/publishing/docs/metadata/schema-org.html.) Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
