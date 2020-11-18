@@ -230,7 +230,7 @@ The file must contain the following three `<nav>` elements:
 
 - `<nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">`
 - `<nav role="doc-pagelist" aria-label="Svartskriftssidor" epub:type="page-list">`
-- `<nav role="directory" aria-label="Landmarks" epub:type="landmarks">`
+- `<nav role="navigation" aria-label="Landmarks" epub:type="landmarks">`
 
 All headings must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting.
 
