@@ -122,11 +122,6 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 <meta property="schema:accessibilityFeature">structuralNavigation</meta>
 <meta property="schema:accessibilityFeature">MathML</meta>
 <meta property="schema:accessibilityFeature">alternativeText</meta>
-<meta property="schema:accessibilityFeature">longDescriptions</meta>
-<meta property="schema:accessibilityAPI">ARIA</meta>
-<meta property="schema:accessibilityControl">fullKeyboardControl</meta>
-<meta property="schema:accessibilityControl">fullMouseControl</meta>
-<meta property="schema:accessibilityControl">fullTouchControl</meta>
 <meta property="schema:accessibilityHazard">noFlashing</meta>
 <meta property="schema:accessibilityHazard">noSound</meta>
 <meta property="schema:accessibilityHazard">noMotionSimulation</meta>
