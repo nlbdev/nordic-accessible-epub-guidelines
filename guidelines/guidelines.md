@@ -262,6 +262,8 @@ The links must always reference the corresponding section element for the headin
 
 A section without heading should be referenced using its `aria-label` value.
 
+Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
+
 ##### 2.6.1.2 Page List
 
 If the source material contains pagination, the next required `<nav>` element is: 
