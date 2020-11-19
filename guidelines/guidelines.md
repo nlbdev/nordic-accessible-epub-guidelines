@@ -264,6 +264,10 @@ A section without heading should be referenced using its `aria-label` value.
 
 Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
 
+See the following link for further information (but disregard examples of unlinked headings or hidden branches):
+
+[http://kb.daisy.org/publishing/docs/navigation/toc.html](http://kb.daisy.org/publishing/docs/navigation/toc.html)
+
 ##### 2.6.1.2 Page List
 
 If the source material contains pagination, the next required `<nav>` element is: 
@@ -271,6 +275,10 @@ If the source material contains pagination, the next required `<nav>` element is
 ```html
 <nav role="doc-pagelist" aria-label="Svartskriftssidor" epub:type="page-list">
 ```
+
+See the following link for further information:
+
+[http://kb.daisy.org/publishing/docs/navigation/pagelist.html](http://kb.daisy.org/publishing/docs/navigation/pagelist.html)
 
 If no pagination occurs in the source material this may be omitted.
 
@@ -282,9 +290,22 @@ The final required `<nav>` element is:
 <nav role="navigation" aria-label="Landmarks" epub:type="landmarks">
 ```
 
-For further information about the navigation document and the table of contents, refer to:
+The Landmarks section should contain references to any main sections of the front- and rearmatter parts of the source material, as well as a reference to the start of the main content of the book, which will be the start of the first content file with the word "bodymatter" in its `epub:type` attribute of the top-level `<section>` element. The list of references may include the following, when applicable:
 
-[http://kb.daisy.org/publishing/docs/navigation/](http://kb.daisy.org/publishing/docs/navigation/)
+- Table of Contents (the toc of the source material)
+- List of Images
+- List of Tables
+- Acknowledgments
+- Preface
+- Start of Content
+- Answers
+- Glossary
+- Bibliography
+- Index
+
+Note that the links, the `<a>` elements, in the Landmarks section must have appropriate `epub:type` values. Examples can be found here:
+
+[http://kb.daisy.org/publishing/docs/navigation/landmarks.html](http://kb.daisy.org/publishing/docs/navigation/landmarks.html)  
 
 #### 2.6.2 NCX Navigation Document
 
