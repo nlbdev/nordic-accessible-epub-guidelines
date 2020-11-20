@@ -517,8 +517,8 @@ The attribute `id` is simply a unique identifier.
 
 By default, the pagebreak elements are required to be empty:
 
-- Inline: `<span epub:type="pagebreak" role="doc-pagebreak"/>`
-- Other: `<div epub:type="pagebreak" role="doc-pagebreak"/>`
+- Inline: `<span epub:type="pagebreak" role="doc-pagebreak"></span>`
+- Other: `<div epub:type="pagebreak" role="doc-pagebreak"></div>`
 
 However, there may be agency specific instructions to place the page number, as it is displayed in the source material, as content in the pagebreak elements. For example:
 
