@@ -603,9 +603,11 @@ By default, `<ul>` should be used here, but Ordering Agencies may give specific 
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element.
 
-The `<tbody>` element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use `<thead>` for any column headers at the top of the table. For the sake of consistency, SPSM require `<thead>` to be used if there are at least one row of column headers at the top of the table. The element `<tfoot>` can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions.
+The `<tbody>` element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use `<thead>` for any column headers at the top of the table. For the sake of consistency, it is required to use `<thead>` if there are at least one row of column headers at the top of the table, unless specific instructions are given to omit it. The element `<tfoot>` can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions.
 
-Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact SPSM for clarification.
+Tables are required to have a consistent number of table cells per row. If `colspan` or `rowspan` are used it is important to take note of that, so that the total number of cells is correct. 
+
+Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.
 
 #### 3.3.5 Definition Lists
 
