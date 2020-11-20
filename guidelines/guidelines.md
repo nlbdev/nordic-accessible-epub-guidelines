@@ -260,7 +260,7 @@ The links must always reference the corresponding section element for the headin
 	<h3 id="h3_2">DET MYTISKA NORDEN</h3>
 ```
 
-A section without heading should be referenced using its `aria-label` value.
+A section without heading must be referenced using its `aria-label` value.
 
 Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
 
@@ -403,7 +403,7 @@ Whenever a `role` attribute is set to a `<section>` element, the `<section>` ele
 </section>
 ```
 
-If the section if untitled, use the `aria-label` attribute instead and assign to it an appropriate label. This will usually be addressed in the Editing Instructions.
+If the section if untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions.
 
 See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
 
