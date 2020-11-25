@@ -99,10 +99,16 @@ The following metadata are required to be placed in the `<metadata>`:
 
 ```xml
 <dc:title id="title"> _[the title of the publication]_ </dc:title>
+<meta refines="#maintitle" property="title-type">main</meta>
+<dc:title id="subtitle"> _[the (optional) subtitle of the publication]_ </dc:title>
+<meta refines="#subtitle" property="title-type">subtitle</meta>
+<dc:title id="edition"> _[the (optional) edition part of publication title, e.g. "1st ed."</dc:title>
+<meta refines="#edition" property="title-type">edition</meta>
+
 <dc:language> _[language code for the main language]_ </dc:language>
 <dc:identifier id="pub-identifier"> _[production UID provided by the ordering agency]_ </dc:identifier>
-<dc:source> _[ISBN of the source material]_ </dc:source>
-<dc:creator> _[author of the source material – one element for each author]_ </dc:creator>
+<dc:source> _[ISBN of the publication]_ </dc:source>
+<dc:creator> _[author of the publication – one element for each author]_ </dc:creator>
 <dc:format>application/epub+zip</dc:format>
 <dc:publisher> _[the ordering agency]_ </dc:publisher>
 <dc:date> _[date of completion]_ </dc:date>
@@ -126,6 +132,34 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 <meta property="schema:accessibilityHazard">noSound</meta>
 <meta property="schema:accessibilityHazard">noMotionSimulation</meta>
 ```
+
+##### 2.4.1.1 Optional Increased Title and Creator Metadata Granularity
+The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
+
+The following is an example of a more granular way of expressing title metadata, separating main title, subtitle, and edition title statements from each other:
+
+```
+<dc:title id="maintitle"> _[the main title of the publication]_ </dc:title>
+<meta refines="#maintitle" property="title-type">main</meta>
+<dc:title id="subtitle"> _[the subtitle of the publication]_ </dc:title>
+<meta refines="#subtitle" property="title-type">subtitle</meta>
+<dc:title id="edition"> _[the edition part of publication title, e.g. "1st ed."</dc:title>
+<meta refines="#edition" property="title-type">edition</meta>
+```
+
+Similarly, creator/author information can be expressed with explicit refinenement of the creator role of each author, as in the following example:
+
+```
+<dc:creator id="creator1"> _[coauthor of the publication]_ </dc:creator>
+<meta refines="#creator1" property="role" scheme="marc:relators" id="role">aut</meta>
+<dc:creator id="creator2"> _[coauthor of the publication]_ </dc:creator>
+<meta refines="#creator1" property="role" scheme="marc:relators" id="role">aut</meta>
+<dc:creator id="creator3"> _[illustrator of the publication]_ </dc:creator>
+<meta refines="#creator1" property="role" scheme="marc:relators" id="role">ill</meta>
+```
+
+The codes to use as values for the creator role are taken from the [https://id.loc.gov/vocabulary/relators.html](MARC relators) vocabulary.
+
 #### 2.4.2 Manifest
 
 In the `<manifest>` all publication resources are declared. Each resource is declared using the `<item>` element with required attributes `id`, `href` and `media-type`. Some items must also have a `properties` attribute.
