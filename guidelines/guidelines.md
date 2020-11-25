@@ -763,3 +763,7 @@ In educational material, especially for younger children, it is common that the 
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by by the Ordering Agency, this values, when applied to a specific publication, should follow the primary language of that publication.
 
 For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
+
+#### 5.1.1 aria-label Values
+#### 5.1.2 Image Alternative Text Values
+#### 5.1.3 schema.org Accessibility Metadata Values
