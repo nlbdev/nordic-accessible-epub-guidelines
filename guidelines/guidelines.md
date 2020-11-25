@@ -753,3 +753,12 @@ Here are some resources for commonly used special characters:
 ### 4.4 Placeholders for user input areas
 
 In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc.
+
+## 5 Appendix
+### 5.1 Fixed text values used in this document
+The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by by the Ordering Agency, this values, when applied to a specific publication, should follow the primary language of that publication.
+
+For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
+
+
+
