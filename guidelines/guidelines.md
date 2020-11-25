@@ -103,12 +103,6 @@ The following metadata are required to be placed in the `<metadata>`:
 
 ```xml
 <dc:title id="title"> _[the title of the publication]_ </dc:title>
-<meta refines="#maintitle" property="title-type">main</meta>
-<dc:title id="subtitle"> _[the (optional) subtitle of the publication]_ </dc:title>
-<meta refines="#subtitle" property="title-type">subtitle</meta>
-<dc:title id="edition"> _[the (optional) edition part of publication title, e.g. "1st ed."</dc:title>
-<meta refines="#edition" property="title-type">edition</meta>
-
 <dc:language> _[language code for the main language]_ </dc:language>
 <dc:identifier id="pub-identifier"> _[production UID provided by the ordering agency]_ </dc:identifier>
 <dc:source> _[ISBN of the publication]_ </dc:source>
