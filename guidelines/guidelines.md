@@ -287,7 +287,7 @@ The principle navigation document of the EPUB package is the `xhtml` file with t
 The first required `<nav>` element in the file is:
 
 ```html
-<nav role="doc-toc" aria-label="Innehållsförteckning" epub:type="toc" id="toc">
+<nav role="doc-toc" aria-label="Contents" epub:type="toc" id="toc">
 ```
 
 All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
@@ -312,7 +312,7 @@ See the following link for further information (but disregard examples of unlink
 If the source material contains pagination, the next required `<nav>` element is: 
 
 ```html
-<nav role="doc-pagelist" aria-label="Svartskriftssidor" epub:type="page-list">
+<nav role="doc-pagelist" aria-label="Print pages" epub:type="page-list">
 ```
 
 See the following link for further information:
@@ -755,8 +755,24 @@ The default text values given in this document are, for practical reasons, only 
 For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
 
 #### 5.1.1 aria-label Values
+| English (default) | Swedish            |
+|-------------------|--------------------|
+| Print pages       | Svartskriftssidor  |
+| Landmarks         | Landmarks          |
+| Cover             | Omslag             |
+| Front cover       | Framsida           |
+| Back cover        | Baksida            |
+| Jacket left flap  | Vänsterflik        |
+| Jacket right flap | Högerflik          |
+| Colophon          | Kolofon            |
+| Dedication        | Dedikation         |
+| Epigraph          | Epigraf            |
+| Contents          | Innehåll           |
+| Start of Content  | Innehållets början |
+
+
 #### 5.1.2 Image Alternative Text Values
-#### 5.1.3 schema.org Accessibility Metadata Values
+#### 5.1.4 schema.org Accessibility Metadata Values
 | English (default)                                                                   | Swedish                                                                                           |
 |-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | This publication conforms to the EPUB Accessibility specification at WCAG Level AA. | Den här publikationen följer EPUB Accessibility-specifikationen och möter kraven i WCAG, nivå AA. |
