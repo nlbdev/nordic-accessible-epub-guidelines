@@ -622,13 +622,16 @@ Note that this is the construction that is used by several Ordering Agencies for
 
 Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:
 
-- `foto` – for photographs
+- `photo` – for photographs
 - `illustration` – for illustrations
-- `figur` – for schematic images, graphs, diagrams, scientific models etc.
+- `figure` – for schematic images, graphs, diagrams, scientific models etc.
 - `symbol` – for icons, signs, inline images etc.
-- `karta` – for maps
+- `map` – for maps
+- `drawing` – for drawings
+- `comic` – for comic strips and panels
+- `logo` – for logos
 
-If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figur`.
+If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
 
 #### 3.3.3 Lists
 
@@ -774,6 +777,18 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 
 
 #### 5.1.2 Image Alternative Text Values
+| English (default) | Swedish       | Norwegian    |
+|-------------------|---------------|--------------|
+| photo             | foto          | foto         |
+| illustration      | illustration  | illustrasjon |
+| figure            | figur         | figur        |
+| symbol            | symbol        | symbol       |
+| map               | karta         | kart         |
+| drawing           | teckning      | tegning      |
+| comic             | tecknad serie | tegneserie   |
+| logo              | logotyp       | logo         |
+
+
 #### 5.1.4 schema.org Accessibility Metadata Values
 | English (default)                                                                   | Swedish                                                                                           |
 |-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
