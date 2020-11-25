@@ -160,6 +160,9 @@ Similarly, creator/author information can be expressed with explicit refinenemen
 
 The codes to use as values for the creator role are taken from the [https://id.loc.gov/vocabulary/relators.html](MARC relators) vocabulary.
 
+##### 2.4.1.2 Optional Additional Metadata
+Additional metadata for inclusion can be supplied by the Ordering Agency on a per-title or per-Agency basis.
+
 #### 2.4.2 Manifest
 
 In the `<manifest>` all publication resources are declared. Each resource is declared using the `<item>` element with required attributes `id`, `href` and `media-type`. Some items must also have a `properties` attribute.
