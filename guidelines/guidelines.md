@@ -171,6 +171,8 @@ In the `<spine>`:
 
 The `<itemref>` has an optional attribute called linear. The linear attribute can have the values yes (default) or no. If the attribute is omitted it is set to yes. The linear attribute indicates whether the referenced item contains content that contributes to the primary reading order and has to be read sequentially (yes) or auxiliary content that enhances or augments the primary content and can be accessed out of sequence (no).  Examples of auxiliary content include: notes, descriptions and answer keys.
 
+`linear="no"` should generally be applied to all content documents representing content that precedes the title page, e.g. cover, half-title page, etc. This is to ensure a reader always lands on the title page when opening the book in their reading system.
+
 If a fall-back ncx navigation document is included, this is required to be referenced by adding the toc attribute to the `<spine>` element and assign as value the id attribute of the `<item>` referring to the ncx file. For example:
 
 ```xml
