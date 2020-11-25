@@ -521,11 +521,9 @@ Use of the `<span>` element is only required when a subtitle is present. The fol
 
 #### 3.2.3 Parts
 
-Some publications are divided into parts, each containing a number of chapters. If possible, each part and its chapters should be contained in a single content file. The part heading will be the `<h1>` and the chapter headings `<h2>`. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
+Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must `<h2>`, even though they are the first heading of its content file. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
 
-In the case of very large publications, where the size of the content files containing the parts and their chapters start to inhibit the performance of reading systems, chapters must be given their own content files. The part heading and any associated contents must then be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must still be `<h2>`, even though they are the first heading of the content file. Semantic attributes are given to both parts and chapters as usual.
-
-Note that this alternative option is only to be used if cleared by the Ordering Agency.
+Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the `<h1>` and the chapter headings `<h2>` and the `<section>` element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, `role` and `epub:type`, must be still given to the `<section>` elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.
 
 ### 3.3 Mark-up Requirements
 
