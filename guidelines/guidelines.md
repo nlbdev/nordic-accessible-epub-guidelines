@@ -262,7 +262,7 @@ The links must always reference the corresponding section element for the headin
 	<h3 id="h3_2">DET MYTISKA NORDEN</h3>
 ```
 
-A section without heading must be referenced using its `aria-label` value.
+A section without any heading must be referenced using its `aria-label` value.
 
 Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
 
@@ -405,7 +405,19 @@ Whenever a `role` attribute is set to a `<section>` element, the `<section>` ele
 </section>
 ```
 
-If the section if untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions.
+If the section if untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but here follows a list of default values to be used for generic sections that are often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:
+
+| Section identification   | Default `aria-label` value |
+|--------------------------|----------------------------|
+| `@epub-type="cover"`     | Cover                      |
+| `@class="frontcover"`    | Front cover                |
+| `@class="backcover"`     | Back cover                 |
+| `@class="leftflap"`      | Jacket left flap           |
+| `@class="rightflap"`     | Jacket right flap          |
+| `@role="doc-colophon"`   | Colophon                   |
+| `@role="doc-dedication"` | Dedication                 |
+| `@role="doc-epigraph"`   | Epigraph                   |
+| `@role="doc-toc"`        | Contents                   |
 
 See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
 
