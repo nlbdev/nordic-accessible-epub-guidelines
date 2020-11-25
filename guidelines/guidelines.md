@@ -130,9 +130,7 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 <meta property="schema:accessibilityFeature">structuralNavigation</meta>
 <meta property="schema:accessibilityFeature">MathML</meta>
 <meta property="schema:accessibilityFeature">alternativeText</meta>
-<meta property="schema:accessibilityHazard">noFlashing</meta>
-<meta property="schema:accessibilityHazard">noSound</meta>
-<meta property="schema:accessibilityHazard">noMotionSimulation</meta>
+<meta property="schema:accessibilityHazard">none</meta>
 ```
 
 ##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
