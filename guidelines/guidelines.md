@@ -117,6 +117,10 @@ The following metadata are required to be placed in the `<metadata>`:
 <meta property="nordic:guidelines">2020-1</meta>
 ```
 
+Note that the default value to use in `<dc:publisher>` is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
+
+##### 2.4.1.1 schema.org Accessibility Metadata
+
 Also required are schema.org accessibility metadata, [http://kb.daisy.org/publishing/docs/metadata/schema-org.html.](http://kb.daisy.org/publishing/docs/metadata/schema-org.html.) Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
 
 ```xml
@@ -133,7 +137,7 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 <meta property="schema:accessibilityHazard">noMotionSimulation</meta>
 ```
 
-##### 2.4.1.1 Optional Increased Title and Creator Metadata Granularity
+##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
 
 The following is an example of a more granular way of expressing title metadata, separating main title, subtitle, and edition title statements from each other:
@@ -160,7 +164,7 @@ Similarly, creator/author information can be expressed with explicit refinenemen
 
 The codes to use as values for the creator role are taken from the [https://id.loc.gov/vocabulary/relators.html](MARC relators) vocabulary.
 
-##### 2.4.1.2 Optional Additional Metadata
+##### 2.4.1.3 Optional Additional Metadata
 Additional metadata for inclusion can be supplied by the Ordering Agency on a per-title or per-Agency basis.
 
 #### 2.4.2 Manifest
