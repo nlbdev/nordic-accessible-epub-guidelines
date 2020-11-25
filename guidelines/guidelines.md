@@ -1,11 +1,15 @@
-# SPSM Guidelines for Production of Accessible EPUB 3
+# Nordic Guidelines for the Production of Accessible EPUB 3
 
 ## 1 Introduction
 
 ### 1.1 Background
-This guidelines document has been developed by The National Agency for Special Needs Education and Schools (SPSM), a Swedish governmental agency. One of the agency’s missions is to adapt teaching materials for children and adults with special needs.
+This guidelines document has been developed as a joint effort between the (mostly) Nordic Agencies dedicated to providing accessible literature in different formats to children and adults with various reading impairments or special needs. The participating organisations are MTM, SPSM, Nota, Celia, HBS, Dedicon, NLB, Statped, SBS.
 
-Fundamental to the process of adapting text-based media is the role of beginning with well-structured digital content. Previously this has been achieved through XML structures as defined by the ANSI/NISO Z39.86 specification for digital talking books (DTBook). The structures specified in these guidelines, however, are based on a profile of HTML5 requiring the use of XML serialization. This ensures that content can be reliably manipulated and rendered. Moreover, the EPUB Content Documents 3.0. specification provides constructs that further ensure semantically meaningful structures.
+Fundamental to the process of adapting text-based media is the role of beginning with well-structured digital content. Previously this has been achieved through XML structures as defined by the ANSI/NISO Z39.86 specification for digital talking books (DTBook). The structures specified in these guidelines, however, are based on a profile of HTML5 requiring the use of XML serialization. This ensures that content can be reliably manipulated and rendered. Moreover, the EPUB 3.2 specification and the accompanying EPUB Accessibility 1.0 specification provide constructs that further ensure semantically meaningful structures and increase the accessibility of the content.
+
+This document can be seen as the successor of the previous EPUB 3 guidelines used by the Nordic agencies (2015-1), and are based on the most recent EPUB 3 specification, EPUB 3.2.
+
+The target audience of the document is mainly contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
 ### 1.2 Situating the Nordic Guidelines in the World of Specifications
 The Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Ordering Agencies. As such, they build on these higher-level specification documents (EPUB 3.2, EPUB Accessibility 1.0, etc.) and provide more detailed instructions for their application in the specific context of production at the Ordering Agencies.
@@ -43,7 +47,7 @@ Note that the `mimetype` file must be archived as the first file in the Containe
 
 #### 2.2.1 META-INF
 
-The `container.xml` file must identify no more than one media alternative, unless indicated otherwise by SPSM.
+The `container.xml` file must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
 
 The container.xml file shall look like this, unless indicated otherwise:
 
@@ -57,7 +61,7 @@ xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
 </container>
 ```
 
-No other files, optional or otherwise, are allowed in the META-INF directory unless specifically indicated by SPSM.
+No other files, optional or otherwise, are allowed in the META-INF directory unless specifically indicated by the Ordering Agency.
 
 ### 2.3 Publication Resources
 
@@ -171,7 +175,7 @@ Additional metadata for inclusion can be supplied by the Ordering Agency on a pe
 
 In the `<manifest>` all publication resources are declared. Each resource is declared using the `<item>` element with required attributes `id`, `href` and `media-type`. Some items must also have a `properties` attribute.
 
-The `id` is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but SPSM will require certain naming conventions to be applied.
+The `id` is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but the Ordering Agency will require certain naming conventions to be applied.
 
 The `href` is simply a path to the publication resource. The path will be relative to where the package document is located.
 
@@ -389,36 +393,36 @@ Image files are required to be stored in a folder named _images_ placed at the s
 
 The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small detail.
 
-In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact SPSM.
+In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
 
 #### 2.7.2 Image editing
 
-Images are required to be captured exactly as they are in the scans or publisher files provided by SPSM. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).
+Images are required to be captured exactly as they are in the scans or publisher files provided by the Ordering Agency. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).
 
 
 When whole sections or parts of text is placed on top of a background image, the text may need to be edited out of the background, if possible. However, no advanced restoration of lost image details are required. Note that if a publisher file is provided, images and text may have been placed in different layers and the image can be extracted without any text.
 
 ### 2.8 CSS
 
-Suppliers are required to include the standard `css` file issued by SPSM. The `css` file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
+Suppliers are required to include the standard `css` file issued by the Ordering Agency. The `css` file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
 
 The `<link>` element is required to be applied to the relevant content documents.
 
 ### 2.9 Fonts
 
-Fonts present in PDF source material must not be included in the EPUB, unless specifically indicated by SPSM.
+Fonts present in PDF source material must not be included in the EPUB, unless specifically indicated by the Ordering Agency.
 
-Suppliers must not include fonts in the EPUB unless requested otherwise by SPSM.
+Suppliers must not include fonts in the EPUB unless requested otherwise by the Ordering Agency.
 
 Fonts, when present, must be stored in a folder named _fonts_ and placed at the same level relative to the package document.
 
 ### 2.10 Javascript
 
-Javascript files requested by SPSM are required to be stored in a folder named _javascript_ and placed on the same level relative to the package document.
+Javascript files requested by the Ordering Agency are required to be stored in a folder named _javascript_ and placed on the same level relative to the package document.
 
 The `<script>` element is required to be applied to the relevant content documents.
 
-Suppliers must not include javascript files in the EPUB unless specifically instructed to do so by SPSM.
+Suppliers must not include javascript files in the EPUB unless specifically instructed to do so by the Ordering Agency.
 
 ### 2.11 Validation
 
@@ -529,7 +533,7 @@ Some publications are divided into parts, each containing a number of chapters. 
 
 In the case of very large publications, where the size of the content files containing the parts and their chapters start to inhibit the performance of reading systems, chapters must be given their own content files. The part heading and any associated contents must then be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must still be `<h2>`, even though they are the first heading of the content file. Semantic attributes are given to both parts and chapters as usual.
 
-Note that this alternative option is only to be used if cleared by SPSM.
+Note that this alternative option is only to be used if cleared by the Ordering Agency.
 
 ### 3.3 Mark-up Requirements
 
@@ -541,7 +545,7 @@ https://www.w3schools.com/
 
 #### 3.3.1 Pagination
 
-All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by SPSM:
+All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by the Ordering Agency:
 
 - Inline: `<span epub:type="pagebreak" role="doc-pagebreak">`
 - Other: `<div epub:type="pagebreak" role="doc-pagebreak">`
@@ -554,7 +558,7 @@ Additionally required attributes:
 
 The value for the `title` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, the title attribute must have a value corresponding to the number implicit for that page.
 
-In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact SPSM.
+In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
 
 The class attribute must have either of the following values:
 
@@ -586,11 +590,11 @@ This is only to be done if specific instructions are given by the Ordering Agenc
 
 #### 3.3.2 Figures
 
-All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact SPSM.
+All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
 Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed directly above the `<img>` element, thus being the first child of the `<figure>` element. If no caption is present, the `<img>` element will be the first child.
 
-Inline images, typically small symbols or other non-typographical content that might occur inline, are required to be represented with `<img>` elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact SPSM.
+Inline images, typically small symbols or other non-typographical content that might occur inline, are required to be represented with `<img>` elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
@@ -694,7 +698,7 @@ In both cases the elements are required to have a `class` attribute. The default
 
 For certain publications there may be instructions given to add `aria-label` attributes to either of the elements, but unless such instructions are given no `aria-label` attributes are to be included.
 
-If there are any doubts which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact SPSM.
+If there are any doubts which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
 Headings in text boxes are required to be marked up with a `<h[x]>` element. Unless specific instructions are given, these headings should not be included in the navigation document.
 
@@ -759,6 +763,3 @@ In educational material, especially for younger children, it is common that the 
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by by the Ordering Agency, this values, when applied to a specific publication, should follow the primary language of that publication.
 
 For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
-
-
-
