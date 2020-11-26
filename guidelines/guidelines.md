@@ -671,6 +671,8 @@ Footnotes and endnotes are required to be handled following the recommendations 
 
 Footnotes are to be placed in an `<aside>` at the end of the current `<section>`. If there are more than one note reference in the section notes must be grouped together in a single `<aside>`.
 
+Endnotes or chapter notes must be placed in a `<section>` element at the end of the content file, before the closing of the top-level `<section>` element. The `<section>` element containing the notes must have the `role` attribute set to `doc-endnotes`. It must also have the `aria-label` attribute set to `Endnotes`. Note that the `<aside>` element must not be used in this case.
+
 Backlinks are required for each note, done according to the examples in the Knowledge Base. Unless other instructions are given, the text of the backlink in endnotes should be in Swedish:
 
 ```html
