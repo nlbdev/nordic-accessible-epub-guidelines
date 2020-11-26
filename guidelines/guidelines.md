@@ -33,7 +33,7 @@ Suppliers are required to refer to the specifications provided in version 3.2 of
 
 #### 2.1.1 Accessible Publishing Knowledge Base
 
-In addition to following the recommended version of the EPUB standard, suppliers are required to follow the recommendations in the Accessible Publishing Knowledge Base that is maintained by the Daisy Consortium: https://kb.daisy.org/publishing/.
+In addition to following the recommended version of the EPUB standard, suppliers are required to follow the recommendations in the Accessible Publishing Knowledge Base that is maintained by the Daisy Consortium: [https://kb.daisy.org/publishing/docs/](https://kb.daisy.org/publishing/docs/).
 
 The recommendations in the Knowledge Base may differ from the specification. As long as no conflicts occur during validation, the recommendations in the Knowledge Base are to be followed.
 
@@ -70,8 +70,6 @@ All publication resources are required to be located in a directory called EPUB.
 ### 2.4 Package Document
 
 The name of the Package Document file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the Package Document.
-
-The package document namespace is [http://www.idpf.org/2007/opf.](http://www.idpf.org/2007/opf.) This will be also be declared in the document.
 
 The following xml declaration must be placed at the first line of the document:
 
@@ -119,7 +117,7 @@ Note that the default value to use in `<dc:publisher>` is the shorthand for the 
 
 ##### 2.4.1.1 schema.org Accessibility Metadata
 
-Also required are schema.org accessibility metadata, [http://kb.daisy.org/publishing/docs/metadata/schema-org.html.](http://kb.daisy.org/publishing/docs/metadata/schema-org.html.) Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
+Also required are schema.org accessibility metadata, [http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
 
 ```xml
 <meta property="schema:accessibilitySummary">This publication conforms to the EPUB Accessibility specification at WCAG Level AA.</meta>
@@ -158,7 +156,7 @@ Similarly, creator/author information can be expressed with explicit refinenemen
 <meta refines="#creator1" property="role" scheme="marc:relators" id="role">ill</meta>
 ```
 
-The codes to use as values for the creator role are taken from the [https://id.loc.gov/vocabulary/relators.html](MARC relators) vocabulary.
+The codes to use as values for the creator role are taken from the MARC relators vocabulary, [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html).
 
 ##### 2.4.1.3 Optional Additional Metadata
 Additional metadata for inclusion can be supplied by the Ordering Agency on a per-title or per-Agency basis.
@@ -179,7 +177,7 @@ The `media-type` attribute specifies what type of resource it is and what format
 - `application/x-dtbncx+xml`
 - `application/javascript`
 
-Refer to https://idpf.github.io/epub-cmt/v3/ for additional information about various media types.
+Refer to [https://www.w3.org/publishing/epub3/epub-spec.html#sec-core-media-types](https://www.w3.org/publishing/epub3/epub-spec.html#sec-core-media-types) for additional information about various media types.
 
 Some resources have additional properties that need to be identified in the corresponding item in order for a reading system to be able to implement these properties. This is done by using the properties attribute. Common examples are:
 
@@ -188,7 +186,7 @@ Some resources have additional properties that need to be identified in the corr
 - `scripted` for any content document where javascripts are being used
 - `mathml` for any content document containing MathML
 
-Refer to https://idpf.github.io/epub-vocabs/package/item/ for additional information about the properties attribute.
+Refer to [https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab](https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab) for additional information about the properties attribute.
 
 #### 2.4.3 Spine
 
@@ -256,7 +254,7 @@ The following namespace values are required to be applied to the namespace attri
 
 Suppliers are required to identify primary languages for each content file instance using the `xml:lang` and `lang` attributes. The values for `xml:lang` and `lang` must be the same.
 
-If not requested otherwise by the Ordering Agency, language should be coded using values from the [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](IANA registry of valid language codes).
+If not requested otherwise by the Ordering Agency, language should be coded using values from the IANA registry of valid language codes, [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
 Please note that the most granular language tag should be used, e.g. the macrolanguage value "no" for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk ("nn") or Norwegian Bokmål ("nb") are not known.
 
@@ -350,7 +348,7 @@ Note that the links, the `<a>` elements, in the Landmarks section must have appr
 
 The EPUB package may include an `ncx` navigation document as fall-back for older reading systems that have not implemented functionality for the EPUB 3 navigation document. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
-Refer to [http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.](http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.) for information about how the `ncx` file should be formed. Required elements are:
+Refer to [http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4](http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) for information about how the `ncx` file should be formed. Required elements are:
 
 - `<head>`
 - `<docTitle>`
@@ -420,8 +418,8 @@ Suppliers must not include javascript files in the EPUB unless specifically inst
 
 Validation of EPUB files should be done using EPUBCheck for structural validity and conformance to the EPUB standard and the Ace tool for accessibility evaluation. The latest distributions of these tools should be used. The tools can be found here:
 
-- https://github.com/w3c/epubcheck/releases
-- https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/
+- [https://github.com/w3c/epubcheck/releases](https://github.com/w3c/epubcheck/releases)
+- [https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/](https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/)
 
 ## 3 General Requirements for Content Documents
 
@@ -531,7 +529,7 @@ These guidelines will not give highly detailed descriptions of how to correctly 
 
 For further information about the common HTML elements and their attributes, please refer to any online resource on HTML 5, for instance:
 
-https://www.w3schools.com/
+[https://www.w3schools.com/](https://www.w3schools.com/)
 
 #### 3.3.1 Pagination
 
@@ -723,13 +721,13 @@ Line numbers must only be included if specific instructions are given about it, 
 
 ### 4.1 Structural Semantics for Educational Content
 
-The EPUB for Education Structural Semantics documentation (see [http://www.idpf.org/epub/profiles/edu/structure/)](http://www.idpf.org/epub/profiles/edu/structure/)) contains a quite elaborate structural semantic vocabulary for educational material.
+The EPUB for Education Structural Semantics documentation (see [http://www.idpf.org/epub/profiles/edu/structure/](http://www.idpf.org/epub/profiles/edu/structure/)) contains a quite elaborate structural semantic vocabulary for educational material.
 
 ### 4.2 Mathematical Content
 
 All mathematical or scientific content, content that contains mathematical operators, special characters, subscripts, superscripts etc., must be marked up using MathML.  These guidelines will not go into much detail about the MathML language. Please refer to the specification:
 
-https://www.w3.org/TR/MathML3/
+[https://www.w3.org/TR/MathML3/](https://www.w3.org/TR/MathML3/)
 
 For more detail about the MathML structure, please refer to each individual agency's requirements.
 
@@ -742,8 +740,8 @@ Unicode character accuracy for special characters, e.g. phonetic characters, is 
 
 Here are some resources for commonly used special characters:
 
-- Phonetics: https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
-- The Greek alphabet: https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm
+- Phonetics: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
+- The Greek alphabet: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 
 
 
