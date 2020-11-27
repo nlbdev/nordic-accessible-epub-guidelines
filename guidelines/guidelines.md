@@ -836,19 +836,19 @@ In circumstances where depth of structure is not amenable to structural markup u
 
 ## 5 Appendix
 ### 5.1 External Resources
-- EPUB 3.2 Specification: https://www.w3.org/publishing/epub3/epub-overview.html
-- EPUB Accessibility 1.0 Specification: https://www.w3.org/Submission/epub-a11y/
-- DAISY Accessible Publishing Knowledge Base: https://kb.daisy.org/publishing/docs/
-- HTML(5) Specification: https://html.spec.whatwg.org/multipage/
-- Digital Publishing WAI-ARIA Module 1.0: https://www.w3.org/TR/dpub-aria-1.0/
-- Ace by DAISY Accessibility Checker for EPUB 3: https://daisy.github.io/ace/
-- MARC Code List for Relators Scheme: https://id.loc.gov/vocabulary/relators.html
-- IANA registry of valid language codes: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-- EPUB 2 .ncx Legacy Navigation Document Specification: http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1
-- MathML Specification: https://www.w3.org/TR/MathML/
-- ASCIIMath Specification: http://asciimath.org
-- International Phonetic Alphabet in Unicode Reference: https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
-- Greek and Coptic Letters in Unicode Reference: https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm
+- EPUB 3.2 Specification: [https://www.w3.org/publishing/epub3/epub-overview.html](https://www.w3.org/publishing/epub3/epub-overview.html)
+- EPUB Accessibility 1.0 Specification: [https://www.w3.org/Submission/epub-a11y/](https://www.w3.org/Submission/epub-a11y/)
+- DAISY Accessible Publishing Knowledge Base: [https://kb.daisy.org/publishing/docs/](https://kb.daisy.org/publishing/docs/)
+- HTML(5) Specification: [https://html.spec.whatwg.org/multipage/](https://html.spec.whatwg.org/multipage/)
+- Digital Publishing WAI-ARIA Module 1.0: [https://www.w3.org/TR/dpub-aria-1.0/](https://www.w3.org/TR/dpub-aria-1.0/)
+- Ace by DAISY Accessibility Checker for EPUB 3: [https://daisy.github.io/ace/](https://daisy.github.io/ace/)
+- MARC Code List for Relators Scheme: [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html)
+- IANA registry of valid language codes:[https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+- EPUB 2 .ncx Legacy Navigation Document Specification: [http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1](http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1)
+- MathML Specification: [https://www.w3.org/TR/MathML/](https://www.w3.org/TR/MathML/)
+- ASCIIMath Specification: [http://asciimath.org](http://asciimath.org)
+- International Phonetic Alphabet in Unicode Reference: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
+- Greek and Coptic Letters in Unicode Reference: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 
 ### 5.2 Fixed text values used in this document
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by by the Ordering Agency, this values, when applied to a specific publication, should follow the primary language of that publication.
