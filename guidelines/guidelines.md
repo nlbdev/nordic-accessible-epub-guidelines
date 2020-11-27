@@ -322,13 +322,13 @@ The following namespace values are required to be applied to the namespace attri
 - `xmlns:epub="http://www.idpf.org/2007/ops"`
 
 **2.5.1.5 Language Definition**
-
 Suppliers are required to identify primary languages for each content file instance using the `xml:lang` and `lang` attributes. The values for `xml:lang` and `lang` must be the same.
 
 If not requested otherwise by the Ordering Agency, language should be coded using values from the IANA registry of valid language codes, [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
 Please note that the most granular language tag should be used, e.g. the macrolanguage value "no" for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk ("nn") or Norwegian Bokmål ("nb") are not known.
 
+The accuracy of language coding is vital, and Suppliers are instructed to contact the Ordering Agency in case of any uncertainties.
 #### 2.5.2 Title
 
 The `<title>` element of every `xhtml` content document must match the `dc:title` metadata of the package file.
