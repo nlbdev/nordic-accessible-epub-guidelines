@@ -59,10 +59,10 @@
             - [3.3.9 Bolding and Italics](#339-bolding-and-italics)
             - [3.3.10 Poetry and Verse](#3310-poetry-and-verse)
     - [4 Specific Requirements for Advanced Content](#4-specific-requirements-for-advanced-content)
-        - [4.1 Structural Semantics for Educational Content](#41-structural-semantics-for-educational-content)
-        - [4.2 Mathematical Content](#42-mathematical-content)
-        - [4.3 Special Characters, Unicode and Phonetics](#43-special-characters-unicode-and-phonetics)
-        - [4.4 Placeholders for user input areas](#44-placeholders-for-user-input-areas)
+        - [4.1 Mathematical Content](#41-mathematical-content)
+        - [4.2 Special Characters, Unicode and Phonetics](#42-special-characters-unicode-and-phonetics)
+        - [4.3 Placeholders for User Input Areas](#43-placeholders-for-user-input-areas)
+        - [4.4 Thematic Breaks in the Text Flow](#44-thematic-breaks-in-the-text-flow)
     - [5 Appendix](#5-appendix)
         - [5.1 Fixed text values used in this document](#51-fixed-text-values-used-in-this-document)
             - [5.1.1 aria-label Values](#511-aria-label-values)
@@ -74,7 +74,6 @@
 
 ## 1 Introduction
 
-### 1.1 Background
 This guidelines document has been developed as a joint effort between the (mostly) Nordic Agencies dedicated to providing accessible literature in different formats to children and adults with various reading impairments or special needs. The participating organisations are MTM, SPSM, Nota, Celia, HBS, Dedicon, NLB, Statped, SBS.
 
 Fundamental to the process of adapting text-based media is the role of beginning with well-structured digital content. Previously this has been achieved through XML structures as defined by the ANSI/NISO Z39.86 specification for digital talking books (DTBook). The structures specified in these guidelines, however, are based on a profile of HTML5 requiring the use of XML serialization. This ensures that content can be reliably manipulated and rendered. Moreover, the EPUB 3.2 specification and the accompanying EPUB Accessibility 1.0 specification provide constructs that further ensure semantically meaningful structures and increase the accessibility of the content.
@@ -83,7 +82,7 @@ This document can be seen as the successor of the previous EPUB 3 guidelines use
 
 The target audience of the document is mainly contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
-### 1.2 Situating the Nordic Guidelines in the World of Specifications
+### 1.1 Situating the Nordic Guidelines in the World of Specifications
 The Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Ordering Agencies. As such, they build on these higher-level specification documents (EPUB 3.2, EPUB Accessibility 1.0, etc.) and provide more detailed instructions for their application in the specific context of production at the Ordering Agencies.
 
 In the other direction, the application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
