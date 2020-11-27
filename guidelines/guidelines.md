@@ -823,13 +823,17 @@ Here are some resources for commonly used special characters:
 
 Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. I.e. careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (-) vs. en dash (–) vs. em dash (—), hyphen minus vs. mathematical minus (−), simple quotation marks ("") vs. typographic quotation marks (”“), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
-### 4.4 Placeholders for user input areas
+### 4.4 Placeholders for User Input Areas
 
-In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc.
+In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the `<span>` element to provide placeholders for these input fields in one of the following three ways:
+
+- `<span class="answer">---</span>` for a horizontal line or box where any amount of text or numbers are meant to be inserted. Multiple lines in succession must be represented by a single `<span class="answer">---</span>` unless other instructions are given by the Ordering Agency.
+- `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
+- `<span class="box">---</span>` for check boxes.  
 
 ### 4.5 Thematic Breaks in the Text Flow
 
-In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks. The markup must be one of the following two cases:
+In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
 
 - `<hr class="emptyline">` indicates thematic breaks represented by a vertical space between paragraphs.
 - `<hr class="separator">` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
