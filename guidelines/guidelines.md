@@ -290,7 +290,6 @@ If a fall-back ncx navigation document is included, this is required to be refer
 
 The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required however to use the extension `.xhtml`.
 
-
 **2.5.1.1 XML Declaration and Encoding**
 
 The following xml declaration must be used:
@@ -329,6 +328,7 @@ If not requested otherwise by the Ordering Agency, language should be coded usin
 Please note that the most granular language tag should be used, e.g. the macrolanguage value "no" for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk ("nn") or Norwegian Bokmål ("nb") are not known.
 
 The accuracy of language coding is vital, and Suppliers are instructed to contact the Ordering Agency in case of any uncertainties.
+
 #### 2.5.2 Title
 
 The `<title>` element of every `xhtml` content document must match the `dc:title` metadata of the package file.
@@ -343,7 +343,6 @@ The content documents are required to contain two `<meta>` elements.
 ```
 
 The production UID must match the `dc:identifier` in the package.
-
 
 ### 2.6 Navigation Documents
 
