@@ -207,7 +207,7 @@ The Ordering Agency may request increased metadata granularity for the represent
 
 The following is an example of a more granular way of expressing title metadata, separating main title, subtitle, and edition title statements from each other:
 
-```
+```xml
 <dc:title id="maintitle"> _[the main title of the publication]_ </dc:title>
 <meta refines="#maintitle" property="title-type">main</meta>
 <dc:title id="subtitle"> _[the subtitle of the publication]_ </dc:title>
@@ -218,7 +218,7 @@ The following is an example of a more granular way of expressing title metadata,
 
 Similarly, creator/author information can be expressed with explicit refinenement of the creator role of each author, as in the following example:
 
-```
+```xml
 <dc:creator id="creator1"> _[coauthor of the publication]_ </dc:creator>
 <meta refines="#creator1" property="role" scheme="marc:relators" id="role">aut</meta>
 <dc:creator id="creator2"> _[coauthor of the publication]_ </dc:creator>
@@ -676,7 +676,7 @@ The extracted text is then placed inside the placeholder, marked up correctly an
 <figure>
 	<figcaption>...</figcaption>
 	<img src="images/img0012.jpg" alt="figur" aria-describedby="desc0012" />
-	<aside class="fig- desc" id="desc0012">
+	<aside class="fig-desc" id="desc0012">
 		<p>...</p>
 
 	</aside>
@@ -805,7 +805,7 @@ All mathematical or scientific content, content that contains mathematical opera
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at the present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
 
 ### 4.2 Special Characters, Unicode and Phonetics
-If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as "¿" rather than "&#191;", "&#xbf;", or similar.
+If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
 
