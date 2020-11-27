@@ -827,6 +827,13 @@ Similarly to phonetics and other special characters, punctuation, such as quotat
 
 In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc.
 
+### 4.5 Thematic Breaks in the Text Flow
+
+In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks. The markup must be one of the following two cases:
+
+- `<hr class="emptyline">` indicates thematic breaks represented by a vertical space between paragraphs.
+- `<hr class="separator">` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
+
 ## 5 Appendix
 ### 5.1 Fixed text values used in this document
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by by the Ordering Agency, this values, when applied to a specific publication, should follow the primary language of that publication.
