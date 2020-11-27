@@ -5,8 +5,7 @@
 
 - [Nordic Guidelines for the Production of Accessible EPUB 3](#nordic-guidelines-for-the-production-of-accessible-epub-3)
     - [1 Introduction](#1-introduction)
-        - [1.1 Background](#11-background)
-        - [1.2 Situating the Nordic Guidelines in the World of Specifications](#12-situating-the-nordic-guidelines-in-the-world-of-specifications)
+        - [1.1 Situating the Nordic Guidelines in the World of Specifications](#11-situating-the-nordic-guidelines-in-the-world-of-specifications)
     - [2 Format Requirements](#2-format-requirements)
         - [2.1 Required EPUB Standard](#21-required-epub-standard)
             - [2.1.1 Accessible Publishing Knowledge Base](#211-accessible-publishing-knowledge-base)
@@ -64,10 +63,11 @@
         - [4.3 Placeholders for User Input Areas](#43-placeholders-for-user-input-areas)
         - [4.4 Thematic Breaks in the Text Flow](#44-thematic-breaks-in-the-text-flow)
     - [5 Appendix](#5-appendix)
-        - [5.1 Fixed text values used in this document](#51-fixed-text-values-used-in-this-document)
-            - [5.1.1 aria-label Values](#511-aria-label-values)
-            - [5.1.2 Image Alternative Text Values](#512-image-alternative-text-values)
-            - [5.1.4 schema.org Accessibility Metadata Values](#514-schemaorg-accessibility-metadata-values)
+        - [5.1 External Resources](#51-external-resources)
+        - [5.2 Fixed text values used in this document](#52-fixed-text-values-used-in-this-document)
+            - [5.2.1 aria-label Values](#521-aria-label-values)
+            - [5.2.2 Image Alternative Text Values](#522-image-alternative-text-values)
+            - [5.2.3 schema.org Accessibility Metadata Values](#523-schemaorg-accessibility-metadata-values)
 
 <!-- markdown-toc end -->
 
@@ -600,7 +600,8 @@ These guidelines will not give highly detailed descriptions of how to correctly 
 
 For further information about the common HTML elements and their attributes, please refer to any online resource on HTML 5, for instance:
 
-[https://www.w3schools.com/](https://www.w3schools.com/)
+- The formal HTML(5) specification: https://html.spec.whatwg.org/multipage/
+- [https://www.w3schools.com/](https://www.w3schools.com/)
 
 #### 3.3.1 Pagination
 
@@ -834,12 +835,27 @@ In circumstances where depth of structure is not amenable to structural markup u
 - `<hr class="separator">` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
 
 ## 5 Appendix
-### 5.1 Fixed text values used in this document
+### 5.1 External Resources
+- EPUB 3.2 Specification: https://www.w3.org/publishing/epub3/epub-overview.html
+- EPUB Accessibility 1.0 Specification: https://www.w3.org/Submission/epub-a11y/
+- DAISY Accessible Publishing Knowledge Base: https://kb.daisy.org/publishing/docs/
+- HTML(5) Specification: https://html.spec.whatwg.org/multipage/
+- Digital Publishing WAI-ARIA Module 1.0: https://www.w3.org/TR/dpub-aria-1.0/
+- Ace by DAISY Accessibility Checker for EPUB 3: https://daisy.github.io/ace/
+- MARC Code List for Relators Scheme: https://id.loc.gov/vocabulary/relators.html
+- IANA registry of valid language codes: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
+- EPUB 2 .ncx Legacy Navigation Document Specification: http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1
+- MathML Specification: https://www.w3.org/TR/MathML/
+- ASCIIMath Specification: http://asciimath.org
+- International Phonetic Alphabet in Unicode Reference: https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
+- Greek and Coptic Letters in Unicode Reference: https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm
+
+### 5.2 Fixed text values used in this document
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by by the Ordering Agency, this values, when applied to a specific publication, should follow the primary language of that publication.
 
 For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
 
-#### 5.1.1 aria-label Values
+#### 5.2.1 aria-label Values
 | English (default) | Swedish            |
 |-------------------|--------------------|
 | Print pages       | Svartskriftssidor  |
@@ -856,7 +872,7 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 | Start of Content  | Innehållets början |
 
 
-#### 5.1.2 Image Alternative Text Values
+#### 5.2.2 Image Alternative Text Values
 | English (default) | Swedish       | Norwegian    |
 |-------------------|---------------|--------------|
 | photo             | foto          | foto         |
@@ -869,7 +885,7 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 | logo              | logotyp       | logo         |
 
 
-#### 5.1.4 schema.org Accessibility Metadata Values
+#### 5.2.3 schema.org Accessibility Metadata Values
 | English (default)                                                                   | Swedish                                                                                           |
 |-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | This publication conforms to the EPUB Accessibility specification at WCAG Level AA. | Den här publikationen följer EPUB Accessibility-specifikationen och möter kraven i WCAG, nivå AA. |
