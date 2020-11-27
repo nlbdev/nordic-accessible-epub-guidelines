@@ -797,11 +797,7 @@ If there is an author name placed under the verse it may be marked up with `<p c
 
 ## 4 Specific Requirements for Advanced Content
 
-### 4.1 Structural Semantics for Educational Content
-
-The EPUB for Education Structural Semantics documentation (see [http://www.idpf.org/epub/profiles/edu/structure/](http://www.idpf.org/epub/profiles/edu/structure/)) contains a quite elaborate structural semantic vocabulary for educational material.
-
-### 4.2 Mathematical Content
+### 4.1 Mathematical Content
 
 All mathematical or scientific content, content that contains mathematical operators, special characters, subscripts, superscripts etc., must be marked up using MathML.  These guidelines will not go into much detail about the MathML language. Please refer to the specification:
 
@@ -809,7 +805,7 @@ All mathematical or scientific content, content that contains mathematical opera
 
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at the present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
 
-### 4.3 Special Characters, Unicode and Phonetics
+### 4.2 Special Characters, Unicode and Phonetics
 If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as "¿" rather than "&#191;", "&#xbf;", or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
@@ -823,7 +819,7 @@ Here are some resources for commonly used special characters:
 
 Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. I.e. careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (-) vs. en dash (–) vs. em dash (—), hyphen minus vs. mathematical minus (−), simple quotation marks ("") vs. typographic quotation marks (”“), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
-### 4.4 Placeholders for User Input Areas
+### 4.3 Placeholders for User Input Areas
 
 In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the `<span>` element to provide placeholders for these input fields in one of the following three ways:
 
@@ -831,7 +827,7 @@ In educational material, especially for younger children, it is common that the 
 - `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
 - `<span class="box">---</span>` for check boxes.  
 
-### 4.5 Thematic Breaks in the Text Flow
+### 4.4 Thematic Breaks in the Text Flow
 
 In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
 
