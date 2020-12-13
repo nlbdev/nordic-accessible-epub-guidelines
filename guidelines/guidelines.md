@@ -539,7 +539,7 @@ https://idpf.github.io/epub-vocabs/structure/
 
 The exception to this is the content file containing the cover image of the printed book, which is required to have simply `epub:type="cover"`.
 
-If an EPUB file contains both parts and chapters and each part and all its chapters is contained in a single content file, the above also is required for the second level `<section>` elements, which will contain the chapters.
+If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `<section>` elements, which will contain the chapters.
 	
 ### 3.1 File Naming Convention
 
