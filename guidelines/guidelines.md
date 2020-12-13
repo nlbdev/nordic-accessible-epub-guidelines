@@ -91,7 +91,7 @@ The different levels of specification can be expressed as the following hierarch
 
 1. High-level specifications, e.g. EPUB 3.2, EPUB Accessibility 1.0, HTML5, etc.
 2. The Nordic Guidelines
-3. General Ordering Agency-specific Guidelines (usually these depart from the Nordic Guidelines, but might also contain some deviations from them)
+3. General Ordering Agency-specific Guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
 
 Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation are outside the scope of this document.
