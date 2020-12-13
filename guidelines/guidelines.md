@@ -510,7 +510,7 @@ Whenever a `role` attribute is set to a `<section>` element, the `<section>` ele
 </section>
 ```
 
-If the section is untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but here follows a list of default values to be used for generic sections that are often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:
+If the section is untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but below you will find a list of default values for generic sections often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:
 
 | Section identification   | Default `aria-label` value |
 |--------------------------|----------------------------|
@@ -563,7 +563,7 @@ Some content files have certain contents that are required to be included and ma
 
 #### 3.2.1 Cover
 
-The following class attributes must be applied to the child `<section>` elements where appropriate:
+The following class attributes must applied to the child `<section>` elements where appropriate:
 
 - `<section class="frontcover">`
 - `<section class="rearcover">`
