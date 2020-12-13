@@ -216,7 +216,7 @@ The following is an example of a more granular way of expressing title metadata,
 <meta refines="#edition" property="title-type">edition</meta>
 ```
 
-Similarly, creator/author information can be expressed with explicit refinenement of the creator role of each author, as in the following example:
+Similarly, creator/author information can be expressed with explicit refinement of the creator role of each author, as in the following example:
 
 ```xml
 <dc:creator id="creator1"> _[coauthor of the publication]_ </dc:creator>
