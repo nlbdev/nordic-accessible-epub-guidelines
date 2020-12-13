@@ -288,7 +288,7 @@ If a fall-back ncx navigation document is included, this is required to be refer
 
 #### 2.5.1 XHTML
 
-The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required however to use the extension `.xhtml`.
+The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required to use the extension `.xhtml`.
 
 **2.5.1.1 XML Declaration and Encoding**
 
