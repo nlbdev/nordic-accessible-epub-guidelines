@@ -85,7 +85,7 @@ The target audience of the document is mainly contracted EPUB 3 suppliers, but t
 ### 1.1 Situating the Nordic Guidelines in the World of Specifications
 The Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Ordering Agencies. As such, they build on these higher-level specification documents (EPUB 3.2, EPUB Accessibility 1.0, etc.) and provide more detailed instructions for their application in the specific context of production at the Ordering Agencies.
 
-In the other direction, the application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
+The application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
 
 The different levels of specification can be expressed as the following hierarchy:
 
