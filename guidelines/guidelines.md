@@ -563,7 +563,7 @@ Some content files have certain contents that are required to be included and ma
 
 #### 3.2.1 Cover
 
-The following class attributes must applied to the child `<section>` elements where appropriate:
+The following class attributes must be applied to the child `<section>` elements where appropriate:
 
 - `<section class="frontcover">`
 - `<section class="rearcover">`
