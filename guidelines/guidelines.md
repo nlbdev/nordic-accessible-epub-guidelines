@@ -497,7 +497,7 @@ The EPUB Content File structure specified in these guidelines is generally made 
 
 The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in `<section>` elements, with proper nesting of subsections. Furthermore, an appropriate value of the ARIA `role` attribute, as well as the appropriate `epub:type` attribute, must be applied to the `<section>` element for the top level(s) of each content file. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `<section>` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
-The `role` attribute is required for the top level `<section>` element of each content file and must have a relevant value out of the following list:
+The `role` attribute is required for the top level `<section>` element of each content file and must have a relevant value from the following list:
 
 https://www.w3.org/TR/dpub-aria-1.0/#roles
 
