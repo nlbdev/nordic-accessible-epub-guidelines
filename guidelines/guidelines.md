@@ -510,7 +510,7 @@ Whenever a `role` attribute is set to a `<section>` element, the `<section>` ele
 </section>
 ```
 
-If the section if untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but here follows a list of default values to be used for generic sections that are often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:
+If the section is untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but here follows a list of default values to be used for generic sections that are often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:
 
 | Section identification   | Default `aria-label` value |
 |--------------------------|----------------------------|
