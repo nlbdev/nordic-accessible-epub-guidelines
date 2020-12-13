@@ -451,7 +451,7 @@ Image files are required to be stored in a folder named _images_ placed at the s
 
 #### 2.7.1 Resizing of Images
 
-The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small detail.
+The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small details.
 
 In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
 
