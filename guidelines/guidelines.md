@@ -762,7 +762,7 @@ In both cases the elements are required to have a `class` attribute. The default
 
 For certain publications there may be instructions given to add `aria-label` attributes to either of the elements, but unless such instructions are given no `aria-label` attributes are to be included.
 
-If there are any doubts which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
+If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
 Headings in text boxes are required to be marked up with a `<h[x]>` element. Unless specific instructions are given, these headings should not be included in the navigation document.
 
