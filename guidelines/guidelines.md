@@ -816,7 +816,7 @@ Here are some resources for commonly used special characters:
 - Phonetics: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
 - The Greek alphabet: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 
-Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. I.e. careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (-) vs. en dash (–) vs. em dash (—), hyphen minus vs. mathematical minus (−), simple quotation marks ("") vs. typographic quotation marks (”“), etc. Any exceptions to this general rule will be noted in Editing Instructions.
+Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (-) vs. en dash (–) vs. em dash (—), hyphen minus vs. mathematical minus (−), simple quotation marks ("") vs. typographic quotation marks (”“), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
 ### 4.3 Placeholders for User Input Areas
 
