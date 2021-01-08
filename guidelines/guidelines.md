@@ -720,6 +720,21 @@ Lists without any bullet markers are required to have the attribute:
 
 By default, `<ul>` should be used here, but Ordering Agencies may give specific instructions to use `<ol>`.
 
+##### 3.3.3.3 Tables of Contents
+
+Any table of contents in the source material is required to be marked up in the following way:
+
+```html
+<ol class="plain" epub:type="toc" role="doc-toc">
+   <li><span class="lic">_[Heading 1]_</span> <span class="lic">_[Page number]_</span></li>
+   ...
+</ol>
+```
+
+This is typically used for the main table of contents that most books have somewhere in the frontmatter part, but it could also be a table of content for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only `<li>`, without any `<span class="lic">`.
+
+Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.
+
 #### 3.3.4 Tables
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
