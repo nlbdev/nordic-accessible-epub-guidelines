@@ -152,7 +152,7 @@ Suppliers are required to apply the following attributes and values to the `<pac
 
 - `xmlns="http://www.idpf.org/2007/opf"`
 - `xmlns:nordic="http://www.mtm.se/epub/"`
-- `version="3.2"`
+- `version="3.0"`
 - `xml:lang="xx"` (The publication language code)
 - `unique-identifier="pub-identifier"`
 
