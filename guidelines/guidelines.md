@@ -279,10 +279,10 @@ The `<itemref>` has an optional attribute called linear. The linear attribute ca
 
 `linear="no"` should generally be applied to all content documents representing content that precedes the title page, e.g. cover, half-title page, etc. This is to ensure a reader always lands on the title page when opening the book in their reading system.
 
-If a fall-back ncx navigation document is included, this is required to be referenced by adding the toc attribute to the `<spine>` element and assign as value the id attribute of the `<item>` referring to the ncx file. For example:
+If a fall-back ncx navigation document is included, this is required to be referenced by adding the toc attribute to the `<spine>` element and assign as value the id attribute of the `<item>` referring to the ncx file, like this:
 
 ```xml
-<spine toc="ncx">
+<spine toc="_[id value of the manifest item that refers to the ncx file]_">
 ```
 ### 2.5 Content Documents
 
