@@ -831,7 +831,7 @@ If not requested otherwise by the Ordering Agency, Unicode characters should be 
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
 
-Unicode character accuracy for special characters, e.g. phonetic characters, is very important. A visual likeness to the characters used in the printed source material is not enough. In order for assistive technology to present correct information to the user, the correct Unicode characters must be used. Also in various conversions to other types of end-user formats, it is vital to have the correct Unicode characters in the input material.
+Unicode character accuracy for special characters, e.g. phonetic characters, is vital for a correct representation of the source material. A visual likeness to the characters used in the printed source material is not enough, as the characters may be used by assistive technology to present text information to the user, or being used in various conversions to other types of end-user formats.
 
 Here are some resources for commonly used special characters:
 
