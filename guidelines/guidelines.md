@@ -794,6 +794,13 @@ If the content written in verse has a title it may be handled as a normal headin
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
+### 3.4 Thematic Breaks in the Text Flow
+
+In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
+
+- `<hr class="emptyline">` indicates thematic breaks represented by a vertical space between paragraphs.
+- `<hr class="separator">` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
+
 ## 4 Specific Requirements for Advanced Content
 
 ### 4.1 Mathematical Content
@@ -825,13 +832,6 @@ In educational material, especially for younger children, it is common that the 
 - `<span class="answer">---</span>` for a horizontal line or box where any amount of text or numbers are meant to be inserted. Multiple lines in succession must be represented by a single `<span class="answer">---</span>` unless other instructions are given by the Ordering Agency.
 - `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
 - `<span class="box">---</span>` for check boxes.  
-
-### 4.4 Thematic Breaks in the Text Flow
-
-In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
-
-- `<hr class="emptyline">` indicates thematic breaks represented by a vertical space between paragraphs.
-- `<hr class="separator">` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
 
 ## 5 Appendix
 ### 5.1 External Resources
