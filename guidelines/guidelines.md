@@ -813,8 +813,8 @@ If there is an author name placed under the verse it may be marked up with `<p c
 
 In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
 
-- `<hr class="emptyline">` indicates thematic breaks represented by a vertical space between paragraphs.
-- `<hr class="separator">` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
+- `<hr class="emptyline"/>` indicates thematic breaks represented by a vertical space between paragraphs.
+- `<hr class="separator"/>` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
 
 ## 4 Specific Requirements for Advanced Content
 
