@@ -123,7 +123,7 @@ The `container.xml` file must identify no more than one media alternative, unles
 The container.xml file shall look like this, unless indicated otherwise:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <container version="1.0"
 xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
 	<rootfiles>
@@ -145,7 +145,7 @@ The name of the Package Document file is required to be `package.opf`. Suppliers
 The following xml declaration must be placed at the first line of the document:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 ```
 
 Suppliers are required to apply the following attributes and values to the `<package>` element:
