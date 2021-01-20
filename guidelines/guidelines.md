@@ -549,7 +549,7 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order in the `<spine>`, with leading zeros as needed. _Role_ corresponds to the ARIA `role` of the main section element in the content file, minus the "`doc-`" part.
+The _UID_ must be identical to the value of `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order in the `<spine>`, with leading zeros as needed. _role_ corresponds to the ARIA `role` of the main section element in the content file, minus the "`doc-`" part. In the absence of an ARIA role for the top-level section of the content document, the value from the `epub:type` attribute should be used instead.
 
 Example:
 
