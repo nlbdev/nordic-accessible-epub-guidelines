@@ -360,7 +360,7 @@ The first required `<nav>` element in the file is:
 
 All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
-The links must always reference the corresponding section element for the heading in the content file, not the h[x] element directly. Thus, in the example below, the link should point to the id "level3_2" in that content file:
+The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a `<section>` element, but can also be `<aside>` or any other sectioning element. Thus, in the example below, the link should point to the id "level3_2" in that content file:
 
 ```html
 <section aria-labelledby="h3_2" id="level3_2">
