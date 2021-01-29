@@ -663,7 +663,9 @@ However, there may be agency specific instructions to place the page number, as 
 ```
 This is only to be done if specific instructions are given by the Ordering Agency.
 
-#### 3.3.2 Figures
+#### 3.3.2 Headings
+
+#### 3.3.3 Figures
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
@@ -673,7 +675,7 @@ Small symbols or other non-typographical content that might occur inline, are re
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
-##### 3.3.2.1 Text Extraction from Images
+##### 3.3.3.1 Text Extraction from Images
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder within the `<figure>` element of the image. The placeholder should be placed after the `<img>` element, before the closing `</figure>` tag. Suppliers are required to use the `<aside>` element for this placeholder with the following attributes:
 
@@ -701,7 +703,7 @@ The extracted text is then placed inside the placeholder, marked up correctly an
 
 Note that this is the construction that is used by several Ordering Agencies for adding image descriptions in post-production.
 
-##### 3.3.2.2 Alt-texts
+##### 3.3.3.2 Alt-texts
 
 Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:
 
@@ -716,7 +718,7 @@ Accessibility guidelines require all images to be supplied with a short, descrip
 
 If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
 
-##### 3.3.2.3 Image Series
+##### 3.3.3.3 Image Series
 
 If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate `<figure>` elements. The whole series must then be wrapped in a `<figure>` element where the `class` attribute is set to `image-series`.
 
@@ -741,17 +743,17 @@ This is how the markup will look like:
 </figure>
 ```
 
-#### 3.3.3 Lists
+#### 3.3.4 Lists
 
 Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Any such content is required to be marked up with either `<ol>` (ordered list) or `<ul>` (unordered list). Each item of any list must be marked up with `<li>`.
 
 A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more `<p>` elements inside every list item of the list.
 
-##### 3.3.3.1 Numbered Lists
+##### 3.3.4.1 Numbered Lists
 
 The numbering of an ordered list must not be included as content in the `<li>` elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the `type` attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the `start` attribute.
 
-##### 3.3.3.2 Unnumbered Lists
+##### 3.3.4.2 Unnumbered Lists
 
 Unnumbered lists often have some sort of bullet markers for each list item. The default is a solid black circle. The type attribute has been used before, to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
 
@@ -761,7 +763,7 @@ Lists without any bullet markers are required to have the attribute:
 
 By default, `<ul>` should be used here, but Ordering Agencies may give specific instructions to use `<ol>`.
 
-##### 3.3.3.3 Tables of Contents
+##### 3.3.4.3 Tables of Contents
 
 Any table of contents in the source material is required to be marked up in the following way:
 
@@ -776,7 +778,7 @@ This is typically used for the main table of contents that most books have somew
 
 Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.
 
-#### 3.3.4 Tables
+#### 3.3.5 Tables
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
@@ -786,11 +788,11 @@ Tables are required to have a consistent number of table cells per row. If `cols
 
 Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.
 
-#### 3.3.5 Definition Lists
+#### 3.3.6 Definition Lists
 
 All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as `<dl>`. Note that language attributes may be required, for example with glossaries.
 
-#### 3.3.6 Notes and Note References
+#### 3.3.7 Notes and Note References
 
 Footnotes and endnotes are required to be handled in accordance with the recommendations in the Accessible Publishing Knowledge Base:
 
@@ -808,7 +810,7 @@ Backlinks are required for each note, done according to the examples in the Know
 
 Note references are not to be marked up with `<sup>`. This is handled by the default CSS.
 
-#### 3.3.7 Sidebars, text boxes etc.
+#### 3.3.8 Sidebars, text boxes etc.
 
 The `<aside>` element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
 
@@ -822,13 +824,13 @@ If there are any doubts about which element to use and there are no further inst
 
 Headings in text boxes are required to be marked up with a `<h[x]>` element. Unless specific instructions are given, these headings should not be included in the navigation document.
 
-#### 3.3.8 Computer Code
+#### 3.3.9 Computer Code
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
 
 In blocks of computer code, spaces and empty lines must be preserved.
 
-#### 3.3.9 Bolding and Italics
+#### 3.3.10 Bolding and Italics
 
 The only elements to be used are `<strong>` for bold and `<em>` for italics. Other type of formatting may be required in certain publications and, if such is the case, specific instructions will be given in the Editing Instructions.
 
@@ -838,7 +840,7 @@ Principles for how `<strong>` and `<em>` are used can be found here:
 
 Please take care that text marked up with em or strong is identical with the original book. Do not include space or punctuation which is not emphasised in the original. Words in em or strong at the end of sentences should not include end-of-sentence punctuation, like full stops, unless the whole sentence is emphasised. If a sentence ends with an emphasised word, and the next sentence begins with a new emphasised word, make sure the words are marked up using separate instances of em or strong, and that the end-of-sentence punctuation is not included.
 
-#### 3.3.10 Poetry and Verse
+#### 3.3.11 Poetry and Verse
 
 Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
 
@@ -850,7 +852,7 @@ If the content written in verse has a title it may be handled as a normal headin
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
-#### 3.3.11 Quotes
+#### 3.3.12 Quotes
 
 Quotes, citations, excerpts from other sources and similar content are required to be marked up using the `<blockquote>` element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate `<p>`.
 
