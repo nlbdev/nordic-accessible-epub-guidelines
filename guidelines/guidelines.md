@@ -172,7 +172,7 @@ The following metadata are required to be placed in the `<metadata>` element:
 <dc:title id="title">_[the title of the publication]_</dc:title>
 <dc:language>_[language code for the main language]_</dc:language>
 <dc:identifier id="pub-identifier">_[production UID provided by the ordering agency]_</dc:identifier>
-<dc:source>_[ISBN of the publication]_</dc:source>
+<dc:source>_[ISBN or ISSN of the publication]_</dc:source>
 <dc:creator>_[author of the publication (one element for each author)]_</dc:creator>
 <dc:format>application/epub+zip</dc:format>
 <dc:publisher>_[the ordering agency]_</dc:publisher>
@@ -184,6 +184,7 @@ The following metadata are required to be placed in the `<metadata>` element:
 
 Note that the default value to use in `<dc:publisher>` is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
 
+If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `<dc:source>` element will be a text string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
 ##### 2.4.1.1 schema.org Accessibility Metadata
 
 Also required are schema.org accessibility metadata, [http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
