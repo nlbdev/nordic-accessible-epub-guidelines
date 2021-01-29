@@ -519,7 +519,7 @@ The `role` attribute is required for the top level `<section>` element of each c
 
 https://www.w3.org/TR/dpub-aria-1.0/#roles
 
-Whenever a `role` attribute is set to a `<section>` element, the `<section>` element is also required to have a label. When the `<section>` has a header, usually `<h1>` or `<h2>`, the header serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
+All `<section>` elements are required to have a label. When the `<section>` has a heading, usually `<h1>`, `<h2>`, etc., the heading serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
 
 ```html
 <section role="doc-chapter" aria-labelledby="hd01" epub:type="bodymatter chapter">
@@ -625,15 +625,15 @@ For further information about the common HTML elements and their attributes, ple
 All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by the Ordering Agency:
 
 - Inline: `<span epub:type="pagebreak" role="doc-pagebreak">`
-- Other: `<div epub:type="pagebreak" role="doc-pagebreak">`
+- Block: `<div epub:type="pagebreak" role="doc-pagebreak">`
 
 Additionally required attributes:
 
-- `title=""`
+- `aria-label=""`
 - `class=""`
 - `id=""`
 
-The value for the `title` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, the title attribute must have a value corresponding to the number implicit for that page.
+The value for the `aria-label` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
 
 In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
 
@@ -651,18 +651,16 @@ The attribute value `page-special` is required for any parts of the book not num
 
 The attribute `id` is simply a unique identifier.
 
-By default, the pagebreak elements are required to be empty:
+By default, the pagebreak elements are required to be empty, like in the following examples:
 
-- Inline: `<span epub:type="pagebreak" role="doc-pagebreak"></span>`
-- Other: `<div epub:type="pagebreak" role="doc-pagebreak"></div>`
+- Inline: `<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></span>`
+- Block: `<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></div>`
 
 However, there may be agency specific instructions to place the page number, as it is displayed in the source material, as content in the pagebreak elements. For example:
 
 ```html
-<div class="page-normal" role="doc-pagebreak" id="page-38"
-title="38">38</div>
+<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38">38</span>`
 ```
-
 This is only to be done if specific instructions are given by the Ordering Agency.
 
 #### 3.3.2 Figures
@@ -782,7 +780,7 @@ Sometimes, mostly in educational books, the table of contents can be more compli
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
-The `<tbody>` element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use `<thead>` for any column headers at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column headers at the top of the table, unless specific instructions are given to omit it. The element `<tfoot>` can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions.
+The `<tbody>` element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use `<thead>` for any column heading at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element `<tfoot>` can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions.
 
 Tables are required to have a consistent number of table cells per row. If `colspan` or `rowspan` are used, take extra care that the total number of cells is correct. 
 
