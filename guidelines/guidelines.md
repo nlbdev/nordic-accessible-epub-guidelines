@@ -519,7 +519,7 @@ The `role` attribute is required for the top level `<section>` element of each c
 
 https://www.w3.org/TR/dpub-aria-1.0/#roles
 
-Whenever a `role` attribute is set to a `<section>` element, the `<section>` element is also required to have a label. When the `<section>` has a header, usually `<h1>` or `<h2>`, the header serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
+All `<section>` elements are required to have a label. When the `<section>` has a heading, usually `<h1>`, `<h2>`, etc., the heading serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
 
 ```html
 <section role="doc-chapter" aria-labelledby="hd01" epub:type="bodymatter chapter">
