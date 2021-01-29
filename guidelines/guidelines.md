@@ -802,7 +802,7 @@ Footnotes and endnotes are required to be handled in accordance with the recomme
 
 [http://kb.daisy.org/publishing/docs/html/notes.html](http://kb.daisy.org/publishing/docs/html/notes.html)
 
-Footnotes are to be placed in an `<aside>` at the end of the relevant `<section>`. If there are more than one note reference in the section notes must be grouped together in a single `<aside>`.
+Footnotes are to be placed in an `<aside>` at the end of the relevant `<section>`. If there are more than one note reference in the section, notes must **not** be grouped in a single `<aside>`, but separated so that each note is contained in its own `<aside>`.
 
 Endnotes or chapter notes must be placed in a `<section>` element at the end of the content file, before the closing of the top-level `<section>` element. The `<section>` element containing the notes must have the `role` attribute set to `doc-endnotes`. It must also have the `aria-label` attribute set to `Endnotes`. Note that the `<aside>` element must not be used in this case.
 
