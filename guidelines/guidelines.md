@@ -199,7 +199,11 @@ Also required are schema.org accessibility metadata, [http://http://kb.daisy.org
 <meta property="schema:accessibilityFeature">MathML</meta>
 <meta property="schema:accessibilityFeature">alternativeText</meta>
 <meta property="schema:accessibilityHazard">none</meta>
+<meta property="a11y:certifiedBy">_[the ordering agency]_</meta>
+<link rel="dcterms:conformsTo" href="_[URL to the nordic guidelines]_"/>
 ```
+
+As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy">` is the shorthand for the Ordering Agency.
 
 ##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
