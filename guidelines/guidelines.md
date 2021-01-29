@@ -673,6 +673,8 @@ However, there may be agency specific instructions to place the page number, as 
 ```
 This is only to be done if specific instructions are given by the Ordering Agency.
 
+There must be no unnumbered pages. If unnumbered pages in the source material are implicitly numbered, for instance the initial pages of a book, they must be numbered accordingly. That is, if the pagination starts with page 9 in the source material, the previous pages must be numbered 1-8. If there are other unnumbered pages in the source material they must be assigned numbers and given the `class` attribute `page-special`. This will be specified by the Ordering Agency via Editing Instructions.
+
 #### 3.3.2 Headings
 
 The `<h1>-<h6>` elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, `<section>`, `<aside>` and `<nav>`.
