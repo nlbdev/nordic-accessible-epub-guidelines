@@ -651,7 +651,7 @@ The attribute value `page-special` is required for any parts of the book not num
 
 The attribute `id` is simply a unique identifier.
 
-By default, the pagebreak elements are required to be empty, like the following examples:
+By default, the pagebreak elements are required to be empty, like in the following examples:
 
 - Inline: `<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></span>`
 - Block: `<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></div>`
