@@ -30,8 +30,9 @@
                 - [2.6.1.3 Landmarks](#2613-landmarks)
             - [2.6.2 NCX Navigation Document](#262-ncx-navigation-document)
         - [2.7 Images](#27-images)
-            - [2.7.1 Resizing of Images](#271-resizing-of-images)
-            - [2.7.2 Image editing](#272-image-editing)
+            - [2.7.1 Image file naming and directory structure](#271-image-file-naming-and-directory-structure)
+            - [2.7.2 Resizing of Images](#272-resizing-of-images)
+            - [2.7.3 Image editing](#273-image-editing)
         - [2.8 CSS](#28-css)
         - [2.9 Fonts](#29-fonts)
         - [2.10 Javascript](#210-javascript)
@@ -50,6 +51,7 @@
             - [3.3.3 Lists](#333-lists)
                 - [3.3.3.1 Numbered Lists](#3331-numbered-lists)
                 - [3.3.3.2 Unnumbered Lists](#3332-unnumbered-lists)
+                - [3.3.3.3 Tables of Contents](#3333-tables-of-contents)
             - [3.3.4 Tables](#334-tables)
             - [3.3.5 Definition Lists](#335-definition-lists)
             - [3.3.6 Notes and Note References](#336-notes-and-note-references)
@@ -57,11 +59,11 @@
             - [3.3.8 Computer Code](#338-computer-code)
             - [3.3.9 Bolding and Italics](#339-bolding-and-italics)
             - [3.3.10 Poetry and Verse](#3310-poetry-and-verse)
+        - [3.4 Thematic Breaks in the Text Flow](#34-thematic-breaks-in-the-text-flow)
     - [4 Specific Requirements for Advanced Content](#4-specific-requirements-for-advanced-content)
         - [4.1 Mathematical Content](#41-mathematical-content)
         - [4.2 Special Characters, Unicode and Phonetics](#42-special-characters-unicode-and-phonetics)
         - [4.3 Placeholders for User Input Areas](#43-placeholders-for-user-input-areas)
-        - [4.4 Thematic Breaks in the Text Flow](#44-thematic-breaks-in-the-text-flow)
     - [5 Appendix](#5-appendix)
         - [5.1 External Resources](#51-external-resources)
         - [5.2 Fixed text values used in this document](#52-fixed-text-values-used-in-this-document)
@@ -70,7 +72,6 @@
             - [5.2.3 schema.org Accessibility Metadata Values](#523-schemaorg-accessibility-metadata-values)
 
 <!-- markdown-toc end -->
-
 
 ## 1 Introduction
 
@@ -447,15 +448,32 @@ requirements are the following:
 - Text in images, line graphics and small detail must be crisp and fully legible, or with no degradation in legibility in comparison with the original image.
 - If the `jpeg` format is used, the quality setting is required to be set at around 90% (or a corresponding setting, if a different scale of measurement is used). A setting of 100% is usually unnecessary as it yields substantially larger files with little or no visible improvement of quality. If, however, there would be visible difference in quality between 90% and a higher setting, then the higher setting should be used.
 
+#### 2.7.1 Image file naming and directory structure
 Image files are required to be stored in a folder named _images_ placed at the same level relative to the package document. The images folder must not contain subfolders.
 
-#### 2.7.1 Resizing of Images
+Image files should be named according to the following file naming convention:
+
+```
+[UID]-[XXX].[png|jpg]
+```
+
+The _UID_ must be identical to the value of the `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
+
+Example:
+
+```
+X41001A-013.png
+```
+
+An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpeg`.
+
+#### 2.7.2 Resizing of Images
 
 The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small details.
 
 In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
 
-#### 2.7.2 Image editing
+#### 2.7.3 Image editing
 
 Images are required to be captured exactly as they are in the scans or publisher files provided by the Ordering Agency. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).
 
@@ -549,7 +567,7 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order in the `<spine>`, with leading zeros as needed. _role_ corresponds to the ARIA `role` of the main section element in the content file, minus the "`doc-`" part. In the absence of an ARIA role for the top-level section of the content document, the value from the `epub:type` attribute should be used instead. In the case of multiple `epub:type` (e.g. `frontmatter titlepage`)values, the most specific (e.g. `titlepage`) should be used.
+The _UID_ must be identical to the value of the `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order in the `<spine>`, with leading zeros as needed. _role_ corresponds to the ARIA `role` of the main section element in the content file, minus the "`doc-`" part. In the absence of an ARIA role for the top-level section of the content document, the value from the `epub:type` attribute should be used instead. In the case of multiple `epub:type` (e.g. `frontmatter titlepage`)values, the most specific (e.g. `titlepage`) should be used.
 
 Example:
 
