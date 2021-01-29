@@ -356,10 +356,11 @@ The principle navigation document of the EPUB package is the `xhtml` file with t
 
 ##### 2.6.1.1 The Table Of Contents
 
-The first required `<nav>` element in the file is:
+The first required `<nav>` element in the file is for the main table of contents. The `<nav>` element is required to have a `<h1>` as the first child element. The `<nav>` element must have the `aria-labelledby` attribute set to the `id` of the `<h1>` element. The `role` and `epub:type` elements must be set as follows:
 
 ```html
-<nav role="doc-toc" aria-label="Contents" epub:type="toc" id="toc">
+<nav role="doc-toc" aria-labelledby="n1" epub:type="toc">
+<h1 id="n1">Table of Contents</h1>
 ```
 
 All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
@@ -384,7 +385,8 @@ See the following link for further information (but disregard examples of unlink
 If the source material contains pagination, the next required `<nav>` element is: 
 
 ```html
-<nav role="doc-pagelist" aria-label="Print pages" epub:type="page-list">
+<nav role="doc-pagelist" aria-labelledby="n2" epub:type="page-list">
+<h1 id="n2">Page List</h1>
 ```
 
 See the following link for further information:
@@ -398,7 +400,8 @@ If no pagination occurs in the source material this may be omitted.
 The final required `<nav>` element is:
 
 ```html
-<nav role="navigation" aria-label="Landmarks" epub:type="landmarks">
+<nav role="navigation" aria-labelledby="n3" epub:type="landmarks">
+<h1 id="n3">Landmarks</h1>
 ```
 
 The Landmarks section should contain references to any main sections of the front- and rearmatter parts of the source material, as well as a reference to the start of the main content of the book, which will be the start of the first content file with the word "bodymatter" in its `epub:type` attribute of the top-level `<section>` element. The list of references may include the following, when applicable:
