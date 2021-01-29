@@ -152,7 +152,8 @@ The following xml declaration must be placed at the first line of the document:
 Suppliers are required to apply the following attributes and values to the `<package>` element:
 
 - `xmlns="http://www.idpf.org/2007/opf"`
-- `xmlns:nordic="http://www.mtm.se/epub/"`
+- `xmlns:dc="http://purl.org/dc/elements/1.1/"`
+- `prefix="nordic: http://www.mtm.se/epub/"`
 - `version="3.0"`
 - `xml:lang="xx"` (The publication language code)
 - `unique-identifier="pub-identifier"`
@@ -165,21 +166,17 @@ Required child elements to the `<package>` element are:
 
 #### 2.4.1 Metadata
 
-The following name space declaration is required to be made in the `<metadata>` element:
-
-- `xmlns:dc="http://purl.org/dc/elements/1.1/"`
-
-The following metadata are required to be placed in the `<metadata>`:
+The following metadata are required to be placed in the `<metadata>` element:
 
 ```xml
-<dc:title id="title"> _[the title of the publication]_ </dc:title>
-<dc:language> _[language code for the main language]_ </dc:language>
-<dc:identifier id="pub-identifier"> _[production UID provided by the ordering agency]_ </dc:identifier>
-<dc:source> _[ISBN of the publication]_ </dc:source>
-<dc:creator> _[author of the publication – one element for each author]_ </dc:creator>
+<dc:title id="title">_[the title of the publication]_</dc:title>
+<dc:language>_[language code for the main language]_</dc:language>
+<dc:identifier id="pub-identifier">_[production UID provided by the ordering agency]_</dc:identifier>
+<dc:source>_[ISBN of the publication]_</dc:source>
+<dc:creator>_[author of the publication (one element for each author)]_</dc:creator>
 <dc:format>application/epub+zip</dc:format>
-<dc:publisher> _[the ordering agency]_ </dc:publisher>
-<dc:date> _[date of completion]_ </dc:date>
+<dc:publisher>_[the ordering agency]_</dc:publisher>
+<dc:date>_[date of completion]_</dc:date>
 <meta property="dcterms:modified"> _[date of completion]_ </meta>
 <meta property="nordic:supplier"> _[company name of supplier]_ </meta>
 <meta property="nordic:guidelines">2020-1</meta>
@@ -342,11 +339,11 @@ The `<title>` element of every `xhtml` content document must match the `dc:title
 The content documents are required to contain two `<meta>` elements.
 
 ```html
-<meta name="dc:identifier" content=" _[production UID]_ "/>
+<meta name="dc:identifier" content="_[production UID]_"/>
 <meta name="viewport" content="width=device-width"/>
 ```
 
-The production UID must match the `dc:identifier` in the package.
+The production UID must match the `dc:identifier` in package.opf.
 
 ### 2.6 Navigation Documents
 
