@@ -1,7 +1,7 @@
 # Nordic Guidelines for the Production of Accessible EPUB 3
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
+## Table of Contents
 
 - [Nordic Guidelines for the Production of Accessible EPUB 3](#nordic-guidelines-for-the-production-of-accessible-epub-3)
     - [1 Introduction](#1-introduction)
@@ -291,7 +291,7 @@ If a fall-back ncx navigation document is included, this is required to be refer
 
 The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required to use the extension `.xhtml`.
 
-**2.5.1.1 XML Declaration and Encoding**
+##### 2.5.1.1 XML Declaration and Encoding
 
 The following xml declaration must be used:
 
@@ -299,13 +299,15 @@ The following xml declaration must be used:
 <?xml version="1.0" encoding="utf-8"?>
 ```
 
-**2.5.1.2 Document Type Declaration**
+##### 2.5.1.2 Document Type Declaration
+
 The following document type declaration must be included:
 
 ```html
 <!DOCTYPE html>
 ```
-**2.5.1.3 HTML Root Attributes**
+
+##### 2.5.1.3 HTML Root Attributes
 
 Suppliers are required to include the following attributes on the html root element:
 
@@ -314,14 +316,15 @@ Suppliers are required to include the following attributes on the html root elem
 - `xml:lang` – XML Language definition
 - `lang` – HTML Language definition
 
-**2.5.1.4 Namespaces**
+##### 2.5.1.4 Namespaces
 
 The following namespace values are required to be applied to the namespace attributes:
 
 - `xmlns="http://www.w3.org/1999/xhtml"`
 - `xmlns:epub="http://www.idpf.org/2007/ops"`
 
-**2.5.1.5 Language Definition**
+##### 2.5.1.5 Language Definition
+
 Suppliers are required to identify primary languages for each content file instance using the `xml:lang` and `lang` attributes. The values for `xml:lang` and `lang` must be the same.
 
 If not requested otherwise by the Ordering Agency, language should be coded using values from the IANA registry of valid language codes, [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
