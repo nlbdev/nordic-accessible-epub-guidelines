@@ -625,15 +625,15 @@ For further information about the common HTML elements and their attributes, ple
 All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by the Ordering Agency:
 
 - Inline: `<span epub:type="pagebreak" role="doc-pagebreak">`
-- Other: `<div epub:type="pagebreak" role="doc-pagebreak">`
+- Block: `<div epub:type="pagebreak" role="doc-pagebreak">`
 
 Additionally required attributes:
 
-- `title=""`
+- `aria-label=""`
 - `class=""`
 - `id=""`
 
-The value for the `title` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, the title attribute must have a value corresponding to the number implicit for that page.
+The value for the `aria-label` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
 
 In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
 
@@ -651,18 +651,16 @@ The attribute value `page-special` is required for any parts of the book not num
 
 The attribute `id` is simply a unique identifier.
 
-By default, the pagebreak elements are required to be empty:
+By default, the pagebreak elements are required to be empty, like the following examples:
 
-- Inline: `<span epub:type="pagebreak" role="doc-pagebreak"></span>`
-- Other: `<div epub:type="pagebreak" role="doc-pagebreak"></div>`
+- Inline: `<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></span>`
+- Block: `<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></div>`
 
 However, there may be agency specific instructions to place the page number, as it is displayed in the source material, as content in the pagebreak elements. For example:
 
 ```html
-<div class="page-normal" role="doc-pagebreak" id="page-38"
-title="38">38</div>
+<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38">38</span>`
 ```
-
 This is only to be done if specific instructions are given by the Ordering Agency.
 
 #### 3.3.2 Figures
