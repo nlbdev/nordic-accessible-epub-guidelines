@@ -512,6 +512,8 @@ Validation of EPUB files should be done using EPUBCheck for structural validity 
 - [https://github.com/w3c/epubcheck/releases](https://github.com/w3c/epubcheck/releases)
 - [https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/](https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/)
 
+The Ordering Agencies are currently developing a specific validation tool based on these guidelines. When this tool is available it will be the primary validation method.
+
 ## 3 General Requirements for Content Documents
 
 The EPUB Content File structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual XHTML content files. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
