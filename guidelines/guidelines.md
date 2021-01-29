@@ -669,7 +669,7 @@ This is only to be done if specific instructions are given by the Ordering Agenc
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
-Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed as the first child of the `<figure>` element. If no caption is present, the `<img>` element will be the first child.
+Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element with a `class` attribute set to `image`. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed as the first child of the `<figure>` element. If no caption is present, the `<img>` element will be the first child.
 
 Small symbols or other non-typographical content that might occur inline, are required to be represented with `<img>` elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
 
@@ -691,10 +691,10 @@ with the same value as the id of the `<aside>` placeholder.
 The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled:
 
 ```html
-<figure>
+<figure class="image">
 	<figcaption>...</figcaption>
-	<img src="images/img0012.jpg" alt="figur" aria-describedby="desc0012" />
-	<aside class="fig-desc" id="desc0012">
+	<img src="images/X41001A-012.jpg" alt="figure" aria-describedby="desc012" />
+	<aside class="fig-desc" id="desc012">
 		<p>...</p>
 
 	</aside>
@@ -717,6 +717,31 @@ Accessibility guidelines require all images to be supplied with a short, descrip
 - `logo` – for logos
 
 If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
+
+##### 3.3.2.3 Image Series
+
+If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate `<figure>` elements. The whole series must then be wrapped in a `<figure>` element where the `class` attribute is set to `image-series`.
+
+If there is a caption for the image series as a whole, this must be marked up with the `<figcaption>` element and placed inside the outer `<figure>` element, before the individual `<figure>` elements containing the images. Any caption for individual images are placed together with that image as described above.
+
+This is how the markup will look like:
+
+```html
+<figure class="image-series">
+   <figcaption>...</figcaption>
+   <figure class="image">
+      <figcaption>...</figcaption>
+      <img src="images/X41001A-012.jpg" alt="figure" aria-describedby="desc012" />
+      <aside class="fig-desc" id="desc012">
+         <p>...</p>
+      </aside>
+   </figure>
+   <figure class="image">
+      ...
+   </figure>
+   ...
+</figure>
+```
 
 #### 3.3.3 Lists
 
