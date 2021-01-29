@@ -665,6 +665,10 @@ This is only to be done if specific instructions are given by the Ordering Agenc
 
 #### 3.3.2 Headings
 
+The `<h1>-<h6>` elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, `<section>`, `<aside>` and `<nav>`.
+
+Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be marked up using `<p epub:type="bridgehead">`. Bridgehead markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
+
 #### 3.3.3 Figures
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
