@@ -933,44 +933,44 @@ The default text values given in this document are, for practical reasons, only 
 For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
 
 ### 5.2.1 nav.xhtml headings
-| English (default) | Swedish      |
-|-------------------|--------------|
-| Pages             | Sidindelning |
-| Contents          | Innehåll     |
-| Landmarks         | Navigation   |
+| English (default) | Swedish      | [...] |
+|-------------------|--------------|-------|
+| Pages             | Sidindelning |       |
+| Contents          | Innehåll     |       |
+| Landmarks         | Navigation   |       |
 
 
 #### 5.2.2 aria-label Values
-| English (default)     | Swedish            |
-|-----------------------|--------------------|
-| Cover                 | Omslag             |
-| Front cover           | Framsida           |
-| Back cover            | Baksida            |
-| Jacket left flap      | Vänsterflik        |
-| Jacket right flap     | Högerflik          |
-| Publisher information | Förlagsinformation |
-| Dedication            | Dedikation         |
-| Epigraph              | Epigraf            |
-| Contents              | Innehåll           |
-| Start of Content      | Innehållets början |
+| English (default)     | Swedish            | [...] |
+|-----------------------|--------------------|-------|
+| Cover                 | Omslag             |       |
+| Front cover           | Framsida           |       |
+| Back cover            | Baksida            |       |
+| Jacket left flap      | Vänsterflik        |       |
+| Jacket right flap     | Högerflik          |       |
+| Publisher information | Förlagsinformation |       |
+| Dedication            | Dedikation         |       |
+| Epigraph              | Epigraf            |       |
+| Contents              | Innehåll           |       |
+| Start of Content      | Innehållets början |       |
 
 
 #### 5.2.3 Image Alternative Text Values
-| English (default) | Swedish       | Norwegian    |
-|-------------------|---------------|--------------|
-| photo             | foto          | foto         |
-| illustration      | illustration  | illustrasjon |
-| figure            | figur         | figur        |
-| symbol            | symbol        | symbol       |
-| map               | karta         | kart         |
-| drawing           | teckning      | tegning      |
-| comic             | tecknad serie | tegneserie   |
-| logo              | logotyp       | logo         |
+| English (default) | Swedish       | Norwegian    | [...] |
+|-------------------|---------------|--------------|-------|
+| photo             | foto          | foto         |       |
+| illustration      | illustration  | illustrasjon |       |
+| figure            | figur         | figur        |       |
+| symbol            | symbol        | symbol       |       |
+| map               | karta         | kart         |       |
+| drawing           | teckning      | tegning      |       |
+| comic             | tecknad serie | tegneserie   |       |
+| logo              | logotyp       | logo         |       |
 
 
 #### 5.2.4 schema.org Accessibility Metadata Values
-| English (default)                                                                   | Swedish                                                                                           |
-|-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| This publication conforms to the EPUB Accessibility specification at WCAG Level AA. | Den här publikationen följer EPUB Accessibility-specifikationen och möter kraven i WCAG, nivå AA. |
+| English (default)                                                                   | Swedish                                                                                           | [...] |
+|-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------|
+| This publication conforms to the EPUB Accessibility specification at WCAG Level AA. | Den här publikationen följer EPUB Accessibility-specifikationen och möter kraven i WCAG, nivå AA. |       |
 
 
