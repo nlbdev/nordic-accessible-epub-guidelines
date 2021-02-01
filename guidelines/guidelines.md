@@ -190,7 +190,7 @@ If the source material does not have an ISBN, ISSN or any other systematic sourc
 Also required are schema.org accessibility metadata, [http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
 
 ```xml
-<meta property="schema:accessibilitySummary">This publication conforms to the EPUB Accessibility specification at WCAG Level AA.</meta>
+<meta property="schema:accessibilitySummary">This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</meta>
 <meta property="schema:accessMode">textual</meta>
 <meta property="schema:accessMode">visual</meta>
 <meta property="schema:accessModeSufficient">textual visual</meta>
@@ -969,8 +969,8 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 
 
 #### 5.2.4 schema.org Accessibility Metadata Values
-| English (default)                                                                   | Swedish                                                                                           | [...] |
-|-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------|
-| This publication conforms to the EPUB Accessibility specification at WCAG Level AA. | Den här publikationen följer EPUB Accessibility-specifikationen och möter kraven i WCAG, nivå AA. |       |
+| English (default)                                                                                           | Swedish                                                                                                                           | [...] |
+|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------|
+| This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Den här publikationen är framställd i enlighet med the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. |       |
 
 
