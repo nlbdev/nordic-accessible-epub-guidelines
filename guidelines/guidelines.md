@@ -95,7 +95,7 @@ The different levels of specification can be expressed as the following hierarch
 3. General Ordering Agency-specific Guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
 
-Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation are outside the scope of this document.
+Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation is outside the scope of this document.
 
 ## 2 Format Requirements
 
