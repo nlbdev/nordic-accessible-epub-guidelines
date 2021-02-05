@@ -932,45 +932,48 @@ The default text values given in this document are, for practical reasons, only 
 
 For convenience, the values are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations to the main languages either separately or jointly.
 
-### 5.2.1 nav.xhtml headings
-| English (default) | Swedish      | [...] |
-|-------------------|--------------|-------|
-| Pages             | Sidindelning |       |
-| Contents          | Innehåll     |       |
-| Landmarks         | Navigation   |       |
+#### 5.2.1 nav.xhtml headings
+| English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish    | [...] |
+|-------------------|--------------|--------------------|---------------------|------------|-------|
+| Pages             | Sidindelning | Liste over sider   | Liste over sider    | Sivut      |       |
+| Contents          | Innehåll     | Innhold            | Innhald             | Sisällys   |       |
+| Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Navigointi |       |
 
 
 #### 5.2.2 aria-label Values
-| English (default)     | Swedish            | [...] |
-|-----------------------|--------------------|-------|
-| Cover                 | Omslag             |       |
-| Front cover           | Framsida           |       |
-| Back cover            | Baksida            |       |
-| Jacket left flap      | Vänsterflik        |       |
-| Jacket right flap     | Högerflik          |       |
-| Publisher information | Förlagsinformation |       |
-| Dedication            | Dedikation         |       |
-| Epigraph              | Epigraf            |       |
-| Contents              | Innehåll           |       |
-| Start of Content      | Innehållets början |       |
+| English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | [...] |
+|-----------------------|--------------------|--------------------|---------------------|----------------|-------|
+| Cover                 | Omslag             | Omslag             | Omslag              | Kansi          |       |
+| Front cover           | Framsida           | Forside            | Framside            | Etukansi       |       |
+| Back cover            | Baksida            | Bakside            | Bakside             | Takakansi      |       |
+| Jacket left flap      | Vänsterflik        | Venstre inbrett    | Venstre inbrett     | Etulieve       |       |
+| Jacket right flap     | Högerflik          | Høyre inbrett      | Høgre inbrett       | Takalieve      |       |
+| Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot |       |
+| Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        |       |
+| Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       |       |
+| Contents              | Innehåll           | Innhold            | Innhald             | Sisällys       |       |
+| Start of Content      | Innehållets början | Start av innhold   | Start av innhald    | Sisällön alku  |       |
 
 
 #### 5.2.3 Image Alternative Text Values
-| English (default) | Swedish       | Norwegian    | [...] |
-|-------------------|---------------|--------------|-------|
-| photo             | foto          | foto         |       |
-| illustration      | illustration  | illustrasjon |       |
-| figure            | figur         | figur        |       |
-| symbol            | symbol        | symbol       |       |
-| map               | karta         | kart         |       |
-| drawing           | teckning      | tegning      |       |
-| comic             | tecknad serie | tegneserie   |       |
-| logo              | logotyp       | logo         |       |
+| English (default) | Swedish       | Norwegian    | Finnish   | [...] |
+|-------------------|---------------|--------------|-----------|-------|
+| photo             | foto          | foto         | valokuva  |       |
+| illustration      | illustration  | illustrasjon | kuvitus   |       |
+| figure            | figur         | figur        | kuvio     |       |
+| symbol            | symbol        | symbol       | symboli   |       |
+| map               | karta         | kart         | kartta    |       |
+| drawing           | teckning      | tegning      | piirros   |       |
+| comic             | tecknad serie | tegneserie   | sarjakuva |       |
+| logo              | logotyp       | logo         | logo      |       |
 
 
 #### 5.2.4 schema.org Accessibility Metadata Values
-| English (default)                                                                                           | Swedish                                                                                                                           | [...] |
-|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------|
-| This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Den här publikationen är framställd i enlighet med the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. |       |
+| English (default)                                                                                           | Swedish                                                                                                                           | Norwegian                                                                                                       | Finnish                                                                                                        | [...] |
+|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-------|
+| This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Den här publikationen är framställd i enlighet med the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Denne publikasjonen er i samsvar med Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Tämä julkaisu noudattaa ohjeistusta Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. |      |
 
-
+#### 5.2.5 Footnote and Endnote Backlink
+| English (default)         | Swedish                         | [...] |
+|---------------------------|---------------------------------|-------|
+| Go to the note reference. | Gå tillbaka till notreferensen. |       |
