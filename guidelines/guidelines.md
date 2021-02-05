@@ -946,8 +946,8 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 | Cover                 | Omslag             | Omslag             | Omslag              | Kansi          |       |
 | Front cover           | Framsida           | Forside            | Framside            | Etukansi       |       |
 | Back cover            | Baksida            | Bakside            | Bakside             | Takakansi      |       |
-| Jacket left flap      | Vänsterflik        | Venstre inbrett    | Venstre inbrett     | Etulieve       |       |
-| Jacket right flap     | Högerflik          | Høyre inbrett      | Høgre inbrett       | Takalieve      |       |
+| Jacket left flap      | Vänsterflik        | Venstre innbrett   | Venstre innbrett    | Etulieve       |       |
+| Jacket right flap     | Högerflik          | Høyre innbrett     | Høgre innbrett      | Takalieve      |       |
 | Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot |       |
 | Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        |       |
 | Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       |       |
@@ -974,6 +974,6 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 | This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Den här publikationen är framställd i enlighet med the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Denne publikasjonen er i samsvar med Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Tämä julkaisu noudattaa ohjeistusta Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. |      |
 
 #### 5.2.5 Footnote and Endnote Backlink
-| English (default)         | Swedish                         | [...] |
-|---------------------------|---------------------------------|-------|
-| Go to the note reference. | Gå tillbaka till notreferensen. |       |
+| English (default)         | Swedish                         | Norwegian              | [...] |
+|---------------------------|---------------------------------|------------------------|-------|
+| Go to the note reference. | Gå tillbaka till notreferensen. | Gå til notereferansen. |       |
