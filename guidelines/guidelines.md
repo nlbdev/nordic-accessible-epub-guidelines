@@ -934,10 +934,10 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 
 #### 5.2.1 nav.xhtml headings
 | English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish    | Dutch            | [...] |
-|-------------------|--------------|--------------------|---------------------|------------|------------------|------|
-| Pages             | Sidindelning | Liste over sider   | Liste over sider    | Sivut      | Paginering       |      |
-| Contents          | Innehåll     | Innhold            | Innhald             | Sisällys   | Inhoud           |      |
-| Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Navigointi | Oriëntatiepunten |      |
+|-------------------|--------------|--------------------|---------------------|------------|------------------|-------|
+| Pages             | Sidindelning | Liste over sider   | Liste over sider    | Sivut      | Paginering       |       |
+| Contents          | Innehåll     | Innhold            | Innhald             | Sisällys   | Inhoud           |       |
+| Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Navigointi | Oriëntatiepunten |       |
 
 
 #### 5.2.2 aria-label Values
