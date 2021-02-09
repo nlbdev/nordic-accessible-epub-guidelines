@@ -941,18 +941,18 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 
 
 #### 5.2.2 aria-label Values
-| English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | [...] |
-|-----------------------|--------------------|--------------------|---------------------|----------------|-------|
-| Cover                 | Omslag             | Omslag             | Omslag              | Kansi          |       |
-| Front cover           | Framsida           | Forside            | Framside            | Etukansi       |       |
-| Back cover            | Baksida            | Bakside            | Bakside             | Takakansi      |       |
-| Jacket left flap      | Vänsterflik        | Venstre innbrett   | Venstre innbrett    | Etulieve       |       |
-| Jacket right flap     | Högerflik          | Høyre innbrett     | Høgre innbrett      | Takalieve      |       |
-| Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot |       |
-| Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        |       |
-| Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       |       |
-| Contents              | Innehåll           | Innhold            | Innhald             | Sisällys       |       |
-| Start of Content      | Innehållets början | Start av innhold   | Start av innhald    | Sisällön alku  |       |
+| English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | [...] |
+|-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-------|
+| Cover                 | Omslag             | Omslag             | Omslag              | Kansi          | Omslag              |       |
+| Front cover           | Framsida           | Forside            | Framside            | Etukansi       | Voorkant            |       |
+| Back cover            | Baksida            | Bakside            | Bakside             | Takakansi      | Achterkant          |       |
+| Jacket left flap      | Vänsterflik        | Venstre innbrett   | Venstre innbrett    | Etulieve       | Linker flaptekst    |       |
+| Jacket right flap     | Högerflik          | Høyre innbrett     | Høgre innbrett      | Takalieve      | Rechter flaptekst   |       |
+| Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot | Uitgeversinformatie |       |
+| Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        | Opdracht            |       |
+| Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       | Epigraaf            |       |
+| Contents              | Innehåll           | Innhold            | Innhald             | Sisällys       | Inhoud              |       |
+| Start of Content      | Innehållets början | Start av innhold   | Start av innhald    | Sisällön alku  | Begin inhoud        |       |
 
 
 #### 5.2.3 Image Alternative Text Values
