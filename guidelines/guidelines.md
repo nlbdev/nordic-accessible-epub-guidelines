@@ -974,6 +974,6 @@ For convenience, the values are listed in the tables below. The Ordering Agencie
 | This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Den här publikationen är framställd i enlighet med the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Denne publikasjonen er i samsvar med Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. | Tämä julkaisu noudattaa ohjeistusta Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1. |      |
 
 #### 5.2.5 Footnote and Endnote Backlink
-| English (default)         | Swedish                         | Norwegian              | [...] |
-|---------------------------|---------------------------------|------------------------|-------|
-| Go to the note reference. | Gå tillbaka till notreferensen. | Gå til notereferansen. |       |
+| English (default)         | Swedish                         | Norwegian              | Finnish             | [...] |
+|---------------------------|---------------------------------|------------------------|---------------------|-------|
+| Go to the note reference. | Gå tillbaka till notreferensen. | Gå til notereferansen. | Siirry viitteeseen. |       |
