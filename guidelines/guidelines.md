@@ -189,7 +189,7 @@ If the source material does not have an ISBN, ISSN or any other systematic sourc
 
 ##### 2.4.1.1 schema.org Accessibility Metadata
 
-Also required are schema.org accessibility metadata, [http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
+Also required are schema.org accessibility metadata, [http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, [https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/](https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/). It will typically be something like this, but not necessarily exactly the same:
 
 ```xml
 <meta property="schema:accessibilitySummary">This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</meta>
@@ -444,8 +444,7 @@ The `<head>` element must contain the following `<meta>` element:
 <meta name="dtb:uid" content=" _[production UID provided by the ordering agency]_ "/>
 ```
 
-All headings must be included in the `<navMap>` and the heading levels must be implied
-through nesting.
+All headings must be included in the `<navMap>` and the heading levels must be implied through nesting.
 
 ### 2.7 Images
 
@@ -486,10 +485,9 @@ The maximum image size is set to 800 pixels on the longest side of the image, un
 
 In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
 
-#### 2.7.3 Image editing
+#### 2.7.3 Image Editing
 
 Images are required to be captured exactly as they are in the scans or publisher files provided by the Ordering Agency. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).
-
 
 When whole sections or parts of text is placed on top of a background image, the text may need to be edited out of the background, if possible. However, no advanced restoration of lost image details are required. Note that if a publisher file is provided, images and text may have been placed in different layers and the image can be extracted without any text.
 
@@ -611,7 +609,7 @@ The front cover, when available, must be captured as a `.jpg` or `.png` image fi
 
 Note that the `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to this content file.
 
-#### 3.3.2 Title page
+#### 3.3.2 Title Page
 
 Content corresponding to the publication’s full title must be included in an `<h1>` element.
 
@@ -636,7 +634,7 @@ These guidelines will not give highly detailed descriptions of how to correctly 
 
 For further information about the common HTML elements and their attributes, please refer to any online resource on HTML 5, for instance:
 
-- The formal HTML(5) specification: https://html.spec.whatwg.org/multipage/
+- The formal HTML(5) specification: [https://html.spec.whatwg.org/multipage/](https://html.spec.whatwg.org/multipage/)
 - [https://www.w3schools.com/](https://www.w3schools.com/)
 
 #### 3.4.1 Pagination
@@ -680,6 +678,7 @@ However, there may be agency specific instructions to place the page number, as 
 ```html
 <span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38">38</span>`
 ```
+
 This is only to be done if specific instructions are given by the Ordering Agency.
 
 There must be no unnumbered pages. If unnumbered pages in the source material are implicitly numbered, for instance the initial pages of a book, they must be numbered accordingly. That is, if the pagination starts with page 9 in the source material, the previous pages must be numbered 1-8. If there are other unnumbered pages in the source material they must be assigned numbers and given the `class` attribute `page-special`. This will be specified by the Ordering Agency via Editing Instructions.
@@ -835,7 +834,7 @@ Backlinks are required for each note, done according to the examples in the Know
 
 Note references are not to be marked up with `<sup>`. This is handled by the default CSS.
 
-#### 3.4.8 Sidebars, text boxes etc.
+#### 3.4.8 Sidebars, Text Boxes etc.
 
 The `<aside>` element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
 
@@ -847,7 +846,7 @@ For certain publications there may be instructions given to add `aria-label` att
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
-Headings in text boxes are required to be marked up with a `<h[x]>` element. Unless specific instructions are given, these headings should not be included in the navigation document.
+Headings in text boxes is by default required to be marked up using `<p epub:type="bridgehead">`. These are structurally unimportant headings and will not be included in the navigation document. If, however, certain text boxes should be included in the navigation document, they must be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text. Only text boxes marked up with `<aside>` can have `<h[x]>` headings.
 
 #### 3.4.9 Computer Code
 
@@ -899,6 +898,7 @@ All mathematical or scientific content, content that contains mathematical opera
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
 
 ### 4.2 Special Characters, Unicode and Phonetics
+
 If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
@@ -938,13 +938,13 @@ In educational material, especially for younger children, it is common that the 
 - International Phonetic Alphabet in Unicode Reference: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
 - Greek and Coptic Letters in Unicode Reference: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 
-### 5.2 Fixed text values used in this document
+### 5.2 Language Dependent Fixed Text Values
 
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by the Ordering Agency, these values, when applied to a specific publication, should follow the primary language of that publication.
 
 For convenience, the values for all the main languages of the Ordering Agencies are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations if the main language of a title is not one of those listed here.
 
-#### 5.2.1 nav.xhtml headings
+#### 5.2.1 nav.xhtml Headings
 
 | English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish    | Dutch            | Danish           | Icelandic   | German              |
 |-------------------|--------------|--------------------|---------------------|------------|------------------|------------------|-------------|---------------------|
