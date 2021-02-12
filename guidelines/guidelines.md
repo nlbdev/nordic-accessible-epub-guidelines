@@ -501,8 +501,6 @@ The `<link>` element is required to be applied to the relevant content documents
 
 Fonts present in PDF source material must not be included in the EPUB, unless specifically indicated by the Ordering Agency.
 
-Suppliers must not include fonts in the EPUB unless requested otherwise by the Ordering Agency.
-
 Fonts, when present, must be stored in a folder named _fonts_ and placed at the same level relative to the package document.
 
 ### 2.10 Javascript
@@ -589,7 +587,7 @@ The _UID_ must be identical to the value of the `dc:identifier` metadata element
 Example:
 
 ```
-X41001A-010- chapter.xhtml
+X41001A-010-chapter.xhtml
 ```
 
 ### 3.3 Special Content Requirements
@@ -614,7 +612,7 @@ Note that the `linear="no"` attribute must be applied to the `itemref` element i
 Content corresponding to the publication’s full title must be included in an `<h1>` element.
 
 ```html
-<h1 epub:type="fulltitle" class="title" id=" booktitle">
+<h1 epub:type="fulltitle" class="title" id="booktitle">
 ```
 
 Use of the `<span>` element is only required when a subtitle is present. The following attribute usage must be applied to the appropriate `<span>` element:
@@ -832,7 +830,7 @@ Backlinks are required for each note, done according to the examples in the Know
 <p><a href="#ref" role="doc-backlink">Go to the note reference.</a></p>
 ```
 
-Note references are not to be marked up with `<sup>`. This is handled by the default CSS.
+Note references are not to be marked up with `<sup>`. This is handled by the default CSS provided by the Ordering Agency.
 
 #### 3.4.8 Sidebars, Text Boxes etc.
 
