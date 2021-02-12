@@ -207,6 +207,8 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 
 As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy">` is the shorthand for the Ordering Agency.
 
+Section 5.2.4 of this document contains language specific texts for `<meta property="schema:accessibilitySummary">`.
+
 ##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
 
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
@@ -359,6 +361,8 @@ The production UID must match the `dc:identifier` in package.opf.
 #### 2.6.1 EPUB 3.2 Navigation Document
 
 The principle navigation document of the EPUB package is the `xhtml` file with the `properties` attribute set to nav in the `<manifest>` section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
+
+Section 5.2.1 of this document contains language specific headings for the `<nav>` sections of the navigation document that are listed below.
 
 ##### 2.6.1.1 The Table Of Contents
 
@@ -572,6 +576,8 @@ If the section is untitled, the `aria-label` attribute is required to be used in
 | `@role="doc-epigraph"`   | Epigraph                   |
 | `@role="doc-toc"`        | Contents                   |
 
+Section 5.2.2 of this document contains language specific values.
+
 See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
 	
 ### 3.2 File Naming Convention
@@ -738,6 +744,8 @@ Accessibility guidelines require all images to be supplied with a short, descrip
 - `comic` – for comic strips and panels
 - `logo` – for logos
 
+Section 5.2.3 of this document contains language specific alt-text values.
+
 If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
 
 ##### 3.4.3.3 Image Series
@@ -829,6 +837,8 @@ Backlinks are required for each note, done according to the examples in the Know
 ```html
 <p><a href="#ref" role="doc-backlink">Go to the note reference.</a></p>
 ```
+
+Section 5.2.5 of this document contains language specific backlink texts.
 
 Note references are not to be marked up with `<sup>`. This is handled by the default CSS provided by the Ordering Agency.
 
