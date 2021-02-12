@@ -521,15 +521,34 @@ The Ordering Agencies are currently developing a specific validation tool based 
 
 ## 3 General Requirements for Content Documents
 
+### 3.1 Structural Divisons and Semantics
+
 The EPUB Content File structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual XHTML content files. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
 
-The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in `<section>` elements, with proper nesting of subsections. Furthermore, an appropriate value of the ARIA `role` attribute, as well as the appropriate `epub:type` attribute, must be applied to the `<section>` element for the top level(s) of each content file. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `<section>` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
+The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in `<section>` elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `<section>` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
-The `role` attribute is required for the top level `<section>` element of each content file and must have a relevant value from the following list:
+The semantic role of each content document must be specified, when possible. This is done by adding the `role` and `epub:type` attributes to the top level `<section>` element of each content file. The available `role` attribute values are listed here:
 
-https://www.w3.org/TR/dpub-aria-1.0/#roles
+[https://www.w3.org/TR/dpub-aria-1.0/#roles](https://www.w3.org/TR/dpub-aria-1.0/#roles)
 
-All `<section>` elements are required to have a label. When the `<section>` has a heading, usually `<h1>`, `<h2>`, etc., the heading serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
+When the content file can be matched to one of the roles listed, the top level `<section>` element is required to have the `role` attribute with that matching value set. If no suitable role exists the `role` attribute may be omitted.  
+
+The `epub:type` attribute is also required for the top level `<section>` element of each content file and must first contain one of the following partition values:
+
+- `cover`
+- `frontmatter`
+- `bodymatter`
+- `backmatter`
+
+The `frontmatter`, `bodymatter` and `backmatter` partition values must also be combined with a divisioning or sectioning value found here:
+
+[https://idpf.github.io/epub-vocabs/structure/](https://idpf.github.io/epub-vocabs/structure/)
+
+If no matching divisioning or sectioning value can be found, the `epub:type` will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
+
+If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `<section>` elements, which will contain the chapters.
+
+Furthermore, all `<section>` elements are required to have a label. When the `<section>` has a heading, usually `<h1>`, `<h2>`, etc., the heading serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
 
 ```html
 <section role="doc-chapter" aria-labelledby="hd01" epub:type="bodymatter chapter">
@@ -553,23 +572,8 @@ If the section is untitled, the `aria-label` attribute is required to be used in
 | `@role="doc-toc"`        | Contents                   |
 
 See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
-
-The `epub:type` attribute is also required for the top level `<section>` element of each content file and must first contain one of the following partition values:
-
-- `cover`
-- `frontmatter`
-- `bodymatter`
-- `backmatter`
-
-After the partition value the `epub:type` value must contain one division or sectioning value found here:
-
-https://idpf.github.io/epub-vocabs/structure/
-
-The exception to this is the content file containing the cover image of the printed book, which is required to have simply `epub:type="cover"`.
-
-If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `<section>` elements, which will contain the chapters.
 	
-### 3.1 File Naming Convention
+### 3.2 File Naming Convention
 
 The basic scheme for naming individual files is:
 
@@ -585,11 +589,11 @@ Example:
 X41001A-010- chapter.xhtml
 ```
 
-### 3.2 Special Content Requirements
+### 3.3 Special Content Requirements
 
 Some content files have certain contents that are required to be included and marked up correctly.
 
-#### 3.2.1 Cover
+#### 3.3.1 Cover
 
 The following class attributes must applied to the child `<section>` elements where appropriate:
 
@@ -602,7 +606,7 @@ The front cover, when available, must be captured as a `.jpg` or `.png` image fi
 
 Note that the `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to this content file.
 
-#### 3.2.2 Title page
+#### 3.3.2 Title page
 
 Content corresponding to the publication’s full title must be included in an `<h1>` element.
 
@@ -615,13 +619,13 @@ Use of the `<span>` element is only required when a subtitle is present. The fol
 - `<span epub:type="title">`
 - `<span epub:type="subtitle">`
 
-#### 3.2.3 Parts
+#### 3.3.3 Parts
 
 Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must be marked up as `<h2>`, even though they are the first heading of its content file. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
 
 Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the `<h1>` and the chapter headings `<h2>` and the `<section>` element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, `role` and `epub:type`, must still be given to the `<section>` elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.
 
-### 3.3 Mark-up Requirements
+### 3.4 Mark-up Requirements
 
 These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like `<p>`, `<blockquote>`, `<aside>`, `<ul>`, `<ol>`, `<dl>`, `<table>`, `<figure>` etc. and the common structural elements like `<section>` and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.
 
@@ -630,7 +634,7 @@ For further information about the common HTML elements and their attributes, ple
 - The formal HTML(5) specification: https://html.spec.whatwg.org/multipage/
 - [https://www.w3schools.com/](https://www.w3schools.com/)
 
-#### 3.3.1 Pagination
+#### 3.4.1 Pagination
 
 All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by the Ordering Agency:
 
@@ -675,13 +679,13 @@ This is only to be done if specific instructions are given by the Ordering Agenc
 
 There must be no unnumbered pages. If unnumbered pages in the source material are implicitly numbered, for instance the initial pages of a book, they must be numbered accordingly. That is, if the pagination starts with page 9 in the source material, the previous pages must be numbered 1-8. If there are other unnumbered pages in the source material they must be assigned numbers and given the `class` attribute `page-special`. This will be specified by the Ordering Agency via Editing Instructions.
 
-#### 3.3.2 Headings
+#### 3.4.2 Headings
 
 The `<h1>-<h6>` elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, `<section>`, `<aside>` and `<nav>`.
 
 Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be marked up using `<p epub:type="bridgehead">`. Bridgehead markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
 
-#### 3.3.3 Figures
+#### 3.4.3 Figures
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
@@ -691,7 +695,7 @@ Small symbols or other non-typographical content that might occur inline, are re
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
-##### 3.3.3.1 Text Extraction from Images
+##### 3.4.3.1 Text Extraction from Images
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder within the `<figure>` element of the image. The placeholder should be placed after the `<img>` element, before the closing `</figure>` tag. Suppliers are required to use the `<aside>` element for this placeholder with the following attributes:
 
@@ -719,7 +723,7 @@ The extracted text is then placed inside the placeholder, marked up correctly an
 
 Note that this is the construction that is used by several Ordering Agencies for adding image descriptions in post-production.
 
-##### 3.3.3.2 Alt-texts
+##### 3.4.3.2 Alt-texts
 
 Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:
 
@@ -734,7 +738,7 @@ Accessibility guidelines require all images to be supplied with a short, descrip
 
 If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
 
-##### 3.3.3.3 Image Series
+##### 3.4.3.3 Image Series
 
 If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate `<figure>` elements. The whole series must then be wrapped in a `<figure>` element where the `class` attribute is set to `image-series`.
 
@@ -759,17 +763,17 @@ This is how the markup will look like:
 </figure>
 ```
 
-#### 3.3.4 Lists
+#### 3.4.4 Lists
 
 Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Any such content is required to be marked up with either `<ol>` (ordered list) or `<ul>` (unordered list). Each item of any list must be marked up with `<li>`.
 
 A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more `<p>` elements inside every list item of the list.
 
-##### 3.3.4.1 Numbered Lists
+##### 3.4.4.1 Numbered Lists
 
 The numbering of an ordered list must not be included as content in the `<li>` elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the `type` attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the `start` attribute.
 
-##### 3.3.4.2 Unnumbered Lists
+##### 3.4.4.2 Unnumbered Lists
 
 Unnumbered lists often have some sort of bullet markers for each list item. The default is a solid black circle. The type attribute has been used before, to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
 
@@ -779,7 +783,7 @@ Lists without any bullet markers are required to have the attribute:
 
 By default, `<ul>` should be used here, but Ordering Agencies may give specific instructions to use `<ol>`.
 
-##### 3.3.4.3 Tables of Contents
+##### 3.4.4.3 Tables of Contents
 
 Any table of contents in the source material is required to be marked up in the following way:
 
@@ -794,7 +798,7 @@ This is typically used for the main table of contents that most books have somew
 
 Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.
 
-#### 3.3.5 Tables
+#### 3.4.5 Tables
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
@@ -804,11 +808,11 @@ Tables are required to have a consistent number of table cells per row. If `cols
 
 Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.
 
-#### 3.3.6 Definition Lists
+#### 3.4.6 Definition Lists
 
 All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as `<dl>`. Note that language attributes may be required, for example with glossaries.
 
-#### 3.3.7 Notes and Note References
+#### 3.4.7 Notes and Note References
 
 Footnotes and endnotes are required to be handled in accordance with the recommendations in the Accessible Publishing Knowledge Base:
 
@@ -826,7 +830,7 @@ Backlinks are required for each note, done according to the examples in the Know
 
 Note references are not to be marked up with `<sup>`. This is handled by the default CSS.
 
-#### 3.3.8 Sidebars, text boxes etc.
+#### 3.4.8 Sidebars, text boxes etc.
 
 The `<aside>` element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
 
@@ -840,13 +844,13 @@ If there are any doubts about which element to use and there are no further inst
 
 Headings in text boxes are required to be marked up with a `<h[x]>` element. Unless specific instructions are given, these headings should not be included in the navigation document.
 
-#### 3.3.9 Computer Code
+#### 3.4.9 Computer Code
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
 
 In blocks of computer code, spaces and empty lines must be preserved.
 
-#### 3.3.10 Bolding and Italics
+#### 3.4.10 Bolding and Italics
 
 The only elements to be used are `<strong>` for bold and `<em>` for italics. Other type of formatting may be required in certain publications and, if such is the case, specific instructions will be given in the Editing Instructions.
 
@@ -856,7 +860,7 @@ Principles for how `<strong>` and `<em>` are used can be found here:
 
 Please take care that text marked up with em or strong is identical with the original book. Do not include space or punctuation which is not emphasised in the original. Words in em or strong at the end of sentences should not include end-of-sentence punctuation, like full stops, unless the whole sentence is emphasised. If a sentence ends with an emphasised word, and the next sentence begins with a new emphasised word, make sure the words are marked up using separate instances of em or strong, and that the end-of-sentence punctuation is not included.
 
-#### 3.3.11 Poetry and Verse
+#### 3.4.11 Poetry and Verse
 
 Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
 
@@ -868,11 +872,11 @@ If the content written in verse has a title it may be handled as a normal headin
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
-#### 3.3.12 Quotes
+#### 3.4.12 Quotes
 
 Quotes, citations, excerpts from other sources and similar content are required to be marked up using the `<blockquote>` element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate `<p>`.
 
-### 3.4 Thematic Breaks in the Text Flow
+### 3.5 Thematic Breaks in the Text Flow
 
 In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
 
