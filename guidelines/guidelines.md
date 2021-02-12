@@ -84,6 +84,7 @@ This document can be seen as the successor of the previous EPUB 3 guidelines use
 The target audience of the document is mainly contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
 ### 1.1 Situating the Nordic Guidelines in the World of Specifications
+
 The Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Ordering Agencies. As such, they build on these higher-level specification documents (EPUB 3.2, EPUB Accessibility 1.0, etc.) and provide more detailed instructions for their application in the specific context of production at the Ordering Agencies.
 
 The application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
@@ -185,6 +186,7 @@ The following metadata are required to be placed in the `<metadata>` element:
 Note that the default value to use in `<dc:publisher>` is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
 
 If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `<dc:source>` element will be a text string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
+
 ##### 2.4.1.1 schema.org Accessibility Metadata
 
 Also required are schema.org accessibility metadata, [http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/. It will typically be something like this, but not necessarily exactly the same:
@@ -206,6 +208,7 @@ Also required are schema.org accessibility metadata, [http://http://kb.daisy.org
 As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy">` is the shorthand for the Ordering Agency.
 
 ##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
+
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
 
 The following is an example of a more granular way of expressing title metadata, separating main title, subtitle, and edition title statements from each other:
@@ -233,6 +236,7 @@ Similarly, creator/author information can be expressed with explicit refinement 
 The codes to use as values for the creator role are taken from the MARC relators vocabulary, [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html).
 
 ##### 2.4.1.3 Optional Additional Metadata
+
 Additional metadata for inclusion can be supplied by the Ordering Agency on a per-title or per-Agency basis.
 
 #### 2.4.2 Manifest
@@ -456,7 +460,8 @@ requirements are the following:
 - Text in images, line graphics and small detail must be crisp and fully legible, or with no degradation in legibility in comparison with the original image.
 - If the `jpeg` format is used, the quality setting is required to be set at around 90% (or a corresponding setting, if a different scale of measurement is used). A setting of 100% is usually unnecessary as it yields substantially larger files with little or no visible improvement of quality. If, however, there would be visible difference in quality between 90% and a higher setting, then the higher setting should be used.
 
-#### 2.7.1 Image file naming and directory structure
+#### 2.7.1 Image File Naming and Directory Structure
+
 Image files are required to be stored in a folder named _images_ placed at the same level relative to the package document. The images folder must not contain subfolders.
 
 Image files should be named according to the following file naming convention:
@@ -473,7 +478,7 @@ Example:
 X41001A-013.png
 ```
 
-An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpeg`.
+An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
 #### 2.7.2 Resizing of Images
 
