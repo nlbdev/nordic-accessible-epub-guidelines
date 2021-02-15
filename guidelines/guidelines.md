@@ -209,6 +209,8 @@ As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy
 
 Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the statement in `nordic:guidelines`, i.e. (for this version of the guidelines) "2020-1".
 
+Section 5.2.4 of this document contains language specific texts for `<meta property="schema:accessibilitySummary">`.
+
 ##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
 
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
