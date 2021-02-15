@@ -1,7 +1,7 @@
 # Nordic Guidelines for the Production of Accessible EPUB 3
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
+**Contents**
 
 - [Nordic Guidelines for the Production of Accessible EPUB 3](#nordic-guidelines-for-the-production-of-accessible-epub-3)
     - [1 Introduction](#1-introduction)
