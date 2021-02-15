@@ -202,12 +202,12 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 <meta property="schema:accessibilityFeature">alternativeText</meta>
 <meta property="schema:accessibilityHazard">none</meta>
 <meta property="a11y:certifiedBy">_[the ordering agency]_</meta>
-<link rel="dcterms:conformsTo" href="_[URL to the nordic guidelines]_"/>
+<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2020-1"/>
 ```
 
 As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy">` is the shorthand for the Ordering Agency.
 
-Section 5.2.4 of this document contains language specific texts for `<meta property="schema:accessibilitySummary">`.
+Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the statement in `nordic:guidelines`, i.e. (for this version of the guidelines) "2020-1".
 
 ##### 2.4.1.2 Optional Increased Title and Creator Metadata Granularity
 
