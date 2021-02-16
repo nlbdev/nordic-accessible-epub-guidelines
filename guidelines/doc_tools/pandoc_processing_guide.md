@@ -13,10 +13,11 @@ The instructions assume Pandoc is called from the working directory `[repository
 
 
 ## Generating the HTML output
-(Pandoc is currently issued in a Windows environment)
-
 ```
-pandoc -f markdown -t html .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.html --toc --toc-depth=4 --template .\doc_tools\template-html.html --shift-heading-level-by=-1 --number-sections
+pandoc -f markdown -t html .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.html --toc --toc-depth=4 --shift-heading-level-by=-1 --number-sections --template .\doc_tools\template-html.html
 ```
 
 ## Generating the PDF output
+```
+pandoc -f markdown -t pdf .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.pdf --toc --toc-depth=4 --shift-heading-level-by=-1 --number-sections --template .\doc_tools\template-latex.tex --pdf-engine=xelatex
+```
