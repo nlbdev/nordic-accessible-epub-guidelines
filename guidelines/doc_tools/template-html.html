@@ -43,8 +43,8 @@ $endif$
 $if(date)$
 <p class="date">$date$</p>
 $endif$
-
-<aside class="credits">
+<div class="infobox">
+<section class="credits">
 $if(editor)$
 <h2>Main editors</h2>
 <ul>
@@ -62,16 +62,18 @@ $for(contributor)$
 $endfor$
 </ul>
 $endif$
-</aside>
+</section>
 
-<aside class="downloads">
+<section class="downloads">
 <h2>Document download formats</h2>
 <ul>
   <li><a href="nordic_guidelines_epub3.pdf">PDF</a></li>
 <!-- <li>HTML (print CSS)</li> -->
 </ul>
-</aside>
+</section>
+</div>
 </header>
+<hr class="separator"/>
 $endif$
 $if(toc)$
 <nav id="$idprefix$TOC" role="doc-toc">
