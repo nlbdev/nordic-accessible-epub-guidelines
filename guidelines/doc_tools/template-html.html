@@ -40,12 +40,27 @@ $if(title)$
 $if(version)$
 <p class="version">Version $version$</p>
 $endif$
-$for(author)$
-<p class="author">$author$</p>
-$endfor$
 $if(date)$
 <p class="date">$date$</p>
 $endif$
+
+<h2>Main editors</h2>
+$for(editor)$
+<p class="editor">$if(editor.name)$
+$editor.name$$if(editor.affiliation)$ ($editor.affiliation$)$endif$
+$else$
+$editor$
+$endif$</p>
+$endfor$
+
+<h2>Contributors</h2>
+$for(contributor)$
+<p class="contributor">$if(contributor.name)$
+$contributor.name$$if(contributor.affiliation)$ ($contributor.affiliation$)$endif$
+$else$
+$contributor$
+$endif$</p>
+$endfor$
 </header>
 $endif$
 $if(toc)$
