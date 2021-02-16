@@ -44,23 +44,36 @@ $if(date)$
 <p class="date">$date$</p>
 $endif$
 
+
+<aside class="credits">
+$if(editor)$
 <h2>Main editors</h2>
+<ul>
 $for(editor)$
-<p class="editor">$if(editor.name)$
+<li class="editor">$if(editor.name)$
 $editor.name$$if(editor.affiliation)$ ($editor.affiliation$)$endif$
 $else$
 $editor$
-$endif$</p>
+$endif$</li>
 $endfor$
+</ul>
+$endif$
 
+$if(contributor)$
 <h2>Contributors</h2>
+<ul>
 $for(contributor)$
-<p class="contributor">$if(contributor.name)$
+<li class="contributor">$if(contributor.name)$
 $contributor.name$$if(contributor.affiliation)$ ($contributor.affiliation$)$endif$
 $else$
 $contributor$
-$endif$</p>
+$endif$</li>
 $endfor$
+</ul>
+$endif$
+
+</aside>
+
 </header>
 $endif$
 $if(toc)$
