@@ -30,10 +30,14 @@ contributor:
   affiliation: Statped
 - name: Toril Bache-Wiig Midtskogen
   affiliation: Statped
+lang: en
 toc-title: Contents
+current_date: $(date +%Y-%m-%d%n)
+block-headings: true
 header-includes:
  - \usepackage{fvextra}
  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
  - \usepackage{fullpage}
  - \usepackage{hyperref}
+ - \usepackage{microtype}
 ---
