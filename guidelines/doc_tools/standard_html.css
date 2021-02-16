@@ -37,3 +37,7 @@ hr.separator:after {
   padding: 40px;
   background: #fdfdfd;
 }
+
+footer {
+    font-size: smaller;
+}
