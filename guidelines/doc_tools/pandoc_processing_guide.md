@@ -14,7 +14,7 @@ The instructions assume Pandoc is called from the working directory `[repository
 (Pandoc is currently issued in a Windows environment)
 
 ```
-pandoc -f markdown -t html .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\nordic_guidelines_epub3-2020-1.html --toc --toc-depth=4 -V lang=en --template .\doc_tools\template-html.html --shift-heading-level-by=-1 -V current_date="$(date +%Y-%m-%d%n)" --number-sections
+pandoc -f markdown -t html .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.html --toc --toc-depth=4 -V lang=en --template .\doc_tools\template-html.html --shift-heading-level-by=-1 -V current_date="$(date +%Y-%m-%d%n)" --number-sections
 ```
 
 ## Generating the PDF output
