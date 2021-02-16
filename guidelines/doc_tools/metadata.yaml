@@ -30,6 +30,7 @@ contributor:
   affiliation: Statped
 - name: Toril Bache-Wiig Midtskogen
   affiliation: Statped
+toc-title: Contents
 header-includes:
  - \usepackage{fvextra}
  - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
