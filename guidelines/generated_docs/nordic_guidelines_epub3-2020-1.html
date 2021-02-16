@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dc.creator" content="Anders Eklund" />
+  <meta name="dc.creator" content="Martin Persson" />
+  <meta name="dcterms.contributor" content="Sami Määtä" />
+  <meta name="dcterms.contributor" content="Bart Donders" />
+  <meta name="dcterms.contributor" content="Gunnar Grímsson" />
+  <meta name="dcterms.contributor" content="Alfreð Halldórsson" />
+  <meta name="dcterms.contributor" content="Elise Aas" />
+  <meta name="dcterms.contributor" content="Jostein Austvik Jacobsen" />
+  <meta name="dcterms.contributor" content="Gaute Rønningen" />
+  <meta name="dcterms.contributor" content="Lisa Hartun Laustsen" />
+  <meta name="dcterms.contributor" content="Christian Egli" />
+  <meta name="dcterms.contributor" content="Ina Dixon" />
+  <meta name="dcterms.contributor" content="Toril Bache-Wiig Midtskogen" />
+  <meta name="dcterms.date" content="2021-02-16" />
+  <title>Nordic Guidelines for the Production of Accessible EPUB 3 (2020-1)</title>
+  <style>
+    /* Pandoc default styles.html rules */
+    
+    html {
+      line-height: 1.7;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 40em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin-top: 1.7em;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.7em;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1.7em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1.7em 0 1.7em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      font-style: italic;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      background-color: #f0f0f0;
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+    }
+    pre {
+      line-height: 1.5em;
+      padding: 1em;
+      background-color: #f0f0f0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin-top: 1.7em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border-bottom: 1px solid lightgray;
+      padding: 1em 3em 1em 0;
+    }
+    header {
+      margin-bottom: 6em;
+      text-align: center;
+    }
+    nav a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    /* Nordic guidelines additional rules */
+    .infobox {
+	padding-bottom: 0;
+	margin-bottom: 0;
+    }
+
+    .credits, .downloads {
+	font-size: smaller;
+	text-align: left;
+    }
+
+    .credits ul {
+	display: inline;
+	list-style: none;
+	padding-left: 0;
+    }
+
+    .credits li {
+	display: inline;
+    }
+
+    .credits ul li:not(:last-child):after {
+	content: ", ";
+    }
+
+    hr.separator {
+	margin: 100px 0;
+    }
+
+    hr.separator:after {
+	content: "🙙";
+	font-size: 1.75em;
+	color: black;
+	left: 50%;
+	position: absolute;
+	transform: translateY(-50%) translateX(-50%);
+	/* Controls the whitespace around the symbol */
+	padding: 40px;
+	background: #fdfdfd;
+    }
+
+    footer {
+	font-size: smaller;
+    }
+
+    .version-history {
+	font-size: smaller;
+	font-style: italics;
+	margin-top: -1em;
+    }
+
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  
+  
+  
+</head>
+<body>
+
+<header id="title-block-header">
+<h1 class="title">Nordic Guidelines for the Production of Accessible EPUB 3</h1>
+<p class="version">Version 2020-1</p>
+<p class="version-history">(<a href="https://format.mtm.se/">version history</a>)</p>
+<p class="date">February 16, 2021</p>
+<div class="infobox">
+<section class="credits">
+<h2>Main editors</h2>
+<ul>
+<li class="editor">Anders Eklund (SPSM)</li>
+<li class="editor">Martin Persson (MTM)</li>
+</ul>
+
+<h2>Contributors</h2>
+<ul>
+<li class="contributor">Sami Määtä (Celia)</li>
+<li class="contributor">Bart Donders (Dedicon)</li>
+<li class="contributor">Gunnar Grímsson (HBS)</li>
+<li class="contributor">Alfreð Halldórsson (HBS)</li>
+<li class="contributor">Elise Aas (NLB)</li>
+<li class="contributor">Jostein Austvik Jacobsen (NLB)</li>
+<li class="contributor">Gaute Rønningen (NLB)</li>
+<li class="contributor">Lisa Hartun Laustsen (Nota)</li>
+<li class="contributor">Christian Egli (SBS)</li>
+<li class="contributor">Ina Dixon (Statped)</li>
+<li class="contributor">Toril Bache-Wiig Midtskogen (Statped)</li>
+</ul>
+</section>
+
+<section class="downloads">
+<h2>Document download formats</h2>
+<ul>
+  <li><a href="nordic_guidelines_epub3.pdf">PDF</a></li>
+</ul>
+</section>
+</div>
+</header>
+<hr class="separator"/>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contents</h2>
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a>
+<ul>
+<li><a href="#situating-the-nordic-guidelines-in-the-world-of-specifications"><span class="toc-section-number">1.1</span> Situating the Nordic Guidelines in the World of Specifications</a></li>
+</ul></li>
+<li><a href="#format-requirements"><span class="toc-section-number">2</span> Format Requirements</a>
+<ul>
+<li><a href="#required-epub-standard"><span class="toc-section-number">2.1</span> Required EPUB Standard</a>
+<ul>
+<li><a href="#accessible-publishing-knowledge-base"><span class="toc-section-number">2.1.1</span> Accessible Publishing Knowledge Base</a></li>
+</ul></li>
+<li><a href="#container"><span class="toc-section-number">2.2</span> Container</a>
+<ul>
+<li><a href="#meta-inf"><span class="toc-section-number">2.2.1</span> META-INF</a></li>
+</ul></li>
+<li><a href="#publication-resources"><span class="toc-section-number">2.3</span> Publication Resources</a></li>
+<li><a href="#package-document"><span class="toc-section-number">2.4</span> Package Document</a>
+<ul>
+<li><a href="#metadata"><span class="toc-section-number">2.4.1</span> Metadata</a>
+<ul>
+<li><a href="#schema.org-accessibility-metadata"><span class="toc-section-number">2.4.1.1</span> schema.org Accessibility Metadata</a></li>
+<li><a href="#optional-increased-title-and-creator-metadata-granularity"><span class="toc-section-number">2.4.1.2</span> Optional Increased Title and Creator Metadata Granularity</a></li>
+<li><a href="#optional-additional-metadata"><span class="toc-section-number">2.4.1.3</span> Optional Additional Metadata</a></li>
+</ul></li>
+<li><a href="#manifest"><span class="toc-section-number">2.4.2</span> Manifest</a></li>
+<li><a href="#spine"><span class="toc-section-number">2.4.3</span> Spine</a></li>
+</ul></li>
+<li><a href="#content-documents"><span class="toc-section-number">2.5</span> Content Documents</a>
+<ul>
+<li><a href="#xhtml"><span class="toc-section-number">2.5.1</span> XHTML</a>
+<ul>
+<li><a href="#xml-declaration-and-encoding"><span class="toc-section-number">2.5.1.1</span> XML Declaration and Encoding</a></li>
+<li><a href="#document-type-declaration"><span class="toc-section-number">2.5.1.2</span> Document Type Declaration</a></li>
+<li><a href="#html-root-attributes"><span class="toc-section-number">2.5.1.3</span> HTML Root Attributes</a></li>
+<li><a href="#namespaces"><span class="toc-section-number">2.5.1.4</span> Namespaces</a></li>
+<li><a href="#language-definition"><span class="toc-section-number">2.5.1.5</span> Language Definition</a></li>
+</ul></li>
+<li><a href="#title"><span class="toc-section-number">2.5.2</span> Title</a></li>
+<li><a href="#metadata-1"><span class="toc-section-number">2.5.3</span> Metadata</a></li>
+</ul></li>
+<li><a href="#navigation-documents"><span class="toc-section-number">2.6</span> Navigation Documents</a>
+<ul>
+<li><a href="#epub-3.2-navigation-document"><span class="toc-section-number">2.6.1</span> EPUB 3.2 Navigation Document</a>
+<ul>
+<li><a href="#the-table-of-contents"><span class="toc-section-number">2.6.1.1</span> The Table Of Contents</a></li>
+<li><a href="#page-list"><span class="toc-section-number">2.6.1.2</span> Page List</a></li>
+<li><a href="#landmarks"><span class="toc-section-number">2.6.1.3</span> Landmarks</a></li>
+</ul></li>
+<li><a href="#ncx-navigation-document"><span class="toc-section-number">2.6.2</span> NCX Navigation Document</a></li>
+</ul></li>
+<li><a href="#images"><span class="toc-section-number">2.7</span> Images</a>
+<ul>
+<li><a href="#image-file-naming-and-directory-structure"><span class="toc-section-number">2.7.1</span> Image File Naming and Directory Structure</a></li>
+<li><a href="#resizing-of-images"><span class="toc-section-number">2.7.2</span> Resizing of Images</a></li>
+<li><a href="#image-editing"><span class="toc-section-number">2.7.3</span> Image Editing</a></li>
+</ul></li>
+<li><a href="#css"><span class="toc-section-number">2.8</span> CSS</a></li>
+<li><a href="#fonts"><span class="toc-section-number">2.9</span> Fonts</a></li>
+<li><a href="#javascript"><span class="toc-section-number">2.10</span> Javascript</a></li>
+<li><a href="#validation"><span class="toc-section-number">2.11</span> Validation</a></li>
+</ul></li>
+<li><a href="#general-requirements-for-content-documents"><span class="toc-section-number">3</span> General Requirements for Content Documents</a>
+<ul>
+<li><a href="#structural-divisons-and-semantics"><span class="toc-section-number">3.1</span> Structural Divisons and Semantics</a></li>
+<li><a href="#file-naming-convention"><span class="toc-section-number">3.2</span> File Naming Convention</a></li>
+<li><a href="#special-content-requirements"><span class="toc-section-number">3.3</span> Special Content Requirements</a>
+<ul>
+<li><a href="#cover"><span class="toc-section-number">3.3.1</span> Cover</a></li>
+<li><a href="#title-page"><span class="toc-section-number">3.3.2</span> Title Page</a></li>
+<li><a href="#parts"><span class="toc-section-number">3.3.3</span> Parts</a></li>
+</ul></li>
+<li><a href="#mark-up-requirements"><span class="toc-section-number">3.4</span> Mark-up Requirements</a>
+<ul>
+<li><a href="#pagination"><span class="toc-section-number">3.4.1</span> Pagination</a></li>
+<li><a href="#headings"><span class="toc-section-number">3.4.2</span> Headings</a></li>
+<li><a href="#figures"><span class="toc-section-number">3.4.3</span> Figures</a>
+<ul>
+<li><a href="#text-extraction-from-images"><span class="toc-section-number">3.4.3.1</span> Text Extraction from Images</a></li>
+<li><a href="#alt-texts"><span class="toc-section-number">3.4.3.2</span> Alt-texts</a></li>
+<li><a href="#image-series"><span class="toc-section-number">3.4.3.3</span> Image Series</a></li>
+</ul></li>
+<li><a href="#lists"><span class="toc-section-number">3.4.4</span> Lists</a>
+<ul>
+<li><a href="#numbered-lists"><span class="toc-section-number">3.4.4.1</span> Numbered Lists</a></li>
+<li><a href="#unnumbered-lists"><span class="toc-section-number">3.4.4.2</span> Unnumbered Lists</a></li>
+<li><a href="#tables-of-contents"><span class="toc-section-number">3.4.4.3</span> Tables of Contents</a></li>
+</ul></li>
+<li><a href="#tables"><span class="toc-section-number">3.4.5</span> Tables</a></li>
+<li><a href="#definition-lists"><span class="toc-section-number">3.4.6</span> Definition Lists</a></li>
+<li><a href="#notes-and-note-references"><span class="toc-section-number">3.4.7</span> Notes and Note References</a></li>
+<li><a href="#sidebars-text-boxes-etc."><span class="toc-section-number">3.4.8</span> Sidebars, Text Boxes etc.</a></li>
+<li><a href="#computer-code"><span class="toc-section-number">3.4.9</span> Computer Code</a></li>
+<li><a href="#bolding-and-italics"><span class="toc-section-number">3.4.10</span> Bolding and Italics</a></li>
+<li><a href="#poetry-and-verse"><span class="toc-section-number">3.4.11</span> Poetry and Verse</a></li>
+<li><a href="#quotes"><span class="toc-section-number">3.4.12</span> Quotes</a></li>
+</ul></li>
+<li><a href="#thematic-breaks-in-the-text-flow"><span class="toc-section-number">3.5</span> Thematic Breaks in the Text Flow</a></li>
+</ul></li>
+<li><a href="#specific-requirements-for-advanced-content"><span class="toc-section-number">4</span> Specific Requirements for Advanced Content</a>
+<ul>
+<li><a href="#mathematical-content"><span class="toc-section-number">4.1</span> Mathematical Content</a></li>
+<li><a href="#special-characters-unicode-and-phonetics"><span class="toc-section-number">4.2</span> Special Characters, Unicode and Phonetics</a></li>
+<li><a href="#placeholders-for-user-input-areas"><span class="toc-section-number">4.3</span> Placeholders for User Input Areas</a></li>
+</ul></li>
+<li><a href="#appendix"><span class="toc-section-number">5</span> Appendix</a>
+<ul>
+<li><a href="#external-resources"><span class="toc-section-number">5.1</span> External Resources</a></li>
+<li><a href="#language-dependent-fixed-text-values"><span class="toc-section-number">5.2</span> Language Dependent Fixed Text Values</a>
+<ul>
+<li><a href="#nav.xhtml-headings"><span class="toc-section-number">5.2.1</span> nav.xhtml Headings</a></li>
+<li><a href="#aria-label-values"><span class="toc-section-number">5.2.2</span> aria-label Values</a></li>
+<li><a href="#image-alternative-text-values"><span class="toc-section-number">5.2.3</span> Image Alternative Text Values</a></li>
+<li><a href="#schema.org-accessibility-metadata-values"><span class="toc-section-number">5.2.4</span> schema.org Accessibility Metadata Values</a></li>
+<li><a href="#footnote-and-endnote-backlink"><span class="toc-section-number">5.2.5</span> Footnote and Endnote Backlink</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 data-number="1" id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p>This guidelines document has been developed as a joint effort between the (mostly) Nordic Agencies dedicated to providing accessible literature in different formats to children and adults with various reading impairments or special needs. The participating organisations are <a href="https://www.celia.fi/">Celia</a>, <a href="https://www.dedicon.nl/">Dedicon</a>, <a href="https://hbs.is/">HBS</a>, <a href="https://mtm.se">MTM</a>, <a href="https://www.nlb.no/">NLB</a>, <a href="https://nota.dk/">Nota</a>, <a href="https://www.sbs.ch/">SBS</a>, <a href="https://spsm.se/">SPSM</a>, and <a href="http://statped.no/">Statped</a>.</p>
+<p>Fundamental to the process of adapting text-based media is the role of beginning with well-structured digital content. Previously this has been achieved through XML structures as defined by the ANSI/NISO Z39.86 specification for digital talking books (DTBook). The structures specified in these guidelines, however, are based on a profile of HTML5 requiring the use of XML serialization. This ensures that content can be reliably manipulated and rendered. Moreover, the EPUB 3.2 specification and the accompanying EPUB Accessibility 1.0 specification provide constructs that further ensure semantically meaningful structures and increase the accessibility of the content.</p>
+<p>This document can be seen as the successor of the previous EPUB 3 guidelines used by the Nordic agencies (2015-1), and are based on the most recent EPUB 3 specification, EPUB 3.2.</p>
+<p>The target audience of the document is mainly contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.</p>
+<h2 data-number="1.1" id="situating-the-nordic-guidelines-in-the-world-of-specifications"><span class="header-section-number">1.1</span> Situating the Nordic Guidelines in the World of Specifications</h2>
+<p>The Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Ordering Agencies. As such, they build on these higher-level specification documents (EPUB 3.2, EPUB Accessibility 1.0, etc.) and provide more detailed instructions for their application in the specific context of production at the Ordering Agencies.</p>
+<p>The application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.</p>
+<p>The different levels of specification can be expressed as the following hierarchy:</p>
+<ol type="1">
+<li>High-level specifications, e.g. EPUB 3.2, EPUB Accessibility 1.0, HTML5, etc.</li>
+<li>The Nordic Guidelines</li>
+<li>General Ordering Agency-specific Guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)</li>
+<li>Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title</li>
+</ol>
+<p>Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation is outside the scope of this document.</p>
+<h1 data-number="2" id="format-requirements"><span class="header-section-number">2</span> Format Requirements</h1>
+<h2 data-number="2.1" id="required-epub-standard"><span class="header-section-number">2.1</span> Required EPUB Standard</h2>
+<p>Suppliers are required to refer to the specifications provided in version 3.2 of the EPUB standard. See <a href="https://www.w3.org/publishing/epub32/epub-spec.html">https://www.w3.org/publishing/epub32/epub-spec.html</a>.</p>
+<h3 data-number="2.1.1" id="accessible-publishing-knowledge-base"><span class="header-section-number">2.1.1</span> Accessible Publishing Knowledge Base</h3>
+<p>In addition to following the recommended version of the EPUB standard, suppliers are required to follow the recommendations in the Accessible Publishing Knowledge Base that is maintained by the Daisy Consortium: <a href="https://kb.daisy.org/publishing/docs/">https://kb.daisy.org/publishing/docs/</a>.</p>
+<p>The recommendations in the Knowledge Base may differ from the specification. As long as no conflicts occur during validation, the recommendations in the Knowledge Base are to be followed.</p>
+<h2 data-number="2.2" id="container"><span class="header-section-number">2.2</span> Container</h2>
+<p>The EPUB container file must be given the production number provided with the order and correspond with the identifier stored in the <code>dc:identifier</code> element located in the Package metadata.</p>
+<p>The container archive is required to have the <code>.epub</code> extension. The file extension must be lowercase.</p>
+<p>Note that the <code>mimetype</code> file must be archived as the first file in the Container.</p>
+<h3 data-number="2.2.1" id="meta-inf"><span class="header-section-number">2.2.1</span> META-INF</h3>
+<p>The <code>container.xml</code> file must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.</p>
+<p>The container.xml file shall look like this, unless indicated otherwise:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot; <span class="kw">?&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;container</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot">xmlns=</span><span class="st">&quot;urn:oasis:names:tc:opendocument:xmlns:container&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;rootfiles&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;rootfile</span><span class="ot"> full-path=</span><span class="st">&quot;EPUB/package.opf&quot;</span><span class="ot"> media-type=</span><span class="st">&quot;application/oebps-package+xml&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/rootfiles&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/container&gt;</span></span></code></pre></div>
+<p>No other files, optional or otherwise, are allowed in the META-INF directory unless specifically indicated by the Ordering Agency.</p>
+<h2 data-number="2.3" id="publication-resources"><span class="header-section-number">2.3</span> Publication Resources</h2>
+<p>All publication resources are required to be located in a directory called EPUB. Publication resources other than the Package Document (<code>.opf</code>) and XHTML Content Documents are to be located in dedicated resource sub-directories.</p>
+<h2 data-number="2.4" id="package-document"><span class="header-section-number">2.4</span> Package Document</h2>
+<p>The name of the Package Document file is required to be <code>package.opf</code>. Suppliers are required to use the file extension <code>.opf</code> for the Package Document.</p>
+<p>The following xml declaration must be placed at the first line of the document:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot; <span class="kw">?&gt;</span></span></code></pre></div>
+<p>Suppliers are required to apply the following attributes and values to the <code>&lt;package&gt;</code> element:</p>
+<ul>
+<li><code>xmlns="http://www.idpf.org/2007/opf"</code></li>
+<li><code>xmlns:dc="http://purl.org/dc/elements/1.1/"</code></li>
+<li><code>prefix="nordic: http://www.mtm.se/epub/"</code></li>
+<li><code>version="3.0"</code></li>
+<li><code>xml:lang="xx"</code> (The publication language code)</li>
+<li><code>unique-identifier="pub-identifier"</code></li>
+</ul>
+<p>Required child elements to the <code>&lt;package&gt;</code> element are:</p>
+<ul>
+<li><code>&lt;metadata&gt;</code></li>
+<li><code>&lt;manifest&gt;</code></li>
+<li><code>&lt;spine&gt;</code></li>
+</ul>
+<h3 data-number="2.4.1" id="metadata"><span class="header-section-number">2.4.1</span> Metadata</h3>
+<p>The following metadata are required to be placed in the <code>&lt;metadata&gt;</code> element:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:title</span><span class="ot"> id=</span><span class="st">&quot;title&quot;</span><span class="kw">&gt;</span>_[the title of the publication]_<span class="kw">&lt;/dc:title&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:language&gt;</span>_[language code for the main language]_<span class="kw">&lt;/dc:language&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:identifier</span><span class="ot"> id=</span><span class="st">&quot;pub-identifier&quot;</span><span class="kw">&gt;</span>_[production UID provided by the ordering agency]_<span class="kw">&lt;/dc:identifier&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:source&gt;</span>_[ISBN or ISSN of the publication]_<span class="kw">&lt;/dc:source&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:creator&gt;</span>_[author of the publication (one element for each author)]_<span class="kw">&lt;/dc:creator&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:format&gt;</span>application/epub+zip<span class="kw">&lt;/dc:format&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:publisher&gt;</span>_[the ordering agency]_<span class="kw">&lt;/dc:publisher&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:date&gt;</span>_[date of completion]_<span class="kw">&lt;/dc:date&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;dcterms:modified&quot;</span><span class="kw">&gt;</span> _[date of completion]_ <span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;nordic:supplier&quot;</span><span class="kw">&gt;</span> _[company name of supplier]_ <span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;nordic:guidelines&quot;</span><span class="kw">&gt;</span>2020-1<span class="kw">&lt;/meta&gt;</span></span></code></pre></div>
+<p>Note that the default value to use in <code>&lt;dc:publisher&gt;</code> is the shorthand for the Ordering Agency, e.g. “NLB”, “MTM”, etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in <code>&lt;meta property="dc:publisher.original"&gt;</code>.</p>
+<p>If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the <code>&lt;dc:source&gt;</code> element will be a text string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.</p>
+<h4 data-number="2.4.1.1" id="schema.org-accessibility-metadata"><span class="header-section-number">2.4.1.1</span> schema.org Accessibility Metadata</h4>
+<p>Also required are schema.org accessibility metadata, <a href="http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html">http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html</a>. Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, <a href="https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/">https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/</a>. It will typically be something like this, but not necessarily exactly the same:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilitySummary&quot;</span><span class="kw">&gt;</span>This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessMode&quot;</span><span class="kw">&gt;</span>textual<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessMode&quot;</span><span class="kw">&gt;</span>visual<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessModeSufficient&quot;</span><span class="kw">&gt;</span>textual visual<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessModeSufficient&quot;</span><span class="kw">&gt;</span>textual<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilityFeature&quot;</span><span class="kw">&gt;</span>structuralNavigation<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilityFeature&quot;</span><span class="kw">&gt;</span>MathML<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilityFeature&quot;</span><span class="kw">&gt;</span>alternativeText<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilityHazard&quot;</span><span class="kw">&gt;</span>none<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;a11y:certifiedBy&quot;</span><span class="kw">&gt;</span>_[the ordering agency]_<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;dcterms:conformsTo&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://format.mtm.se/nordic_epub/2020-1&quot;</span><span class="kw">/&gt;</span></span></code></pre></div>
+<p>As with <code>&lt;dc:publisher&gt;</code>, the default value of <code>&lt;meta property="a11y:certifiedBy"&gt;</code> is the shorthand for the Ordering Agency.</p>
+<p>Please note that the version number forming the end of the <code>dcterms:conformsTo</code> URL must match the value of the statement in <code>nordic:guidelines</code>, i.e. (for this version of the guidelines) “2020-1”.</p>
+<p>Section 5.2.4 of this document contains language specific texts for <code>&lt;meta property="schema:accessibilitySummary"&gt;</code>.</p>
+<h4 data-number="2.4.1.2" id="optional-increased-title-and-creator-metadata-granularity"><span class="header-section-number">2.4.1.2</span> Optional Increased Title and Creator Metadata Granularity</h4>
+<p>The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.</p>
+<p>The following is an example of a more granular way of expressing title metadata, separating main title, subtitle, and edition title statements from each other:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:title</span><span class="ot"> id=</span><span class="st">&quot;maintitle&quot;</span><span class="kw">&gt;</span> _[the main title of the publication]_ <span class="kw">&lt;/dc:title&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> refines=</span><span class="st">&quot;#maintitle&quot;</span><span class="ot"> property=</span><span class="st">&quot;title-type&quot;</span><span class="kw">&gt;</span>main<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:title</span><span class="ot"> id=</span><span class="st">&quot;subtitle&quot;</span><span class="kw">&gt;</span> _[the subtitle of the publication]_ <span class="kw">&lt;/dc:title&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> refines=</span><span class="st">&quot;#subtitle&quot;</span><span class="ot"> property=</span><span class="st">&quot;title-type&quot;</span><span class="kw">&gt;</span>subtitle<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:title</span><span class="ot"> id=</span><span class="st">&quot;edition&quot;</span><span class="kw">&gt;</span> _[the edition part of publication title, e.g. &quot;1st ed.&quot;<span class="kw">&lt;/dc:title&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> refines=</span><span class="st">&quot;#edition&quot;</span><span class="ot"> property=</span><span class="st">&quot;title-type&quot;</span><span class="kw">&gt;</span>edition<span class="kw">&lt;/meta&gt;</span></span></code></pre></div>
+<p>Similarly, creator/author information can be expressed with explicit refinement of the creator role of each author, as in the following example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:creator</span><span class="ot"> id=</span><span class="st">&quot;creator1&quot;</span><span class="kw">&gt;</span> _[coauthor of the publication]_ <span class="kw">&lt;/dc:creator&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> refines=</span><span class="st">&quot;#creator1&quot;</span><span class="ot"> property=</span><span class="st">&quot;role&quot;</span><span class="ot"> scheme=</span><span class="st">&quot;marc:relators&quot;</span><span class="ot"> id=</span><span class="st">&quot;role&quot;</span><span class="kw">&gt;</span>aut<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:creator</span><span class="ot"> id=</span><span class="st">&quot;creator2&quot;</span><span class="kw">&gt;</span> _[coauthor of the publication]_ <span class="kw">&lt;/dc:creator&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> refines=</span><span class="st">&quot;#creator1&quot;</span><span class="ot"> property=</span><span class="st">&quot;role&quot;</span><span class="ot"> scheme=</span><span class="st">&quot;marc:relators&quot;</span><span class="ot"> id=</span><span class="st">&quot;role&quot;</span><span class="kw">&gt;</span>aut<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;dc:creator</span><span class="ot"> id=</span><span class="st">&quot;creator3&quot;</span><span class="kw">&gt;</span> _[illustrator of the publication]_ <span class="kw">&lt;/dc:creator&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> refines=</span><span class="st">&quot;#creator1&quot;</span><span class="ot"> property=</span><span class="st">&quot;role&quot;</span><span class="ot"> scheme=</span><span class="st">&quot;marc:relators&quot;</span><span class="ot"> id=</span><span class="st">&quot;role&quot;</span><span class="kw">&gt;</span>ill<span class="kw">&lt;/meta&gt;</span></span></code></pre></div>
+<p>The codes to use as values for the creator role are taken from the MARC relators vocabulary, <a href="https://id.loc.gov/vocabulary/relators.html">https://id.loc.gov/vocabulary/relators.html</a>.</p>
+<h4 data-number="2.4.1.3" id="optional-additional-metadata"><span class="header-section-number">2.4.1.3</span> Optional Additional Metadata</h4>
+<p>Additional metadata for inclusion can be supplied by the Ordering Agency on a per-title or per-Agency basis.</p>
+<h3 data-number="2.4.2" id="manifest"><span class="header-section-number">2.4.2</span> Manifest</h3>
+<p>In the <code>&lt;manifest&gt;</code> all publication resources are declared. Each resource is declared using the <code>&lt;item&gt;</code> element with required attributes <code>id</code>, <code>href</code> and <code>media-type</code>. Some items must also have a <code>properties</code> attribute.</p>
+<p>The <code>id</code> is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but the Ordering Agency will require certain naming conventions to be applied.</p>
+<p>The <code>href</code> is simply a path to the publication resource. The path will be relative to where the package document is located.</p>
+<p>The <code>media-type</code> attribute specifies what type of resource it is and what format. Here are some of the more common examples:</p>
+<ul>
+<li><code>application/xhtml+xml</code></li>
+<li><code>text/css</code></li>
+<li><code>image/jpeg</code></li>
+<li><code>application/x-dtbncx+xml</code></li>
+<li><code>application/javascript</code></li>
+</ul>
+<p>Refer to <a href="https://www.w3.org/publishing/epub3/epub-spec.html#sec-core-media-types">https://www.w3.org/publishing/epub3/epub-spec.html#sec-core-media-types</a> for additional information about various media types.</p>
+<p>Some resources have additional properties that need to be identified in the corresponding item in order for a reading system to be able to implement these properties. This is done by using the properties attribute. Common examples are:</p>
+<ul>
+<li><code>nav</code> for the <code>xhtml</code> navigation document</li>
+<li><code>cover-image</code> for the cover image</li>
+<li><code>scripted</code> for any content document where javascripts are being used</li>
+<li><code>mathml</code> for any content document containing MathML</li>
+</ul>
+<p>Refer to <a href="https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab">https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab</a> for additional information about the properties attribute.</p>
+<h3 data-number="2.4.3" id="spine"><span class="header-section-number">2.4.3</span> Spine</h3>
+<p>In the <code>&lt;spine&gt;</code> all content documents are listed in the correct reading order. This is done by using an <code>&lt;itemref&gt;</code> element for each content document and simply listing them in the desired order. The <code>&lt;itemref&gt;</code> element is associated with the corresponding <code>&lt;item&gt;</code> for the content document in the <code>&lt;manifest&gt;</code> by using the idref attribute and setting the value to the id attribute of the <code>&lt;item&gt;</code> element. The idref attribute is a required attribute and the id it refers to must be unique. Here is an example:</p>
+<p>In the <code>&lt;manifest&gt;</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;item</span><span class="ot"> id=</span><span class="st">&quot;item_7&quot;</span><span class="ot"> href=</span><span class="st">&quot;007-chapter.xhtml&quot;</span><span class="ot"> media-type=</span><span class="st">&quot;application/xhtml+xml&quot;</span><span class="kw">/&gt;</span></span></code></pre></div>
+<p>In the <code>&lt;spine&gt;</code>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;itemref</span><span class="ot"> idref=</span><span class="st">&quot;item_7&quot;</span><span class="kw">/&gt;</span></span></code></pre></div>
+<p>The <code>&lt;itemref&gt;</code> has an optional attribute called linear. The linear attribute can have the values yes (default) or no. If the attribute is omitted it is set to yes. The linear attribute indicates whether the referenced item contains content that contributes to the primary reading order and has to be read sequentially (yes) or auxiliary content that enhances or augments the primary content and can be accessed out of sequence (no). Examples of auxiliary content include: notes, descriptions and answer keys.</p>
+<p><code>linear="no"</code> should generally be applied to all content documents representing content that precedes the title page, e.g. cover, half-title page, etc. This is to ensure a reader always lands on the title page when opening the book in their reading system.</p>
+<p>If a fall-back ncx navigation document is included, this is required to be referenced by adding the toc attribute to the <code>&lt;spine&gt;</code> element and assign as value the id attribute of the <code>&lt;item&gt;</code> referring to the ncx file, like this:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;spine</span><span class="ot"> toc=</span><span class="st">&quot;_[id value of the manifest item that refers to the ncx file]_&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<h2 data-number="2.5" id="content-documents"><span class="header-section-number">2.5</span> Content Documents</h2>
+<h3 data-number="2.5.1" id="xhtml"><span class="header-section-number">2.5.1</span> XHTML</h3>
+<p>The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required to use the extension <code>.xhtml</code>.</p>
+<h4 data-number="2.5.1.1" id="xml-declaration-and-encoding"><span class="header-section-number">2.5.1.1</span> XML Declaration and Encoding</h4>
+<p>The following xml declaration must be used:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot;<span class="kw">?&gt;</span></span></code></pre></div>
+<h4 data-number="2.5.1.2" id="document-type-declaration"><span class="header-section-number">2.5.1.2</span> Document Type Declaration</h4>
+<p>The following document type declaration must be included:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span></code></pre></div>
+<h4 data-number="2.5.1.3" id="html-root-attributes"><span class="header-section-number">2.5.1.3</span> HTML Root Attributes</h4>
+<p>Suppliers are required to include the following attributes on the html root element:</p>
+<ul>
+<li><code>xmlns</code> – XML namespace</li>
+<li><code>xmlns:epub</code> – EPUB namespace</li>
+<li><code>xml:lang</code> – XML Language definition</li>
+<li><code>lang</code> – HTML Language definition</li>
+</ul>
+<h4 data-number="2.5.1.4" id="namespaces"><span class="header-section-number">2.5.1.4</span> Namespaces</h4>
+<p>The following namespace values are required to be applied to the namespace attributes:</p>
+<ul>
+<li><code>xmlns="http://www.w3.org/1999/xhtml"</code></li>
+<li><code>xmlns:epub="http://www.idpf.org/2007/ops"</code></li>
+</ul>
+<h4 data-number="2.5.1.5" id="language-definition"><span class="header-section-number">2.5.1.5</span> Language Definition</h4>
+<p>Suppliers are required to identify primary languages for each content file instance using the <code>xml:lang</code> and <code>lang</code> attributes. The values for <code>xml:lang</code> and <code>lang</code> must be the same.</p>
+<p>If not requested otherwise by the Ordering Agency, language should be coded using values from the IANA registry of valid language codes, <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a>.</p>
+<p>Please note that the most granular language tag should be used, e.g. the macrolanguage value “no” for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk (“nn”) or Norwegian Bokmål (“nb”) are not known.</p>
+<p>The accuracy of language coding is vital, and Suppliers are instructed to contact the Ordering Agency in case of any uncertainties.</p>
+<h3 data-number="2.5.2" id="title"><span class="header-section-number">2.5.2</span> Title</h3>
+<p>The <code>&lt;title&gt;</code> element of every <code>xhtml</code> content document must match the <code>dc:title</code> metadata of the package file.</p>
+<h3 data-number="2.5.3" id="metadata-1"><span class="header-section-number">2.5.3</span> Metadata</h3>
+<p>The content documents are required to contain two <code>&lt;meta&gt;</code> elements.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;dc:identifier&quot;</span><span class="ot"> content=</span><span class="st">&quot;_[production UID]_&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width&quot;</span><span class="kw">/&gt;</span></span></code></pre></div>
+<p>The production UID must match the <code>dc:identifier</code> in package.opf.</p>
+<h2 data-number="2.6" id="navigation-documents"><span class="header-section-number">2.6</span> Navigation Documents</h2>
+<h3 data-number="2.6.1" id="epub-3.2-navigation-document"><span class="header-section-number">2.6.1</span> EPUB 3.2 Navigation Document</h3>
+<p>The principle navigation document of the EPUB package is the <code>xhtml</code> file with the <code>properties</code> attribute set to nav in the <code>&lt;manifest&gt;</code> section of the package document. For matters of convenience mostly, this file is required to be named <code>nav.xhtml</code>.</p>
+<p>Section 5.2.1 of this document contains language specific headings for the <code>&lt;nav&gt;</code> sections of the navigation document that are listed below.</p>
+<h4 data-number="2.6.1.1" id="the-table-of-contents"><span class="header-section-number">2.6.1.1</span> The Table Of Contents</h4>
+<p>The first required <code>&lt;nav&gt;</code> element in the file is for the main table of contents. The <code>&lt;nav&gt;</code> element is required to have a <code>&lt;h1&gt;</code> as the first child element. The <code>&lt;nav&gt;</code> element must have the <code>aria-labelledby</code> attribute set to the <code>id</code> of the <code>&lt;h1&gt;</code> element. The <code>role</code> and <code>epub:type</code> elements must be set as follows:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;nav</span><span class="ot"> role=</span><span class="st">&quot;doc-toc&quot;</span><span class="ot"> aria-labelledby=</span><span class="st">&quot;n1&quot;</span><span class="ot"> epub:type=</span><span class="st">&quot;toc&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span><span class="ot"> id=</span><span class="st">&quot;n1&quot;</span><span class="kw">&gt;</span>Contents<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<p>All headings in the main body of text must be included in the <code>&lt;nav role="doc-toc"...&gt;</code> element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.</p>
+<p>The links must always reference the corresponding sectioning element for the heading in the content file, not the <code>h[x]</code> element directly. This is usually a <code>&lt;section&gt;</code> element, but can also be <code>&lt;aside&gt;</code> or any other sectioning element. Thus, in the example below, the link should point to the id “level3_2” in that content file:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;section</span><span class="ot"> aria-labelledby=</span><span class="st">&quot;h3_2&quot;</span><span class="ot"> id=</span><span class="st">&quot;level3_2&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h3</span><span class="ot"> id=</span><span class="st">&quot;h3_2&quot;</span><span class="kw">&gt;</span>DET MYTISKA NORDEN<span class="kw">&lt;/h3&gt;</span></span></code></pre></div>
+<p>A section without any heading must be referenced using its <code>aria-label</code> value.</p>
+<p>Note that this is not a representation of the table of contents in the source material. Only headings, or references using the <code>aria-label</code> value of the corresponding <code>&lt;section&gt;</code> element, should be included.</p>
+<p>See the following link for further information (but disregard examples of unlinked headings or hidden branches):</p>
+<p><a href="http://kb.daisy.org/publishing/docs/navigation/toc.html">http://kb.daisy.org/publishing/docs/navigation/toc.html</a></p>
+<h4 data-number="2.6.1.2" id="page-list"><span class="header-section-number">2.6.1.2</span> Page List</h4>
+<p>If the source material contains pagination, the next required <code>&lt;nav&gt;</code> element is:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;nav</span><span class="ot"> role=</span><span class="st">&quot;doc-pagelist&quot;</span><span class="ot"> aria-labelledby=</span><span class="st">&quot;n2&quot;</span><span class="ot"> epub:type=</span><span class="st">&quot;page-list&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span><span class="ot"> id=</span><span class="st">&quot;n2&quot;</span><span class="kw">&gt;</span>Pages<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<p>See the following link for further information:</p>
+<p><a href="http://kb.daisy.org/publishing/docs/navigation/pagelist.html">http://kb.daisy.org/publishing/docs/navigation/pagelist.html</a></p>
+<p>If no pagination occurs in the source material this may be omitted.</p>
+<h4 data-number="2.6.1.3" id="landmarks"><span class="header-section-number">2.6.1.3</span> Landmarks</h4>
+<p>The final required <code>&lt;nav&gt;</code> element is:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;nav</span><span class="ot"> role=</span><span class="st">&quot;navigation&quot;</span><span class="ot"> aria-labelledby=</span><span class="st">&quot;n3&quot;</span><span class="ot"> epub:type=</span><span class="st">&quot;landmarks&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span><span class="ot"> id=</span><span class="st">&quot;n3&quot;</span><span class="kw">&gt;</span>Landmarks<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<p>The Landmarks section should contain references to any main sections of the front- and rearmatter parts of the source material, as well as a reference to the start of the main content of the book, which will be the start of the first content file with the word “bodymatter” in its <code>epub:type</code> attribute of the top-level <code>&lt;section&gt;</code> element. The list of references may include the following, when applicable:</p>
+<ul>
+<li>Table of Contents (the toc of the source material)</li>
+<li>List of Images</li>
+<li>List of Tables</li>
+<li>Acknowledgments</li>
+<li>Preface</li>
+<li>Start of Content</li>
+<li>Answers</li>
+<li>Glossary</li>
+<li>Bibliography</li>
+<li>Index</li>
+</ul>
+<p>Note that the links, the <code>&lt;a&gt;</code> elements, in the Landmarks section must have appropriate <code>epub:type</code> values. Examples can be found here:</p>
+<p><a href="http://kb.daisy.org/publishing/docs/navigation/landmarks.html">http://kb.daisy.org/publishing/docs/navigation/landmarks.html</a></p>
+<h3 data-number="2.6.2" id="ncx-navigation-document"><span class="header-section-number">2.6.2</span> NCX Navigation Document</h3>
+<p>The EPUB package may include an <code>ncx</code> navigation document as fall-back for older reading systems that have not implemented functionality for the EPUB 3 navigation document. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No <code>ncx</code> file should be included unless specifically requested. If requested, the file is required to be named <code>nav.ncx</code>.</p>
+<p>Refer to <a href="http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4">http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4</a> for information about how the <code>ncx</code> file should be formed. Required elements are:</p>
+<ul>
+<li><code>&lt;head&gt;</code></li>
+<li><code>&lt;docTitle&gt;</code></li>
+<li><code>&lt;navMap&gt;</code></li>
+<li><code>&lt;pageList&gt;</code></li>
+</ul>
+<p>The <code>&lt;head&gt;</code> element must contain the following <code>&lt;meta&gt;</code> element:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;dtb:uid&quot;</span><span class="ot"> content=</span><span class="st">&quot; _[production UID provided by the ordering agency]_ &quot;</span><span class="kw">/&gt;</span></span></code></pre></div>
+<p>All headings must be included in the <code>&lt;navMap&gt;</code> and the heading levels must be implied through nesting.</p>
+<h2 data-number="2.7" id="images"><span class="header-section-number">2.7</span> Images</h2>
+<p>Image content is required to be captured in the <code>jpeg</code> or <code>png</code> formats. The format extension is required to be <code>.jpg</code> or <code>.png</code>. Photos, drawings and illustrations must be captured in the <code>jpeg</code> format. For line graphics, charts and diagrams the preferred format is <code>png</code>.</p>
+<p>Suppliers are required to maintain the highest possible image quality. The quality requirements are the following:</p>
+<ul>
+<li>The aspect ratio of the original image must always be maintained.</li>
+<li>Colours must be reproduced and rendered accurately.</li>
+<li>The image must be free of any compression artefacts or any distortion effects arising from scanning.</li>
+<li>Text in images, line graphics and small detail must be crisp and fully legible, or with no degradation in legibility in comparison with the original image.</li>
+<li>If the <code>jpeg</code> format is used, the quality setting is required to be set at around 90% (or a corresponding setting, if a different scale of measurement is used). A setting of 100% is usually unnecessary as it yields substantially larger files with little or no visible improvement of quality. If, however, there would be visible difference in quality between 90% and a higher setting, then the higher setting should be used.</li>
+</ul>
+<h3 data-number="2.7.1" id="image-file-naming-and-directory-structure"><span class="header-section-number">2.7.1</span> Image File Naming and Directory Structure</h3>
+<p>Image files are required to be stored in a folder named <em>images</em> placed at the same level relative to the package document. The images folder must not contain subfolders.</p>
+<p>Image files should be named according to the following file naming convention:</p>
+<pre><code>[UID]-[XXX].[png|jpg]</code></pre>
+<p>The <em>UID</em> must be identical to the value of the <code>dc:identifier</code> metadata element. <em>XXX</em> is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)</p>
+<p>Example:</p>
+<pre><code>X41001A-013.png</code></pre>
+<p>An exception to this is the cover image, which should be named simply <code>cover.png</code> or <code>cover.jpg</code>.</p>
+<h3 data-number="2.7.2" id="resizing-of-images"><span class="header-section-number">2.7.2</span> Resizing of Images</h3>
+<p>The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small details.</p>
+<p>In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.</p>
+<h3 data-number="2.7.3" id="image-editing"><span class="header-section-number">2.7.3</span> Image Editing</h3>
+<p>Images are required to be captured exactly as they are in the scans or publisher files provided by the Ordering Agency. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).</p>
+<p>When whole sections or parts of text is placed on top of a background image, the text may need to be edited out of the background, if possible. However, no advanced restoration of lost image details are required. Note that if a publisher file is provided, images and text may have been placed in different layers and the image can be extracted without any text.</p>
+<h2 data-number="2.8" id="css"><span class="header-section-number">2.8</span> CSS</h2>
+<p>Suppliers are required to include the standard <code>css</code> file issued by the Ordering Agency. The <code>css</code> file is required to be stored in a folder named <em>css</em> and placed at the same level relative to the package document.</p>
+<p>The <code>&lt;link&gt;</code> element is required to be applied to the relevant content documents.</p>
+<h2 data-number="2.9" id="fonts"><span class="header-section-number">2.9</span> Fonts</h2>
+<p>Fonts present in PDF source material must not be included in the EPUB, unless specifically indicated by the Ordering Agency.</p>
+<p>Fonts, when present, must be stored in a folder named <em>fonts</em> and placed at the same level relative to the package document.</p>
+<h2 data-number="2.10" id="javascript"><span class="header-section-number">2.10</span> Javascript</h2>
+<p>Javascript files requested by the Ordering Agency are required to be stored in a folder named <em>javascript</em> and placed on the same level relative to the package document.</p>
+<p>The <code>&lt;script&gt;</code> element is required to be applied to the relevant content documents.</p>
+<p>Suppliers must not include javascript files in the EPUB unless specifically instructed to do so by the Ordering Agency.</p>
+<h2 data-number="2.11" id="validation"><span class="header-section-number">2.11</span> Validation</h2>
+<p>Validation of EPUB files should be done using EPUBCheck for structural validity and conformance to the EPUB standard and the Ace tool for accessibility evaluation. The latest distributions of these tools should be used. The tools can be found here:</p>
+<ul>
+<li><a href="https://github.com/w3c/epubcheck/releases">https://github.com/w3c/epubcheck/releases</a></li>
+<li><a href="https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/">https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/</a></li>
+</ul>
+<p>The Ordering Agencies are currently developing a specific validation tool based on these guidelines. When this tool is available it will be the primary validation method.</p>
+<h1 data-number="3" id="general-requirements-for-content-documents"><span class="header-section-number">3</span> General Requirements for Content Documents</h1>
+<h2 data-number="3.1" id="structural-divisons-and-semantics"><span class="header-section-number">3.1</span> Structural Divisons and Semantics</h2>
+<p>The EPUB Content File structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual XHTML content files. The individual content files will typically correspond to <em>Part</em> or <em>Chapter</em> divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.</p>
+<p>The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in <code>&lt;section&gt;</code> elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a <code>&lt;section&gt;</code> element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency.</p>
+<p>The semantic role of each content document must be specified, when possible. This is done by adding the <code>role</code> and <code>epub:type</code> attributes to the top level <code>&lt;section&gt;</code> element of each content file. The available <code>role</code> attribute values are listed here:</p>
+<p><a href="https://www.w3.org/TR/dpub-aria-1.0/#roles">https://www.w3.org/TR/dpub-aria-1.0/#roles</a></p>
+<p>When the content file can be matched to one of the roles listed, the top level <code>&lt;section&gt;</code> element is required to have the <code>role</code> attribute with that matching value set. If no suitable role exists the <code>role</code> attribute may be omitted.</p>
+<p>The <code>epub:type</code> attribute is also required for the top level <code>&lt;section&gt;</code> element of each content file and must first contain one of the following partition values:</p>
+<ul>
+<li><code>cover</code></li>
+<li><code>frontmatter</code></li>
+<li><code>bodymatter</code></li>
+<li><code>backmatter</code></li>
+</ul>
+<p>The <code>frontmatter</code>, <code>bodymatter</code> and <code>backmatter</code> partition values must also be combined with a divisioning or sectioning value found here:</p>
+<p><a href="https://idpf.github.io/epub-vocabs/structure/">https://idpf.github.io/epub-vocabs/structure/</a></p>
+<p>If no matching divisioning or sectioning value can be found, the <code>epub:type</code> will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply <code>epub:type="cover"</code>.</p>
+<p>If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level <code>&lt;section&gt;</code> elements, which will contain the chapters.</p>
+<p>Furthermore, all <code>&lt;section&gt;</code> elements are required to have a label. When the <code>&lt;section&gt;</code> has a heading, usually <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc., the heading serves as a label but must be associated with the <code>&lt;section&gt;</code> element. This is done by using the <code>aria-labelledby</code> attribute and setting the <code>id</code> of the associated header as value:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;section</span><span class="ot"> role=</span><span class="st">&quot;doc-chapter&quot;</span><span class="ot"> aria-labelledby=</span><span class="st">&quot;hd01&quot;</span><span class="ot"> epub:type=</span><span class="st">&quot;bodymatter chapter&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1</span><span class="ot"> id=</span><span class="st">&quot;hd01&quot;</span><span class="kw">&gt;</span>Chapter 1<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        ...</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
+<p>If the section is untitled, the <code>aria-label</code> attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but below you will find a list of default values for generic sections often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Section identification</th>
+<th>Default <code>aria-label</code> value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>@epub-type="cover"</code></td>
+<td>Cover</td>
+</tr>
+<tr class="even">
+<td><code>@class="frontcover"</code></td>
+<td>Front cover</td>
+</tr>
+<tr class="odd">
+<td><code>@class="backcover"</code></td>
+<td>Back cover</td>
+</tr>
+<tr class="even">
+<td><code>@class="leftflap"</code></td>
+<td>Jacket left flap</td>
+</tr>
+<tr class="odd">
+<td><code>@class="rightflap"</code></td>
+<td>Jacket right flap</td>
+</tr>
+<tr class="even">
+<td><code>@role="doc-colophon"</code></td>
+<td>Publisher information</td>
+</tr>
+<tr class="odd">
+<td><code>@role="doc-dedication"</code></td>
+<td>Dedication</td>
+</tr>
+<tr class="even">
+<td><code>@role="doc-epigraph"</code></td>
+<td>Epigraph</td>
+</tr>
+<tr class="odd">
+<td><code>@role="doc-toc"</code></td>
+<td>Contents</td>
+</tr>
+</tbody>
+</table>
+<p>Section 5.2.2 of this document contains language specific values.</p>
+<p>See <a href="http://kb.daisy.org/publishing/docs/html/sections.html">http://kb.daisy.org/publishing/docs/html/sections.html</a> for more information.</p>
+<h2 data-number="3.2" id="file-naming-convention"><span class="header-section-number">3.2</span> File Naming Convention</h2>
+<p>The basic scheme for naming individual files is:</p>
+<pre><code>[UID]-[XXX]-[role].xhtml</code></pre>
+<p>The <em>UID</em> must be identical to the value of the <code>dc:identifier</code> metadata element. <em>XXX</em> is a three-digit numeric string corresponding to the order in the <code>&lt;spine&gt;</code>, with leading zeros as needed. <em>role</em> corresponds to the ARIA <code>role</code> of the main section element in the content file, minus the “<code>doc-</code>” part. In the absence of an ARIA role for the top-level section of the content document, the value from the <code>epub:type</code> attribute should be used instead. In the case of multiple <code>epub:type</code> (e.g. <code>frontmatter titlepage</code>)values, the most specific (e.g. <code>titlepage</code>) should be used.</p>
+<p>Example:</p>
+<pre><code>X41001A-010-chapter.xhtml</code></pre>
+<h2 data-number="3.3" id="special-content-requirements"><span class="header-section-number">3.3</span> Special Content Requirements</h2>
+<p>Some content files have certain contents that are required to be included and marked up correctly.</p>
+<h3 data-number="3.3.1" id="cover"><span class="header-section-number">3.3.1</span> Cover</h3>
+<p>The following class attributes must applied to the child <code>&lt;section&gt;</code> elements where appropriate:</p>
+<ul>
+<li><code>&lt;section class="frontcover"&gt;</code></li>
+<li><code>&lt;section class="rearcover"&gt;</code></li>
+<li><code>&lt;section class="leftflap"&gt;</code></li>
+<li><code>&lt;section class="rightflap"&gt;</code></li>
+</ul>
+<p>The front cover, when available, must be captured as a <code>.jpg</code> or <code>.png</code> image file and given the name <code>cover.jpg/png</code>. The <code>properties="cover-image"</code> attribute must be applied to the manifest item element corresponding to this image. The <code>&lt;img&gt;</code> element referencing the cover image must have <code>aria-role</code> set to <code>"doc-cover"</code>.</p>
+<p>Note that the <code>linear="no"</code> attribute must be applied to the <code>itemref</code> element in the package spine corresponding to this content file.</p>
+<h3 data-number="3.3.2" id="title-page"><span class="header-section-number">3.3.2</span> Title Page</h3>
+<p>Content corresponding to the publication’s full title must be included in an <code>&lt;h1&gt;</code> element.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span><span class="ot"> epub:type=</span><span class="st">&quot;fulltitle&quot;</span><span class="ot"> class=</span><span class="st">&quot;title&quot;</span><span class="ot"> id=</span><span class="st">&quot;booktitle&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<p>Use of the <code>&lt;span&gt;</code> element is only required when a subtitle is present. The following attribute usage must be applied to the appropriate <code>&lt;span&gt;</code> element:</p>
+<ul>
+<li><code>&lt;span epub:type="title"&gt;</code></li>
+<li><code>&lt;span epub:type="subtitle"&gt;</code></li>
+</ul>
+<h3 data-number="3.3.3" id="parts"><span class="header-section-number">3.3.3</span> Parts</h3>
+<p>Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the <code>&lt;section&gt;</code> element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must be marked up as <code>&lt;h2&gt;</code>, even though they are the first heading of its content file. Semantic attributes, <code>role</code> and <code>epub:type</code>, must be given to the <code>&lt;section&gt;</code> elements of both part and chapters.</p>
+<p>Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the <code>&lt;h1&gt;</code> and the chapter headings <code>&lt;h2&gt;</code> and the <code>&lt;section&gt;</code> element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, <code>role</code> and <code>epub:type</code>, must still be given to the <code>&lt;section&gt;</code> elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.</p>
+<h2 data-number="3.4" id="mark-up-requirements"><span class="header-section-number">3.4</span> Mark-up Requirements</h2>
+<p>These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like <code>&lt;p&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;figure&gt;</code> etc. and the common structural elements like <code>&lt;section&gt;</code> and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.</p>
+<p>For further information about the common HTML elements and their attributes, please refer to any online resource on HTML 5, for instance:</p>
+<ul>
+<li>The formal HTML(5) specification: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></li>
+<li><a href="https://www.w3schools.com/">https://www.w3schools.com/</a></li>
+</ul>
+<h3 data-number="3.4.1" id="pagination"><span class="header-section-number">3.4.1</span> Pagination</h3>
+<p>All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by the Ordering Agency:</p>
+<ul>
+<li>Inline: <code>&lt;span epub:type="pagebreak" role="doc-pagebreak"&gt;</code></li>
+<li>Block: <code>&lt;div epub:type="pagebreak" role="doc-pagebreak"&gt;</code></li>
+</ul>
+<p>Additionally required attributes:</p>
+<ul>
+<li><code>aria-label=""</code></li>
+<li><code>class=""</code></li>
+<li><code>id=""</code></li>
+</ul>
+<p>The value for the <code>aria-label</code> attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.</p>
+<p>In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.</p>
+<p>The class attribute must have either of the following values:</p>
+<ul>
+<li><code>page-front</code></li>
+<li><code>page-normal</code></li>
+<li><code>page-special</code></li>
+</ul>
+<p>The attribute value <code>page-normal</code> is required for the pagination of the main contents of the book, basically the bodymatter, but can also be used for the frontmatter and backmatter if the pagination is continuous.</p>
+<p>The attribute value <code>page-front</code> is required when the page numbering series of the frontmatter is not logically continued in the publication bodymatter, i.e. roman numerals.</p>
+<p>The attribute value <code>page-special</code> is required for any parts of the book not numbered in a standard manner, for example appendices, suites of photography etc.</p>
+<p>The attribute <code>id</code> is simply a unique identifier.</p>
+<p>By default, the pagebreak elements are required to be empty, like in the following examples:</p>
+<ul>
+<li>Inline: <code>&lt;span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"&gt;&lt;/span&gt;</code></li>
+<li>Block: <code>&lt;div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"&gt;&lt;/div&gt;</code></li>
+</ul>
+<p>However, there may be agency specific instructions to place the page number, as it is displayed in the source material, as content in the pagebreak elements. For example:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span><span class="ot"> epub:type=</span><span class="st">&quot;pagebreak&quot;</span><span class="ot"> role=</span><span class="st">&quot;doc-pagebreak&quot;</span><span class="ot"> class=</span><span class="st">&quot;page-normal&quot;</span><span class="ot"> id=</span><span class="st">&quot;page-38&quot;</span><span class="ot"> aria-label=</span><span class="st">&quot;38&quot;</span><span class="kw">&gt;</span>38<span class="kw">&lt;/span&gt;</span>`</span></code></pre></div>
+<p>This is only to be done if specific instructions are given by the Ordering Agency.</p>
+<p>There must be no unnumbered pages. If unnumbered pages in the source material are implicitly numbered, for instance the initial pages of a book, they must be numbered accordingly. That is, if the pagination starts with page 9 in the source material, the previous pages must be numbered 1-8. If there are other unnumbered pages in the source material they must be assigned numbers and given the <code>class</code> attribute <code>page-special</code>. This will be specified by the Ordering Agency via Editing Instructions.</p>
+<h3 data-number="3.4.2" id="headings"><span class="header-section-number">3.4.2</span> Headings</h3>
+<p>The <code>&lt;h1&gt;-&lt;h6&gt;</code> elements are used to reflect the heading structure present in the source copy. Note that <code>&lt;h[x]&gt;</code> tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code> and <code>&lt;nav&gt;</code>.</p>
+<p>Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be marked up using <code>&lt;p epub:type="bridgehead"&gt;</code>. Bridgehead markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.</p>
+<h3 data-number="3.4.3" id="figures"><span class="header-section-number">3.4.3</span> Figures</h3>
+<p>All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.</p>
+<p>Unless the image occurs inline in the source material, any image is required to be placed inside a <code>&lt;figure&gt;</code> element with a <code>class</code> attribute set to <code>image</code>. If the image has a caption, the caption is required to be marked up with the <code>&lt;figcaption&gt;</code> element and placed as the first child of the <code>&lt;figure&gt;</code> element. If no caption is present, the <code>&lt;img&gt;</code> element will be the first child.</p>
+<p>Small symbols or other non-typographical content that might occur inline, are required to be represented with <code>&lt;img&gt;</code> elements alone, without the <code>&lt;figure&gt;</code> container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use <code>&lt;figure&gt;</code> or, alternatively, contact the Ordering Agency.</p>
+<p>Images in tables or lists may be handled as inline images if there are no captions or similar.</p>
+<h4 data-number="3.4.3.1" id="text-extraction-from-images"><span class="header-section-number">3.4.3.1</span> Text Extraction from Images</h4>
+<p>When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder within the <code>&lt;figure&gt;</code> element of the image. The placeholder should be placed after the <code>&lt;img&gt;</code> element, before the closing <code>&lt;/figure&gt;</code> tag. Suppliers are required to use the <code>&lt;aside&gt;</code> element for this placeholder with the following attributes:</p>
+<ul>
+<li><code>class="fig-desc"</code></li>
+<li><code>id=""</code></li>
+</ul>
+<p>where <code>id</code> is a unique identifier. Furthermore, the corresponding <code>&lt;img&gt;</code> element must then be given the following attribute:</p>
+<ul>
+<li><code>aria-describedby=""</code></li>
+</ul>
+<p>with the same value as the id of the <code>&lt;aside&gt;</code> placeholder.</p>
+<p>The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure</span><span class="ot"> class=</span><span class="st">&quot;image&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;figcaption&gt;</span>...<span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;images/X41001A-012.jpg&quot;</span><span class="ot"> alt=</span><span class="st">&quot;figure&quot;</span><span class="ot"> aria-describedby=</span><span class="st">&quot;desc012&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;aside</span><span class="ot"> class=</span><span class="st">&quot;fig-desc&quot;</span><span class="ot"> id=</span><span class="st">&quot;desc012&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p&gt;</span>...<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<p>Note that this is the construction that is used by several Ordering Agencies for adding image descriptions in post-production.</p>
+<h4 data-number="3.4.3.2" id="alt-texts"><span class="header-section-number">3.4.3.2</span> Alt-texts</h4>
+<p>Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the <code>alt</code> attribute of the <code>&lt;img&gt;</code> elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:</p>
+<ul>
+<li><code>photo</code> – for photographs</li>
+<li><code>illustration</code> – for illustrations</li>
+<li><code>figure</code> – for schematic images, graphs, diagrams, scientific models etc.</li>
+<li><code>symbol</code> – for icons, signs, inline images etc.</li>
+<li><code>map</code> – for maps</li>
+<li><code>drawing</code> – for drawings</li>
+<li><code>comic</code> – for comic strips and panels</li>
+<li><code>logo</code> – for logos</li>
+</ul>
+<p>Section 5.2.3 of this document contains language specific alt-text values.</p>
+<p>If there are any doubts about which value to assign the <code>alt</code> attribute, Suppliers are required to use <code>figure</code>.</p>
+<h4 data-number="3.4.3.3" id="image-series"><span class="header-section-number">3.4.3.3</span> Image Series</h4>
+<p>If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate <code>&lt;figure&gt;</code> elements. The whole series must then be wrapped in a <code>&lt;figure&gt;</code> element where the <code>class</code> attribute is set to <code>image-series</code>.</p>
+<p>If there is a caption for the image series as a whole, this must be marked up with the <code>&lt;figcaption&gt;</code> element and placed inside the outer <code>&lt;figure&gt;</code> element, before the individual <code>&lt;figure&gt;</code> elements containing the images. Any caption for individual images are placed together with that image as described above.</p>
+<p>This is how the markup will look like:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure</span><span class="ot"> class=</span><span class="st">&quot;image-series&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;figcaption&gt;</span>...<span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;figure</span><span class="ot"> class=</span><span class="st">&quot;image&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;figcaption&gt;</span>...<span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;images/X41001A-012.jpg&quot;</span><span class="ot"> alt=</span><span class="st">&quot;figure&quot;</span><span class="ot"> aria-describedby=</span><span class="st">&quot;desc012&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;aside</span><span class="ot"> class=</span><span class="st">&quot;fig-desc&quot;</span><span class="ot"> id=</span><span class="st">&quot;desc012&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>...<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;/figure&gt;</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;figure</span><span class="ot"> class=</span><span class="st">&quot;image&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>      ...</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;/figure&gt;</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>   ...</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<h3 data-number="3.4.4" id="lists"><span class="header-section-number">3.4.4</span> Lists</h3>
+<p>Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Any such content is required to be marked up with either <code>&lt;ol&gt;</code> (ordered list) or <code>&lt;ul&gt;</code> (unordered list). Each item of any list must be marked up with <code>&lt;li&gt;</code>.</p>
+<p>A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more <code>&lt;p&gt;</code> elements inside every list item of the list.</p>
+<h4 data-number="3.4.4.1" id="numbered-lists"><span class="header-section-number">3.4.4.1</span> Numbered Lists</h4>
+<p>The numbering of an ordered list must not be included as content in the <code>&lt;li&gt;</code> elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the <code>type</code> attribute. The default starting point is <code>1</code> (regardless of which type of numbering the ordered list uses), but can be changed using the <code>start</code> attribute.</p>
+<h4 data-number="3.4.4.2" id="unnumbered-lists"><span class="header-section-number">3.4.4.2</span> Unnumbered Lists</h4>
+<p>Unnumbered lists often have some sort of bullet markers for each list item. The default is a solid black circle. The type attribute has been used before, to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.</p>
+<p>Lists without any bullet markers are required to have the attribute:</p>
+<ul>
+<li><code>class="plain"</code></li>
+</ul>
+<p>By default, <code>&lt;ul&gt;</code> should be used here, but Ordering Agencies may give specific instructions to use <code>&lt;ol&gt;</code>.</p>
+<h4 data-number="3.4.4.3" id="tables-of-contents"><span class="header-section-number">3.4.4.3</span> Tables of Contents</h4>
+<p>Any table of contents in the source material is required to be marked up in the following way:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;ol</span><span class="ot"> class=</span><span class="st">&quot;plain&quot;</span><span class="ot"> epub:type=</span><span class="st">&quot;toc&quot;</span><span class="ot"> role=</span><span class="st">&quot;doc-toc&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;li&gt;&lt;span</span><span class="ot"> class=</span><span class="st">&quot;lic&quot;</span><span class="kw">&gt;</span>_[Heading 1]_<span class="kw">&lt;/span&gt;</span> <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;lic&quot;</span><span class="kw">&gt;</span>_[Page number]_<span class="kw">&lt;/span&gt;&lt;/li&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>   ...</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/ol&gt;</span></span></code></pre></div>
+<p>This is typically used for the main table of contents that most books have somewhere in the frontmatter part, but it could also be a table of content for a single part or chapter. The <code>&lt;span class="lic"&gt;</code> element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only <code>&lt;li&gt;</code>, without any <code>&lt;span class="lic"&gt;</code>.</p>
+<p>Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.</p>
+<h3 data-number="3.4.5" id="tables"><span class="header-section-number">3.4.5</span> Tables</h3>
+<p>All tables or table-like structures are required to be marked up as <code>&lt;table&gt;</code>. If the table has a caption it is required to be marked up with <code>&lt;caption&gt;</code> and placed just after the starting tag of the <code>&lt;table&gt;</code> element. It can sometimes be unclear what content should go into the <code>&lt;caption&gt;</code> element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the <code>&lt;caption&gt;</code> element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the <code>&lt;caption&gt;</code> element in individual paragraphs. Non-standard use of the <code>&lt;caption&gt;</code> element should be specified by the Ordering Agency in the Editing Instructions.</p>
+<p>The <code>&lt;tbody&gt;</code> element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use <code>&lt;thead&gt;</code> for any column heading at the top of the table. For the sake of consistency, it is required to use <code>&lt;thead&gt;</code> if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element <code>&lt;tfoot&gt;</code> can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions.</p>
+<p>Tables are required to have a consistent number of table cells per row. If <code>colspan</code> or <code>rowspan</code> are used, take extra care that the total number of cells is correct.</p>
+<p>Never use tables solely for the purpose of mimicking the layout of the source material. The <code>colspan</code> and <code>rowspan</code> attributes may be used with <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.</p>
+<h3 data-number="3.4.6" id="definition-lists"><span class="header-section-number">3.4.6</span> Definition Lists</h3>
+<p>All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as <code>&lt;dl&gt;</code>. Note that language attributes may be required, for example with glossaries.</p>
+<h3 data-number="3.4.7" id="notes-and-note-references"><span class="header-section-number">3.4.7</span> Notes and Note References</h3>
+<p>Footnotes and endnotes are required to be handled in accordance with the recommendations in the Accessible Publishing Knowledge Base:</p>
+<p><a href="http://kb.daisy.org/publishing/docs/html/notes.html">http://kb.daisy.org/publishing/docs/html/notes.html</a></p>
+<p>Footnotes are to be placed in an <code>&lt;aside&gt;</code> at the end of the relevant <code>&lt;section&gt;</code>. If there are more than one note reference in the section, notes must <strong>not</strong> be grouped in a single <code>&lt;aside&gt;</code>, but separated so that each note is contained in its own <code>&lt;aside&gt;</code>.</p>
+<p>Endnotes or chapter notes must be placed in a <code>&lt;section&gt;</code> element at the end of the content file, before the closing of the top-level <code>&lt;section&gt;</code> element. The <code>&lt;section&gt;</code> element containing the notes must have the <code>role</code> attribute set to <code>doc-endnotes</code>. It must also have the <code>aria-label</code> attribute set to <code>Endnotes</code>. Note that the <code>&lt;aside&gt;</code> element must not be used in this case.</p>
+<p>Backlinks are required for each note, done according to the examples in the Knowledge Base. Unless other instructions are given, the text of the backlink in should read (in English):</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#ref&quot;</span><span class="ot"> role=</span><span class="st">&quot;doc-backlink&quot;</span><span class="kw">&gt;</span>Go to the note reference.<span class="kw">&lt;/a&gt;&lt;/p&gt;</span></span></code></pre></div>
+<p>Section 5.2.5 of this document contains language specific backlink texts.</p>
+<p>Note references are not to be marked up with <code>&lt;sup&gt;</code>. This is handled by the default CSS provided by the Ordering Agency.</p>
+<h3 data-number="3.4.8" id="sidebars-text-boxes-etc."><span class="header-section-number">3.4.8</span> Sidebars, Text Boxes etc.</h3>
+<p>The <code>&lt;aside&gt;</code> element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.</p>
+<p>Any material that is in some way contained or has a clearly visible beginning and end, but is still an integral part of the main text or content is required to be marked up with <code>&lt;div&gt;</code>. This could be, for instance, examples, definitions, tips, boxes containing words or phrases in exercises etc.</p>
+<p>In both cases the elements are required to have a <code>class</code> attribute. The default value of the class attribute is text-box, but other values can be given in Editing Instructions.</p>
+<p>For certain publications there may be instructions given to add <code>aria-label</code> attributes to either of the elements, but unless such instructions are given no <code>aria-label</code> attributes are to be included.</p>
+<p>If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.</p>
+<p>Headings in text boxes is by default required to be marked up using <code>&lt;p epub:type="bridgehead"&gt;</code>. These are structurally unimportant headings and will not be included in the navigation document. If, however, certain text boxes should be included in the navigation document, they must be marked up using a <code>&lt;h[x]&gt;</code> element of an appropriate level, following the level structure of the surrounding text. Only text boxes marked up with <code>&lt;aside&gt;</code> can have <code>&lt;h[x]&gt;</code> headings. The Ordering Agency will specify in the Editing Instructions if <code>&lt;h[x]&gt;</code> markup is required.</p>
+<h3 data-number="3.4.9" id="computer-code"><span class="header-section-number">3.4.9</span> Computer Code</h3>
+<p>Suppliers are required to mark up code content with the <code>&lt;code&gt;</code> element. For block instances containing several lines of code, the <code>&lt;code&gt;</code> element must be contained in a <code>&lt;pre&gt;</code> element.</p>
+<p>In blocks of computer code, spaces and empty lines must be preserved.</p>
+<h3 data-number="3.4.10" id="bolding-and-italics"><span class="header-section-number">3.4.10</span> Bolding and Italics</h3>
+<p>The only elements to be used are <code>&lt;strong&gt;</code> for bold and <code>&lt;em&gt;</code> for italics. Other type of formatting may be required in certain publications and, if such is the case, specific instructions will be given in the Editing Instructions.</p>
+<p>Principles for how <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> are used can be found here:</p>
+<p><a href="http://kb.daisy.org/publishing/docs/html/emphasis.html">http://kb.daisy.org/publishing/docs/html/emphasis.html</a></p>
+<p>Please take care that text marked up with em or strong is identical with the original book. Do not include space or punctuation which is not emphasised in the original. Words in em or strong at the end of sentences should not include end-of-sentence punctuation, like full stops, unless the whole sentence is emphasised. If a sentence ends with an emphasised word, and the next sentence begins with a new emphasised word, make sure the words are marked up using separate instances of em or strong, and that the end-of-sentence punctuation is not included.</p>
+<h3 data-number="3.4.11" id="poetry-and-verse"><span class="header-section-number">3.4.11</span> Poetry and Verse</h3>
+<p>Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with <code>&lt;div class="verse"&gt;</code>.</p>
+<p>Each group of lines of text must be contained in a separate <code>&lt;p class="linegroup"&gt;</code> element and each line of text must be marked up with <code>&lt;span class="line"&gt;</code>. HTML line breaks, <code>&lt;br/&gt;</code>, must be added between consecutive lines within a line group. Indented lines may be marked up using <code>&lt;span class="line_indent"&gt;</code> or <code>&lt;span class="line_longindent"&gt;</code>.</p>
+<p>Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with <code>&lt;span class="linenum"&gt;</code>.</p>
+<p>If the content written in verse has a title it may be handled as a normal heading, with <code>&lt;section&gt;</code> elements wrapping the content. However, if it does not make sense to use a heading, it may be marked up with <code>&lt;p class="verse-title"&gt;</code> and placed within the <code>&lt;div class="verse"&gt;</code> container. This option must not be used unless specific instructions are given by the Ordering Agency.</p>
+<p>If there is an author name placed under the verse it may be marked up with <code>&lt;p class="verse-author"&gt;</code> and placed at the end of the <code>&lt;div class="verse"&gt;</code> container.</p>
+<h3 data-number="3.4.12" id="quotes"><span class="header-section-number">3.4.12</span> Quotes</h3>
+<p>Quotes, citations, excerpts from other sources and similar content are required to be marked up using the <code>&lt;blockquote&gt;</code> element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The <code>&lt;blockquote&gt;</code> element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the <code>&lt;blockquote&gt;</code> element, marked up with a separate <code>&lt;p&gt;</code>.</p>
+<h2 data-number="3.5" id="thematic-breaks-in-the-text-flow"><span class="header-section-number">3.5</span> Thematic Breaks in the Text Flow</h2>
+<p>In circumstances where depth of structure is not amenable to structural markup using <code>&lt;section&gt;</code> elements, Suppliers are required to use the <code>&lt;hr&gt;</code> element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:</p>
+<ul>
+<li><code>&lt;hr class="emptyline"/&gt;</code> indicates thematic breaks represented by a vertical space between paragraphs.</li>
+<li><code>&lt;hr class="separator"/&gt;</code> indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.</li>
+</ul>
+<h1 data-number="4" id="specific-requirements-for-advanced-content"><span class="header-section-number">4</span> Specific Requirements for Advanced Content</h1>
+<h2 data-number="4.1" id="mathematical-content"><span class="header-section-number">4.1</span> Mathematical Content</h2>
+<p>All mathematical or scientific content, content that contains mathematical operators, special characters, subscripts, superscripts etc., must be marked up using MathML. These guidelines will not go into much detail about the MathML language. Please refer to the specification:</p>
+<p><a href="https://www.w3.org/TR/MathML3/">https://www.w3.org/TR/MathML3/</a></p>
+<p>For more detail about the MathML structure, please refer to each individual Ordering Agency’s requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See <a href="http://asciimath.org">http://asciimath.org</a> for information about the ASCIIMath notation.</p>
+<h2 data-number="4.2" id="special-characters-unicode-and-phonetics"><span class="header-section-number">4.2</span> Special Characters, Unicode and Phonetics</h2>
+<p>If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as <code>¿</code> rather than <code>&amp;#191;</code>, <code>&amp;#xbf;</code>, or similar.</p>
+<p>Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.</p>
+<p>Unicode character accuracy for special characters, e.g. phonetic characters, is vital for a correct representation of the source material. A visual likeness to the characters used in the printed source material is not enough, as the characters may be used by assistive technology to present text information to the user, or being used in various conversions to other types of end-user formats.</p>
+<p>Here are some resources for commonly used special characters:</p>
+<ul>
+<li>Phonetics: <a href="https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm">https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm</a></li>
+<li>The Greek alphabet: <a href="https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm">https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm</a></li>
+</ul>
+<p>Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.</p>
+<h2 data-number="4.3" id="placeholders-for-user-input-areas"><span class="header-section-number">4.3</span> Placeholders for User Input Areas</h2>
+<p>In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book. Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the <code>&lt;span&gt;</code> element to provide placeholders for these input fields in one of the following three ways:</p>
+<ul>
+<li><code>&lt;span class="answer"&gt;---&lt;/span&gt;</code> for a horizontal line or box where any amount of text or numbers are meant to be inserted. Multiple lines in succession must be represented by a single <code>&lt;span class="answer"&gt;---&lt;/span&gt;</code> unless other instructions are given by the Ordering Agency.</li>
+<li><code>&lt;span class="answer_1"&gt;-&lt;/span&gt;</code> for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two <code>&lt;span class="answer_1"&gt;-&lt;/span&gt;</code> elements, without space between them.</li>
+<li><code>&lt;span class="box"&gt;---&lt;/span&gt;</code> for check boxes.</li>
+</ul>
+<h1 data-number="5" id="appendix"><span class="header-section-number">5</span> Appendix</h1>
+<h2 data-number="5.1" id="external-resources"><span class="header-section-number">5.1</span> External Resources</h2>
+<ul>
+<li>EPUB 3.2 Specification: <a href="https://www.w3.org/publishing/epub3/epub-overview.html">https://www.w3.org/publishing/epub3/epub-overview.html</a></li>
+<li>EPUB Accessibility 1.0 Specification: <a href="https://www.w3.org/Submission/epub-a11y/">https://www.w3.org/Submission/epub-a11y/</a></li>
+<li>DAISY Accessible Publishing Knowledge Base: <a href="https://kb.daisy.org/publishing/docs/">https://kb.daisy.org/publishing/docs/</a></li>
+<li>HTML(5) Specification: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></li>
+<li>Digital Publishing WAI-ARIA Module 1.0: <a href="https://www.w3.org/TR/dpub-aria-1.0/">https://www.w3.org/TR/dpub-aria-1.0/</a></li>
+<li>Ace by DAISY Accessibility Checker for EPUB 3: <a href="https://daisy.github.io/ace/">https://daisy.github.io/ace/</a></li>
+<li>MARC Code List for Relators Scheme: <a href="https://id.loc.gov/vocabulary/relators.html">https://id.loc.gov/vocabulary/relators.html</a></li>
+<li>IANA registry of valid language codes:<a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a></li>
+<li>EPUB 2 .ncx Legacy Navigation Document Specification: <a href="http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1">http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1</a></li>
+<li>MathML Specification: <a href="https://www.w3.org/TR/MathML/">https://www.w3.org/TR/MathML/</a></li>
+<li>ASCIIMath Specification: <a href="http://asciimath.org">http://asciimath.org</a></li>
+<li>International Phonetic Alphabet in Unicode Reference: <a href="https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm">https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm</a></li>
+<li>Greek and Coptic Letters in Unicode Reference: <a href="https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm">https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm</a></li>
+</ul>
+<h2 data-number="5.2" id="language-dependent-fixed-text-values"><span class="header-section-number">5.2</span> Language Dependent Fixed Text Values</h2>
+<p>The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by the Ordering Agency, these values, when applied to a specific publication, should follow the primary language of that publication.</p>
+<p>For convenience, the values for all the main languages of the Ordering Agencies are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations if the main language of a title is not one of those listed here.</p>
+<h3 data-number="5.2.1" id="nav.xhtml-headings"><span class="header-section-number">5.2.1</span> nav.xhtml Headings</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>English (default)</th>
+<th>Swedish</th>
+<th>Norwegian (Bokmål)</th>
+<th>Norwegian (Nynorsk)</th>
+<th>Finnish</th>
+<th>Dutch</th>
+<th>Danish</th>
+<th>Icelandic</th>
+<th>German</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pages</td>
+<td>Sidindelning</td>
+<td>Liste over sider</td>
+<td>Liste over sider</td>
+<td>Sivut</td>
+<td>Paginering</td>
+<td>Liste over sider</td>
+<td>Blaðsíður</td>
+<td>Seiten</td>
+</tr>
+<tr class="even">
+<td>Contents</td>
+<td>Innehåll</td>
+<td>Innhold</td>
+<td>Innhald</td>
+<td>Sisällys</td>
+<td>Inhoud</td>
+<td>Indhold</td>
+<td>Efni</td>
+<td>Inhalt</td>
+</tr>
+<tr class="odd">
+<td>Landmarks</td>
+<td>Navigation</td>
+<td>Navigasjon</td>
+<td>Navigasjon</td>
+<td>Navigointi</td>
+<td>Oriëntatiepunten</td>
+<td>Navigation</td>
+<td>Leiðarmerki</td>
+<td>Orientierungspunkte</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="5.2.2" id="aria-label-values"><span class="header-section-number">5.2.2</span> aria-label Values</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>English (default)</th>
+<th>Swedish</th>
+<th>Norwegian (Bokmål)</th>
+<th>Norwegian (Nynorsk)</th>
+<th>Finnish</th>
+<th>Dutch</th>
+<th>Danish</th>
+<th>Icelandic</th>
+<th>German</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cover</td>
+<td>Omslag</td>
+<td>Omslag</td>
+<td>Omslag</td>
+<td>Kansi</td>
+<td>Omslag</td>
+<td>Omslag</td>
+<td>Kápa</td>
+<td>Umschlag</td>
+</tr>
+<tr class="even">
+<td>Front cover</td>
+<td>Framsida</td>
+<td>Forside</td>
+<td>Framside</td>
+<td>Etukansi</td>
+<td>Voorkant</td>
+<td>Forside</td>
+<td>Forsíða</td>
+<td>Buchvorderseite</td>
+</tr>
+<tr class="odd">
+<td>Back cover</td>
+<td>Baksida</td>
+<td>Bakside</td>
+<td>Bakside</td>
+<td>Takakansi</td>
+<td>Achterkant</td>
+<td>Bagside</td>
+<td>Bakhlið</td>
+<td>Buchrückseite</td>
+</tr>
+<tr class="even">
+<td>Jacket left flap</td>
+<td>Vänsterflik</td>
+<td>Venstre innbrett</td>
+<td>Venstre innbrett</td>
+<td>Etulieve</td>
+<td>Linker flaptekst</td>
+<td>Venstre inderflap</td>
+<td>Vinstra innábrot</td>
+<td>Vorderer Klappentext</td>
+</tr>
+<tr class="odd">
+<td>Jacket right flap</td>
+<td>Högerflik</td>
+<td>Høyre innbrett</td>
+<td>Høgre innbrett</td>
+<td>Takalieve</td>
+<td>Rechter flaptekst</td>
+<td>Højre inderflap</td>
+<td>Hægra innábrot</td>
+<td>Hinterer Klappentext</td>
+</tr>
+<tr class="even">
+<td>Publisher information</td>
+<td>Förlagsinformation</td>
+<td>Utgiverinformasjon</td>
+<td>Utgivarinformasjon</td>
+<td>Julkaisutiedot</td>
+<td>Uitgeversinformatie</td>
+<td>Kolofon</td>
+<td>Útgefandi</td>
+<td>Verlagsangaben</td>
+</tr>
+<tr class="odd">
+<td>Dedication</td>
+<td>Dedikation</td>
+<td>Dedikasjon</td>
+<td>Dedikasjon</td>
+<td>Omistus</td>
+<td>Opdracht</td>
+<td>Dedikation</td>
+<td>Tileinkun</td>
+<td>Widmung</td>
+</tr>
+<tr class="even">
+<td>Epigraph</td>
+<td>Epigraf</td>
+<td>Epigraf</td>
+<td>Epigraf</td>
+<td>Epigrafi</td>
+<td>Epigraaf</td>
+<td>Epigraf</td>
+<td>Tilvitnun</td>
+<td>Epigraf</td>
+</tr>
+<tr class="odd">
+<td>Contents</td>
+<td>Innehåll</td>
+<td>Innhold</td>
+<td>Innhald</td>
+<td>Sisällys</td>
+<td>Inhoud</td>
+<td>Indhold</td>
+<td>Efni</td>
+<td>Inhalt</td>
+</tr>
+<tr class="even">
+<td>Start of Content</td>
+<td>Innehållets början</td>
+<td>Start av innhold</td>
+<td>Start av innhald</td>
+<td>Sisällön alku</td>
+<td>Begin inhoud</td>
+<td>Indholdets begyndelse</td>
+<td>Byrjun</td>
+<td>Beginn des Inhalts</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="5.2.3" id="image-alternative-text-values"><span class="header-section-number">5.2.3</span> Image Alternative Text Values</h3>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>English (default)</th>
+<th>Swedish</th>
+<th>Norwegian</th>
+<th>Finnish</th>
+<th>Dutch</th>
+<th>Danish</th>
+<th>Icelandic</th>
+<th>German</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Photo</td>
+<td>Foto</td>
+<td>Foto</td>
+<td>Valokuva</td>
+<td>Foto</td>
+<td>Foto</td>
+<td>Ljósmynd</td>
+<td>Foto</td>
+</tr>
+<tr class="even">
+<td>Illustration</td>
+<td>Illustration</td>
+<td>Illustrasjon</td>
+<td>Kuvitus</td>
+<td>Illustratie</td>
+<td>Illustration</td>
+<td>Mynd</td>
+<td>Illustration</td>
+</tr>
+<tr class="odd">
+<td>Figure</td>
+<td>Figur</td>
+<td>Figur</td>
+<td>Kuvio</td>
+<td>Figuur</td>
+<td>Figur</td>
+<td>Myndefni</td>
+<td>Figur</td>
+</tr>
+<tr class="even">
+<td>Symbol</td>
+<td>Symbol</td>
+<td>Symbol</td>
+<td>Symboli</td>
+<td>Symbool</td>
+<td>Symbol</td>
+<td>Tákn</td>
+<td>Symbol</td>
+</tr>
+<tr class="odd">
+<td>Map</td>
+<td>Karta</td>
+<td>Kart</td>
+<td>Kartta</td>
+<td>Kaart</td>
+<td>Kort</td>
+<td>Kort</td>
+<td>Karte</td>
+</tr>
+<tr class="even">
+<td>Drawing</td>
+<td>Teckning</td>
+<td>Tegning</td>
+<td>Piirros</td>
+<td>Tekening</td>
+<td>Tegning</td>
+<td>Teikning</td>
+<td>Zeichnung</td>
+</tr>
+<tr class="odd">
+<td>Comic</td>
+<td>Tecknad serie</td>
+<td>Tegneserie</td>
+<td>Sarjakuva</td>
+<td>Stripverhaal</td>
+<td>Tegneserie</td>
+<td>Myndasaga</td>
+<td>Comic</td>
+</tr>
+<tr class="even">
+<td>Logo</td>
+<td>Logotyp</td>
+<td>Logo</td>
+<td>Logo</td>
+<td>Logo</td>
+<td>Logo</td>
+<td>Lógó</td>
+<td>Logo</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="5.2.4" id="schema.org-accessibility-metadata-values"><span class="header-section-number">5.2.4</span> schema.org Accessibility Metadata Values</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>English (default)</th>
+<th>Swedish</th>
+<th>Norwegian</th>
+<th>Finnish</th>
+<th>Dutch</th>
+<th>Danish</th>
+<th>Icelandic</th>
+<th>German</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</td>
+<td>Den här publikationen är framställd i enlighet med the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</td>
+<td>Denne publikasjonen er i samsvar med Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</td>
+<td>Tämä julkaisu noudattaa ohjeistusta Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</td>
+<td>Deze publicatie voldoet aan de Nordic Guidelines voor productie van toegankelijke EPUB3, versie 2020-1.</td>
+<td>Denne publikation er i overensstemmelse med de Nordiske Retningslinjer for Produktion af Tilgængelighed i Epub 3, version 2020-1.</td>
+<td>Þessi aðgengisjöfnun er unnin í samræmi við Norrænu viðmiðunarreglurnar um aðgengilegar rafbækur á EPUB3 sniði, útgáfa 2020-1.</td>
+<td>Diese Veröffentlichung entspricht den Nordic Guidelines für die Herstellung von barrierefreiem EPUB 3, Version 2020-1.</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="5.2.5" id="footnote-and-endnote-backlink"><span class="header-section-number">5.2.5</span> Footnote and Endnote Backlink</h3>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>English (default)</th>
+<th>Swedish</th>
+<th>Norwegian</th>
+<th>Finnish</th>
+<th>Dutch</th>
+<th>Danish</th>
+<th>Icelandic</th>
+<th>German</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Go to the note reference.</td>
+<td>Gå tillbaka till notreferensen.</td>
+<td>Gå til notereferansen.</td>
+<td>Siirry viitteeseen.</td>
+<td>Ga naar nootreferentie.</td>
+<td>Gå til notereference.</td>
+<td>Aftur í tilvísun.</td>
+<td>Gehe zur Referenz.</td>
+</tr>
+</tbody>
+</table>
+<footer>
+  <hr class="separator"/>
+  <p><cite>Nordic Guidelines for the Production of Accessible EPUB 3</cite>, version 2020-1</p>
+  <p>Document built on 2021-02-16 , powered by <a href="https://www.pandoc.org">Pandoc</a>.</p>
+</footer>
+
+</body>
+</html>
