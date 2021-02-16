@@ -50,11 +50,7 @@ $if(editor)$
 <h2>Main editors</h2>
 <ul>
 $for(editor)$
-<li class="editor">$if(editor.name)$
-$editor.name$$if(editor.affiliation)$ ($editor.affiliation$)$endif$
-$else$
-$editor$
-$endif$</li>
+<li class="editor">$if(editor.name)$ $editor.name$$if(editor.affiliation)$ ($editor.affiliation$)$endif$ $else$ $editor$ $endif$</li>
 $endfor$
 </ul>
 $endif$
@@ -63,11 +59,7 @@ $if(contributor)$
 <h2>Contributors</h2>
 <ul>
 $for(contributor)$
-<li class="contributor">$if(contributor.name)$
-$contributor.name$$if(contributor.affiliation)$ ($contributor.affiliation$)$endif$
-$else$
-$contributor$
-$endif$</li>
+<li class="contributor">$if(contributor.name)$ $contributor.name$$if(contributor.affiliation)$ ($contributor.affiliation$)$endif$ $else$ $contributor$ $endif$</li>
 $endfor$
 </ul>
 $endif$
