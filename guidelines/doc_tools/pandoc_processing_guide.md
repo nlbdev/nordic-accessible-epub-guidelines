@@ -14,10 +14,10 @@ The instructions assume Pandoc is called from the working directory `[repository
 
 ## Generating the HTML output
 ```
-pandoc -f markdown -t html .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.html --toc --toc-depth=4 --shift-heading-level-by=-1 --number-sections --template .\doc_tools\template-html.html
+pandoc -f markdown -t html .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.html --toc --toc-depth=4 --shift-heading-level-by=-1 --number-sections -V current_date="$(date +%Y-%m-%d%n)" --template .\doc_tools\template-html.html
 ```
 
 ## Generating the PDF output
 ```
-pandoc -f markdown -t pdf .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.pdf --toc --toc-depth=4 --shift-heading-level-by=-1 --number-sections --template .\doc_tools\template-latex.tex --pdf-engine=xelatex
+pandoc -f markdown -t pdf .\guidelines.md .\doc_tools\metadata.yaml -o .\generated_docs\2020-1\nordic_guidelines_epub3-2020-1.pdf --toc --toc-depth=4 --shift-heading-level-by=-1 --number-sections -V current_date="$(date +%Y-%m-%d%n)" --template .\doc_tools\template-latex.tex --pdf-engine=xelatex 
 ```

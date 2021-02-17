@@ -32,7 +32,6 @@ contributor:
   affiliation: Statped
 lang: en
 toc-title: Contents
-current_date: $(date +%Y-%m-%d%n)
 block-headings: true
 header-includes:
  - \usepackage{fvextra}
