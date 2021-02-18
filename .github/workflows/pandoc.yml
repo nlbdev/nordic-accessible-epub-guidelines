@@ -19,3 +19,7 @@ jobs:
             --shift-heading-level-by=-1
             --number-sections
             guidelines/guidelines.md guidelines/doc_tools/metadata.yaml
+      - uses: actions/upload-artifact@v2
+        with:
+          name: nordic_guidelines_epub3-2020-1.html
+          path: nordic_guidelines_epub3-2020-1.html
