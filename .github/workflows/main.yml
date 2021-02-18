@@ -1,0 +1,21 @@
+name: Build Guidelines with pandoc
+
+on: push
+
+jobs:
+  convert_to_html_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: |>
+            --standalone
+            --from markdown
+            --to html
+            --output=nordic_guidelines_epub3-2020-1.html
+            --toc 
+            --toc-depth=4 
+            --base-header-level=1 
+            --number-sections
+		        --template guidelines/doc_tools/template-html.html
+            guidelines/guidelines.md guidelines/doc_tools/metadata.yaml
