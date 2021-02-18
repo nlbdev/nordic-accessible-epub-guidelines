@@ -17,5 +17,4 @@ jobs:
             --toc-depth=4
             --shift-heading-level-by=-1
             --number-sections
-            --template=guidelines/doc_tools/template-html.html
             guidelines/guidelines.md guidelines/doc_tools/metadata.yaml
