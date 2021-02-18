@@ -3,7 +3,7 @@ name: Build Guidelines with pandoc
 on: push
 
 jobs:
-  convert_to_html_via_pandoc:
+  convert_to_html:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -23,3 +23,25 @@ jobs:
         with:
           name: nordic_guidelines_epub3-2020-1.html
           path: nordic_guidelines_epub3-2020-1.html
+
+  convert_to_pdf:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: >-
+            --from markdown
+            --to pdf
+            --output=nordic_guidelines_epub3-2020-1.pdf
+            --toc
+            --toc-depth=4
+            --shift-heading-level-by=-1
+            --number-sections
+            --template=guidelines/doc_tools/template-latex.tex
+            --pdf-engine=xelatex
+            guidelines/guidelines.md guidelines/doc_tools/metadata.yaml
+      - uses: actions/upload-artifact@v2
+        with:
+          name: nordic_guidelines_epub3-2020-1.pdf
+          path: nordic_guidelines_epub3-2020-1.pdf
