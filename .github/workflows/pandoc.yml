@@ -13,9 +13,9 @@ jobs:
             --from markdown
             --to html
             --output=nordic_guidelines_epub3-2020-1.html
-            --toc 
-            --toc-depth=4 
-            --base-header-level=1 
+            --toc
+            --toc-depth=4
+            --shift-heading-level-by=-1
             --number-sections
-            --template guidelines/doc_tools/template-html.html
+            --template=guidelines/doc_tools/template-html.html
             guidelines/guidelines.md guidelines/doc_tools/metadata.yaml
