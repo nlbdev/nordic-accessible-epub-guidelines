@@ -38,6 +38,7 @@ jobs:
             --toc-depth=4
             --shift-heading-level-by=-1
             --number-sections
+            --template=guidelines/doc_tools/template-latex.tex
             --pdf-engine=xelatex
             guidelines/guidelines.md guidelines/doc_tools/metadata.yaml
       - uses: actions/upload-artifact@v2
