@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: docker://pandoc/core:2.9
         with:
-          args: |
+          args: >-
             --standalone
             --from markdown
             --to html
