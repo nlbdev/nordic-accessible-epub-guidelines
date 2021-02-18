@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: docker://pandoc/ubuntu-latex:2.9
+      - uses: docker://pandoc/ubuntu-latex
         with:
           args: >-
             --from markdown
