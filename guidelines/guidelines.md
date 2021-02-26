@@ -122,7 +122,7 @@ Also required are schema.org accessibility metadata, [http://kb.daisy.org/publis
 <meta property="schema:accessibilitySummary">This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</meta>
 <meta property="schema:accessMode">textual</meta>
 <meta property="schema:accessMode">visual</meta>
-<meta property="schema:accessModeSufficient">textual visual</meta>
+<meta property="schema:accessModeSufficient">textual,visual</meta>
 <meta property="schema:accessModeSufficient">textual</meta>
 <meta property="schema:accessibilityFeature">structuralNavigation</meta>
 <meta property="schema:accessibilityFeature">MathML</meta>
