@@ -809,7 +809,7 @@ Each group of lines of text must be contained in a separate `<p class="linegroup
 
 Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with `<span class="linenum">`.
 
-If the content written in verse has a title it may be handled as a normal heading, with `<section>` elements wrapping the content. However, if it does not make sense to use a heading, it may be marked up with `<p class="verse-title">` and placed within the `<div class="verse">` container. This option must not be used unless specific instructions are given by the Ordering Agency.
+If the content written in verse has a title it may be handled as a normal heading, with `<section>` elements wrapping the content. However, if it does not make sense to use a proper heading, it may be marked up with `<p epub:type="bridgehead">` and placed within the `<div class="verse">` container. This option must not be used unless specific instructions are given by the Ordering Agency.
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
