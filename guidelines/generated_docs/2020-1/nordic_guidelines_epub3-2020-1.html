@@ -17,7 +17,7 @@
   <meta name="dcterms.contributor" content="Christian Egli" />
   <meta name="dcterms.contributor" content="Ina Dixon" />
   <meta name="dcterms.contributor" content="Toril Bache-Wiig Midtskogen" />
-  <meta name="dcterms.date" content="2021-02-16" />
+  <meta name="dcterms.date" content="2021-03-04" />
   <title>Nordic Guidelines for the Production of Accessible EPUB 3 (2020-1)</title>
   <style>
     /* Pandoc default styles.html rules */
@@ -290,7 +290,7 @@
 <h1 class="title">Nordic Guidelines for the Production of Accessible EPUB 3</h1>
 <p class="version">Version 2020-1</p>
 <p class="version-history">(<a href="https://format.mtm.se/nordic_epub/">version history</a>)</p>
-<p class="date">February 16, 2021</p>
+<p class="date">March 4, 2021</p>
 <div class="infobox">
 <section class="credits">
 <h2>Main editors</h2>
@@ -522,7 +522,7 @@
 <div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilitySummary&quot;</span><span class="kw">&gt;</span>This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.<span class="kw">&lt;/meta&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessMode&quot;</span><span class="kw">&gt;</span>textual<span class="kw">&lt;/meta&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessMode&quot;</span><span class="kw">&gt;</span>visual<span class="kw">&lt;/meta&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessModeSufficient&quot;</span><span class="kw">&gt;</span>textual visual<span class="kw">&lt;/meta&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessModeSufficient&quot;</span><span class="kw">&gt;</span>textual,visual<span class="kw">&lt;/meta&gt;</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessModeSufficient&quot;</span><span class="kw">&gt;</span>textual<span class="kw">&lt;/meta&gt;</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilityFeature&quot;</span><span class="kw">&gt;</span>structuralNavigation<span class="kw">&lt;/meta&gt;</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> property=</span><span class="st">&quot;schema:accessibilityFeature&quot;</span><span class="kw">&gt;</span>MathML<span class="kw">&lt;/meta&gt;</span></span>
@@ -970,7 +970,7 @@
 <p>Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with <code>&lt;div class="verse"&gt;</code>.</p>
 <p>Each group of lines of text must be contained in a separate <code>&lt;p class="linegroup"&gt;</code> element and each line of text must be marked up with <code>&lt;span class="line"&gt;</code>. HTML line breaks, <code>&lt;br/&gt;</code>, must be added between consecutive lines within a line group. Indented lines may be marked up using <code>&lt;span class="line_indent"&gt;</code> or <code>&lt;span class="line_longindent"&gt;</code>.</p>
 <p>Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with <code>&lt;span class="linenum"&gt;</code>.</p>
-<p>If the content written in verse has a title it may be handled as a normal heading, with <code>&lt;section&gt;</code> elements wrapping the content. However, if it does not make sense to use a heading, it may be marked up with <code>&lt;p class="verse-title"&gt;</code> and placed within the <code>&lt;div class="verse"&gt;</code> container. This option must not be used unless specific instructions are given by the Ordering Agency.</p>
+<p>If the content written in verse has a title it may be handled as a normal heading, with <code>&lt;section&gt;</code> elements wrapping the content. However, if it does not make sense to use a proper heading, it may be marked up with <code>&lt;p epub:type="bridgehead"&gt;</code> and placed within the <code>&lt;div class="verse"&gt;</code> container. This option must not be used unless specific instructions are given by the Ordering Agency.</p>
 <p>If there is an author name placed under the verse it may be marked up with <code>&lt;p class="verse-author"&gt;</code> and placed at the end of the <code>&lt;div class="verse"&gt;</code> container.</p>
 <h3 data-number="3.4.12" id="quotes"><span class="header-section-number">3.4.12</span> Quotes</h3>
 <p>Quotes, citations, excerpts from other sources and similar content are required to be marked up using the <code>&lt;blockquote&gt;</code> element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The <code>&lt;blockquote&gt;</code> element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the <code>&lt;blockquote&gt;</code> element, marked up with a separate <code>&lt;p&gt;</code>.</p>
@@ -1407,7 +1407,7 @@
 <footer>
   <hr class="separator"/>
   <p><cite>Nordic Guidelines for the Production of Accessible EPUB 3</cite>, version 2020-1</p>
-  <p>Document built on 2021-02-19 , powered by <a href="https://www.pandoc.org">Pandoc</a>.</p>
+  <p>Document built on 2021-03-04 , powered by <a href="https://www.pandoc.org">Pandoc</a>.</p>
 </footer>
 
 </body>
