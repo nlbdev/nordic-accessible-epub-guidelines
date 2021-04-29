@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: docker://pandoc/latex
+      - uses: docker://sbsdev/pandoc-texlive
         with:
           args: >-
             --from markdown
