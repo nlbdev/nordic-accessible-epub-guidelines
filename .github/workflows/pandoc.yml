@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: docker://pandoc/core:2.9
+      - uses: docker://sbsdev/pandoc-texlive
         with:
           args: >-
             --standalone
