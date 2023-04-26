@@ -15,9 +15,7 @@ Participants:
 - Christian (SBS)
 
 
-Open guidelines issues: https://github.com/nlbdev/epub3-guidelines-update/issues?q=is%3Aopen+label%3Aguidelines
-
-Meeting notes: https://github.com/nlbdev/epub3-guidelines-update/tree/master/guidelines/meeting_notes
+Open guidelines issues: https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues?q=is%3Aopen+label%3Aguidelines
 
 ## Activities
 0. [@0] Time plan
