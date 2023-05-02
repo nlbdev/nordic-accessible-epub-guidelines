@@ -4,7 +4,7 @@ on: push
 
 jobs:
   convert_to_html:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - uses: docker://sbsdev/pandoc-texlive
@@ -27,7 +27,7 @@ jobs:
           path: nordic_guidelines_epub3-2020-1.html
 
   convert_to_pdf:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - uses: docker://sbsdev/pandoc-texlive
