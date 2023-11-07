@@ -19,11 +19,12 @@ Open guidelines issues: https://github.com/nlbdev/nordic-accessible-epub-guideli
 
 ## Activities
 0. [@0] Time plan
-1. Add any new issues in GitHub and tag with Effort/Importance
-2. Select prioritised issues after tagging, leave others for second version
-3. Discuss, analyse and decide on issues/content
-4. Edit document and finish first draft
-5. Send draft to full group and to EPUB 3 producers
-6. Revise after feedback
-7. Complete final document 
-8. Start working on second version
+1. Ask Jostein to give Martin, Oscar, Jonas and Anders full access to the repository
+2. Set up cloned repositories with push and pull connections
+3. Select prioritised issues after tagging, leave others for second version
+4. Discuss, analyse and decide on issues/content
+5. Edit document and finish first draft
+6. Send draft to full group and to EPUB 3 producers
+7. Revise after feedback
+8. Complete final document 
+9. Start working on second version
