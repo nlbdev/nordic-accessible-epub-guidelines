@@ -1,19 +1,7 @@
 Update of the Nordic EPUB 3 guidelines, work items
 ================================================
 
-Coordinators: Martin & Anders
-
-Participants: 
-- Martin (MTM)
-- Anders (SPSM)
-- Lisa (Nota)
-- Sami (Celia)
-- Alfreð, Gunnar (HBS)
-- Bart (Dedicon)
-- Gaute, Elise (NLB)
-- Ina, Toril (Statped)
-- Christian (SBS)
-
+Editors: Martin, Anders, Oscar, Jonas
 
 Open guidelines issues: https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues?q=is%3Aopen+label%3Aguidelines
 
