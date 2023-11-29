@@ -834,20 +834,24 @@ All mathematical or scientific content, content that contains mathematical opera
 
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
 
-### Special Characters, Unicode and Phonetics
-
+### Special characters, punctuation, etc.
+#### Representation of characters
 If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
 
+#### Character accuracy
 Unicode character accuracy for special characters, e.g. phonetic characters, is vital for a correct representation of the source material. A visual likeness to the characters used in the printed source material is not enough, as the characters may be used by assistive technology to present text information to the user, or being used in various conversions to other types of end-user formats.
 
-Here are some resources for commonly used special characters:
+The following resources could be valuable for verifying commonly used special characters:
 
-- Phonetics: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
-- The Greek alphabet: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
+- Phonetics: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](The International Phonetic Alphabet in Unicode (UCL))
+- The Greek alphabet: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](Unicode Characters in the Greek and Coptic Block (FileFormat.info))
 
 Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.
+
+#### Ligatures
+Depending on the typography of the source material, ligatures may be present in source text. These may **not** be captured as dedicated ligature unicode characters, e.g. "ﬆ" (U+FB06). Rather, ligatures should be normalised to their separate letter components (e.g. "st") upon capture.
 
 ### Placeholders for User Input Areas
 
