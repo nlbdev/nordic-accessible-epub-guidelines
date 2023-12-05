@@ -677,6 +677,12 @@ Section 5.2.3 of this document contains language specific alt-text values.
 
 If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
 
+<div class="note">
+
+The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
+
+</div>
+
 ##### Image Series
 
 If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate `<figure>` elements. The whole series must then be wrapped in a `<figure>` element where the `class` attribute is set to `image-series`.
