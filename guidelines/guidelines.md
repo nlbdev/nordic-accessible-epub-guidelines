@@ -658,7 +658,7 @@ Note that this is the construction that is used by several Ordering Agencies for
 
 ##### Alt-texts
 
-Accessibility guidelines require all images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` elements. Suppliers are not required to provide these descriptive texts, but should instead use one of the following generic values:
+Accessibility guidelines require images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
 - `photo` – for photographs
 - `illustration` – for illustrations
@@ -671,7 +671,7 @@ Accessibility guidelines require all images to be supplied with a short, descrip
 
 Section 5.2.3 of this document contains language specific alt-text values.
 
-If there are any doubts about which value to assign the `alt` attribute, Suppliers are required to use `figure`.
+If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `figure`.
 
 <div class="note">
 
