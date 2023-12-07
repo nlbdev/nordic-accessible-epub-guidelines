@@ -461,9 +461,7 @@ The EPUB Content File structure specified in these guidelines is generally made 
 
 The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in `<section>` elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `<section>` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
-The semantic role of each content document must be specified, when possible. This is done by adding the `role` and `epub:type` attributes to the top level `<section>` element of each content file. The available `role` attribute values are listed here:
-
-[https://www.w3.org/TR/dpub-aria-1.0/#roles](https://www.w3.org/TR/dpub-aria-1.0/#roles)
+The semantic role of each content document must be specified, when possible. This is done by adding the `role` and `epub:type` attributes to the top level `<section>` element of each content file. The available `role` attribute values are listed in the [Digital Publishing WAI-ARIA Module 1.0](https://www.w3.org/TR/dpub-aria-1.0/#roles).
 
 When the content file can be matched to one of the roles listed, the top level `<section>` element is required to have the `role` attribute with that matching value set. If no suitable role exists the `role` attribute may be omitted.  
 
@@ -474,9 +472,7 @@ The `epub:type` attribute is also required for the top level `<section>` element
 - `bodymatter`
 - `backmatter`
 
-The `frontmatter`, `bodymatter` and `backmatter` partition values must also be combined with a divisioning or sectioning value found here:
-
-[https://idpf.github.io/epub-vocabs/structure/](https://idpf.github.io/epub-vocabs/structure/)
+The `frontmatter`, `bodymatter` and `backmatter` partition values must also be combined with a divisioning or sectioning value found in the [EPUB 3 Structural Semantics Vocabulary 1.1](https://www.w3.org/TR/epub-ssv-11/).
 
 If no matching divisioning or sectioning value can be found, the `epub:type` will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
 
