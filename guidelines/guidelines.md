@@ -819,7 +819,26 @@ If there is an author name placed under the verse it may be marked up with `<p c
 
 Quotes, citations, excerpts from other sources and similar content are required to be marked up using the `<blockquote>` element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate `<p>`.
 
-### Thematic Breaks in the Text Flow
+#### Numbered paragraphs
+
+Some books, such as editions of classical literary works, may have numbered paragraphs or stanzas in the source material. Unless the ordering agency gives instructions to exclude the numbering, the supplier is required to preserve it. The numbers are placed at the beginning of the paragraph and marked up with `<span class="parnum">`. The paragraph is given `class="numbered"`.
+
+Example 1, prose:
+
+```
+<p class="numbered"><span class="parnum">1</span>Paragraph text.</p>
+```
+
+Example 2, poetry and verse:
+
+```
+<p class="line-group numbered">
+    <span class="parnum">1</span><span class="line">First line.</span><br/>
+    <span class="line">Second line.</span>
+</p>
+```
+
+#### Thematic Breaks in the Text Flow
 
 In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
 
