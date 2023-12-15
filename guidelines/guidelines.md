@@ -540,16 +540,20 @@ Note that the `linear="no"` attribute must be applied to the `itemref` element i
 
 #### Title Page
 
-Content corresponding to the publication’s full title must be included in an `<h1>` element.
+The publication’s title must be included in an `<h1>` element with `class="title"` and `epub:type="title"`.
 
 ```html
-<h1 epub:type="fulltitle" class="title" id="booktitle">
+<h1 epub:type="title" class="title" id="booktitle">Title</h1>
 ```
 
-Use of the `<span>` element is only required when a subtitle is present. The following attribute usage must be applied to the appropriate `<span>` element:
+When a subtitle is present, the title and subtitle are grouped in an `<hgroup>` element:
 
-- `<span epub:type="title">`
-- `<span epub:type="subtitle">`
+```html
+<hgroup>
+    <h1 epub:type="title" class="title" id="booktitle">Main title</h1>
+    <p epub:type="subtitle" role="doc-subtitle">Subtitle</p>
+</hgroup>
+````
 
 #### Parts
 
