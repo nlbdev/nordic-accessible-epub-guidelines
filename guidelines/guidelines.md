@@ -304,11 +304,17 @@ The first required `<nav>` element in the file is for the main table of contents
 
 All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
+Some headings consist of a main heading and a subtitle grouped in an `<hgroup>` element (see section [Headings](#headings) for details on markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
+
+```html
+<li><a href="...">Main heading. Subtitle<</a></li>
+```
+
 The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a `<section>` element, but can also be `<aside>` or any other sectioning element. Thus, in the example below, the link should point to the id "level3_2" in that content file:
 
 ```html
 <section aria-labelledby="h3_2" id="level3_2">
-	<h3 id="h3_2">DET MYTISKA NORDEN</h3>
+	<h3 id="h3_2">Det mytiska Norden</h3>
 ```
 
 A section without any heading must be referenced using its `aria-label` value.
@@ -546,7 +552,7 @@ The publication’s title must be included in an `<h1>` element with `class="tit
 <h1 epub:type="title" class="title" id="booktitle">Title</h1>
 ```
 
-When a subtitle is present, the title and subtitle are grouped in an `<hgroup>` element:
+For subtitles, use a `<p>` tag with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the title and subtitle in an `<hgroup>` element.
 
 ```html
 <hgroup>
@@ -619,6 +625,17 @@ There must be no unnumbered pages. If unnumbered pages in the source material ar
 #### Headings
 
 The `<h1>-<h6>` elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, `<section>`, `<aside>` and `<nav>`.
+
+Some chapter or part headings consist of a main heading and a subtitle. For subtitles, use a `<p>` tag with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the main heading and subtitle in an `<hgroup>` element.
+
+```html
+<hgroup>
+    <h1>Main heading</h1>
+    <p epub:type="subtitle" role="doc-subtitle">Subtitle</p>
+</hgroup>
+```
+
+Note that the subtitle should be included in the section's navigation TOC entry. See section [EPUB 3.2 Navigation Document](#epub-3.2-navigation-document) for detailed instructions.
 
 Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be marked up using `<p epub:type="bridgehead">`. Bridgehead markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
 
