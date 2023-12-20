@@ -635,7 +635,7 @@ Some chapter or part headings consist of a main heading and a subtitle. For subt
 </hgroup>
 ```
 
-Note that the subtitle should be included in the section's navigation TOC entry. See section [EPUB 3.2 Navigation Documents](#epub-3.2-navigation-documents) for detailed instructions.
+Note that the subtitle should be included in the section's navigation TOC entry. See section [EPUB 3.2 Navigation Document](#epub-32-navigation-document) for detailed instructions.
 
 Sometimes the source material has a chapter or part number, or a phrase indicating the number, followed by a chapter or part heading as two distinct block elements. In this case, the number is included in the same `h[x]` element as the heading that follows it. The number is marked up with a `<span>` with `class="chnum"` or `class="partnum"`. A `<br/>` tag is inserted after the `<span>`.
 
