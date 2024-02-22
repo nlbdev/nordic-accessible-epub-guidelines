@@ -872,6 +872,10 @@ In circumstances where depth of structure is not amenable to structural markup u
 - `<hr class="emptyline"/>` indicates thematic breaks represented by a vertical space between paragraphs.
 - `<hr class="separator"/>` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
 
+#### Language Tagging
+
+Content documents may contain text in other languages than the main language, as defined in the root element (see section [Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include `<p>`, `<ol>`, `<ul>`, `<blockquote>`, `<aside>` and `<section>`. Inline text is not marked up unless specifically indicated by the Ordering Agency.
+
 ## Specific Requirements for Advanced Content
 
 ### Mathematical Content
