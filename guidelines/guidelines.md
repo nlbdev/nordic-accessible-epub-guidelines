@@ -987,3 +987,11 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | English (default)         | Swedish                         | Norwegian              | Finnish             | Dutch                   | Danish                | Icelandic         | German             |
 |---------------------------|---------------------------------|------------------------|---------------------|-------------------------|-----------------------|-------------------|--------------------|
 | Go to the note reference. | Gå tillbaka till notreferensen. | Gå til notereferansen. | Siirry viitteeseen. | Ga naar nootreferentie. | Gå til notereference. | Aftur í tilvísun. | Gehe zur Referenz. |
+
+### Additional valid markup
+In addition to the features documented above, the Nordic Guidelines recognise some additional markup constructions that are allowed in valid 2024-1 files.
+
+Suppliers do not need to observe these unless specifically requested by Ordering Agencies, as they will mostly be used in post production at the Ordering Agencies. They are listed here primarily for documentational purposes.
+
+#### Sentence markup
+Sentence markup using `<span>` and `@class="sentence"` is allowed. This is used in Media Overlays talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
