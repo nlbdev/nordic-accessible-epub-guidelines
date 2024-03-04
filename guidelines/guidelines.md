@@ -818,7 +818,7 @@ Headings in text boxes is by default required to be marked up using `<p epub:typ
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
 
-In blocks of computer code, spaces and empty lines must be preserved.
+In blocks of computer code, spaces, line breaks and empty lines must be preserved. It should be noted, however, that the correct markup for code blocks involves interpretation alongside the principle of capturing the text verbatim. For example, programming books may sometimes use a mix of semantic line breaks, which must be preserved, and line breaks necessitated by the print layout.
 
 #### Bolding and Italics
 
