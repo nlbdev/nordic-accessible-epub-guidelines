@@ -655,6 +655,29 @@ Small symbols or other non-typographical content that might occur inline, are re
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
+##### Alt-texts
+
+Accessibility guidelines require images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
+
+- `photo` – for photographs
+- `illustration` – for illustrations
+- `figure` – for schematic images, graphs, diagrams, scientific models etc.
+- `symbol` – for icons, signs, inline images etc.
+- `map` – for maps
+- `drawing` – for drawings
+- `comic` – for comic strips and panels
+- `logo` – for logos
+
+Section 5.2.3 of this document contains language specific alt-text values.
+
+If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `figure`.
+
+<div class="note">
+
+The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
+
+</div>
+
 ##### Text Extraction from Images
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder within the `<figure>` element of the image. The placeholder should be placed after the `<img>` element, before the closing `</figure>` tag. Suppliers are required to use the `<aside>` element for this placeholder with the following attributes:
@@ -683,28 +706,7 @@ The extracted text is then placed inside the placeholder, marked up correctly an
 
 Note that this is the construction that is used by several Ordering Agencies for adding image descriptions in post-production.
 
-##### Alt-texts
-
-Accessibility guidelines require images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
-
-- `photo` – for photographs
-- `illustration` – for illustrations
-- `figure` – for schematic images, graphs, diagrams, scientific models etc.
-- `symbol` – for icons, signs, inline images etc.
-- `map` – for maps
-- `drawing` – for drawings
-- `comic` – for comic strips and panels
-- `logo` – for logos
-
-Section 5.2.3 of this document contains language specific alt-text values.
-
-If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `figure`.
-
-<div class="note">
-
-The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
-
-</div>
+If an inline image require text extraction the extracted text must be used as value for the `alt` attribute. The text then replaces the generic value described above.
 
 ##### Image Series
 
