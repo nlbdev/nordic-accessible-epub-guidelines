@@ -304,6 +304,8 @@ The first required `<nav>` element in the file is for the main table of contents
 
 All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
+The title page is referenced using the label "Title page" in the language of the publication (see section [aria-label and TOC Values](#aria-label-and-toc-values)). The book title is not included in the TOC.
+
 Some headings consist of a main heading and a subtitle grouped in an `<hgroup>` element (see section [Headings](#headings) for details on markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
 
 ```html
@@ -999,7 +1001,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Navigointi | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
 
 
-#### aria-label Values
+#### aria-label and TOC Values
 
 | English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | Danish                | Icelandic        | German               |
 |-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-----------------------|------------------|----------------------|
