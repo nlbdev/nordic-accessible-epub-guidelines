@@ -304,6 +304,8 @@ The first required `<nav>` element in the file is for the main table of contents
 
 All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
+The title page is referenced using the label "Title page" in the language of the publication (see section [aria-label and TOC Values](#aria-label-and-toc-values)). The book title is not included in the TOC.
+
 Some headings consist of a main heading and a subtitle grouped in an `<hgroup>` element (see section [Headings](#headings) for details on markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
 
 ```html
@@ -1009,7 +1011,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Navigointi | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
 
 
-#### aria-label Values
+#### aria-label and TOC Values
 
 | English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | Danish                | Icelandic        | German               |
 |-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-----------------------|------------------|----------------------|
@@ -1018,6 +1020,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Back cover            | Baksida            | Bakside            | Bakside             | Takakansi      | Achterkant          | Bagside               | Bakhlið          | Buchrückseite        |
 | Jacket left flap      | Vänsterflik        | Venstre innbrett   | Venstre innbrett    | Etulieve       | Linker flaptekst    | Venstre inderflap     | Vinstra innábrot | Vorderer Klappentext |
 | Jacket right flap     | Högerflik          | Høyre innbrett     | Høgre innbrett      | Takalieve      | Rechter flaptekst   | Højre inderflap       | Hægra innábrot   | Hinterer Klappentext |
+| Title page            | Titelsida          | [to be added]      | [to be added]       | Nimiö          | [to be added]       | Titelside             | [to be added]    | Titelseite           |
 | Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot | Uitgeversinformatie | Kolofon               | Útgefandi        | Verlagsangaben       |
 | Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        | Opdracht            | Dedikation            | Tileinkun        | Widmung              |
 | Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
