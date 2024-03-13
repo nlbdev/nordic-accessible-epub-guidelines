@@ -486,7 +486,7 @@ If no matching divisioning or sectioning value can be found, the `epub:type` wil
 
 If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `<section>` elements, which will contain the chapters.
 
-Furthermore, all `<section>` elements are required to have a label. When the `<section>` has a heading, usually `<h1>`, `<h2>`, etc., the heading serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
+Furthermore, all top-level `<section>` elements are required to have a label. When the `<section>` has a `<h1>` heading, the heading serves as a label but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
 
 ```html
 <section role="doc-chapter" aria-labelledby="hd01" epub:type="bodymatter chapter">
@@ -510,6 +510,8 @@ If the section is untitled, the `aria-label` attribute is required to be used in
 | `@role="doc-toc"`        | Contents                   |
 
 Section 5.2.2 of this document contains language specific values.
+
+No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
 
 See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
 	
