@@ -107,36 +107,68 @@ The following metadata are required to be placed in the `<metadata>` element:
 <dc:date>_[date of completion]_</dc:date>
 <meta property="dcterms:modified"> _[date of completion]_ </meta>
 <meta property="nordic:supplier"> _[company name of supplier]_ </meta>
-<meta property="nordic:guidelines">2020-1</meta>
+<meta property="nordic:guidelines">2024-1</meta>
 ```
 
 Note that the default value to use in `<dc:publisher>` is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
 
 If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `<dc:source>` element will be a text string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
 
-##### schema.org Accessibility Metadata
+##### Accessibility Metadata
 
-Also required are schema.org accessibility metadata, [http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html](http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html). Which metadata that are relevant depend on the type of content included in the package. Use the Accessibility Checker for EPUB tool to find out which metadata are relevant, [https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/](https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/). It will typically be something like this, but not necessarily exactly the same:
+Also required are accessibility metadata. A full description of accessibility metadata in EPUB can be found in [section 2 of EPUB Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/). See also Daisy Accessible Publishing Knowledge Base, [Metadata](http://kb.daisy.org/publishing/docs/metadata/).
+
+The metadata will vary depending on the content and properties of the publication. The examples below show what it may look like for a simple and a more complex book.
+
+*Example 1: Simple book without images*
 
 ```xml
-<meta property="schema:accessibilitySummary">This publication conforms to the Nordic Guidelines for the Production of Accessible EPUB 3, version 2020-1.</meta>
+<meta property="schema:accessMode">textual</meta>
+<meta property="schema:accessModeSufficient">textual</meta>
+<meta property="schema:accessibilityFeature">displayTransformability</meta>
+<meta property="schema:accessibilityFeature">structuralNavigation</meta>
+<meta property="schema:accessibilityFeature">tableOfContents</meta>
+<meta property="schema:accessibilityFeature">readingOrder</meta>
+<meta property="schema:accessibilityHazard">none</meta>
+<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2024-1"/><!--Check url-->
+<meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
+```
+
+*Example 2: Complex book with described images and MathML markup*
+
+```xml
 <meta property="schema:accessMode">textual</meta>
 <meta property="schema:accessMode">visual</meta>
-<meta property="schema:accessModeSufficient">textual,visual</meta>
 <meta property="schema:accessModeSufficient">textual</meta>
+<meta property="schema:accessibilityFeature">displayTransformability</meta>
 <meta property="schema:accessibilityFeature">structuralNavigation</meta>
-<meta property="schema:accessibilityFeature">MathML</meta>
+<meta property="schema:accessibilityFeature">tableOfContents</meta>
+<meta property="schema:accessibilityFeature">readingOrder</meta>
 <meta property="schema:accessibilityFeature">alternativeText</meta>
+<meta property="schema:accessibilityFeature">longDescription</meta>
+<meta property="schema:accessibilityFeature">MathML</meta>
 <meta property="schema:accessibilityHazard">none</meta>
-<meta property="a11y:certifiedBy">_[the ordering agency]_</meta>
-<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2020-1"/>
+<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2024-1"/><!--Check url-->
+<meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
 ```
 
 As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy">` is the shorthand for the Ordering Agency.
 
-Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the statement in `nordic:guidelines`, i.e. (for this version of the guidelines) "2020-1".
+Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
 
-Section 5.2.4 of this document contains language specific texts for `<meta property="schema:accessibilitySummary">`.
+Note on `accessMode`: The `visual` value indicates that the book contains visual content such as images, graphics or video that is relevant to understanding the content. The value must not be set if the only visual elements are decorative images, the cover image or corporate logos.
+
+If the book contains page break markers and a page list, the following metadata must be provided:
+
+```xml
+<meta property="schema:accessibilityFeature">pageBreakMarkers</meta>
+<meta property="schema:accessibilityFeature">pageNavigation</meta>
+<meta property="pageBreakSource">urn:isbn:xxxxxxxxxxxxx</meta>
+```
+
+The `pageBreakSource` property identifies the pagination source, typically using the ISBN of a print edition. Refer to [Page Source Identification]([https://www.w3.org/publishing/a11y/page-source-id/) and Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
+
+The `schema:accessibilitySummary` property can be used to provide information that complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
 ##### Optional Increased Title and Creator Metadata Granularity
 
