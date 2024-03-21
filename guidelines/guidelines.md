@@ -976,6 +976,8 @@ In circumstances where depth of structure is not amenable to structural markup u
 
 Content documents may contain text in other languages than the main language, as defined in the root element (see section [Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include `<p>`, `<ol>`, `<ul>`, `<blockquote>`, `<aside>` and `<section>`. Inline text is not marked up unless specifically indicated by the Ordering Agency.
 
+Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG/#language-of-parts).
+
 ## Specific Requirements for Advanced Content
 
 ### Mathematical Content
