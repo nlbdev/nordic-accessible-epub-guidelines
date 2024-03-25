@@ -116,7 +116,7 @@ If the source material does not have an ISBN, ISSN or any other systematic sourc
 
 ##### Accessibility Metadata
 
-Usually, the supplier is expected to add accessibility metadata to the publication. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
+The supplier is also expected to add accessibility metadata. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
 
 A full description of accessibility metadata in EPUB can be found in [section 2 of EPUB Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/). See also Daisy Accessible Publishing Knowledge Base, [Metadata](http://kb.daisy.org/publishing/docs/metadata/).
 
