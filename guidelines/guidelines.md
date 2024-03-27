@@ -514,7 +514,7 @@ The `epub:type` attribute is also required for the top level `<section>` element
 - `bodymatter`
 - `backmatter`
 
-The `frontmatter`, `bodymatter` and `backmatter` partition values must also be combined with a divisioning or sectioning value found in the [EPUB 3 Structural Semantics Vocabulary 1.1](https://www.w3.org/TR/epub-ssv-11/).
+The `frontmatter`, `bodymatter` and `backmatter` partition values must, where possible, be combined with a divisioning or sectioning value found in the [EPUB 3 Structural Semantics Vocabulary 1.1](https://www.w3.org/TR/epub-ssv-11/). Note that according to this vocabulary, introductory sections such as foreword, introduction, preface and prologue are typically part of the publication bodymatter.
 
 If no matching divisioning or sectioning value can be found, the `epub:type` will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
 
