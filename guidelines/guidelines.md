@@ -378,29 +378,31 @@ If no pagination occurs in the source material this may be omitted.
 
 ##### Landmarks
 
-The final required `<nav>` element is:
+The landmarks `<nav>` element is optional, and should be included only if the Ordering Agency requests it.
 
 ```html
-<nav role="navigation" aria-labelledby="n3" epub:type="landmarks">
+<nav aria-labelledby="n3" epub:type="landmarks">
 <h1 id="n3">Landmarks</h1>
 ```
 
-The Landmarks section should contain references to any main sections of the front- and rearmatter parts of the source material, as well as a reference to the start of the main content of the book, which will be the start of the first content file with the word "bodymatter" in its `epub:type` attribute of the top-level `<section>` element. The list of references may include the following, when applicable:
+The Ordering Agency will give instructions on which sections to include and how to label them in the landmarks navigation list. For examples and further information, see the sections about EPUB landmarks in the [EPUB 3.3 specification](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) and [EPUB Accessibility Techniques 1.1](https://www.w3.org/TR/epub-a11y-tech-11/#meta-006).
 
-- Table of Contents (the toc of the source material)
-- List of Images
-- List of Tables
-- Acknowledgments
-- Preface
-- Start of Content
-- Answers
-- Glossary
-- Bibliography
-- Index
+It is recommended that the list of landmarks include a link to the start of the bodymatter as well as to any navigation aids or important reference sections in the front- and backmatter. It will typically include the following, when applicable:
 
-Note that the links, the `<a>` elements, in the Landmarks section must have appropriate `epub:type` values. Examples can be found here:
+- Frontmatter:
+    - Table of Contents
+    - List of Images
+    - List of Tables
+- Bodymatter:
+    - Start of content/Start reading
+- Backmatter:
+    - Notes
+    - Bibliography
+    - Index
+    - Answers
+    - Glossary
 
-[http://kb.daisy.org/publishing/docs/navigation/landmarks.html](http://kb.daisy.org/publishing/docs/navigation/landmarks.html)  
+Introductory sections such as a prologue, preface, foreword or introduction can also be included in the landmarks. It should be noted, however, that they are considered bodymatter. In the landmarks `<nav>`, the first bodymatter section should be referenced using `epub:type="bodymatter"` and a label indicating that it is the start of the main content, regardless of any other applicable `epub:type` value.
 
 #### NCX Navigation Document
 
