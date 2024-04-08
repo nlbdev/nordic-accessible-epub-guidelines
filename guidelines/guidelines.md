@@ -984,6 +984,12 @@ Content documents may contain text in other languages than the main language, as
 
 Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG/#language-of-parts).
 
+#### Uppercase text
+
+The source material may contain text that is set in all uppercase or small caps for layout reasons. Common examples are headings, title page text and lead-ins, where the first words of a chapter or block of text are set in a different style. Such text must be represented with lower case letters, with an initial capital letter at the beginning of the heading or sentence. Exceptions to this rule are proper nouns, which have an initial capital letter, and certain acronyms and abbreviations. Lead-ins are marked up with `<span class="lead-in">`.
+
+When uppercase text is changed to lower case, the spelling should conform to, firstly, capitalization patterns in the surrounding text and, secondly, capitalization rules of the language. Where capital letters represent symbols, or are used in formulas or mathematical expressions, it is very important to preserve the original representation.
+
 ## Specific Requirements for Advanced Content
 
 ### Mathematical Content
