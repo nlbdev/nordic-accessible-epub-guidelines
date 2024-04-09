@@ -552,7 +552,9 @@ Section 5.2.2 of this document contains language specific values.
 No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
 
 See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
-	
+
+Note that if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+
 ### File Naming Convention
 
 The basic scheme for naming individual files is:
@@ -617,6 +619,8 @@ For further information about the common HTML elements and their attributes, ple
 
 - The formal HTML(5) specification: [https://html.spec.whatwg.org/multipage/](https://html.spec.whatwg.org/multipage/)
 - [https://www.w3schools.com/](https://www.w3schools.com/)
+
+Note that, again, if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the mark-up of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
 
 #### Pagination
 
