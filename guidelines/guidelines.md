@@ -818,13 +818,68 @@ Sometimes, mostly in educational books, the table of contents can be more compli
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
-The `<tbody>` element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use `<thead>` for any column heading at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element `<tfoot>` can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions.
+The `<tbody>` element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use `<thead>` for any column heading at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element `<tfoot>` can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note, that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See the code example at the end of this section.
 
-Each row of the table, with all its table cells, must be placed inside a `<tr>` element and each individual table cell must be placed inside either a `<td>` element for regular table data, or inside a `<th>` element for column or row headings. The `<th>` element is required to have the attribute `scope` with  a value that specifies what the header is for. The most common values are `col` or `row`, for column and row, respectively, but the values `colgroup` and `rowgroup` may be used if the table has headings spanning multiple columns or rows with individual sub-headings.
+Each row of the table, with all its table cells, must be placed inside a `<tr>` element and each individual table cell must be placed inside either a `<td>` element for regular table data, or inside a `<th>` element for column or row headings. Headings are typically found in the top-most row and the left-most column of the table, but there may be heading cells elsewhere and there may be headings for groups of rows or columns. The `<th>` element is required to have the attribute `scope` with  a value that specifies what the header is for in the following cases:
+
+- when heading cells are merged with colspan or rowspan, or
+- when column headings are present anywhere else than in the first (topmost) row, or row headings are present anywhere else than in the first (leftmost) column.
+
+The possible values are `col` or `row`, for column and row, respectively, and `colgroup` and `rowgroup`, if the table has headings spanning multiple columns or rows with individual sub-headings. If none of the criteria mentioned above is fulfilled, `scope` is not required. 
 
 Tables are required to have a consistent number of table cells per row. If the `colspan` or `rowspan` attributes are used, take extra care that the total number of cells is correct. 
 
 Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.
+
+Below is an example of table mark-up that covers most of the details explained above.
+
+```html
+<table>
+    <caption>Table 1.1. Full example.</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>            
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="4" scope="rowgroup">1990</th>
+        </tr>
+        <tr>
+            <th>Row 1</th>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>            
+        <tr>
+            <th>Row 2</th>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>            
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="4" scope="rowgroup">2020</th>
+        </tr>
+        <tr>
+            <th>Row 1</th>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>            
+        <tr>
+            <th>Row 2</th>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+        </tr>            
+    </tbody>
+</table>    
+```
 
 #### Definition Lists
 
