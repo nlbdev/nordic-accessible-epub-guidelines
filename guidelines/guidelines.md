@@ -1047,9 +1047,15 @@ Please note that the level of language markup required by suppliers in these gui
 
 #### Uppercase text
 
-The source material may contain text that is set in all uppercase or small caps for layout reasons. Common examples are headings, title page text and lead-ins, where the first words of a chapter or block of text are set in a different style. Such text must be represented with lower case letters, with an initial capital letter at the beginning of the heading or sentence. Exceptions to this rule are proper nouns, which have an initial capital letter, and certain acronyms and abbreviations. Lead-ins are marked up with `<span class="lead-in">`.
+As a general rule, all text in the XHTML files should be written in sentence case: The first word of the sentence or heading is capitalised, as well as proper nouns and other words as required by a more specific rule. Some acronyms are written in all uppercase. If all caps (or small caps) formatting is desired in cases where the use of capital letters is not required by ortography, it should taken care of through CSS.
 
-When uppercase text is changed to lower case, the spelling should conform to, firstly, capitalization patterns in the surrounding text and, secondly, capitalization rules of the language. Where capital letters represent symbols, or are used in formulas or mathematical expressions, it is very important to preserve the original representation.
+In many cases, however, the source material contains text styled as all caps or small caps, which is transferred to the XHTML files as uppercase letters. This is commonly found in headings and in lead-ins, where the first words of a chapter or block of text are set in all caps or small caps in the source.
+
+In general, the Supplier is not expected to normalise capitalisation (change it to sentence case) unless the Ordering Agency specifically requests this.
+
+For lead-ins, the Supplier must normalise capitalisation and apply `<span class="lead-in">` to the lead-in text. In doing this, care should be taken to respect capitalisation patterns in the surrounding text as well as language specific conventions.
+
+All caps or small caps may also be used to emphasise words or short passages of body text. If the source file is an EPUB or other HTML based publication where such styling is applied using CSS, the markup `<strong class="all-caps">` or `<strong class="small-caps">` should be used to preserve the styling.
 
 ## Specific Requirements for Advanced Content
 
