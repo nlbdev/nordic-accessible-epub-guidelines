@@ -306,7 +306,7 @@ The accuracy of language coding is vital, and Suppliers are instructed to contac
 
 #### Title
 
-The `<title>` element of every `xhtml` content document must match the main heading of the content document in question. For front- and rearmatter content, if the document does not have a heading, the `aria-label` value of the main `<section>` element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
+The `<title>` element of every `xhtml` content document must match the main heading of the content document in question. For front- and backmatter content, if the document does not have a heading, the `aria-label` value of the main `<section>` element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
 
 #### Metadata
 
@@ -589,7 +589,7 @@ Some content files have certain contents that are required to be included and ma
 The following class attributes must applied to the child `<section>` elements where appropriate:
 
 - `<section class="frontcover">`
-- `<section class="rearcover">`
+- `<section class="backcover">`
 - `<section class="leftflap">`
 - `<section class="rightflap">`
 
