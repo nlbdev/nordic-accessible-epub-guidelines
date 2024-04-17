@@ -531,9 +531,18 @@ Furthermore, the top-level `<section>` element for every content file is require
 </section>
 ```
 
-Note that for the most part it will only by sections with `<h1>` headings that must be done this way, but if a production is split into parts, chapters will have `<h2>` headings and these are the top-level headings of those content documents. 
+Note that for the most part it will only by sections with `<h1>` headings that must be done this way, but if a production is split into parts, chapters will have `<h2>` headings and these are the top-level headings of those content documents.
 
-If the section is untitled, the `aria-label` attribute is required to be used instead and have an appropriate label assigned to it. This will usually be addressed in the Editing Instructions, but below you will find a list of default values for generic sections often untitled in books, that should be used if there are no other instructions given by the Ordering Agency:
+Note that if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+
+#### Subsections
+No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
+
+#### Untitled sections
+If a major section, e.g. a chapter, is untitled, the `aria-label` attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
+
+##### Default `aria-label` values for standard sections
+The following table lists default `aria-label` values for standard sections.
 
 | Section identification   | Default `aria-label` value |
 |--------------------------|----------------------------|
@@ -549,11 +558,11 @@ If the section is untitled, the `aria-label` attribute is required to be used in
 
 Section 5.2.2 of this document contains language specific values.
 
-No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
+###### `aria-label` values using the first three words
+If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with `aria-label` using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
 
-See [http://kb.daisy.org/publishing/docs/html/sections.html](http://kb.daisy.org/publishing/docs/html/sections.html) for more information.
-
-Note that if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+###### Custom `aria-label` values
+If none of the two methods above fits, the Ordering Agency may request custom `aria-label` values in Editing Instructions.
 
 ### File Naming Convention
 
