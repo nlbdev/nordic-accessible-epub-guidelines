@@ -495,7 +495,9 @@ Validation of EPUB files should be done using EPUBCheck for structural validity 
 - [https://github.com/w3c/epubcheck/releases](https://github.com/w3c/epubcheck/releases)
 - [https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/](https://inclusivepublishing.org/toolbox/accessibility-checker/getting-started/)
 
-The Ordering Agencies are currently developing a specific validation tool based on these guidelines. When this tool is available it will be the primary validation method.
+The Ordering Agencies have developed a specific validation tool based on these guidelines. This tool, or any similar validation-tool provided by the agencies based on the same ruleset, should be the primary validation method and can be found here:
+
+- [http://nlbdev.github.io/nordic-epub3-dtbook-migrator/](http://nlbdev.github.io/nordic-epub3-dtbook-migrator/)
 
 ## General Requirements for Content Documents
 
