@@ -892,6 +892,8 @@ Below is an example of table mark-up that covers most of the details explained a
 </table>    
 ```
 
+Large tables may give rise to visual display issues where content overflows the page area. One way to handle this is to add scroll bars to the table through CSS. For this to be possible, the table needs to be wrapped in a `div` with `class="table-wrapper"`. The Ordering Agency will specify in Editing Instructions if this optional markup is needed.
+
 #### Definition Lists
 
 All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as `<dl>`. Note that language attributes may be required, for example with glossaries.
