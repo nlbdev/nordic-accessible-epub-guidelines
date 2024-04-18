@@ -640,6 +640,8 @@ All page breaks occurring in the source copy are required to be indicated with o
 - Inline: `<span epub:type="pagebreak" role="doc-pagebreak">`
 - Block: `<div epub:type="pagebreak" role="doc-pagebreak">`
 
+In general, block page break markers are used when the page break occurs between two block level elements. Lists are an exception. If a page break occurs between list items, an inline marker is placed at the end of the last item on the page. If a page break occurs in a table, an inline marker is placed in the last cell of the last row on the page.
+
 Additionally required attributes:
 
 - `aria-label=""`
