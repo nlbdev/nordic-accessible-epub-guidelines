@@ -716,14 +716,14 @@ Images in tables or lists may be handled as inline images if there are no captio
 
 Accessibility guidelines require images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
-- `photo` – for photographs
-- `illustration` – for illustrations
-- `figure` – for schematic images, graphs, diagrams, scientific models etc.
-- `symbol` – for icons, signs, inline images etc.
-- `map` – for maps
-- `drawing` – for drawings
-- `comic` – for comic strips and panels
-- `logo` – for logos
+- `Photo.` – for photographs
+- `Illustration.` – for illustrations
+- `Figure.` – for schematic images, graphs, diagrams, scientific models etc.
+- `Symbol.` – for icons, signs, inline images etc.
+- `Map.` – for maps
+- `Drawing.` – for drawings
+- `Comic.` – for comic strips and panels
+- `Logo.` – for logos
 
 Section 5.2.3 of this document contains language specific alt-text values.
 
@@ -733,6 +733,10 @@ If there are any doubts about which value to assign the `alt` attribute, supplie
 
 The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
 
+</div>
+
+<div class="note">
+For alt-texts provided by the Supplier to be properly read by screen-readers they should always end with a punctuation mark.
 </div>
 
 ##### Text Extraction from Images
@@ -1160,16 +1164,16 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 #### Image Alternative Text Values
 
-| English (default) | Swedish       | Norwegian    | Finnish   | Dutch        | Danish       | Icelandic | German       |
-|-------------------|---------------|--------------|-----------|--------------|--------------|-----------|--------------|
-| Photo             | Foto          | Foto         | Valokuva  | Foto         | Foto         | Ljósmynd  | Foto         |
-| Illustration      | Illustration  | Illustrasjon | Kuvitus   | Illustratie  | Illustration | Mynd      | Illustration |
-| Figure            | Figur         | Figur        | Kuvio     | Figuur       | Figur        | Myndefni  | Figur        |
-| Symbol            | Symbol        | Symbol       | Symboli   | Symbool      | Symbol       | Tákn      | Symbol       |
-| Map               | Karta         | Kart         | Kartta    | Kaart        | Kort         | Kort      | Karte        |
-| Drawing           | Teckning      | Tegning      | Piirros   | Tekening     | Tegning      | Teikning  | Zeichnung    |
-| Comic             | Tecknad serie | Tegneserie   | Sarjakuva | Stripverhaal | Tegneserie   | Myndasaga | Comic        |
-| Logo              | Logotyp       | Logo         | Logo      | Logo         | Logo         | Lógó      | Logo         |
+| English (default) | Swedish        | Norwegian     | Finnish    | Dutch         | Danish        | Icelandic  | German        |
+| ----------------- | -------------- | ------------- | ---------- | ------------- | ------------- | ---------- | ------------- |
+| Photo.            | Foto.          | Foto.         | Valokuva.  | Foto.         | Foto.         | Ljósmynd.  | Foto.         |
+| Illustration.     | Illustration.  | Illustrasjon. | Kuvitus.   | Illustratie.  | Illustration. | Mynd.      | Illustration. |
+| Figure.           | Figur.         | Figur.        | Kuvio.     | Figuur.       | Figur.        | Myndefni.  | Figur.        |
+| Symbol.           | Symbol.        | Symbol.       | Symboli.   | Symbool.      | Symbol.       | Tákn.      | Symbol.       |
+| Map.              | Karta.         | Kart.         | Kartta.    | Kaart.        | Kort.         | Kort.      | Karte.        |
+| Drawing.          | Teckning.      | Tegning.      | Piirros.   | Tekening.     | Tegning.      | Teikning.  | Zeichnung.    |
+| Comic.            | Tecknad serie. | Tegneserie.   | Sarjakuva. | Stripverhaal. | Tegneserie.   | Myndasaga. | Comic.        |
+| Logo.             | Logotyp.       | Logo.         | Logo.      | Logo.         | Logo.         | Lógó.      | Logo.         |
 
 #### End Note Heading
 
