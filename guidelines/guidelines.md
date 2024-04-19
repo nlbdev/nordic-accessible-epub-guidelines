@@ -1000,7 +1000,11 @@ For certain publications there may be instructions given to add `aria-label` att
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
-Headings in text boxes is by default required to be marked up using `<p epub:type="bridgehead">`. These are structurally unimportant headings and will not be included in the navigation document. If, however, certain text boxes should be included in the navigation document, they must be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text. Only text boxes marked up with `<aside>` can have `<h[x]>` headings. The Ordering Agency will specify in the Editing Instructions if `<h[x]>` markup is required.
+Headings in text boxes should be marked up using a <h[x]> element of an appropriate level, following the level structure of the surrounding text. These headers should be included in the navigation document. 
+
+<div class="note">
+In previous versions of the Nordic guidelines, `<p epub:type="bridgehead">` has been reccomended as a substitute for headers in `asides`. Since `epub:type="bridgehead"` is a deprecated attribute, this is not used any longer.
+</div>
 
 #### Computer Code
 
