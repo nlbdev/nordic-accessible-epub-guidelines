@@ -456,6 +456,10 @@ X41001A-013.png
 
 An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
+#### Image id:s for loi
+In cases where a title contains a list of illustrations (`loi`), or where a list of ilustrations should be included in the `nav.xhtml`-file , the figure element  should be provided with an id. These id:s should be named`"fig-XXX"` in sequential order, where XXX is the number of the figure in the file.
+Instances may occur where id:s are required for images. In those cases the id should be `"img-XXX"` and follow the same pattern as for figures.
+
 #### Resizing of Images
 
 The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small details.
@@ -899,6 +903,10 @@ Below is an example of table mark-up that covers most of the details explained a
 ```
 
 Large tables may give rise to visual display issues where content overflows the page area. One way to handle this is to add scroll bars to the table through CSS. For this to be possible, the table needs to be wrapped in a `div` with `class="table-wrapper"`. The Ordering Agency will specify in Editing Instructions if this optional markup is needed.
+
+###### Table id:s for lot
+In cases where a title contains a list of tables (`lot`) or where a list of tables should be included in the `nav.xhtml`-file, the table element  should be provided with an id. These id:s should be named `"tab-XXX"` in sequential order, where XXX is the number of the table in the file.
+Instances may occur where id:s are required for tables without it being included in the `nav.xhtml`-file.
 
 #### Definition Lists
 
