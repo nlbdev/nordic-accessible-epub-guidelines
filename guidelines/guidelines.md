@@ -1002,9 +1002,7 @@ If there are any doubts about which element to use and there are no further inst
 
 Headings in text boxes should be marked up using a <h[x]> element of an appropriate level, following the level structure of the surrounding text. These headers should be included in the navigation document. 
 
-<div class="note">
 In previous versions of the Nordic guidelines, `<p epub:type="bridgehead">` has been reccomended as a substitute for headers in `asides`. Since `epub:type="bridgehead"` is a deprecated attribute, this is not used any longer.
-</div>
 
 #### Computer Code
 
