@@ -37,12 +37,6 @@ Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, a
 
 Suppliers are required to refer to the specifications provided in version 3.2 of the EPUB standard. See [https://www.w3.org/publishing/epub32/epub-spec.html](https://www.w3.org/publishing/epub32/epub-spec.html).
 
-#### Accessible Publishing Knowledge Base
-
-In addition to following the recommended version of the EPUB standard, suppliers are required to follow the recommendations in the Accessible Publishing Knowledge Base that is maintained by the Daisy Consortium: [https://kb.daisy.org/publishing/docs/](https://kb.daisy.org/publishing/docs/).
-
-The recommendations in the Knowledge Base may differ from the specification. As long as no conflicts occur during validation, the recommendations in the Knowledge Base are to be followed.
-
 ### Container
 
 The EPUB container file must be given the production number provided with the order and correspond with the identifier stored in the `dc:identifier` element located in the Package metadata.
