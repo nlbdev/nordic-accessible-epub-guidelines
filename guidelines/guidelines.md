@@ -1067,14 +1067,14 @@ Some books, such as editions of classical literary works, may have numbered para
 
 Example 1, prose:
 
-```
+```html
 <p class="numbered"><span class="parnum">1</span>Paragraph text.</p>
 ```
 
 Example 2, poetry and verse:
 
-```
-<p class="line-group numbered">
+```html
+<p class="linegroup numbered">
     <span class="parnum">1</span><span class="line">First line.</span><br/>
     <span class="line">Second line.</span>
 </p>
