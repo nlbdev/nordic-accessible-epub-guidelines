@@ -553,6 +553,8 @@ No sub-sections of any content document should have an `aria-label` or `aria-lab
 #### Untitled sections
 If a major section, e.g. a chapter, is untitled, the `aria-label` attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
 
+In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructios specifically requesting this treatment.
+
 ##### Default `aria-label` values for standard sections
 The following table lists default `aria-label` values for standard sections.
 
