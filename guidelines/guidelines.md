@@ -517,7 +517,7 @@ The EPUB Content File structure specified in these guidelines is generally made 
 
 The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in `<section>` elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `<section>` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
-The semantic role of each content document must be specified, when possible. This is done by adding the `role` and `epub:type` attributes to the top level `<section>` element of each content file. The available `role` attribute values are listed in the [Digital Publishing WAI-ARIA Module 1.0](https://www.w3.org/TR/dpub-aria-1.0/#roles).
+The semantic role of each content document must be specified, when possible. This is done by adding the `role` and `epub:type` attributes to the top level `<section>` element of each content file. The available `role` attribute values are listed in the [Digital Publishing WAI-ARIA Module 1.1](https://www.w3.org/TR/dpub-aria-1.1/#roles).
 
 When the content file can be matched to one of the roles listed, the top level `<section>` element is required to have the `role` attribute with that matching value set. If no suitable role exists the `role` attribute may be omitted.  
 
@@ -1152,7 +1152,7 @@ In educational material, especially for younger children, it is common that the 
 - EPUB Accessibility 1.0 Specification: [https://www.w3.org/Submission/epub-a11y/](https://www.w3.org/Submission/epub-a11y/)
 - DAISY Accessible Publishing Knowledge Base: [https://kb.daisy.org/publishing/docs/](https://kb.daisy.org/publishing/docs/)
 - HTML(5) Specification: [https://html.spec.whatwg.org/multipage/](https://html.spec.whatwg.org/multipage/)
-- Digital Publishing WAI-ARIA Module 1.0: [https://www.w3.org/TR/dpub-aria-1.0/](https://www.w3.org/TR/dpub-aria-1.0/)
+- Digital Publishing WAI-ARIA Module 1.1: [https://www.w3.org/TR/dpub-aria-1.1/](https://www.w3.org/TR/dpub-aria-1.1/)
 - Ace by DAISY Accessibility Checker for EPUB 3: [https://daisy.github.io/ace/](https://daisy.github.io/ace/)
 - MARC Code List for Relators Scheme: [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html)
 - IANA registry of valid language codes:[https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
