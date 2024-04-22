@@ -767,11 +767,12 @@ The placeholder  element is required to have the following attributes:
 
 where `id` is a unique identifier. Furthermore, the corresponding `<img>` element must then be given the following attribute:
 
-- `aria-describedby=""`
+- `aria-describedby=""` if the placeholder is `<aside>`
+- `aria-details=""` if the placeholder is `<details>`
 
 with the same value as the id of the `<aside>` placeholder.
 
-The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled using the default option:
+The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled using the `<aside>` option:
 
 ```html
 <figure class="image">
