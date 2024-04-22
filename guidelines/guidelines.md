@@ -720,7 +720,7 @@ Headings that do not contribute to the hierarchical structure of the work and th
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
-Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element with a `class` attribute set to `image`. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed as the first child of the `<figure>` element. If no caption is present, the `<img>` element will be the first child.
+Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element with a `class` attribute set to `image`. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed as either the first or the last child of the `<figure>` element.
 
 Small symbols or other non-typographical content that might occur inline, are required to be represented with `<img>` elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
 
@@ -755,7 +755,12 @@ For alt-texts provided by the Supplier to be properly read by screen-readers the
 
 ##### Text Extraction from Images
 
-When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder within the `<figure>` element of the image. The placeholder should be placed after the `<img>` element, before the closing `</figure>` tag. Suppliers are required to use the `<aside>` element for this placeholder with the following attributes:
+When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder element, either within the `<figure>` element of the image or directly after it. The placeholder elements can be:
+
+- `<aside>` This is the default option. It can be placed inside the `<figure>` element or directly after it. If it is placed inside it must be placed after the `<img>` element, before the closing `</figure>` tag. If there is also a `<figcaption>`, this must be placed before the `<img>` element. If the `<aside>` is placed after the closing `</figure>` tag, there is no restriction on the placement of the `<figcaption>`.
+- `<details>` This element must only be used if specific instructions are given by the Ordering Agency. It is required to be placed directly after the `<figure>` element, never inside it.
+
+The placeholder  element is required to have the following attributes:
 
 - `class="fig-desc"`
 - `id=""`
@@ -766,7 +771,7 @@ where `id` is a unique identifier. Furthermore, the corresponding `<img>` elemen
 
 with the same value as the id of the `<aside>` placeholder.
 
-The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled:
+The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled using the default option:
 
 ```html
 <figure class="image">
