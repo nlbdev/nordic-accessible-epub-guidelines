@@ -751,7 +751,7 @@ For alt-texts provided by the Supplier to be properly read by screen-readers the
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder element, either within the `<figure>` element of the image or directly after it. The placeholder elements can be:
 
-- `<aside>` This is the default option. It can be placed inside the `<figure>` element or directly after it. If it is placed inside it must be placed after the `<img>` element, before the closing `</figure>` tag. If there is also a `<figcaption>`, this must be placed before the `<img>` element. If the `<aside>` is placed after the closing `</figure>` tag, there is no restriction on the placement of the `<figcaption>`.
+- `<aside>` This is the default option. It can be placed inside the `<figure>` element or directly after it. If it is placed inside it must be placed after the `<img>` element, before the closing `</figure>` tag. If there is also a `<figcaption>`, this must be placed before the `<img>` element. If the `<aside>` is placed after the closing `</figure>` tag, there is no restriction on the placement of the `<figcaption>`. It is up to the Ordering Agency to specify which option to be used, either in Agency-specific Guidelines or in Editing Instructions.
 - `<details>` This element must only be used if specific instructions are given by the Ordering Agency. It is required to be placed directly after the `<figure>` element, never inside it.
 
 The placeholder  element is required to have the following attributes:
@@ -766,7 +766,7 @@ where `id` is a unique identifier. Furthermore, the corresponding `<img>` elemen
 
 with the same value as the id of the `<aside>` placeholder.
 
-The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text should be handled using the `<aside>` option:
+The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text can be handled using the `<aside>` option:
 
 ```html
 <figure class="image">
