@@ -1034,6 +1034,12 @@ If there is an author name placed under the verse it may be marked up with `<p c
 
 In some cases, where poetry has figurative or otherwise non-standard disposition of the text, it may be requested by the Ordering Agency to also capture the verse as an image. It may also be requested that the verse is captured as pre-formatted text, using the `<pre>` element. Neither of these options must be used unless specific instructions are given by the Ordering Agency. 
 
+##### Use of line/linenum-formatted content in non-verse content. 
+
+In some titles, line-by-line based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line>` should be used instead. 
+
+In the cases where `<div class="line-by-line>` are used, the same rules as for `<div class="verse">` are applied. Any variations to the markup in `<div class="line-by-line>` are given by the Ordering Agency.
+
 #### Quotes
 
 Quotes, citations, excerpts from other sources and similar content are required to be marked up using the `<blockquote>` element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate `<p>`.
