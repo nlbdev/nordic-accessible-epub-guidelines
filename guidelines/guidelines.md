@@ -708,7 +708,9 @@ Sometimes the source material has a chapter or part number, or a phrase indicati
 <h1><span class="chnum">Chapter 1</span><br/>Chapter heading</h1>
 ```
 
-Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, omitted from the navigation document. This markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
+Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, omitted from the navigation document. This mark-up may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
+
+In some cases heading mark-up may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency. 
 
 #### Figures
 
@@ -1008,9 +1010,9 @@ For certain publications there may be instructions given to add `aria-label` att
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
-Headings in text boxes should be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text. These headers should be included in the navigation document. 
+If headings in text boxes can be seen as part of the hierarchical heading structure of the book, they should be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text and included in the navigation document.
 
-In previous versions of the Nordic guidelines, `<p epub:type="bridgehead">` has been reccomended as a substitute for headers in `asides`. Since `epub:type="bridgehead"` is a deprecated attribute, this is not used any longer.
+Structurally insignificant headings should be marked up with `<h[x]>` with the attribute `class="no-toc"`, or, for instance if they are often repeated, marked up as `<p class="faux-hd">`. Both of these options must only be used if specific instructions are given by the Ordering Agency.
 
 <div class="note">
 At the time of publication, the Epub accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside), which considers the aside element an WAI-ARIA landmark (complementary), only when it has an accessible name. When triggered by non-labelled aside elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
@@ -1040,7 +1042,7 @@ Each group of lines of text must be contained in a separate `<p class="linegroup
 
 Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with `<span class="linenum">`.
 
-If the content written in verse has a title it may be handled as a normal heading, with `<section>` elements wrapping the content. However, if it does not make sense to use a proper heading, it may be marked up with `<p epub:type="bridgehead">` and placed within the `<div class="verse">` container. This option must not be used unless specific instructions are given by the Ordering Agency.
+If the content written in verse has a title it may be handled as a normal heading, with `<section>` elements wrapping the content. However, if it does not make sense to use a proper heading, it may be marked up with `<p class="faux-hd">` and placed within the `<div class="verse">` container. This option must not be used unless specific instructions are given by the Ordering Agency.
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
