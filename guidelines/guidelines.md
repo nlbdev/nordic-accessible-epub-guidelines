@@ -708,7 +708,7 @@ Sometimes the source material has a chapter or part number, or a phrase indicati
 <h1><span class="chnum">Chapter 1</span><br/>Chapter heading</h1>
 ```
 
-Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be marked up using `<p epub:type="bridgehead">`. Bridgehead markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
+Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, omitted from the navigation document. This markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
 
 #### Figures
 
