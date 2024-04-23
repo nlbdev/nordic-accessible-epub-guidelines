@@ -1012,6 +1012,10 @@ Headings in text boxes should be marked up using a <h[x]> element of an appropri
 
 In previous versions of the Nordic guidelines, `<p epub:type="bridgehead">` has been reccomended as a substitute for headers in `asides`. Since `epub:type="bridgehead"` is a deprecated attribute, this is not used any longer.
 
+<div class="note">
+At the time of publication, the Epub accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside), which considers the aside element an WAI-ARIA landmark (complementary), only when it has an accessible name. When triggered by non-labelled aside elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
+</div>
+
 #### Computer Code
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
