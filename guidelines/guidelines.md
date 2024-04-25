@@ -708,9 +708,9 @@ Sometimes the source material has a chapter or part number, or a phrase indicati
 <h1><span class="chnum">Chapter 1</span><br/>Chapter heading</h1>
 ```
 
-Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, omitted from the navigation document. This mark-up may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
+Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, be omitted from the navigation document. This mark-up may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
 
-In some cases heading mark-up may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency. 
+In some cases heading mark-up may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency.
 
 #### Figures
 
@@ -1010,7 +1010,7 @@ For certain publications there may be instructions given to add `aria-label` att
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
-If headings in text boxes can be seen as part of the hierarchical heading structure of the book, they should be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text and included in the navigation document.
+If headings in text boxes can be seen as part of the hierarchical heading structure of the book, they should be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text, and should be included in the navigation document.
 
 Structurally insignificant headings should be marked up with `<h[x]>` with the attribute `class="no-toc"`, or, for instance if they are often repeated, marked up as `<p class="faux-hd">`. Both of these options must only be used if specific instructions are given by the Ordering Agency.
 
