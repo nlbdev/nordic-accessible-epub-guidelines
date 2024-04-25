@@ -2,15 +2,15 @@
 
 ## Introduction
 
-This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats -- e.g. talking books, braille, and accessible e-books -- to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](http://statped.no/).
+This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](http://statped.no/).
 
-Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collect instructions for the application of the [Epub 3.3](https://www.w3.org/TR/epub-33/) and [Epub Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/), bridging the gap between general standards and the local context(s) of the Nordic agencies.
+Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of [Epub 3.3](https://www.w3.org/TR/epub-33/) and [Epub Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/), bridging the gap between general standards and the local context(s) of the Nordic agencies.
 
-The target audience of the document is mainly the Nordic agencies' contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
+The target audience of the document is mainly the Nordic agencies’ contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
 ### For readers looking for general e-book accessibility advice
 
-Readers should note that these guidelines build on available standards and best practices for accessible e-book production documented elsewhere. This document do not provide general e-book accessibility advice, please have a look at the [DAISY Consortium's Accessible Publishing Knowledge Base](https://kb.daisy.org/publishing/docs/) for a comprehensive resource on current best practices for e-book accessibility in general. Many of the techniques used in this document are based on DAISY Accessible Publishing Knowledge Base examples and guidance. The Nordic agencies are indebted to the [DAISY Consortium](https://daisy.org/) for providing this valuable resource.
+Readers should note that these guidelines build on available standards and best practices for accessible e-book production documented elsewhere. This document does not provide general e-book accessibility advice, please have a look at the [DAISY Consortium's Accessible Publishing Knowledge Base](https://kb.daisy.org/publishing/docs/) for a comprehensive resource on current best practices for e-book accessibility in general. Many of the techniques used in this document are based on DAISY Accessible Publishing Knowledge Base examples and guidance. The Nordic agencies are indebted to the [DAISY Consortium](https://daisy.org/) for providing this valuable resource.
 
 #### Note about WCAG compliance
 
@@ -18,15 +18,15 @@ Please note that some of the instructions given here do not provide sufficient a
 
 ### Situating the Nordic Guidelines in the World of Specifications
 
-As described above, the Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Nordic agencies (henceforth "the Ordering Agency/Agencies").
+As described above, the Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Nordic agencies (henceforth ”the Ordering Agency/Agencies”).
 
 The application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
 
 The different levels of specification can be expressed as the following hierarchy:
 
-1. High-level specifications, e.g. [Epub 3.3](https://www.w3.org/TR/epub-33/), [Epub Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/), [HTML5],(https://www.w3.org/TR/html/) etc.
+1. High-level specifications, e.g. [Epub 3.3](https://www.w3.org/TR/epub-33/), [Epub Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/), [HTML5](https://www.w3.org/TR/html/) etc.
 2. The Nordic Guidelines (this document)
-3. General Ordering Agency-specific Guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
+3. General Ordering Agency-specific guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
 
 Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation is outside the scope of this document.
