@@ -730,7 +730,7 @@ Consider the following example:
 </section>
 ```
 
-Here, there is more content belonging to the outer `<section>` element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the class attributes  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text "(continued)" added. Note that this addition is language dependent  and language-specific terms can be found in section 5.2.4. The exampel above would then be:
+Here, there is more content belonging to the outer `<section>` element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the class attributes  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text "(continued)" added. Note that this addition is language dependent  and language-specific terms can be found in section 5.2.4. The example above would then be:
 
 ```html
 <section>
