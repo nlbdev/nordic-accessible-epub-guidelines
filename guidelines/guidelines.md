@@ -712,6 +712,43 @@ Headings that do not contribute to the hierarchical structure of the work and th
 
 In some cases heading mark-up may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency.
 
+##### Continuation Headings
+
+Consider the following example: 
+
+```html
+<section>
+    <h[x]>Section heading</h[x]>
+    <p>...</p>
+    ...
+    <section>
+        <h[x+1]>Sub-section heading</h[x+1]>
+        ...
+    </section>
+    <p>Content belonging to the section on level x.</p>
+    ...    
+</section>
+```
+
+Here, there is more content belonging to the outer `<section>` element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the class attributes  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text "(continued)" added. Note that this addition is language dependent  and language-specific terms can be found in section 5.2.4. The exampel above would then be:
+
+```html
+<section>
+    <h[x]>Section heading</h[x]>
+    <p>...</p>
+    ...
+    <section>
+        <h[x+1]>Sub-section heading</h[x+1]>
+        ...
+    </section>
+    <h[x] class="no-toc cont-hd">Section heading (continued)</h[x]>    
+    <p>Content belonging to the section on level x.</p>
+    ...    
+</section>
+```
+
+Continuation headings must only be used if specific instructions are given by the Ordering Agency.
+
 #### Figures
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
@@ -1206,6 +1243,12 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Drawing.          | Teckning.      | Tegning.      | Piirros.   | Tekening.     | Tegning.      | Teikning.  | Zeichnung.    |
 | Comic.            | Tecknad serie. | Tegneserie.   | Sarjakuva. | Stripverhaal. | Tegneserie.   | Myndasaga. | Comic.        |
 | Logo.             | Logotyp.       | Logo.         | Logo.      | Logo.         | Logo.         | Lógó.      | Logo.         |
+
+#### Continuation Heading Identifiers
+
+| English (default) | Swedish        | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
+|-------------------|----------------|---------------|---------------|---------------|---------------|---------------|---------------|
+| (continued)       | (fortsättning) | [to be added] | [to be added] | [to be added] | [to be added] | [to be added] | [to be added] |
 
 #### End Note Heading
 
