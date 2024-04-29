@@ -1150,9 +1150,9 @@ All caps or small caps may also be used to emphasise words or short passages of 
 
 Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note, that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with `<sup>`, unless the number is part of a mathematical expression.
 
-Simple mathematical expressions or other simple STEM related content in non-STEM contexts can be captured as regular text with standard HTML used to mark up exponents or indices. The correct Unicode characters must be used to represent mathematical operators or special characters. More complex expressions are required to be marked up with MathML, however, even in non-STEM contexts. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must as the Ordering Agency for clarification. 
+Simple mathematical expressions or other simple STEM related content in non-STEM contexts can be captured as regular text with standard HTML used to mark up exponents or indices. The correct Unicode characters must be used to represent mathematical operators or special characters. More complex expressions are required to be marked up with MathML, however, even in non-STEM contexts. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must ask the Ordering Agency for clarification. 
 
-In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into much detail about the MathML language. Please refer to the specification:
+In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into details about the MathML language. Please refer to the specification:
 
 [https://www.w3.org/TR/MathML3/](https://www.w3.org/TR/MathML3/)
 
