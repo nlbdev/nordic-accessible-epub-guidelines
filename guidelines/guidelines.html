@@ -1,4 +1,51 @@
-# Nordic Guidelines for the Production of Accessible EPUB 3
+<html>
+  <title>Nordic Guidelines for the Production of Accessible EPUB 3 2024-1</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer/>
+<script>
+var respecConfig = {
+    format: "markdown",
+    xref: {
+        specs: ["epub-33"],
+        profile: "web-platform",
+    },
+    editors: [
+	{
+            name: "Oscar Lagerström Carlsson",
+            company: "MTM",
+            companyURL: "https://www.mtm.se/",
+        },
+        {
+            name: "Anders Eklund",
+            company: "SPSM",
+            companyURL: "https://www.spsm.se/",
+        },
+        {
+            name: "Jonas Lillqvist",
+            company: "Celia",
+            companyURL: "https://www.celia.fi/",
+        },
+	{
+            name: "Linda Lindhé",
+            company: "MTM",
+            companyURL: "https://www.mtm.se/",
+        },	
+
+        {
+            name: "Martin Persson",
+            company: "MTM",
+            companyURL: "https://www.mtm.se/",
+        },
+    ],
+}
+</script>
+
+<body>
+
+<section id="abstract">
+
+[REQUIRED SECTION]
+
+</section>
 
 ## Introduction
 
@@ -343,7 +390,7 @@ The title page is referenced using the label "Title page" in the language of the
 Some headings consist of a main heading and a subtitle grouped in an `<hgroup>` element (see section [Headings](#headings) for details on markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
 
 ```html
-<li><a href="...">Main heading. Subtitle</a></li>
+<li><a href="...">Main heading. Subtitle<</a></li>
 ```
 
 The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a `<section>` element, but can also be `<aside>` or any other sectioning element. Thus, in the example below, the link should point to the id "level3_2" in that content file:
@@ -357,7 +404,9 @@ A section without any heading must be referenced using its `aria-label` value.
 
 Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
 
-If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the `<a>` element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
+See the following link for further information (but disregard examples of unlinked headings or hidden branches):
+
+[http://kb.daisy.org/publishing/docs/navigation/toc.html](http://kb.daisy.org/publishing/docs/navigation/toc.html)
 
 ##### Page List
 
@@ -728,7 +777,7 @@ Consider the following example:
 </section>
 ```
 
-Here, there is more content belonging to the outer `<section>` element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the class attributes  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text "(continued)" added. Note that this addition is language dependent  and language-specific terms can be found in section 5.2.4. The example above would then be:
+Here, there is more content belonging to the outer `<section>` element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the class attributes  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text "(continued)" added. Note that this addition is language dependent  and language-specific terms can be found in section 5.2.4. The exampel above would then be:
 
 ```html
 <section>
@@ -1053,9 +1102,6 @@ Structurally insignificant headings should be marked up with `<h[x]>` with the a
 At the time of publication, the Epub accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside), which considers the aside element an WAI-ARIA landmark (complementary), only when it has an accessible name. When triggered by non-labelled aside elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
 </div>
 
-##### Nested text boxes
-In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of `<aside>` elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see above). Another possibility is to consider whether the parent text box could actually be a `<div>`, and then the inner level box an `<aside>`.
-
 #### Computer Code
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
@@ -1146,13 +1192,9 @@ All caps or small caps may also be used to emphasise words or short passages of 
 
 ## Specific Requirements for Advanced Content
 
-### Numbers and STEM Content
+### Mathematical Content
 
-Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note, that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with `<sup>`, unless the number is part of a mathematical expression.
-
-Simple mathematical expressions or other simple STEM related content in non-STEM contexts can be captured as regular text with standard HTML used to mark up exponents or indices. The correct Unicode characters must be used to represent mathematical operators or special characters. More complex expressions are required to be marked up with MathML, however, even in non-STEM contexts. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must as the Ordering Agency for clarification. 
-
-In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into much detail about the MathML language. Please refer to the specification:
+All mathematical or scientific content, content that contains mathematical operators, special characters, subscripts, superscripts etc., must be marked up using MathML.  These guidelines will not go into much detail about the MathML language. Please refer to the specification:
 
 [https://www.w3.org/TR/MathML3/](https://www.w3.org/TR/MathML3/)
 
@@ -1274,3 +1316,7 @@ Suppliers do not need to observe these unless specifically requested by Ordering
 
 #### Sentence markup
 Sentence markup using `<span>` and `@class="sentence"` is allowed. This is used in Media Overlays talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
+
+
+</body>
+</html>
