@@ -590,18 +590,21 @@ X41001A-010-chapter.xhtml
 
 Some content files have certain contents that are required to be included and marked up correctly.
 
-#### Cover
+#### Cover and back cover
 
-The following class attributes must applied to the child `<section>` elements where appropriate:
+The cover should be captured in a separate file from the back cover and only contain the cover-image. The `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to the cover file. 
 
-- `<section class="frontcover">`
+The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The `properties="cover-image"` attribute must be applied to the manifest item element corresponding to this image. The `<img>` element referencing the cover image must have `aria-role` set to `"doc-cover"`.
+
+The back cover should be captured as the first frontmatter-file in the title with the right- and left flaps as sub sections. The following class attributes must applied to the `<section>` and child `<section>` elements where appropriate:
 - `<section class="backcover">`
 - `<section class="leftflap">`
 - `<section class="rightflap">`
 
-The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The `properties="cover-image"` attribute must be applied to the manifest item element corresponding to this image. The `<img>` element referencing the cover image must have `aria-role` set to `"doc-cover"`.
+The placement of the back cover file might vary between agency specific guidelines.
 
-Note that the `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to this content file.
+Ordering Agencies may require a legalpage or other frontmatter-content to be inserted into the title. The specifications and placing of this will be up to the Ordering Agency.
+
 
 #### Title Page
 
