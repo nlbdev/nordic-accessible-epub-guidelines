@@ -343,7 +343,7 @@ The title page is referenced using the label "Title page" in the language of the
 Some headings consist of a main heading and a subtitle grouped in an `<hgroup>` element (see section [Headings](#headings) for details on markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
 
 ```html
-<li><a href="...">Main heading. Subtitle<</a></li>
+<li><a href="...">Main heading. Subtitle</a></li>
 ```
 
 The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a `<section>` element, but can also be `<aside>` or any other sectioning element. Thus, in the example below, the link should point to the id "level3_2" in that content file:
@@ -357,9 +357,7 @@ A section without any heading must be referenced using its `aria-label` value.
 
 Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
 
-See the following link for further information (but disregard examples of unlinked headings or hidden branches):
-
-[http://kb.daisy.org/publishing/docs/navigation/toc.html](http://kb.daisy.org/publishing/docs/navigation/toc.html)
+If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the `<a>` element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
 
 ##### Page List
 
