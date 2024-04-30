@@ -1147,6 +1147,17 @@ For lead-ins, the Supplier must normalise capitalisation and apply `<span class=
 
 All caps or small caps may also be used to emphasise words or short passages of body text. If the source file is an EPUB or other HTML based publication where such styling is applied using CSS, the markup `<strong class="all-caps">` or `<strong class="small-caps">` should be used to preserve the styling.
 
+#### Styling
+
+In general, styling and layout properties must be ignored. The styling and layout of the EPUB file will be handled by standard CSS files provided by the the Ordering Agencies. However, there are cases when styling used in the source material carry a semantic meaning. In these cases styling classes may be required. Typical examples of this can be:
+
+- Words, phrases or expressions written in a different colour and being referred to elsewhere in the text
+- Text boxes with a certain background colour that explains the function of the box
+- Words or phrases written in a different font for some specific reason
+
+Note, that these are only examples and other types of significant stylings may occur. The `class` attributes must be placed in a `<span>` element wrapping the words or phrases in question, or in an already present element where that is applicable. Only `class` attributes defined by the Ordering Agency may be used. The `style` attribute is not allowed. The Suppliers must only apply styling classes when given specific instructions by the Ordering Agency.
+
+
 ## Specific Requirements for Advanced Content
 
 ### Numbers and STEM Content
