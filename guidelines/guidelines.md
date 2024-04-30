@@ -623,6 +623,19 @@ For subtitles, use a `<p>` tag with `epub:type="subtitle"` and `role="doc-subtit
 </hgroup>
 ````
 
+For the author of the publication, use `<p class="docauthor">`. For titles where there are more than one author, repeat this for each instance.
+
+In some titles, more detailed classes for titlepage can be required: 
+
+`<p class="seriestitle>`
+`<p class="contributor">`
+`<p class="publisher">`
+`<figure class="logo">`
+
+`<p class="contributor">` represents several different types of contributors such as illustrator, editor or translator. 
+`<p class="seriestitle>` and `<p class="publisher">` should mostly be used when requested by the Ordering Agency.
+
+
 #### Parts
 
 Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must be marked up as `<h2>`, even though they are the first heading of its content file. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
