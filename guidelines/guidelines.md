@@ -1157,6 +1157,8 @@ In general, styling and layout properties must be ignored. The styling and layou
 
 Note, that these are only examples and other types of significant stylings may occur. The `class` attributes must be placed in a `<span>` element wrapping the words or phrases in question, or in an already present element where that is applicable. Only `class` attributes defined by the Ordering Agency may be used. The `style` attribute is not allowed. The Suppliers must only apply styling classes when given specific instructions by the Ordering Agency.
 
+Since the semantic meaning of this content will not be accessible to all readers of the EPUB file by this soloution, there is a need for post-markup editing to ensure full WCAG-compliance.
+
 
 ## Specific Requirements for Advanced Content
 
