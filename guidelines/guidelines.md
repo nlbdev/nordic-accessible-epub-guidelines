@@ -763,6 +763,10 @@ Here, there is more content belonging to the outer `<section>` element after the
 
 Continuation headings must only be used if specific instructions are given by the Ordering Agency.
 
+##### Chapter authors
+
+Sometimes an author name appears before or after the chapter heading. Use the markup `<p class="chapter-author">` for a paragraph containing one or more author names. Note that this markup should not be used for author names at the end of a section.
+
 #### Figures
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
