@@ -1073,9 +1073,6 @@ Structurally insignificant headings should be marked up with `<h[x]>` with the a
 At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside), which considers the aside element an WAI-ARIA landmark (complementary), only when it has an accessible name. When triggered by non-labelled aside elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
 </div>
 
-##### Nested text boxes
-In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of `<aside>` elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see above). Another possibility is to consider whether the parent text box could actually be a `<div>`, and then the inner level box an `<aside>`.
-
 #### Computer Code
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
