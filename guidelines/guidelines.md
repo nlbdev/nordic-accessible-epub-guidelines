@@ -1250,11 +1250,11 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 #### nav.xhtml Headings
 
-| English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish    | Dutch            | Danish           | Icelandic   | German              |
-|-------------------|--------------|--------------------|---------------------|------------|------------------|------------------|-------------|---------------------|
-| Pages             | Sidindelning | Liste over sider   | Liste over sider    | Sivut      | Paginering       | Liste over sider | Blaðsíður   | Seiten              |
-| Contents          | Innehåll     | Innhold            | Innhald             | Sisällys   | Inhoud           | Indhold          | Efni        | Inhalt              |
-| Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Navigointi | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
+| English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish       | Dutch            | Danish           | Icelandic   | German              |
+|-------------------|--------------|--------------------|---------------------|---------------|------------------|------------------|-------------|---------------------|
+| Pages             | Sidindelning | Liste over sider   | Liste over sider    | Sivut         | Paginering       | Liste over sider | Blaðsíður   | Seiten              |
+| Contents          | Innehåll     | Innhold            | Innhald             | Sisällys      | Inhoud           | Indhold          | Efni        | Inhalt              |
+| Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Kiintopisteet | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
 
 
 #### aria-label and TOC Values
@@ -1291,13 +1291,13 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 | English (default) | Swedish        | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| (continued)       | (fortsättning) | [to be added] | [to be added] | [to be added] | [to be added] | [to be added] | [to be added] |
+| (continued)       | (fortsättning) | [to be added] | (jatkuu)      | [to be added] | [to be added] | [to be added] | [to be added] |
 
 #### End Note Heading
 
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Notes             | Noter    | [to be added] | [to be added] | [to be added] | [to be added] | [to be added] | [to be added] |
+| Notes             | Noter    | [to be added] | Viitteet      | [to be added] | [to be added] | [to be added] | [to be added] |
 
 #### Footnote and Endnote Backlink
 
