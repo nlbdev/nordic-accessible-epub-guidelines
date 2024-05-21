@@ -1,6 +1,4 @@
-# Nordic Guidelines for the Production of Accessible EPUB 3
-
-## Introduction
+# Introduction
 
 This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](http://statped.no/).
 
@@ -8,15 +6,15 @@ Making book content accessible starts in well-structured and granular semantic m
 
 The target audience of the document is mainly the Nordic agencies’ contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
-### For readers looking for general e-book accessibility advice
+## For readers looking for general e-book accessibility advice
 
 Readers should note that these guidelines build on available standards and best practices for accessible e-book production documented elsewhere. This document does not provide general e-book accessibility advice, please have a look at the [DAISY Consortium's Accessible Publishing Knowledge Base](https://kb.daisy.org/publishing/docs/) for a comprehensive resource on current best practices for e-book accessibility in general. Many of the techniques used in this document are based on DAISY Accessible Publishing Knowledge Base examples and guidance. The Nordic agencies are indebted to the [DAISY Consortium](https://daisy.org/) for providing this valuable resource.
 
-#### Note about WCAG compliance
+### Note about WCAG compliance
 
 Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG22/), even on the base level (A). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
 
-### Situating the Nordic Guidelines in the World of Specifications
+## Situating the Nordic Guidelines in the World of Specifications
 
 As described above, the Nordic Guidelines work as an application of higher-level standards for the purpose of accessible EPUB 3 production at the Nordic agencies (henceforth ”the Ordering Agency/Agencies”).
 
@@ -31,13 +29,13 @@ The different levels of specification can be expressed as the following hierarch
 
 Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation is outside the scope of this document.
 
-## Format Requirements
+# Format Requirements
 
-### Required EPUB Standard
+## Required EPUB Standard
 
 Suppliers are required to refer to the specifications provided in version 3.2 of the EPUB standard. See [https://www.w3.org/publishing/epub32/epub-spec.html](https://www.w3.org/publishing/epub32/epub-spec.html).
 
-### Container
+## Container
 
 The EPUB container file must be given the production number provided with the order and correspond with the identifier stored in the `dc:identifier` element located in the Package metadata.
 
@@ -45,7 +43,7 @@ The container archive is required to have the `.epub` extension. The file extens
 
 Note that the `mimetype` file must be archived as the first file in the Container.
 
-#### META-INF
+### META-INF
 
 The `container.xml` file must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
 
@@ -63,11 +61,11 @@ xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
 
 No other files, optional or otherwise, are allowed in the META-INF directory unless specifically indicated by the Ordering Agency.
 
-### Publication Resources
+## Publication Resources
 
 All publication resources are required to be located in a directory called EPUB.  Publication resources other than the Package Document (`.opf`) and XHTML Content Documents are to be located in dedicated resource sub-directories.
 
-### Package Document
+## Package Document
 
 The name of the Package Document file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the Package Document.
 
@@ -92,7 +90,7 @@ Required child elements to the `<package>` element are:
 - `<manifest>`
 - `<spine>`
 
-#### Metadata
+### Metadata
 
 The following metadata are required to be placed in the `<metadata>` element:
 
@@ -114,7 +112,7 @@ Note that the default value to use in `<dc:publisher>` is the shorthand for the 
 
 If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `<dc:source>` element will be a text string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
 
-##### Accessibility Metadata
+#### Accessibility Metadata
 
 The supplier is also expected to add accessibility metadata. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
 
@@ -172,7 +170,7 @@ The `pageBreakSource` property identifies the pagination source, typically using
 
 The `schema:accessibilitySummary` property can be used to provide information that complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
-##### Optional Increased Title and Creator Metadata Granularity
+#### Optional Increased Title and Creator Metadata Granularity
 
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
 
@@ -200,11 +198,11 @@ Similarly, creator/author information can be expressed with explicit refinement 
 
 The codes to use as values for the creator role are taken from the MARC relators vocabulary, [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html).
 
-##### Optional Additional Metadata
+#### Optional Additional Metadata
 
 Additional metadata for inclusion can be supplied by the Ordering Agency on a per-title or per-Agency basis.
 
-#### Manifest
+### Manifest
 
 In the `<manifest>` all publication resources are declared. Each resource is declared using the `<item>` element with required attributes `id`, `href` and `media-type`. Some items must also have a `properties` attribute.
 
@@ -231,7 +229,7 @@ Some resources have additional properties that need to be identified in the corr
 
 Refer to [https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab](https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab) for additional information about the properties attribute.
 
-#### Spine
+### Spine
 
 In the `<spine>` all content documents are listed in the correct reading order. This is done by using an `<itemref>` element for each content document and simply listing them in the desired order. The `<itemref>` element is associated with the corresponding `<item>` for the content document in the `<manifest>` by using the idref attribute and setting the value to the id attribute of the `<item>` element. The idref attribute is a required attribute and the id it refers to must be unique. Here is an example:
 
@@ -256,13 +254,13 @@ If a fall-back ncx navigation document is included, this is required to be refer
 ```xml
 <spine toc="_[id value of the manifest item that refers to the ncx file]_">
 ```
-### Content Documents
+## Content Documents
 
-#### XHTML
+### XHTML
 
 The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required to use the extension `.xhtml`.
 
-##### XML Declaration and Encoding
+#### XML Declaration and Encoding
 
 The following xml declaration must be used:
 
@@ -270,7 +268,7 @@ The following xml declaration must be used:
 <?xml version="1.0" encoding="utf-8"?>
 ```
 
-##### Document Type Declaration
+#### Document Type Declaration
 
 The following document type declaration must be included:
 
@@ -278,7 +276,7 @@ The following document type declaration must be included:
 <!DOCTYPE html>
 ```
 
-##### HTML Root Attributes
+#### HTML Root Attributes
 
 Suppliers are required to include the following attributes on the html root element:
 
@@ -287,14 +285,14 @@ Suppliers are required to include the following attributes on the html root elem
 - `xml:lang` – XML Language definition
 - `lang` – HTML Language definition
 
-##### Namespaces
+#### Namespaces
 
 The following namespace values are required to be applied to the namespace attributes:
 
 - `xmlns="http://www.w3.org/1999/xhtml"`
 - `xmlns:epub="http://www.idpf.org/2007/ops"`
 
-##### Language Definition
+#### Language Definition
 
 Suppliers are required to identify the primary language of each content document using the `xml:lang` and `lang` attributes. On how to tag language change within a document, see section [Language Tagging](#language-tagging).
 
@@ -304,11 +302,11 @@ Please note that the most granular language tag should be used, e.g. the macrola
 
 The accuracy of language coding is vital, and Suppliers are instructed to contact the Ordering Agency in case of any uncertainties.
 
-#### Title
+### Title
 
 The `<title>` element of every `xhtml` content document must match the main heading of the content document in question. For front- and backmatter content, if the document does not have a heading, the `aria-label` value of the main `<section>` element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
 
-#### Metadata
+### Metadata
 
 The content documents are required to contain two `<meta>` elements.
 
@@ -319,15 +317,15 @@ The content documents are required to contain two `<meta>` elements.
 
 The production UID must match the `dc:identifier` in package.opf.
 
-### Navigation Documents
+## Navigation Documents
 
-#### EPUB 3.2 Navigation Document
+### EPUB 3.2 Navigation Document
 
 The principle navigation document of the EPUB package is the `xhtml` file with the `properties` attribute set to nav in the `<manifest>` section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
 Section 5.2.1 of this document contains language specific headings for the `<nav>` sections of the navigation document that are listed below.
 
-##### The Table Of Contents
+#### The Table Of Contents
 
 The first required `<nav>` element in the file is for the main table of contents. The `<nav>` element is required to have a `<h1>` as the first child element. The `<nav>` element must have the `aria-labelledby` attribute set to the `id` of the `<h1>` element. The `role` and `epub:type` elements must be set as follows:
 
@@ -359,7 +357,7 @@ Note that this is not a representation of the table of contents in the source ma
 
 If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the `<a>` element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
 
-##### Page List
+#### Page List
 
 If the source material contains pagination, the next required `<nav>` element is: 
 
@@ -374,7 +372,7 @@ See the following link for further information:
 
 If no pagination occurs in the source material this may be omitted.
 
-##### Landmarks
+#### Landmarks
 
 The landmarks `<nav>` element is optional, and should be included only if the Ordering Agency requests it.
 
@@ -402,7 +400,7 @@ It is recommended that the list of landmarks include a link to the start of the 
 
 Introductory sections such as a prologue, preface, foreword or introduction can also be included in the landmarks. It should be noted, however, that they are considered bodymatter. In the landmarks `<nav>`, the first bodymatter section should be referenced using `epub:type="bodymatter"` and a label indicating that it is the start of the main content, regardless of any other applicable `epub:type` value.
 
-#### NCX Navigation Document
+### NCX Navigation Document
 
 The EPUB package may include an `ncx` navigation document as fall-back for older reading systems that have not implemented functionality for the EPUB 3 navigation document. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
@@ -421,7 +419,7 @@ The `<head>` element must contain the following `<meta>` element:
 
 All headings must be included in the `<navMap>` and the heading levels must be implied through nesting.
 
-### Images
+## Images
 
 Image content is required to be captured in the `jpeg` or `png` formats. The format extension is required to be `.jpg` or `.png`. Photos, drawings and illustrations must be captured in the `jpeg` format. For line graphics, charts and diagrams the preferred format is `png`.
 
@@ -434,7 +432,7 @@ requirements are the following:
 - Text in images, line graphics and small detail must be crisp and fully legible, or with no degradation in legibility in comparison with the original image.
 - If the `jpeg` format is used, the quality setting is required to be set at around 90% (or a corresponding setting, if a different scale of measurement is used). A setting of 100% is usually unnecessary as it yields substantially larger files with little or no visible improvement of quality. If, however, there would be visible difference in quality between 90% and a higher setting, then the higher setting should be used.
 
-#### Image File Naming and Directory Structure
+### Image File Naming and Directory Structure
 
 Image files are required to be stored in a folder named _images_ placed at the same level relative to the package document. The images folder must not contain subfolders.
 
@@ -454,35 +452,35 @@ X41001A-013.png
 
 An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
-#### Image id:s for loi
+### Image id:s for loi
 In cases where a title contains a list of illustrations (`loi`), or where a list of ilustrations should be included in the `nav.xhtml`-file , the figure element  should be provided with an id. These id:s should be named`"fig-XXX"` in sequential order, where XXX is the number of the figure in the file.
 Instances may occur where id:s are required for images. In those cases the id should be `"img-XXX"` and follow the same pattern as for figures.
 
-#### Resizing of Images
+### Resizing of Images
 
 The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small details.
 
 In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
 
-#### Image Editing
+### Image Editing
 
 Images are required to be captured exactly as they are in the scans or publisher files provided by the Ordering Agency. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).
 
 When whole sections or parts of text is placed on top of a background image, the text may need to be edited out of the background, if possible. However, no advanced restoration of lost image details are required. Note that if a publisher file is provided, images and text may have been placed in different layers and the image can be extracted without any text.
 
-### CSS
+## CSS
 
 Suppliers are required to include the standard `css` file issued by the Ordering Agency. The `css` file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
 
 The `<link>` element is required to be applied to the relevant content documents.
 
-### Fonts
+## Fonts
 
 Fonts present in PDF source material must not be included in the EPUB, unless specifically indicated by the Ordering Agency.
 
 Fonts, when present, must be stored in a folder named _fonts_ and placed at the same level relative to the package document.
 
-### Javascript
+## Javascript
 
 Javascript files requested by the Ordering Agency are required to be stored in a folder named _javascript_ and placed on the same level relative to the package document.
 
@@ -490,7 +488,7 @@ The `<script>` element is required to be applied to the relevant content documen
 
 Suppliers must not include javascript files in the EPUB unless specifically instructed to do so by the Ordering Agency.
 
-### Validation
+## Validation
 
 Validation of EPUB files should be done using EPUBCheck for structural validity and conformance to the EPUB standard and the Ace tool for accessibility evaluation. The latest distributions of these tools should be used. The tools can be found here:
 
@@ -501,9 +499,9 @@ The Ordering Agencies have developed a specific validation tool based on these g
 
 - [http://nlbdev.github.io/nordic-epub3-dtbook-migrator/](http://nlbdev.github.io/nordic-epub3-dtbook-migrator/)
 
-## General Requirements for Content Documents
+# General Requirements for Content Documents
 
-### Structural Divisons and Semantics
+## Structural Divisons and Semantics
 
 The EPUB Content File structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual XHTML content files. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
 
@@ -539,15 +537,15 @@ Note that for the most part it will only by sections with `<h1>` headings that m
 
 Note that if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
 
-#### Subsections
+### Subsections
 No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
 
-#### Untitled sections
+### Untitled sections
 If a major section, e.g. a chapter, is untitled, the `aria-label` attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
 
 In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructios specifically requesting this treatment.
 
-##### Default `aria-label` values for standard sections
+#### Default `aria-label` values for standard sections
 The following table lists default `aria-label` values for standard sections.
 
 | Section identification   | Default `aria-label` value |
@@ -564,13 +562,13 @@ The following table lists default `aria-label` values for standard sections.
 
 Section 5.2.2 of this document contains language specific values.
 
-###### `aria-label` values using the first three words
+##### `aria-label` values using the first three words
 If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with `aria-label` using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
 
-###### Custom `aria-label` values
+##### Custom `aria-label` values
 If none of the two methods above fits, the Ordering Agency may request custom `aria-label` values in Editing Instructions.
 
-### File Naming Convention
+## File Naming Convention
 
 The basic scheme for naming individual files is:
 
@@ -586,11 +584,11 @@ Example:
 X41001A-010-chapter.xhtml
 ```
 
-### Special Content Requirements
+## Special Content Requirements
 
 Some content files have certain contents that are required to be included and marked up correctly.
 
-#### Cover and back cover
+### Cover and back cover
 
 The cover should be captured in a separate file from the back cover and only contain the cover-image. The `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to the cover file. 
 
@@ -606,7 +604,7 @@ The placement of the back cover file might vary between agency specific guidelin
 Ordering Agencies may require a legalpage or other frontmatter-content to be inserted into the title. The specifications and placing of this will be up to the Ordering Agency.
 
 
-#### Title Page
+### Title Page
 
 The publication’s title must be included in an `<h1>` element with `class="title"` and `epub:type="title"`.
 
@@ -636,13 +634,13 @@ In some titles, more detailed classes for titlepage can be required:
 `<p class="seriestitle>` and `<p class="publisher">` should mostly be used when requested by the Ordering Agency.
 
 
-#### Parts
+### Parts
 
 Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the `<section>` element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must be marked up as `<h2>`, even though they are the first heading of its content file. Semantic attributes, `role` and `epub:type`, must be given to the `<section>` elements of both part and chapters.
 
 Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the `<h1>` and the chapter headings `<h2>` and the `<section>` element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, `role` and `epub:type`, must still be given to the `<section>` elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.
 
-### Mark-up Requirements
+## Mark-up Requirements
 
 These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like `<p>`, `<blockquote>`, `<aside>`, `<ul>`, `<ol>`, `<dl>`, `<table>`, `<figure>` etc. and the common structural elements like `<section>` and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.
 
@@ -653,7 +651,7 @@ For further information about the common HTML elements and their attributes, ple
 
 Note that, again, if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the mark-up of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
 
-#### Pagination
+### Pagination
 
 All page breaks occurring in the source copy are required to be indicated with one of the following elements unless stated otherwise by the Ordering Agency:
 
@@ -701,7 +699,7 @@ This is only to be done if specific instructions are given by the Ordering Agenc
 
 There must be no unnumbered pages. If unnumbered pages in the source material are implicitly numbered, for instance the initial pages of a book, they must be numbered accordingly. That is, if the pagination starts with page 9 in the source material, the previous pages must be numbered 1-8. If there are other unnumbered pages in the source material they must be assigned numbers and given the `class` attribute `page-special`. This will be specified by the Ordering Agency via Editing Instructions.
 
-#### Headings
+### Headings
 
 The `<h1>-<h6>` elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, `<section>`, `<aside>` and `<nav>`.
 
@@ -726,7 +724,7 @@ Headings that do not contribute to the hierarchical structure of the work and th
 
 In some cases heading mark-up may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency.
 
-##### Continuation Headings
+#### Continuation Headings
 
 Consider the following example: 
 
@@ -763,11 +761,11 @@ Here, there is more content belonging to the outer `<section>` element after the
 
 Continuation headings must only be used if specific instructions are given by the Ordering Agency.
 
-##### Chapter authors
+#### Chapter authors
 
 Sometimes an author name appears before or after the chapter heading. Use the markup `<p class="chapter-author">` for a paragraph containing one or more author names. Note that this markup should not be used for author names at the end of a section.
 
-#### Figures
+### Figures
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
@@ -777,7 +775,7 @@ Small symbols or other non-typographical content that might occur inline, are re
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
-##### Alt-texts
+#### Alt-texts
 
 Accessibility guidelines require images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
@@ -804,7 +802,7 @@ The list of generic categories for Supplier to apply as alt-text values do not a
 For alt-texts provided by the Supplier to be properly read by screen-readers they should always end with a punctuation mark.
 </div>
 
-##### Text Extraction from Images
+#### Text Extraction from Images
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder element, either within the `<figure>` element of the image or directly after it. The placeholder elements can be:
 
@@ -840,7 +838,7 @@ Note that this is the construction that is used by several Ordering Agencies for
 
 If an inline image require text extraction the extracted text must be used as value for the `alt` attribute. The text then replaces the generic value described above.
 
-##### Image Series
+#### Image Series
 
 If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate `<figure>` elements. The whole series must then be wrapped in a `<figure>` element where the `class` attribute is set to `image-series`.
 
@@ -865,17 +863,17 @@ This is how the markup will look like:
 </figure>
 ```
 
-#### Lists
+### Lists
 
 Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Any such content is required to be marked up with either `<ol>` (ordered list) or `<ul>` (unordered list). Each item of any list must be marked up with `<li>`.
 
 A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more `<p>` elements inside every list item of the list.
 
-##### Numbered Lists
+#### Numbered Lists
 
 The numbering of an ordered list must not be included as content in the `<li>` elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the `type` attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the `start` attribute.
 
-##### Unnumbered Lists
+#### Unnumbered Lists
 
 Unnumbered lists often have some sort of bullet markers for each list item. The default is a solid black circle. The type attribute has been used before, to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
 
@@ -885,7 +883,7 @@ Lists without any bullet markers are required to have the attribute:
 
 By default, `<ul>` should be used here, but Ordering Agencies may give specific instructions to use `<ol>`.
 
-##### Tables of Contents
+#### Tables of Contents
 
 Any table of contents in the source material is required to be marked up in the following way:
 
@@ -900,7 +898,7 @@ This is typically used for the main table of contents that most books have somew
 
 Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.
 
-#### Tables
+### Tables
 
 All tables or table-like structures are required to be marked up as `<table>`. If the table has a caption it is required to be marked up with `<caption>` and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
@@ -969,21 +967,21 @@ Below is an example of table mark-up that covers most of the details explained a
 
 Large tables may give rise to visual display issues where content overflows the page area. One way to handle this is to add scroll bars to the table through CSS. For this to be possible, the table needs to be wrapped in a `div` with `class="table-wrapper"`. The Ordering Agency will specify in Editing Instructions if this optional markup is needed.
 
-###### Table id:s for lot
+##### Table id:s for lot
 In cases where a title contains a list of tables (`lot`) or where a list of tables should be included in the `nav.xhtml`-file, the table element  should be provided with an id. These id:s should be named `"tab-XXX"` in sequential order, where XXX is the number of the table in the file.
 Instances may occur where id:s are required for tables without it being included in the `nav.xhtml`-file.
 
-#### Definition Lists
+### Definition Lists
 
 All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as `<dl>`. Note that language attributes may be required, for example with glossaries.
 
-#### Notes and Note References
+### Notes and Note References
 
-##### Note References
+#### Note References
 
 Note references are required to be marked up as hyperlinks with the `role` attribute set to `doc-noteref` and `epub:type` set to `noteref`. The `<a>` element must also have a unique `id` attribute. Note references are not to be marked up with `<sup>` as styling will be handled by a default CSS file provided by the Ordering Agency.
 
-##### End notes
+#### End notes
 
 End notes or chapter notes must be placed in a `<section>` element at the end of the content file, before the closing of the top-level `<section>` element. The `<section>` element containing the notes is required to have the `role` attribute set to `doc-endnotes` and `epub:type` set to `endnotes`. If the source material has a section like this and it has a heading, this heading is required to be preserved and marked up as `<h2>`. If there is not a heading for the note section present in the source, it is required to be added. Section 5.2.5 of this document contains language specific headings to be used.
 
@@ -1019,7 +1017,7 @@ If, for some reason, an ordered list can't be used, each note text is required t
 </section>   
 ```
 
-##### Footnotes
+#### Footnotes
 
 Footnotes that are sequentially numbered are required to be handled as end notes (see the section above). The note texts must be placed at the end of the content file, in its own `<section>` element and all `role` and `epub:type` attributes must be set as end notes. This goes for the note references as well.
 
@@ -1035,7 +1033,7 @@ Other types of footnotes are to be placed in an `<aside>` at the end of the rele
 
 If notes occur in tables, the note texts are required to be handled as footnotes and must not be placed in a `<tfoot>` element within the `<table>` structure. They must be placed directly after the table.
 
-##### Backlinks
+#### Backlinks
 
 Backlinks are required for each note, pointing back to the note reference. The `<a>` element is required to have `role` set to `doc-backlink`.  For both footnotes and endnotes, the backlink is required to be placed in its own paragraph, after the note text. The backlink text must contain the number or identifier of the note.
 
@@ -1053,7 +1051,7 @@ Section 5.2.6 of this document contains language specific backlink texts. Unless
 
 If there are more than one note reference for a single note text, the note text must be repeated for each note reference so that there is a one-to-one relationship between note references and note texts and all backlinks are unique. This may cause one or more numbers to be repeated and, if so, note texts must be marked up using `<div>` elements instead of and ordered list.
 
-#### Sidebars, Text Boxes etc.
+### Sidebars, Text Boxes etc.
 
 The `<aside>` element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
 
@@ -1073,16 +1071,16 @@ Structurally insignificant headings should be marked up with `<h[x]>` with the a
 At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside), which considers the aside element an WAI-ARIA landmark (complementary), only when it has an accessible name. When triggered by non-labelled aside elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
 </div>
 
-##### Nested text boxes
+#### Nested text boxes
 In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of `<aside>` elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see above). Another possibility is to consider whether the parent text box could actually be a `<div>`, and then the inner level box an `<aside>`.
 
-#### Computer Code
+### Computer Code
 
 Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
 
 In blocks of computer code, spaces, line breaks and empty lines must be preserved. It should be noted, however, that the correct markup for code blocks involves interpretation alongside the principle of capturing the text verbatim. For example, programming books may sometimes use a mix of semantic line breaks, which must be preserved, and line breaks necessitated by the print layout.
 
-#### Bolding and Italics
+### Bolding and Italics
 
 The only elements to be used are `<strong>` for bold and `<em>` for italics. Other type of formatting may be required in certain publications and, if such is the case, specific instructions will be given in the Editing Instructions.
 
@@ -1092,7 +1090,7 @@ Principles for how `<strong>` and `<em>` are used can be found here:
 
 Please take care that text marked up with em or strong is identical with the original book. Do not include space or punctuation which is not emphasised in the original. Words in em or strong at the end of sentences should not include end-of-sentence punctuation, like full stops, unless the whole sentence is emphasised. If a sentence ends with an emphasised word, and the next sentence begins with a new emphasised word, make sure the words are marked up using separate instances of em or strong, and that the end-of-sentence punctuation is not included.
 
-#### Poetry and Verse
+### Poetry and Verse
 
 Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
 
@@ -1106,21 +1104,21 @@ If there is an author name placed under the verse it may be marked up with `<p c
 
 In some cases, where poetry has figurative or otherwise non-standard disposition of the text, it may be requested by the Ordering Agency to also capture the verse as an image. It may also be requested that the verse is captured as pre-formatted text, using the `<pre>` element. Neither of these options must be used unless specific instructions are given by the Ordering Agency. 
 
-##### Use of line/linenum-formatted content in non-verse content. 
+#### Use of line/linenum-formatted content in non-verse content. 
 
 In some titles, line-by-line based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line>` should be used instead. 
 
 In the cases where `<div class="line-by-line>` are used, the same rules as for `<div class="verse">` are applied. Any variations to the markup in `<div class="line-by-line>` are given by the Ordering Agency.
 
-#### Quotes
+### Quotes
 
 Quotes, citations, excerpts from other sources and similar content are required to be marked up using the `<blockquote>` element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate `<p>`.
 
-#### Hyperlinks and URLs
+### Hyperlinks and URLs
 
 Any URLs in printed source material are required to be represented as plain text in the EPUB file and not be made into an active hyperlink. In digital sources, already active hyperlinks are required to be preserved, but an URL that is just plain text is required to remain as such.  
 
-#### Numbered paragraphs
+### Numbered paragraphs
 
 Some books, such as editions of classical literary works, may have numbered paragraphs or stanzas in the source material. Unless the ordering agency gives instructions to exclude the numbering, the supplier is required to preserve it. The numbers are placed at the beginning of the paragraph and marked up with `<span class="parnum">`. The paragraph is given `class="numbered"`.
 
@@ -1139,20 +1137,20 @@ Example 2, poetry and verse:
 </p>
 ```
 
-#### Thematic Breaks in the Text Flow
+### Thematic Breaks in the Text Flow
 
 In circumstances where depth of structure is not amenable to structural markup using `<section>` elements, Suppliers are required to use the `<hr>` element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
 
 - `<hr class="emptyline"/>` indicates thematic breaks represented by a vertical space between paragraphs.
 - `<hr class="separator"/>` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
 
-#### Language Tagging
+### Language Tagging
 
 Content documents may contain text in other languages than the main language, as defined in the root element (see section [Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include `<p>`, `<ol>`, `<ul>`, `<blockquote>`, `<aside>` and `<section>`. Inline text is not marked up unless specifically indicated by the Ordering Agency.
 
 Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG/#language-of-parts).
 
-#### Uppercase text
+### Uppercase text
 
 As a general rule, all text in the XHTML files should be written in sentence case: The first word of the sentence or heading is capitalised, as well as proper nouns and other words as required by a more specific rule. Some acronyms are written in all uppercase. If all caps (or small caps) formatting is desired in cases where the use of capital letters is not required by ortography, it should taken care of through CSS.
 
@@ -1164,7 +1162,7 @@ For lead-ins, the Supplier must normalise capitalisation and apply `<span class=
 
 All caps or small caps may also be used to emphasise words or short passages of body text. If the source file is an EPUB or other HTML based publication where such styling is applied using CSS, the markup `<strong class="all-caps">` or `<strong class="small-caps">` should be used to preserve the styling.
 
-#### Styling
+### Styling
 
 In general, styling and layout properties must be ignored. The styling and layout of the EPUB file will be handled by standard CSS files provided by the the Ordering Agencies. However, there are cases when styling used in the source material carries a meaning. In these cases styling classes may be required. Typical examples of this can be:
 
@@ -1176,9 +1174,9 @@ Note that these are only examples and other types of significant styling may occ
 
 Since the meaning conveyed through styling will not be accessible to all readers of the EPUB file, there may be a need for post production editing to ensure full WCAG compliance.
 
-## Specific Requirements for Advanced Content
+# Specific Requirements for Advanced Content
 
-### Numbers and STEM Content
+## Numbers and STEM Content
 
 Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note, that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with `<sup>`, unless the number is part of a mathematical expression.
 
@@ -1196,13 +1194,13 @@ In STEM-related materials, all STEM content, excluding stand-alone numbers or si
 
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
 
-### Special characters, punctuation, etc.
-#### Representation of characters
+## Special characters, punctuation, etc.
+### Representation of characters
 If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
 
-#### Character accuracy
+### Character accuracy
 Unicode character accuracy for special characters, e.g. phonetic characters, is vital for a correct representation of the source material. A visual likeness to the characters used in the printed source material is not enough, as the characters may be used by assistive technology to present text information to the user, or being used in various conversions to other types of end-user formats. If there is a Unicode representation for any character or symbol used in an inline context this should be used, rather than capturing the symbol as an image. Emojis are an example of where it is important to use the Unicode representation instead of capturing them as images.
 
 The following resources could be valuable for verifying commonly used special characters:
@@ -1213,10 +1211,10 @@ The following resources could be valuable for verifying commonly used special ch
 
 Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
-#### Ligatures
+### Ligatures
 Depending on the typography of the source material, ligatures may be present in source text. These may **not** be captured as dedicated ligature unicode characters, e.g. "ﬆ" (U+FB06). Rather, ligatures should be normalised to their separate letter components (e.g. "st") upon capture.
 
-### Placeholders for User Input Areas
+## Placeholders for User Input Areas
 
 In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the `<span>` element to provide placeholders for these input fields in one of the following three ways:
 
@@ -1224,9 +1222,9 @@ In educational material, especially for younger children, it is common that the 
 - `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
 - `<span class="box">---</span>` for check boxes.  
 
-## Appendix
+# Appendix
 
-### External Resources
+## External Resources
 
 - EPUB 3.2 Specification: [https://www.w3.org/publishing/epub3/epub-overview.html](https://www.w3.org/publishing/epub3/epub-overview.html)
 - EPUB Accessibility 1.0 Specification: [https://www.w3.org/Submission/epub-a11y/](https://www.w3.org/Submission/epub-a11y/)
@@ -1242,13 +1240,13 @@ In educational material, especially for younger children, it is common that the 
 - International Phonetic Alphabet in Unicode Reference: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
 - Greek and Coptic Letters in Unicode Reference: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 
-### Language Dependent Fixed Text Values
+## Language Dependent Fixed Text Values
 
 The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by the Ordering Agency, these values, when applied to a specific publication, should follow the primary language of that publication.
 
 For convenience, the values for all the main languages of the Ordering Agencies are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations if the main language of a title is not one of those listed here.
 
-#### nav.xhtml Headings
+### nav.xhtml Headings
 
 | English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish       | Dutch            | Danish           | Icelandic   | German              |
 |-------------------|--------------|--------------------|---------------------|---------------|------------------|------------------|-------------|---------------------|
@@ -1257,7 +1255,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Kiintopisteet | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
 
 
-#### aria-label and TOC Values
+### aria-label and TOC Values
 
 | English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | Danish                | Icelandic        | German               |
 |-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-----------------------|------------------|----------------------|
@@ -1274,7 +1272,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Start of Content      | Innehållets början | Start av innhold   | Start av innhald    | Sisällön alku  | Begin inhoud        | Indholdets begyndelse | Byrjun           | Beginn des Inhalts   |
 
 
-#### Image Alternative Text Values
+### Image Alternative Text Values
 
 | English (default) | Swedish        | Norwegian     | Finnish    | Dutch         | Danish        | Icelandic  | German        |
 | ----------------- | -------------- | ------------- | ---------- | ------------- | ------------- | ---------- | ------------- |
@@ -1287,28 +1285,28 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Comic.            | Tecknad serie. | Tegneserie.   | Sarjakuva. | Stripverhaal. | Tegneserie.   | Myndasaga. | Comic.        |
 | Logo.             | Logotyp.       | Logo.         | Logo.      | Logo.         | Logo.         | Lógó.      | Logo.         |
 
-#### Continuation Heading Identifiers
+### Continuation Heading Identifiers
 
 | English (default) | Swedish        | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------------|---------------|---------------|---------------|---------------|---------------|---------------|
 | (continued)       | (fortsättning) | [to be added] | (jatkuu)      | [to be added] | [to be added] | [to be added] | [to be added] |
 
-#### End Note Heading
+### End Note Heading
 
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
 | Notes             | Noter    | [to be added] | Viitteet      | [to be added] | [to be added] | [to be added] | [to be added] |
 
-#### Footnote and Endnote Backlink
+### Footnote and Endnote Backlink
 
 | English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
 | Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferans #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
-### Additional valid markup
+## Additional valid markup
 In addition to the features documented above, the Nordic Guidelines recognise some additional markup constructions that are allowed in valid 2024-1 files.
 
 Suppliers do not need to observe these unless specifically requested by Ordering Agencies, as they will mostly be used in post production at the Ordering Agencies. They are listed here primarily for documentational purposes.
 
-#### Sentence markup
+### Sentence markup
 Sentence markup using `<span>` and `@class="sentence"` is allowed. This is used in Media Overlays talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
