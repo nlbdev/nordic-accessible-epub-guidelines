@@ -2,7 +2,7 @@
 
 This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](http://statped.no/).
 
-Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of [epub-33] and [epub-a11y-11], bridging the gap between general standards and the local context(s) of the Nordic agencies.
+Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of [[epub-33]] and [[epub-a11y-11]], bridging the gap between general standards and the local context(s) of the Nordic agencies.
 
 The target audience of the document is mainly the Nordic agencies’ contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
@@ -22,7 +22,7 @@ The application of the Nordic Guidelines can also be further specified on lower 
 
 The different levels of specification can be expressed as the following hierarchy:
 
-1. High-level specifications, e.g. [epub-33], [epub-a11y-11], [html5] etc.
+1. High-level specifications, e.g. [[epub-33]], [[epub-a11y-11]], [[html5]] etc.
 2. The Nordic Guidelines (this document)
 3. General Ordering Agency-specific guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
