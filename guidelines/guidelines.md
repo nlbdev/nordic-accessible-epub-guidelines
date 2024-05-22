@@ -2,7 +2,7 @@
 
 This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](http://statped.no/).
 
-Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of [[epub-33]] and [[epub-a11y-11]], bridging the gap between general standards and the local context(s) of the Nordic agencies.
+Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of Epub 3 [[epub-33]] and Epub Accessibility 1.1 [[epub-a11y-11]], bridging the gap between general standards and the local context(s) of the Nordic agencies.
 
 The target audience of the document is mainly the Nordic agencies’ contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
@@ -12,7 +12,7 @@ Readers should note that these guidelines build on available standards and best 
 
 ### Note about WCAG compliance
 
-Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG22/), even on the base level (A). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
+Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the Web Content Accessibility Guidelines [[wcag-22]], even on the base level (A). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
 
 ## Situating the Nordic Guidelines in the World of Specifications
 
