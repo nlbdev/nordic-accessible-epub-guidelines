@@ -41,7 +41,7 @@ The EPUB [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-c
 
 The container archive is required to have the `.epub` extension. The file extension must be lowercase.
 
-Note that the `mimetype` file must be archived as the first file in the Container.
+Note that the [`mimetype` file](https://www.w3.org/TR/epub-33/#sec-zip-container-mime) must be archived as the first file in the container.
 
 ### META-INF
 
