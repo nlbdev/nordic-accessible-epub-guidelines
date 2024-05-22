@@ -72,7 +72,7 @@ All [=publication resources=] are required to be located in a directory called `
 
 ## Package Document
 
-The name of the [=Package Document=] file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the package document.
+The name of the [=package document=] file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the package document.
 
 The following xml declaration must be placed at the first line of the document:
 
@@ -97,7 +97,7 @@ Required child elements to the package element are:
 
 ### Metadata
 
-The following metadata are required to be placed in the `<metadata>` element:
+The following metadata are required to be placed in the [^metadata^] element:
 
 ```xml
 <dc:title id="title">_[the title of the publication]_</dc:title>
@@ -113,19 +113,19 @@ The following metadata are required to be placed in the `<metadata>` element:
 <meta property="nordic:guidelines">2024-1</meta>
 ```
 
-Note that the default value to use in `<dc:publisher>` is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
+Note that the default value to use in [^dc:publisher^] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
 
-If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `<dc:source>` element will be a text string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
+If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the [^dc:source^] element will be a string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
 
 #### Accessibility Metadata
 
 The supplier is also expected to add accessibility metadata. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
 
-A full description of accessibility metadata in EPUB can be found in [section 2 of EPUB Accessibility 1.1](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/). See also Daisy Accessible Publishing Knowledge Base, [Metadata](http://kb.daisy.org/publishing/docs/metadata/).
+A full description of accessibility metadata in EPUB can be found in [section 2 of EPUB Accessibility [[epub-a11y-11/#sec-discovery]] and the [Schema.org Accessibility Properties for Discoverability Vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/). See also the Daisy Accessible Publishing Knowledge Base, [Metadata](http://kb.daisy.org/publishing/docs/metadata/).
 
 The metadata will vary depending on the content and properties of the publication. The examples below show what it may look like for a simple and a more complex book.
 
-*Example 1: Simple book without images*
+<aside class="example" title="Metadata for a simple book without images">
 
 ```xml
 <meta property="schema:accessMode">textual</meta>
@@ -139,7 +139,9 @@ The metadata will vary depending on the content and properties of the publicatio
 <meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
 ```
 
-*Example 2: Complex book with described images and MathML markup*
+</aside>
+
+<aside class="example" title="Metadata for a complex book with described images and MathML markup*">
 
 ```xml
 <meta property="schema:accessMode">textual</meta>
@@ -157,7 +159,9 @@ The metadata will vary depending on the content and properties of the publicatio
 <meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
 ```
 
-As with `<dc:publisher>`, the default value of `<meta property="a11y:certifiedBy">` is the shorthand for the Ordering Agency.
+</aside>
+
+As with [^dc:publisher^], the default value of `a11y:certifiedBy` is the shorthand for the Ordering Agency.
 
 Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
 
@@ -171,7 +175,7 @@ If the book contains page break markers and a page list, the following metadata 
 <meta property="pageBreakSource">urn:isbn:xxxxxxxxxxxxx</meta>
 ```
 
-The `pageBreakSource` property identifies the pagination source, typically using the ISBN of a print edition. Refer to [Page Source Identification](https://www.w3.org/publishing/a11y/page-source-id/) and Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
+The `pageBreakSource` property identifies the pagination source, typically using the ISBN of a print edition. Refer to [Page Source Identification](https://www.w3.org/publishing/a11y/page-source-id/) and the Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
 
 The `schema:accessibilitySummary` property can be used to provide information that complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
@@ -180,6 +184,8 @@ The `schema:accessibilitySummary` property can be used to provide information th
 The Ordering Agency may request increased metadata granularity for the representation of title and creator details, making use of a linked meta element refining the character of the main metadata element.
 
 The following is an example of a more granular way of expressing title metadata, separating main title, subtitle, and edition title statements from each other:
+
+<aside class="example" title="Granular title metadata">
 
 ```xml
 <dc:title id="maintitle"> _[the main title of the publication]_ </dc:title>
@@ -190,7 +196,11 @@ The following is an example of a more granular way of expressing title metadata,
 <meta refines="#edition" property="title-type">edition</meta>
 ```
 
+</aside>
+
 Similarly, creator/author information can be expressed with explicit refinement of the creator role of each author, as in the following example:
+
+<aside class="example" title="Granular creator metadata">
 
 ```xml
 <dc:creator id="creator1"> _[coauthor of the publication]_ </dc:creator>
@@ -200,6 +210,8 @@ Similarly, creator/author information can be expressed with explicit refinement 
 <dc:creator id="creator3"> _[illustrator of the publication]_ </dc:creator>
 <meta refines="#creator1" property="role" scheme="marc:relators" id="role">ill</meta>
 ```
+
+</aside>
 
 The codes to use as values for the creator role are taken from the MARC relators vocabulary, [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html).
 
