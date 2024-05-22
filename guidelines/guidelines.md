@@ -33,11 +33,11 @@ Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, a
 
 ## Required EPUB Standard
 
-Suppliers are required to refer to the specifications provided in version 3.2 of the EPUB standard. See [https://www.w3.org/publishing/epub32/epub-spec.html](https://www.w3.org/publishing/epub32/epub-spec.html).
+Suppliers are required to refer to the specifications provided in version 3.3 of the EPUB standard [[epub-33]].
 
 ## Container
 
-The EPUB container file must be given the production number provided with the order and correspond with the identifier stored in the `dc:identifier` element located in the Package metadata.
+The EPUB [^container^] file must be given the production number provided with the order and correspond with the identifier stored in the `dc:identifier` element located in the [^package^] metadata.
 
 The container archive is required to have the `.epub` extension. The file extension must be lowercase.
 
