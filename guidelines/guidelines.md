@@ -45,19 +45,23 @@ Note that the [`mimetype` file](https://www.w3.org/TR/epub-33/#sec-zip-container
 
 ### META-INF
 
-The `container.xml` file must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
+The container file must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
 
-The container.xml file shall look like this, unless indicated otherwise:
+The container file shall look like this, unless indicated otherwise:
 
-```xml
+<aside class="example" title="The container file">
+  <p>
+    This is how to use it.
+  <p>
+  <pre class="xml">
 <?xml version="1.0" encoding="utf-8" ?>
-<container version="1.0"
-xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
-	<rootfiles>
-		<rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml"/>
-	</rootfiles>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+  <rootfiles>
+    <rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml"/>
+  </rootfiles>
 </container>
-```
+  </pre>
+</aside>
 
 No other files, optional or otherwise, are allowed in the META-INF directory unless specifically indicated by the Ordering Agency.
 
