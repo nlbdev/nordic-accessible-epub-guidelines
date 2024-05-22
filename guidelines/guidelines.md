@@ -72,7 +72,7 @@ All [=publication resources=] are required to be located in a directory called `
 
 ## Package Document
 
-The name of the Package Document file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the Package Document.
+The name of the [=Package Document=] file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the package document.
 
 The following xml declaration must be placed at the first line of the document:
 
@@ -80,20 +80,20 @@ The following xml declaration must be placed at the first line of the document:
 <?xml version="1.0" encoding="utf-8" ?>
 ```
 
-Suppliers are required to apply the following attributes and values to the `<package>` element:
+Suppliers are required to apply the following attributes and values to the [^package^] element:
 
 - `xmlns="http://www.idpf.org/2007/opf"`
 - `xmlns:dc="http://purl.org/dc/elements/1.1/"`
 - `prefix="nordic: http://www.mtm.se/epub/"`
 - `version="3.0"`
-- `xml:lang="xx"` (The publication language code)
+- `xml:lang="xx"` (the publication language code)
 - `unique-identifier="pub-identifier"`
 
-Required child elements to the `<package>` element are:
+Required child elements to the package element are:
 
-- `<metadata>`
-- `<manifest>`
-- `<spine>`
+- [^metadata^]
+- [^manifest^]
+- [^spine^]
 
 ### Metadata
 
