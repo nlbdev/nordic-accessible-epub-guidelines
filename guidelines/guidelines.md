@@ -62,7 +62,7 @@ The container file shall look like this, unless indicated otherwise:
 
 </aside>
 
-No other files, optional or otherwise, are allowed in the META-INF directory unless specifically indicated by the Ordering Agency.
+No other files, optional or otherwise, are allowed in the [META-INF directory](https://www.w3.org/TR/epub-33/#sec-container-metainf) unless specifically indicated by the Ordering Agency.
 
 ## Publication Resources
 
