@@ -66,7 +66,7 @@ No other files, optional or otherwise, are allowed in the [META-INF directory](h
 
 ## Publication Resources
 
-All [=publication resource=]s are required to be located in a directory called `EPUB`. Publication resources other than the [=package document=] (`.opf`) and [=xhtml content document=]s are to be located in dedicated resource sub-directories.
+All [=publication resource=]s are required to be located in a directory called `EPUB`. Publication resources other than the [=package document=] (`.opf`) and [=XHTML content documents=]s are to be located in dedicated resource sub-directories.
 
 ## Package Document
 
