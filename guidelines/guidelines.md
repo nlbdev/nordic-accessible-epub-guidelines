@@ -12,7 +12,7 @@ Readers should note that these guidelines build on available standards and best 
 
 ### Note about WCAG compliance
 
-Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the Web Content Accessibility Guidelines [[wcag-22]], even on the base level (A). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
+Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the Web Content Accessibility Guidelines [[WCAG 22]], even on the base level (A). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
 
 ## Situating the Nordic Guidelines in the World of Specifications
 
