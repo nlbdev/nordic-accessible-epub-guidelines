@@ -12,7 +12,7 @@ Readers should note that these guidelines build on available standards and best 
 
 <div class="note" title="About WCAG compliance">
 
-Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the Web Content Accessibility Guidelines [[WCAG22]], even on the base level (A). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
+Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the Web Content Accessibility Guidelines [[WCAG22]], even on the [base conformance level (A)](https://www.w3.org/TR/WCAG22/#cc1). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
 
 </div>
 
