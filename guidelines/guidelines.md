@@ -1186,11 +1186,9 @@ Simple mathematical expressions or other simple STEM related content in non-STEM
 - Chemical formulae for common substances, like `CO<sub>2</sub>`
 - Greek letters
 
-If standard HTML is unable to represent the expression exactly as it looks in the source material, MathML must be used. Therefore, more complex expressions are required to be marked up with MathML, even in non-STEM contexts. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must ask the Ordering Agency for clarification. 
+If standard HTML is unable to represent the expression exactly as it looks in the source material, [[MathML3]] must be used. Therefore, more complex expressions are required to be marked up with MathML, even in non-STEM contexts. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must ask the Ordering Agency for clarification. 
 
-In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into details about the MathML language. Please refer to the specification:
-
-[https://www.w3.org/TR/MathML3/](https://www.w3.org/TR/MathML3/)
+In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into details about the MathML language. Please refer to the specification.
 
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
 
