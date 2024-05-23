@@ -24,7 +24,7 @@ The application of the Nordic Guidelines can also be further specified on lower 
 
 The different levels of specification can be expressed as the following hierarchy:
 
-1. High-level specifications, e.g. [[epub-33]], [[epub-a11y-11]], [[html5]] etc.
+1. High-level specifications, e.g. [[epub-33]], [[epub-a11y-11]], [[HTML5]] etc.
 2. The Nordic Guidelines (this document)
 3. General Ordering Agency-specific guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
