@@ -1325,3 +1325,14 @@ Suppliers do not need to observe these unless specifically requested by Ordering
 
 ### Sentence markup
 Sentence markup using `<span>` and `@class="sentence"` is allowed. This is used in Media Overlays talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
+
+<section class="appendix">
+
+## Acknowledgements
+This guidelines document has been jointly produced with input and feedback from all participating organisations. In addition to the editors, the following people contributed to the document at various stages of its completion:
+
+- name name, organisation
+- name name, organisation
+- etc.
+
+</section>
