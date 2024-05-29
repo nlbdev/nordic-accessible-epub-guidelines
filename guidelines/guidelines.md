@@ -39,7 +39,7 @@ Suppliers are required to refer to the specifications provided in version 3.3 of
 
 ## Container
 
-The EPUB [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-container.xml) must be given the production number provided with the order and correspond with the identifier stored in the [^dc-identifier^] located in the [^package^] metadata.
+The EPUB [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-container.xml) must be given the production number provided with the order and correspond with the identifier stored in the [^dc:identifier^] located in the [^package^] metadata.
 
 The container archive is required to have the `.epub` extension. The file extension must be lowercase.
 
