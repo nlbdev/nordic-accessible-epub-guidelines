@@ -229,11 +229,11 @@ Additional metadata for inclusion can be supplied by the Ordering Agency on a pe
 
 ### Manifest
 
-In the `<manifest>` all publication resources are declared. Each resource is declared using the `<item>` element with required attributes `id`, `href` and `media-type`. Some items must also have a `properties` attribute.
+In [^manifest^] all publication resources are declared. Each resource is declared using the [^item^] element with required attributes [`id`](https://www.w3.org/TR/epub-33/#attrdef-id), [`href`](https://www.w3.org/TR/epub-33/#attrdef-href) and [`media-type`](https://www.w3.org/TR/epub-33/#attrdef-media-type). Some items must also have a [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute.
 
-The `id` is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but the Ordering Agency will require certain naming conventions to be applied.
+The `id` attribute is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but the Ordering Agency will require certain naming conventions to be applied.
 
-The `href` is simply a path to the publication resource. The path will be relative to where the package document is located.
+The `href` attribute is simply a path to the publication resource. The path will be relative to where the package document is located.
 
 The `media-type` attribute specifies what type of resource it is and what format. Here are some of the more common examples:
 
@@ -252,7 +252,7 @@ Some resources have additional properties that need to be identified in the corr
 - `scripted` for any content document where javascripts are being used
 - `mathml` for any content document containing MathML
 
-Refer to [https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab](https://www.w3.org/publishing/epub3/epub-packages.html#app-item-properties-vocab) for additional information about the properties attribute.
+Refer to the [Manifest properties vocabulary of EPUB 3.3](https://www.w3.org/TR/epub-33/#app-item-properties-vocab) for additional information about the properties attribute.
 
 ### Spine
 
