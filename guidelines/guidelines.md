@@ -1,6 +1,6 @@
 # Introduction
 
-This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](http://statped.no/).
+This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](https://statped.no/).
 
 Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of EPUB 3 [[epub-33]] and EPUB Accessibility 1.1 [[epub-a11y-11]], bridging the gap between general standards and the local context(s) of the Nordic agencies.
 
@@ -439,7 +439,7 @@ Introductory sections such as a prologue, preface, foreword or introduction can 
 
 The EPUB package may include an `ncx` navigation document as fall-back for older reading systems that have not implemented functionality for the EPUB 3 navigation document. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
-Refer to [http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4](http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) for information about how the `ncx` file should be formed. Required elements are:
+Refer to [https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) for information about how the `ncx` file should be formed. Required elements are:
 
 - `<head>`
 - `<docTitle>`
@@ -532,7 +532,7 @@ Validation of EPUB files should be done using EPUBCheck for structural validity 
 
 The Ordering Agencies have developed a specific validation tool based on these guidelines. This tool, or any similar validation-tool provided by the agencies based on the same ruleset, should be the primary validation method and can be found here:
 
-- [http://nlbdev.github.io/nordic-epub3-dtbook-migrator/](http://nlbdev.github.io/nordic-epub3-dtbook-migrator/)
+- [https://nlbdev.github.io/nordic-epub3-dtbook-migrator/](https://nlbdev.github.io/nordic-epub3-dtbook-migrator/)
 
 # General Requirements for Content Documents
 
@@ -1225,7 +1225,7 @@ If standard HTML is unable to represent the expression exactly as it looks in th
 
 In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into details about the MathML language. Please refer to the specification.
 
-For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [http://asciimath.org](http://asciimath.org) for information about the ASCIIMath notation. 
+For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [https://asciimath.org](https://asciimath.org) for information about the ASCIIMath notation. 
 
 ## Special characters, punctuation, etc.
 ### Representation of characters
@@ -1267,9 +1267,9 @@ In educational material, especially for younger children, it is common that the 
 - Ace by DAISY Accessibility Checker for EPUB 3: [https://daisy.github.io/ace/](https://daisy.github.io/ace/)
 - MARC Code List for Relators Scheme: [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html)
 - IANA registry of valid language codes:[https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
-- EPUB 2 .ncx Legacy Navigation Document Specification: [http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1](http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1)
+- EPUB 2 .ncx Legacy Navigation Document Specification: [https://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1](https://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1)
 - MathML Specification: [https://www.w3.org/TR/MathML/](https://www.w3.org/TR/MathML/)
-- ASCIIMath Specification: [http://asciimath.org](http://asciimath.org)
+- ASCIIMath Specification: [https://asciimath.org](https://asciimath.org)
 - International Phonetic Alphabet in Unicode Reference: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
 - Greek and Coptic Letters in Unicode Reference: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 
