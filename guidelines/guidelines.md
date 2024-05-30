@@ -291,11 +291,11 @@ If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-op
 
 ### XHTML
 
-The XHTML content files specified by the EPUB 3.2 specification are based on HTML5. Suppliers are required to use the extension `.xhtml`.
+The [=xhtml content document=] files specified by [[epub-33]] are based on [[HTML5]]. Suppliers are required to use the extension `.xhtml`.
 
 #### XML Declaration and Encoding
 
-The following xml declaration must be used:
+The following XML declaration must be used:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -311,12 +311,12 @@ The following document type declaration must be included:
 
 #### HTML Root Attributes
 
-Suppliers are required to include the following attributes on the html root element:
+Suppliers are required to include the following attributes on the [^html^] root element:
 
-- `xmlns` – XML namespace
+- `xmlns` – default namespace
 - `xmlns:epub` – EPUB namespace
-- `xml:lang` – XML Language definition
-- `lang` – HTML Language definition
+- `xml:lang` – XML language definition
+- `lang` – HTML language definition
 
 #### Namespaces
 
@@ -329,15 +329,15 @@ The following namespace values are required to be applied to the namespace attri
 
 Suppliers are required to identify the primary language of each content document using the `xml:lang` and `lang` attributes. On how to tag language change within a document, see section [Language Tagging](#language-tagging).
 
-If not requested otherwise by the Ordering Agency, language should be coded using values from the IANA registry of valid language codes, [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+If not requested otherwise by the Ordering Agency, language should be coded using values from the [IANA registry of valid language codes](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
-Please note that the most granular language tag should be used, e.g. the macrolanguage value "no" for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk ("nn") or Norwegian Bokmål ("nb") are not known.
+Please note that the most granular language tag should be used, e.g. the macrolanguage value `no` for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk (`nn`) or Norwegian Bokmål (`nb`) are not known.
 
 The accuracy of language coding is vital, and Suppliers are instructed to contact the Ordering Agency in case of any uncertainties.
 
 ### Title
 
-The `<title>` element of every `xhtml` content document must match the main heading of the content document in question. For front- and backmatter content, if the document does not have a heading, the `aria-label` value of the main `<section>` element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
+The [^title^] element of every [=xhtml content document=] must match the main heading of the content document in question. For front- and backmatter content, if the document does not have a heading, the `aria-label` value of the main `<section>` element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
 
 ### Metadata
 
