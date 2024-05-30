@@ -113,9 +113,9 @@ The following metadata are required to be placed in the [^metadata^] element:
 <meta property="nordic:guidelines">2024-1</meta>
 ```
 
-Note that the default value to use in `dc:publisher` [dcterms] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
+Note that the default value to use in `dc:publisher` [[dcterms]] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
 
-If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `dc:source` element [dcterms] will be a string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
+If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `dc:source` element [[dcterms]] will be a string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
 
 #### Accessibility Metadata
 
