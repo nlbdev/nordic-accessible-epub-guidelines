@@ -165,7 +165,7 @@ As with `dc:publisher`, the default value of `a11y:certifiedBy` [[epub-a11y-11]]
 
 Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
 
-<div class="note" title="Note on `accessMode`">
+<div class="note" title="Note on <code>accessMode</code>">
 
 The `visual` value indicates that the book contains visual content such as images, graphics or video that is relevant to understanding the content. The value must not be set if the only visual elements are decorative images, the cover image or corporate logos.
 
