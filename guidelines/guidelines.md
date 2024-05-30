@@ -341,14 +341,14 @@ The [^title^] element of every [=xhtml content document=] must match the main he
 
 ### Metadata
 
-The content documents are required to contain two `<meta>` elements.
+The content documents are required to contain two [^meta^] elements.
 
 ```html
 <meta name="dc:identifier" content="_[production UID]_"/>
 <meta name="viewport" content="width=device-width"/>
 ```
 
-The production UID must match the `dc:identifier` in package.opf.
+The production UID must match the [^dc:identifier^] of the [=package document=].
 
 ## Navigation Documents
 
