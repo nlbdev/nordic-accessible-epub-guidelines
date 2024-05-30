@@ -243,7 +243,7 @@ The `media-type` attribute specifies what type of resource it is and what format
 - `application/x-dtbncx+xml`
 - `application/javascript`
 
-Refer to [https://www.w3.org/publishing/epub3/epub-spec.html#sec-core-media-types](https://www.w3.org/publishing/epub3/epub-spec.html#sec-core-media-types) for additional information about various media types.
+Refer to the [Core media types table of EPUB 3.3](https://www.w3.org/TR/epub-33/#sec-core-media-types) for additional information about various media types.
 
 Some resources have additional properties that need to be identified in the corresponding item in order for a reading system to be able to implement these properties. This is done by using the properties attribute. Common examples are:
 
