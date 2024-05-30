@@ -183,7 +183,7 @@ If the book contains page break markers and a page list, the following metadata 
 
 </aside>
 
-The `pageBreakSource` property identifies the pagination source, typically using the ISBN of a print edition. Refer to [Page Source Identification](https://www.w3.org/publishing/a11y/page-source-id/) and the Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
+The [`pageBreakSource`](https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/#pageBreakSource) property [[pagesourceid]] identifies the pagination source, typically using the ISBN of a print edition. See also the Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
 
 The `schema:accessibilitySummary` property can be used to provide information that complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
