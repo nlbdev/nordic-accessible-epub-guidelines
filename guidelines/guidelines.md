@@ -439,7 +439,7 @@ Introductory sections such as a prologue, preface, foreword or introduction can 
 
 The EPUB package may include an `ncx` navigation document as fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
-Refer to [Section2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[opf-201]] for information about how the `ncx` file should be formed. Required elements are:
+Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[opf-201]] for information about how the `ncx` file should be formed. Required elements are:
 
 - `<head>`
 - `<docTitle>`
