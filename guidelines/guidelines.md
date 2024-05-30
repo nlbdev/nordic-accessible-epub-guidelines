@@ -185,7 +185,7 @@ If the book contains page break markers and a page list, the following metadata 
 
 The [`pageBreakSource`](https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/#pageBreakSource) property [[pagesourceid]] identifies the pagination source, typically using the ISBN of a print edition. See also the Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
 
-The `schema:accessibilitySummary` property can be used to provide information that complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
+The `schema:accessibilitySummary` property can be used to provide information taht complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
 #### Optional Increased Title and Creator Metadata Granularity
 
@@ -221,7 +221,7 @@ Similarly, creator/author information can be expressed with explicit refinement 
 
 </aside>
 
-The codes to use as values for the creator role are taken from the MARC relators vocabulary, [https://id.loc.gov/vocabulary/relators.html](https://id.loc.gov/vocabulary/relators.html).
+The codes to use as values for the creator role are taken from the [MARC relators vocabulary](https://id.loc.gov/vocabulary/relators.html).
 
 #### Optional Additional Metadata
 
