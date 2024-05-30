@@ -354,7 +354,7 @@ The production UID must match the [^dc:identifier^] of the [=package document=].
 
 ### EPUB 3.3 Navigation Document
 
-The principle [=navigation document=] of the EPUB package is the `xhtml` file with the `properties` attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
+The principle [=EPUB navigation document=] of the EPUB package is the `xhtml` file with the `properties` attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
 [Section 5.2.1](#nav-xhtml-headings) of this document contains language-specific headings for the [^nav^] sections of the navigation document that are listed below.
 
