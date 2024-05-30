@@ -409,14 +409,14 @@ If no pagination occurs in the source material, the page list may be omitted.
 
 #### Landmarks
 
-The landmarks `<nav>` element is optional, and should be included only if the Ordering Agency requests it.
+The [landmarks `<nav>`](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) element is optional, and should be included only if the Ordering Agency requests it.
 
 ```html
 <nav aria-labelledby="n3" epub:type="landmarks">
-<h1 id="n3">Landmarks</h1>
+	<h1 id="n3">Landmarks</h1>
 ```
 
-The Ordering Agency will give instructions on which sections to include and how to label them in the landmarks navigation list. For examples and further information, see the sections about EPUB landmarks in the [EPUB 3.3 specification](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) and [EPUB Accessibility Techniques 1.1](https://www.w3.org/TR/epub-a11y-tech-11/#meta-006).
+The Ordering Agency will give instructions on which sections to include and how to label them in the landmarks navigation list. For examples and further information, see the sections about [EPUB landmarks](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) in [[epub-33]] and the [corresponding section](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) in [[epub-a11y-tech-11]].
 
 It is recommended that the list of landmarks include a link to the start of the bodymatter as well as to any navigation aids or important reference sections in the front- and backmatter. It will typically include the following, when applicable:
 
@@ -433,7 +433,7 @@ It is recommended that the list of landmarks include a link to the start of the 
     - Answers
     - Glossary
 
-Introductory sections such as a prologue, preface, foreword or introduction can also be included in the landmarks. It should be noted, however, that they are considered bodymatter. In the landmarks `<nav>`, the first bodymatter section should be referenced using `epub:type="bodymatter"` and a label indicating that it is the start of the main content, regardless of any other applicable `epub:type` value.
+Introductory sections such as a prologue, preface, foreword or introduction can also be included in the landmarks. It should be noted, however, that they are considered bodymatter. In the landmarks `<nav>`, the first bodymatter section should be referenced using [^/epub:type^] `bodymatter` and a label indicating that it is the start of the main content, regardless of any other applicable [^/epub:type^] value.
 
 ### NCX Navigation Document
 
