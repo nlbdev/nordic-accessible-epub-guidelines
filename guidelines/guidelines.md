@@ -121,7 +121,7 @@ If the source material does not have an ISBN, ISSN or any other systematic sourc
 
 The supplier is also expected to add accessibility metadata. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
 
-A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) of EPUB Accessibility 1.1 [[epub-a11y-11]] and in [[schemaprop]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](http://kb.daisy.org/publishing/docs/metadata/).
+A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) of EPUB Accessibility 1.1 [[epub-a11y-11]] and in [[schemaprop]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](https://kb.daisy.org/publishing/docs/metadata/).
 
 The metadata will vary depending on the content and properties of the publication. The examples below show what it may look like for a simple and a more complex book.
 
@@ -183,7 +183,7 @@ If the book contains page break markers and a page list, the following metadata 
 
 </aside>
 
-The [`pageBreakSource`](https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/#pageBreakSource) property [[pagesourceid]] identifies the pagination source, typically using the ISBN of a print edition. See also the Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
+The [`pageBreakSource`](https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/#pageBreakSource) property [[pagesourceid]] identifies the pagination source, typically using the ISBN of a print edition. See also the Daisy Accessible Publishing Knwoledge Base, [Page Source](https://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
 
 The `schema:accessibilitySummary` property can be used to provide information taht complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
@@ -1121,7 +1121,7 @@ The only elements to be used are `<strong>` for bold and `<em>` for italics. Oth
 
 Principles for how `<strong>` and `<em>` are used can be found here:
 
-[http://kb.daisy.org/publishing/docs/html/emphasis.html](http://kb.daisy.org/publishing/docs/html/emphasis.html)
+[https://kb.daisy.org/publishing/docs/html/emphasis.html](https://kb.daisy.org/publishing/docs/html/emphasis.html)
 
 Please take care that text marked up with em or strong is identical with the original book. Do not include space or punctuation which is not emphasised in the original. Words in em or strong at the end of sentences should not include end-of-sentence punctuation, like full stops, unless the whole sentence is emphasised. If a sentence ends with an emphasised word, and the next sentence begins with a new emphasised word, make sure the words are marked up using separate instances of em or strong, and that the end-of-sentence punctuation is not included.
 
