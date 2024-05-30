@@ -341,7 +341,7 @@ The [^title^] element of every [=xhtml content document=] must match the main he
 
 ### Metadata
 
-The content documents are required to contain two [^meta^] elements [[HTML5]].
+The content documents are required to contain two <a data-cite="HTML5#meta"><code>meta</code></a> elements.
 
 ```html
 <meta name="dc:identifier" content="_[production UID]_"/>
