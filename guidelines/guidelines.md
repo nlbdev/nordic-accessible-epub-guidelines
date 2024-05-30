@@ -654,7 +654,7 @@ For subtitles, use a `<p>` tag with `epub:type="subtitle"` and `role="doc-subtit
     <h1 epub:type="title" class="title" id="booktitle">Main title</h1>
     <p epub:type="subtitle" role="doc-subtitle">Subtitle</p>
 </hgroup>
-````
+```
 
 For the author of the publication, use `<p class="docauthor">`. For titles where there are more than one author, repeat this for each instance.
 
