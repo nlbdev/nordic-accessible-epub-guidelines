@@ -161,19 +161,27 @@ The metadata will vary depending on the content and properties of the publicatio
 
 </aside>
 
-As with [^dc:publisher^], the default value of `a11y:certifiedBy` is the shorthand for the Ordering Agency.
+As with `dc:publisher`, the default value of `a11y:certifiedBy` [[epub-a11y-11]] is the shorthand for the Ordering Agency.
 
 Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
 
-Note on `accessMode`: The `visual` value indicates that the book contains visual content such as images, graphics or video that is relevant to understanding the content. The value must not be set if the only visual elements are decorative images, the cover image or corporate logos.
+<div class="note" title="Note on `accessMode`">
+
+The `visual` value indicates that the book contains visual content such as images, graphics or video that is relevant to understanding the content. The value must not be set if the only visual elements are decorative images, the cover image or corporate logos.
+
+</div>
 
 If the book contains page break markers and a page list, the following metadata must be provided:
+
+<aside class="example" title="Metadata for page-related content">
 
 ```xml
 <meta property="schema:accessibilityFeature">pageBreakMarkers</meta>
 <meta property="schema:accessibilityFeature">pageNavigation</meta>
 <meta property="pageBreakSource">urn:isbn:xxxxxxxxxxxxx</meta>
 ```
+
+</aside>
 
 The `pageBreakSource` property identifies the pagination source, typically using the ISBN of a print edition. Refer to [Page Source Identification](https://www.w3.org/publishing/a11y/page-source-id/) and the Daisy Accessible Publishing Knwoledge Base, [Page Source](http://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
 
