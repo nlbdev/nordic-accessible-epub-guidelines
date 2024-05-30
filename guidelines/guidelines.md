@@ -12,7 +12,7 @@ Readers should note that these guidelines build on available standards and best 
 
 <div class="note" title="About WCAG compliance">
 
-Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of the Web Content Accessibility Guidelines [[WCAG22]], even on the [base conformance level (A)](https://www.w3.org/TR/WCAG22/#cc1). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
+Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of [[[WCAG22]]], even on the [base conformance level (A)](https://www.w3.org/TR/WCAG22/#cc1). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
 
 </div>
 
@@ -24,7 +24,7 @@ The application of the Nordic Guidelines can also be further specified on lower 
 
 The different levels of specification can be expressed as the following hierarchy:
 
-1. High-level specifications, e.g. [[epub-33]], [[epub-a11y-11]], [[HTML5]] etc.
+1. High-level specifications, e.g. [[[epub-33]]], [[[epub-a11y-11]]], [[[HTML5]]] etc.
 2. The Nordic Guidelines (this document)
 3. General Ordering Agency-specific guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
@@ -35,7 +35,7 @@ Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, a
 
 ## Required EPUB Standard
 
-Suppliers are required to refer to the specifications provided in version 3.3 of the EPUB standard [[epub-33]].
+Suppliers are required to refer to the specifications provided in [[[epub-33]]].
 
 ## Container
 
@@ -121,7 +121,7 @@ If the source material does not have an ISBN, ISSN or any other systematic sourc
 
 The supplier is also expected to add accessibility metadata. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
 
-A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) of EPUB Accessibility 1.1 [[epub-a11y-11]] and in [[schemaprop]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](https://kb.daisy.org/publishing/docs/metadata/).
+A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) of [[[epub-a11y-11]]] and in [[[schemaprop]]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](https://kb.daisy.org/publishing/docs/metadata/).
 
 The metadata will vary depending on the content and properties of the publication. The examples below show what it may look like for a simple and a more complex book.
 
@@ -291,7 +291,7 @@ If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-op
 
 ### XHTML
 
-The [=xhtml content document=] files specified by [[epub-33]] are based on [[HTML5]]. Suppliers are required to use the extension `.xhtml`.
+The [=xhtml content document=] files specified by [[[epub-33]]] are based on [[[HTML5]]]. Suppliers are required to use the extension `.xhtml`.
 
 #### XML Declaration and Encoding
 
@@ -416,7 +416,7 @@ The [landmarks `<nav>`](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) elemen
 	<h1 id="n3">Landmarks</h1>
 ```
 
-The Ordering Agency will give instructions on which sections to include and how to label them in the landmarks navigation list. For examples and further information, see the sections about [EPUB landmarks](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) in [[epub-33]] and the [corresponding section](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) in [[epub-a11y-tech-11]].
+The Ordering Agency will give instructions on which sections to include and how to label them in the landmarks navigation list. For examples and further information, see the sections about [EPUB landmarks](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) in [[[epub-33]]] and the [corresponding section](https://www.w3.org/TR/epub-33/#sec-nav-landmarks) in [[[epub-a11y-tech-11]]].
 
 It is recommended that the list of landmarks include a link to the start of the bodymatter as well as to any navigation aids or important reference sections in the front- and backmatter. It will typically include the following, when applicable:
 
@@ -439,7 +439,7 @@ Introductory sections such as a prologue, preface, foreword or introduction can 
 
 The EPUB package may include an `ncx` navigation document as fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
-Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[opf201]] for information about how the `ncx` file should be formed. Required elements are:
+Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[[opf201]]] for information about how the `ncx` file should be formed. Required elements are:
 
 - `<head>`
 - `<docTitle>`
