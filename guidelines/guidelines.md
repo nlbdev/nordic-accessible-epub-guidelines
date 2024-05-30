@@ -356,39 +356,43 @@ The production UID must match the [^dc:identifier^] of the [=package document=].
 
 The principle [=navigation document=] of the EPUB package is the `xhtml` file with the `properties` attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
-Section 5.2.1 of this document contains language specific headings for the `<nav>` sections of the navigation document that are listed below.
+[Section 5.2.1](#nav-xhtml-headings) of this document contains language-specific headings for the [^nav^] sections of the navigation document that are listed below.
 
 #### The Table Of Contents
 
-The first required `<nav>` element in the file is for the main table of contents. The `<nav>` element is required to have a `<h1>` as the first child element. The `<nav>` element must have the `aria-labelledby` attribute set to the `id` of the `<h1>` element. The `role` and `epub:type` elements must be set as follows:
+The first required [^nav^] element in the file is for the main table of contents. The element is required to have a [^h1^] as the first child element. The element must have the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute set to the `id` of that [^h1^] element. The [^/role^] and [^/epub:type^] attributes must be set as follows:
 
 ```html
 <nav role="doc-toc" aria-labelledby="n1" epub:type="toc">
 <h1 id="n1">Contents</h1>
 ```
 
-All headings in the main body of text must be included in the `<nav role="doc-toc"...>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
+All headings in the main body of text must be included in the `<nav role="doc-toc" …>` element and the heading levels must be implied through nesting. Headings of sidebars, text boxes or other secondary content should not be included, unless specific instructions are given by the Ordering Agency.
 
 The title page is referenced using the label "Title page" in the language of the publication (see section [aria-label and TOC Values](#aria-label-and-toc-values)). The book title is not included in the TOC.
 
-Some headings consist of a main heading and a subtitle grouped in an `<hgroup>` element (see section [Headings](#headings) for details on markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
+Some headings consist of a main heading and a subtitle grouped in an [^hgroup^] element (see section [Headings](#headings) for details on the markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
 
 ```html
-<li><a href="...">Main heading. Subtitle</a></li>
+<li><a href="…">Main heading. Subtitle</a></li>
 ```
 
-The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a `<section>` element, but can also be `<aside>` or any other sectioning element. Thus, in the example below, the link should point to the id "level3_2" in that content file:
+The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a [^section^] element, but can also be an [^aside^] or any other sectioning element. Thus, in the example below, the link should point to the id `level3_2` in that content file:
+
+<aside class="example" title="Target section for navigation document">
 
 ```html
 <section aria-labelledby="h3_2" id="level3_2">
 	<h3 id="h3_2">Det mytiska Norden</h3>
 ```
 
+</aside>
+
 A section without any heading must be referenced using its `aria-label` value.
 
-Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `<section>` element, should be included.
+Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding [^section^] element, should be included.
 
-If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the `<a>` element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
+If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the [^a^] element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
 
 #### Page List
 
