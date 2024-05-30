@@ -256,29 +256,37 @@ Refer to the [manifest properties vocabulary of EPUB 3.3](https://www.w3.org/TR/
 
 ### Spine
 
-In the `<spine>` all content documents are listed in the correct reading order. This is done by using an `<itemref>` element for each content document and simply listing them in the desired order. The `<itemref>` element is associated with the corresponding `<item>` for the content document in the `<manifest>` by using the idref attribute and setting the value to the id attribute of the `<item>` element. The idref attribute is a required attribute and the id it refers to must be unique. Here is an example:
+In the [^spine^] all content documents are listed in the correct reading order. This is done by using an [^itemref^] element for each content document and simply listing them in the desired order. The [^itemref^] element is associated with the corresponding [^item^] for the content document in the [^manifest^] by using the [`idref`](https://www.w3.org/TR/epub-33/#attrdef-itemref-idref) attribute and setting the value to the [`id`](https://www.w3.org/TR/epub-33/#sec-item-elem) attribute of the [^item^] element. The `idref` attribute is a required attribute and the id it refers to must be unique. Here is an example:
 
-In the `<manifest>`:
+<div class="example" title="`manifest` and `spine` items linking">
+In [^manifest^]:
 
 ```xml
 <item id="item_7" href="007-chapter.xhtml" media-type="application/xhtml+xml"/>
 ```
 
-In the `<spine>`:
+In [^spine^]:
 
 ```xml
 <itemref idref="item_7"/>
 ```
 
-The `<itemref>` has an optional attribute called linear. The linear attribute can have the values yes (default) or no. If the attribute is omitted it is set to yes. The linear attribute indicates whether the referenced item contains content that contributes to the primary reading order and has to be read sequentially (yes) or auxiliary content that enhances or augments the primary content and can be accessed out of sequence (no).  Examples of auxiliary content include: notes, descriptions and answer keys.
+</div>
 
-As a general rule `linear="no"` should only be applied to the cover-file of a title. This is to ensure a reader does not mis out on any of the content, no matter which reading system they are using. Agency specific guidelines might have other requirements than this.
+[^itemref^] has an optional attribute called [`linear`](https://www.w3.org/TR/epub-33/#attrdef-itemref-linear). The `linear` attribute can have the values `yes` (default) or `no`. If the attribute is omitted it is set to `yes`. The `linear` attribute indicates whether the referenced item contains content that contributes to the primary reading order and has to be read sequentially (`yes`) or auxiliary content that enhances or augments the primary content and can be accessed out of sequence (`no`). Examples of auxiliary content include: notes, descriptions and answer keys.
 
-If a fall-back ncx navigation document is included, this is required to be referenced by adding the toc attribute to the `<spine>` element and assign as value the id attribute of the `<item>` referring to the ncx file, like this:
+As a general rule `linear="no"` should only be applied to the cover file of a title. This is to ensure a reader does not miss out on any of the content, no matter which reading system they are using. Agency-specific guidelines might have other requirements than this.
+
+If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) is included in the EPUB package, this is required to be referenced by adding the `toc` attribute to the [^spine^] element and assign as value the `id` attribute of the [^item^] referring to the ncx file, like this:
+
+<div class="example" title="[^spine^] referencing in case of an ncx file">
 
 ```xml
 <spine toc="_[id value of the manifest item that refers to the ncx file]_">
 ```
+
+</div>
+
 ## Content Documents
 
 ### XHTML
