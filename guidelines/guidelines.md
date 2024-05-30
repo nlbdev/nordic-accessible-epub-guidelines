@@ -396,18 +396,16 @@ If, for some reason, unlinked content must be added to the  table of contents, t
 
 #### Page List
 
-If the source material contains pagination, the next required `<nav>` element is: 
+If the source material contains pagination, the next required [^nav^] element is: 
 
 ```html
 <nav role="doc-pagelist" aria-labelledby="n2" epub:type="page-list">
-<h1 id="n2">Pages</h1>
+	<h1 id="n2">Pages</h1>
 ```
 
-See the following link for further information:
+Consult the the Daisy Accessible Publishing Knowledge Base, [Page List](https://kb.daisy.org/publishing/docs/navigation/pagelist.html), for more details.
 
-[http://kb.daisy.org/publishing/docs/navigation/pagelist.html](http://kb.daisy.org/publishing/docs/navigation/pagelist.html)
-
-If no pagination occurs in the source material this may be omitted.
+If no pagination occurs in the source material, the page list may be omitted.
 
 #### Landmarks
 
