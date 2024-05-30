@@ -141,7 +141,7 @@ The metadata will vary depending on the content and properties of the publicatio
 
 </aside>
 
-<aside class="example" title="Metadata for a complex book with described images and MathML markup*">
+<aside class="example" title="Metadata for a complex book with described images and MathML markup">
 
 ```xml
 <meta property="schema:accessMode">textual</meta>
