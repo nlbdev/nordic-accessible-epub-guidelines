@@ -437,9 +437,9 @@ Introductory sections such as a prologue, preface, foreword or introduction can 
 
 ### NCX Navigation Document
 
-The EPUB package may include an `ncx` navigation document as fall-back for older reading systems that have not implemented functionality for the EPUB 3 navigation document. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
+The EPUB package may include an `ncx` navigation document as fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
-Refer to [https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) for information about how the `ncx` file should be formed. Required elements are:
+Refer to [Section2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[opf-201]] for information about how the `ncx` file should be formed. Required elements are:
 
 - `<head>`
 - `<docTitle>`
@@ -448,11 +448,11 @@ Refer to [https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4](http
 
 The `<head>` element must contain the following `<meta>` element:
 
-```html
+```xml
 <meta name="dtb:uid" content=" _[production UID provided by the ordering agency]_ "/>
 ```
 
-All headings must be included in the `<navMap>` and the heading levels must be implied through nesting.
+All headings must be included in the `<navMap>` element and the heading levels must be implied through nesting.
 
 ## Images
 
