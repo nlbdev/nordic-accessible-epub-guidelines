@@ -556,7 +556,7 @@ If no matching divisioning or sectioning value can be found, [^/epub:type^] will
 
 If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level [^section^] elements, which will contain the chapters.
 
-Furthermore, the top-level [^section^] element for every content file is required to have a label. When the [^section^] has a heading it will serve as a label, but must be associated with the [^section^] element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute and referencing the [^/id^] value of the associated heading:
+Furthermore, the top-level [^section^] element for every content file is required to have a label. When the [^section^] has a heading it will serve as a label, but must be associated with the [^section^] element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute and referencing the [^global/id^] value of the associated heading:
 
 <aside class="example" title="Linking a section and its heading with aria-labelledby">
 
