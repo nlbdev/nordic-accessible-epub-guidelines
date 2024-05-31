@@ -567,7 +567,7 @@ Furthermore, the top-level [^section^] element for every content file is require
 </section>
 ```
 
-</section>
+</aside>
 
 Note that for the most part it will only by [^sections^] with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
 
