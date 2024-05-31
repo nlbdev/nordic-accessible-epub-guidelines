@@ -456,16 +456,15 @@ All headings must be included in the `<navMap>` element and the heading levels m
 
 ## Images
 
-Image content is required to be captured in the `jpeg` or `png` formats. The format extension is required to be `.jpg` or `.png`. Photos, drawings and illustrations must be captured in the `jpeg` format. For line graphics, charts and diagrams the preferred format is `png`.
+Image content is required to be captured in JPEG or PNG. The format extension is required to be `.jpg` or `.png`. Photos, drawings and illustrations must be captured in JPEG. For line graphics, charts and diagrams the preferred format is PNG.
 
-Suppliers are required to maintain the highest possible image quality. The quality
-requirements are the following:
+Suppliers are required to maintain the highest possible image quality. The quality requirements are the following:
 
-- The aspect ratio of the original image must always be maintained.
-- Colours must be reproduced and rendered accurately.
-- The image must be free of any compression artefacts or any distortion effects arising from scanning.
-- Text in images, line graphics and small detail must be crisp and fully legible, or with no degradation in legibility in comparison with the original image.
-- If the `jpeg` format is used, the quality setting is required to be set at around 90% (or a corresponding setting, if a different scale of measurement is used). A setting of 100% is usually unnecessary as it yields substantially larger files with little or no visible improvement of quality. If, however, there would be visible difference in quality between 90% and a higher setting, then the higher setting should be used.
+1. The aspect ratio of the original image must always be maintained.
+2. Colours must be reproduced and rendered accurately.
+3. The image must be free of any compression artefacts or any distortion effects arising from scanning.
+4. Text in images, line graphics and small detail must be crisp and fully legible, or with no degradation in legibility in comparison with the original image.
+5. If JPEG is used, the quality setting is required to be set at around 90% (or a corresponding setting, if a different scale of measurement is used). A setting of 100% is usually unnecessary as it yields substantially larger files with little or no visible improvement of quality. If, however, there would be visible difference in quality between 90% and a higher setting, then the higher setting should be used.
 
 ### Image File Naming and Directory Structure
 
@@ -479,8 +478,7 @@ Image files should be named according to the following file naming convention:
 
 The _UID_ must be identical to the value of the `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
 
-Example:
-
+<aside class="example" title="Image filename">
 ```
 X41001A-013.png
 ```
@@ -488,12 +486,13 @@ X41001A-013.png
 An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
 ### Image id:s for loi
-In cases where a title contains a list of illustrations (`loi`), or where a list of ilustrations should be included in the `nav.xhtml`-file , the figure element  should be provided with an id. These id:s should be named`"fig-XXX"` in sequential order, where XXX is the number of the figure in the file.
+In cases where a title contains a list of illustrations (`loi`), or where a list of ilustrations should be included in `nav.xhtml`, the figure element should be provided with an id. These id:s should be named `"fig-XXX"` in sequential order, where _XXX_ is the number of the figure in the file.
+
 Instances may occur where id:s are required for images. In those cases the id should be `"img-XXX"` and follow the same pattern as for figures.
 
 ### Resizing of Images
 
-The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see point 4 above, or other small details.
+The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see [item 4 above](#images), or other small details.
 
 In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
 
