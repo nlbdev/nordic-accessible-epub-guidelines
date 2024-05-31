@@ -513,7 +513,7 @@ The <a data-cite="HTML5#link><code>link</code></a> element is required to be app
 
 ## Fonts
 
-Fonts present in PDF source material must not be included in the EPUB, unless specifically indicated by the Ordering Agency.
+Fonts present in PDF source material must not be included in the EPUB package, unless specifically indicated by the Ordering Agency.
 
 Fonts, when present, must be stored in a folder named _fonts_ and placed at the same level relative to the package document.
 
