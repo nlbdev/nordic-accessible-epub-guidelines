@@ -1351,3 +1351,16 @@ This guidelines document has been jointly produced with input and feedback from 
 - etc.
 
 </section>
+
+<section class="appendix">
+
+## Change log
+This version is a major update to the [2020-1 version of the Nordic Guidelines](https://format.mtm.se/nordic_epub/2020-1).
+
+The following substantive changes have been made since 2020-1:
+
+- change 1 in plain language (perhaps with reference to GH issue?)
+- change 2 in plain language (perhaps with reference to GH issue?)
+- change 3 in plain language \[etc …\]
+
+</section>
