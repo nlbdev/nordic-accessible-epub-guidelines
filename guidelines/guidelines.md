@@ -517,13 +517,13 @@ Fonts present in PDF source material must not be included in the EPUB package, u
 
 Fonts, when present, must be stored in a folder named _fonts_ and placed at the same level relative to the package document.
 
-## Javascript
+## JavaScript
 
 Javascript files requested by the Ordering Agency are required to be stored in a folder named _javascript_ and placed on the same level relative to the package document.
 
-The `<script>` element is required to be applied to the relevant content documents.
+The [^script^] element is required to be applied to the relevant content documents.
 
-Suppliers must not include javascript files in the EPUB unless specifically instructed to do so by the Ordering Agency.
+Suppliers must not include JavaScript files in the EPUB package unless specifically instructed to do so by the Ordering Agency.
 
 ## Validation
 
