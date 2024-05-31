@@ -507,7 +507,7 @@ When whole sections or parts of text is placed on top of a background image, the
 
 ## CSS
 
-Suppliers are required to include the standard CSS [[css2]] file issued by the Ordering Agency. The CSS file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
+Suppliers are required to include the standard CSS [[css-2023]] file issued by the Ordering Agency. The CSS file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
 
 The <a data-cite="HTML5#link><code>link</code></a> element is required to be applied to the relevant content documents.
 
