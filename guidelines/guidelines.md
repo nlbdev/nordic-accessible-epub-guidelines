@@ -479,9 +479,12 @@ Image files should be named according to the following file naming convention:
 The _UID_ must be identical to the value of the `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
 
 <aside class="example" title="Image filename">
+
 ```
 X41001A-013.png
 ```
+
+</aside>
 
 An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
