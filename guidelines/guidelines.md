@@ -535,39 +535,43 @@ In addition, the Ordering Agencies have developed a specific validation tool bas
 
 ## Structural Divisons and Semantics
 
-The EPUB Content File structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual XHTML content files. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
+The [^EPUB content file^] structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual [=XHTML content documents=]. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
 
-The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in `<section>` elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `<section>` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
+The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in [^section^] elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a [^section^] element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
-The semantic role of each content document must be specified, when possible. This is done by adding the `role` and `epub:type` attributes to the top level `<section>` element of each content file. The available `role` attribute values are listed in the [Digital Publishing WAI-ARIA Module 1.1](https://www.w3.org/TR/dpub-aria-1.1/#roles).
+The semantic role of each content document must be specified, when possible. This is done by adding the [^/role^] and [^/epub:type^] attributes to the top level [^section^] element of each content file. The available [^/role^] attribute values are listed in the [[[dpub-aria-1.1]]].
 
-When the content file can be matched to one of the roles listed, the top level `<section>` element is required to have the `role` attribute with that matching value set. If no suitable role exists the `role` attribute may be omitted.  
+When the content file can be matched to one of the roles listed, the top level [^section^] element is required to have the [^/role^] attribute with that matching value set. If no suitable role exists, [^/role^] may be omitted.
 
-The `epub:type` attribute is also required for the top level `<section>` element of each content file and must first contain one of the following partition values:
+The [^/epub:type^] attribute is also required for the top level [^section^] element of each content file and must first contain one of the following partition values:
 
 - `cover`
 - `frontmatter`
 - `bodymatter`
 - `backmatter`
 
-The `frontmatter`, `bodymatter` and `backmatter` partition values must, where possible, be combined with a divisioning or sectioning value found in the [EPUB 3 Structural Semantics Vocabulary 1.1](https://www.w3.org/TR/epub-ssv-11/). Note that according to this vocabulary, introductory sections such as foreword, introduction, preface and prologue are typically part of the publication bodymatter.
+The `frontmatter`, `bodymatter` and `backmatter` partition values must, where possible, be combined with a divisioning or sectioning value found in the [[[epub-ssv-11]]]. Note that according to this vocabulary, introductory sections such as foreword, introduction, preface and prologue are typically part of the publication bodymatter.
 
-If no matching divisioning or sectioning value can be found, the `epub:type` will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
+If no matching divisioning or sectioning value can be found, [^/epub:type^] will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
 
-If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `<section>` elements, which will contain the chapters.
+If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level [^section^] elements, which will contain the chapters.
 
-Furthermore, the top-level `<section>` element for every content file is required to have a label. When the `<section>` has a heading it will serve as a label, but must be associated with the `<section>` element.  This is done by using the `aria-labelledby` attribute and setting the `id` of the associated header as value:
+Furthermore, the top-level [^section^] element for every content file is required to have a label. When the [^section^] has a heading it will serve as a label, but must be associated with the [^section^] element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute and referencing the [/^id^] value of the associated heading:
+
+<aside class="example" title="Linking a section and its heading with aria-labelledby">
 
 ```html
 <section role="doc-chapter" aria-labelledby="hd01" epub:type="bodymatter chapter">
 	<h1 id="hd01">Chapter 1</h1>
-		...
+	…
 </section>
 ```
 
-Note that for the most part it will only by sections with `<h1>` headings that must be done this way, but if a production is split into parts, chapters will have `<h2>` headings and these are the top-level headings of those content documents.
+</section>
 
-Note that if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+Note that for the most part it will only by [^sections^] with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
+
+Note that if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
 
 ### Subsections
 No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
