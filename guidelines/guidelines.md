@@ -476,7 +476,7 @@ Image files should be named according to the following file naming convention:
 [UID]-[XXX].[png|jpg]
 ```
 
-The _UID_ must be identical to the value of the `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
+The _UID_ must be identical to the value of the [^dc:identifier^] metadata element in the package document. _XXX_ is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
 
 <aside class="example" title="Image filename">
 
@@ -579,24 +579,24 @@ No sub-sections of any content document should have an [`aria-label`](https://ww
 ### Untitled sections
 If a major section, e.g. a chapter, is untitled, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
 
-In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructios specifically requesting this treatment.
+In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructions specifically requesting this treatment.
 
 #### Default `aria-label` values for standard sections
 The following table lists default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) values for standard sections.
 
 | Section identification   | Default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value |
-|--------------------------|----------------------------|
-| `@epub-type="cover"`     | Cover                      |
-| `@class="frontcover"`    | Front cover                |
-| `@class="backcover"`     | Back cover                 |
-| `@class="leftflap"`      | Jacket left flap           |
-| `@class="rightflap"`     | Jacket right flap          |
-| `@role="doc-colophon"`   | Publisher information      |
-| `@role="doc-dedication"` | Dedication                 |
-| `@role="doc-epigraph"`   | Epigraph                   |
-| `@role="doc-toc"`        | Contents                   |
+|--------------------------|--------------------------------------------------------------------------|
+| `@epub:type="cover"`     | Cover                                                                    |
+| `@class="frontcover"`    | Front cover                                                              |
+| `@class="backcover"`     | Back cover                                                               |
+| `@class="leftflap"`      | Jacket left flap                                                         |
+| `@class="rightflap"`     | Jacket right flap                                                        |
+| `@role="doc-colophon"`   | Publisher information                                                    |
+| `@role="doc-dedication"` | Dedication                                                               |
+| `@role="doc-epigraph"`   | Epigraph                                                                 |
+| `@role="doc-toc"`        | Contents                                                                 |
 
-Section 5.2.2 of this document contains language specific values.
+The section [aria-label and TOC values](#aria-label-and-toc-values) of this document contains language specific values.
 
 ##### `aria-label` values using the first three words
 If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
@@ -612,13 +612,15 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of the `dc:identifier` metadata element. _XXX_ is a three-digit numeric string corresponding to the order in the `<spine>`, with leading zeros as needed. _role_ corresponds to the ARIA `role` of the main section element in the content file, minus the "`doc-`" part. In the absence of an ARIA role for the top-level section of the content document, the value from the `epub:type` attribute should be used instead. In the case of multiple `epub:type` (e.g. `frontmatter titlepage`)values, the most specific (e.g. `titlepage`) should be used.
+The _UID_ must be identical to the value of the [[dc:identifier] metadata element of the [=package document=]. _XXX_ is a three-digit numeric string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of an ARIA role for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple [^/epub:type^] values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
 
-Example:
+<aside class="example" title="Correctly named content file">
 
 ```
 X41001A-010-chapter.xhtml
 ```
+
+</aside>
 
 ## Special Content Requirements
 
