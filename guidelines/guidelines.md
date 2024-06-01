@@ -632,7 +632,7 @@ The cover should be captured in a separate file from the back cover and only con
 
 The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The attribute [^/properties^] with value `"cover-image"` attribute must be applied to the [^manifest^] [^item^] element corresponding to this image. The [^img^] element referencing the cover image must have a [^/role^] attribute set to `"doc-cover"`.
 
-The back cover should be captured as the first frontmatter file in the title with the right- and left flaps as subsections. The following [^/class^] attribute values must be applied to the parent and child [^section^] elements where appropriate:
+The back cover should be captured as the first frontmatter file in the title with the right- and left flaps as subsections. The following [^global/class^] attribute values must be applied to the parent and child [^section^] elements where appropriate:
 - `<section class="backcover">`
 - `<section class="leftflap">`
 - `<section class="rightflap">`
