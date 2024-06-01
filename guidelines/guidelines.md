@@ -612,7 +612,7 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of the [[dc:identifier] metadata element of the [=package document=]. _XXX_ is a three-digit numeric string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of an ARIA role for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple [^/epub:type^] values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
+The _UID_ must be identical to the value of the [[dc:identifier] metadata element of the [=package document=]. _XXX_ is a three-digit numeric string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of an [^/role^] for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple [^/epub:type^] values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
 
 <aside class="example" title="Correctly named content file">
 
@@ -628,18 +628,18 @@ Some content files have certain contents that are required to be included and ma
 
 ### Cover and back cover
 
-The cover should be captured in a separate file from the back cover and only contain the cover-image. The `linear="no"` attribute must be applied to the `itemref` element in the package spine corresponding to the cover file. 
+The cover should be captured in a separate file from the back cover and only contain the cover image. The [^/linear^] attribute with value `"no"` must be applied to the [^itemref^] element in the package [^spine^] corresponding to the cover file. 
 
-The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The `properties="cover-image"` attribute must be applied to the manifest item element corresponding to this image. The `<img>` element referencing the cover image must have `aria-role` set to `"doc-cover"`.
+The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The attribute [^/properties^] with value `"cover-image"` attribute must be applied to the [^manifest^] [^item^] element corresponding to this image. The [^img^] element referencing the cover image must have a [^/role^] attribute set to `"doc-cover"`.
 
-The back cover should be captured as the first frontmatter-file in the title with the right- and left flaps as sub sections. The following class attributes must applied to the `<section>` and child `<section>` elements where appropriate:
+The back cover should be captured as the first frontmatter file in the title with the right- and left flaps as subsections. The following [^/class^] attribute values must be applied to the parent and child [^section^] elements where appropriate:
 - `<section class="backcover">`
 - `<section class="leftflap">`
 - `<section class="rightflap">`
 
-The placement of the back cover file might vary between agency specific guidelines.
+The placement of the back cover file might vary between agency-specific guidelines.
 
-Ordering Agencies may require a legalpage or other frontmatter-content to be inserted into the title. The specifications and placing of this will be up to the Ordering Agency.
+Ordering Agencies may require a "legal page" or other frontmatter content to be inserted into the title. The specifications and placing of this will be up to the Ordering Agency.
 
 
 ### Title Page
