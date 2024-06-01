@@ -388,9 +388,9 @@ The links must always reference the corresponding sectioning element for the hea
 
 </aside>
 
-A section without any heading must be referenced using its `aria-label` value.
+A section without any heading must be referenced using its [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value.
 
-Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding [^section^] element, should be included.
+Note that this is not a representation of the table of contents in the source material. Only headings, or references using the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value of the corresponding [^section^] element, should be included.
 
 If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the [^a^] element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
 
@@ -556,7 +556,7 @@ If no matching divisioning or sectioning value can be found, [^/epub:type^] will
 
 If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level [^section^] elements, which will contain the chapters.
 
-Furthermore, the top-level [^section^] element for every content file is required to have a label. When the [^section^] has a heading it will serve as a label, but must be associated with the [^section^] element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute and referencing the [^global/id^] value of the associated heading:
+Furthermore, the top-level [^section^] element for every content file is required to have a label. When the [^section^] has a heading it will serve as a label, but must be associated with the [^section^] element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute and referencing the [^global/id^] value of the associated heading:
 
 <aside class="example" title="Linking a section and its heading with aria-labelledby">
 
@@ -574,17 +574,17 @@ Note that for the most part it will only by [^sections^] with [^h1^] headings th
 Note that if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
 
 ### Subsections
-No sub-sections of any content document should have an `aria-label` or `aria-labelledby` attribute, unless specific instructions are given by the Ordering Agency.
+No sub-sections of any content document should have an [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) or [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute, unless specific instructions are given by the Ordering Agency.
 
 ### Untitled sections
-If a major section, e.g. a chapter, is untitled, the `aria-label` attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
+If a major section, e.g. a chapter, is untitled, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
 
 In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructios specifically requesting this treatment.
 
 #### Default `aria-label` values for standard sections
-The following table lists default `aria-label` values for standard sections.
+The following table lists default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) values for standard sections.
 
-| Section identification   | Default `aria-label` value |
+| Section identification   | Default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value |
 |--------------------------|----------------------------|
 | `@epub-type="cover"`     | Cover                      |
 | `@class="frontcover"`    | Front cover                |
@@ -599,10 +599,10 @@ The following table lists default `aria-label` values for standard sections.
 Section 5.2.2 of this document contains language specific values.
 
 ##### `aria-label` values using the first three words
-If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with `aria-label` using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
+If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
 
 ##### Custom `aria-label` values
-If none of the two methods above fits, the Ordering Agency may request custom `aria-label` values in Editing Instructions.
+If none of the two methods above fits, the Ordering Agency may request custom [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) values in Editing Instructions.
 
 ## File Naming Convention
 
@@ -702,7 +702,7 @@ Additionally required attributes:
 - `class=""`
 - `id=""`
 
-The value for the `aria-label` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
+The value for the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
 
 In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
 
@@ -1095,7 +1095,7 @@ Any material that is in some way contained or has a clearly visible beginning an
 
 In both cases the elements are required to have a `class` attribute. The default value of the class attribute is text-box, but other values can be given in Editing Instructions.
 
-For certain publications there may be instructions given to add `aria-label` attributes to either of the elements, but unless such instructions are given no `aria-label` attributes are to be included.
+For certain publications there may be instructions given to add [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attributes to either of the elements, but unless such instructions are given no [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attributes are to be included.
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
