@@ -644,13 +644,13 @@ Ordering Agencies may require a "legal page" or other frontmatter content to be 
 
 ### Title Page
 
-The publication’s title must be included in an `<h1>` element with `class="title"` and `epub:type="title"`.
+The publication’s title must be included in an [^h1^] element with `class="title"` and `epub:type="title"`.
 
 ```html
 <h1 epub:type="title" class="title" id="booktitle">Title</h1>
 ```
 
-For subtitles, use a `<p>` tag with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the title and subtitle in an `<hgroup>` element.
+For subtitles, use a [^p^] element with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the title and subtitle in an [^hgroup^] element.
 
 ```html
 <hgroup>
@@ -663,12 +663,13 @@ For the author of the publication, use `<p class="docauthor">`. For titles where
 
 In some titles, more detailed classes for titlepage can be required: 
 
-`<p class="seriestitle>`
-`<p class="contributor">`
-`<p class="publisher">`
-`<figure class="logo">`
+- `<p class="seriestitle>`
+- `<p class="contributor">`
+- `<p class="publisher">`
+- `<figure class="logo">`
 
-`<p class="contributor">` represents several different types of contributors such as illustrator, editor or translator. 
+`<p class="contributor">` represents several different types of contributors such as illustrator, editor or translator.
+
 `<p class="seriestitle>` and `<p class="publisher">` should mostly be used when requested by the Ordering Agency.
 
 
