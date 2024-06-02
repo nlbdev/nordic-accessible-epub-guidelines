@@ -352,7 +352,7 @@ The production UID must match the [^dc:identifier^] of the [=package document=].
 
 ## Navigation Documents
 
-### EPUB 3.3 Navigation Document
+### EPUB 3 Navigation Document
 
 The principal [=EPUB navigation document=] of the EPUB package is the `xhtml` file with the [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
@@ -758,9 +758,9 @@ There must be no unnumbered pages. If unnumbered pages in the source material ar
 
 ### Headings
 
-The `<h1>-<h6>` elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, `<section>`, `<aside>` and `<nav>`.
+The [^h1^]-[^h6^] elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, [^section^], [^aside^] and [^nav^].
 
-Some chapter or part headings consist of a main heading and a subtitle. For subtitles, use a `<p>` tag with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the main heading and subtitle in an `<hgroup>` element.
+Some chapter or part headings consist of a main heading and a subtitle. For subtitles, use a [^p^] element with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the main heading and subtitle in an [^hgroup^] element.
 
 ```html
 <hgroup>
@@ -769,9 +769,9 @@ Some chapter or part headings consist of a main heading and a subtitle. For subt
 </hgroup>
 ```
 
-Note that the subtitle should be included in the section's navigation TOC entry. See section [EPUB 3.2 Navigation Document](#epub-32-navigation-document) for detailed instructions.
+Note that the subtitle should be included in the section's navigation TOC entry. See the section [EPUB 3 Navigation Document](#epub-3-navigation-document) for detailed instructions.
 
-Sometimes the source material has a chapter or part number, or a phrase indicating the number, followed by a chapter or part heading as two distinct block elements. In this case, the number is included in the same `h[x]` element as the heading that follows it. The number is marked up with a `<span>` with `class="chnum"` or `class="partnum"`. A `<br/>` tag is inserted after the `<span>`.
+Sometimes the source material has a chapter or part number, or a phrase indicating the number, followed by a chapter or part heading as two distinct block elements. In this case, the number is included in the same `h[x]` element as the heading that follows it. The number is marked up with a [^span^] with `class="chnum"` or `class="partnum"`. A [^br^] element is inserted after the `<span>`.
 
 ```html
 <h1><span class="chnum">Chapter 1</span><br/>Chapter heading</h1>
@@ -785,34 +785,40 @@ In some cases heading markup may not be desired at all, for usability reasons. I
 
 Consider the following example: 
 
+<aside class="example" title="Continued parent section">
+
 ```html
 <section>
     <h[x]>Section heading</h[x]>
-    <p>...</p>
-    ...
+    <p>…</p>
+    …
     <section>
         <h[x+1]>Sub-section heading</h[x+1]>
-        ...
+        …
     </section>
     <p>Content belonging to the section on level x.</p>
-    ...    
+    …
 </section>
 ```
 
-Here, there is more content belonging to the outer `<section>` element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the class attributes  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text "(continued)" added. Note that this addition is language dependent  and language-specific terms can be found in section 5.2.4. The example above would then be:
+</aside>
+
+Here, there is more content belonging to the outer [^section^] element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the [^global/class^] attribute values  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text " (continued)" added. Note that this addition is language dependent, and language-specific terms can be found in [section 5.2.4](#continuation-heading-identifiers). The example above would then be:
+
+<aside class="example" title="Continued parent section, with continuation heading">
 
 ```html
 <section>
     <h[x]>Section heading</h[x]>
-    <p>...</p>
-    ...
+    <p>…</p>
+    …
     <section>
         <h[x+1]>Sub-section heading</h[x+1]>
-        ...
+        …
     </section>
-    <h[x] class="no-toc cont-hd">Section heading (continued)</h[x]>    
+    <h[x] class="no-toc cont-hd">Section heading (continued)</h[x]>
     <p>Content belonging to the section on level x.</p>
-    ...    
+    …
 </section>
 ```
 
@@ -824,17 +830,17 @@ Sometimes an author name appears before or after the chapter heading. Use the ma
 
 ### Figures
 
-All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see section 2.7). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
+All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see [section 2.7](#images). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
-Unless the image occurs inline in the source material, any image is required to be placed inside a `<figure>` element with a `class` attribute set to `image`. If the image has a caption, the caption is required to be marked up with the `<figcaption>` element and placed as either the first or the last child of the `<figure>` element.
+Unless the image occurs inline in the source material, any image is required to be placed inside a [^figure^] element with a [^global/class^] attribute set to `image`. If the image has a caption, the caption is required to be marked up with the [^figaption^] element and placed as either the first or the last child of the `<figure>` element.
 
-Small symbols or other non-typographical content that might occur inline, are required to be represented with `<img>` elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
+Small symbols or other non-typographical content that might occur inline, are required to be represented with [^img^] elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
 #### Alt-texts
 
-Accessibility guidelines require images to be supplied with a short, descriptive text as value of the `alt` attribute of the `<img>` element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
+Accessibility guidelines require images to be supplied with a short, descriptive text as value of the [^/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
 - `Photo.` – for photographs
 - `Illustration.` – for illustrations
@@ -845,9 +851,9 @@ Accessibility guidelines require images to be supplied with a short, descriptive
 - `Comic.` – for comic strips and panels
 - `Logo.` – for logos
 
-Section 5.2.3 of this document contains language specific alt-text values.
+[Section 5.2.3](#image-alternative-text-values) of this document contains language specific alt-text values.
 
-If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `figure`.
+If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `Figure.`.
 
 <div class="note">
 
