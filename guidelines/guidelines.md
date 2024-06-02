@@ -1150,13 +1150,13 @@ If there are more than one note reference for a single note text, the note text 
 
 ### Sidebars, Text Boxes etc.
 
-The `<aside>` element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
+The [^aside^] element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
 
-Any material that is in some way contained or has a clearly visible beginning and end, but is still an integral part of the main text or content is required to be marked up with `<div>`. This could be, for instance, examples, definitions, tips, boxes containing words or phrases in exercises etc.
+Any material that is in some way contained or has a clearly visible beginning and end, but is still an integral part of the main text or content is required to be marked up with [^div^]. This could be, for instance, examples, definitions, tips, boxes containing words or phrases in exercises etc.
 
-In both cases the elements are required to have a `class` attribute. The default value of the class attribute is text-box, but other values can be given in Editing Instructions.
+In both cases the elements are required to have a [^global/class^] attribute. The default value of the `class` attribute is `text-box`, but other values can be given in Editing Instructions.
 
-For certain publications there may be instructions given to add [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attributes to either of the elements, but unless such instructions are given no [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attributes are to be included.
+For certain publications there may be instructions given to add [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attributes to either of the elements, but unless such instructions are given no `aria-label` attributes are to be included.
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
@@ -1165,7 +1165,7 @@ If headings in text boxes can be seen as part of the hierarchical heading struct
 Structurally insignificant headings should be marked up with `<h[x]>` with the attribute `class="no-toc"`, or, for instance if they are often repeated, marked up as `<p class="faux-hd">`. Both of these options must only be used if specific instructions are given by the Ordering Agency.
 
 <div class="note">
-At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside), which considers the aside element an WAI-ARIA landmark (complementary), only when it has an accessible name. When triggered by non-labelled aside elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
+At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside) [[html-aam-1.0]], which considers the aside element a [[WAI-ARIA]] [landmark](https://www.w3.org/TR/wai-aria/#dfn-landmark) ([complementary](https://www.w3.org/TR/wai-aria/#complementary)) only when it has an accessible name. When triggered by non-labelled `aside` elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
 </div>
 
 #### Nested text boxes
