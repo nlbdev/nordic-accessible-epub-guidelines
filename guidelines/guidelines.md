@@ -1221,13 +1221,15 @@ Any URLs in printed source material are required to be represented as plain text
 
 Some books, such as editions of classical literary works, may have numbered paragraphs or stanzas in the source material. Unless the ordering agency gives instructions to exclude the numbering, the supplier is required to preserve it. The numbers are placed at the beginning of the paragraph and marked up with `<span class="parnum">`. The paragraph is given `class="numbered"`.
 
-Example 1, prose:
+<aside class="example" title="Numbered paragraphs, prose">
 
 ```html
 <p class="numbered"><span class="parnum">1</span>Paragraph text.</p>
 ```
 
-Example 2, poetry and verse:
+</aside>
+
+<aside class="example" title="Numbered paragraphs, poetry and verse">
 
 ```html
 <p class="linegroup numbered">
@@ -1235,6 +1237,8 @@ Example 2, poetry and verse:
     <span class="line">Second line.</span>
 </p>
 ```
+
+</aside>
 
 ### Thematic Breaks in the Text Flow
 
