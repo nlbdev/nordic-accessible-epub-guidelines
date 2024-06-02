@@ -1404,7 +1404,7 @@ In addition to the features documented above, the Nordic Guidelines recognise so
 Suppliers do not need to observe these unless specifically requested by Ordering Agencies, as they will mostly be used in post production at the Ordering Agencies. They are listed here primarily for documentational purposes.
 
 ### Sentence markup
-Sentence markup using `<span>` and `@class="sentence"` is allowed. This is used in Media Overlays talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
+Sentence markup using [^span^] and `@class="sentence"` is allowed. This is used in [=media overlay documents=] talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
 
 <section class="appendix">
 
