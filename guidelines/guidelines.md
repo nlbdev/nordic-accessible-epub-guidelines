@@ -961,6 +961,10 @@ Lists without any bullet markers are required to have the attribute:
 
 By default, `<ul>` should be used for lists without any bullet markers, but Ordering Agencies may give specific instructions to use [^ol^].
 
+#### Definition Lists
+
+All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as [^dl^]. Note that language attributes may be required, for example with glossaries.
+
 #### Tables of Contents
 
 Any table of contents in the source material is required to be marked up in the following way:
@@ -1053,10 +1057,6 @@ Large tables may give rise to visual display issues where content overflows the 
 In cases where a title contains a list of tables (`lot`) or where a list of tables should be included in the `nav.xhtml` file, the table element should be provided with an id. These id:s should be named `"tab-XXX"` in sequential order, where XXX is the number of the table in the file.
 
 Instances may occur where id:s are required for tables without it being included in the `nav.xhtml` file.
-
-### Definition Lists
-
-All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as [^dl^]. Note that language attributes may be required, for example with glossaries.
 
 ### Notes and Note References
 
