@@ -1211,11 +1211,11 @@ In the cases where `<div class="line-by-line>` are used, the same rules as for `
 
 ### Quotes
 
-Quotes, citations, excerpts from other sources and similar content are required to be marked up using the `<blockquote>` element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate `<p>`.
+Quotes, citations, excerpts from other sources and similar content are required to be marked up using the [^blockquote^] element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate [^p^].
 
 ### Hyperlinks and URLs
 
-Any URLs in printed source material are required to be represented as plain text in the EPUB file and not be made into an active hyperlink. In digital sources, already active hyperlinks are required to be preserved, but an URL that is just plain text is required to remain as such.  
+Any URLs in printed source material are required to be represented as plain text in the EPUB file and not be made into an active hyperlink. In digital sources, already active hyperlinks are required to be preserved, but an URL that is just plain text is required to remain as such.
 
 ### Numbered paragraphs
 
