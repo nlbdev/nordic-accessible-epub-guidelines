@@ -683,13 +683,13 @@ Some publications are divided into parts, each containing a number of chapters. 
 
 Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the `<h1>` and the chapter headings `<h2>` and the `<section>` element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, `role` and `epub:type`, must still be given to the `<section>` elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.
 
-## Mark-up Requirements
+## Markup Requirements
 
 These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like [^p^], [^blockquote^], [^aside^], [^ul^], [^ol^], [^dl^], [^table^], [^figure^], etc., and the common structural elements like [^section^] and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.
 
 For further information about the common HTML elements and their attributes, please refer to [[[html5]]].
 
-Note that, [again](#h-note-1#), if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the mark-up of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
+Note that, [again](#h-note-1#), if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the markup of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
 
 ### Pagination
 
@@ -760,9 +760,9 @@ Sometimes the source material has a chapter or part number, or a phrase indicati
 <h1><span class="chnum">Chapter 1</span><br/>Chapter heading</h1>
 ```
 
-Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, be omitted from the navigation document. This mark-up may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
+Headings that do not contribute to the hierarchical structure of the work and that are not desired to be included in the navigation document can be given the attribute `class="no-toc"` and then, consequently, be omitted from the navigation document. This markup may be specifically requested by the Ordering Agency via Editing Instructions and must never be used otherwise.
 
-In some cases heading mark-up may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency.
+In some cases heading markup may not be desired at all, for usability reasons. In these cases, `<p class="faux-hd">` may be used, but only if specific instructions are given by the Ordering Agency.
 
 #### Continuation Headings
 
@@ -955,7 +955,7 @@ Tables are required to have a consistent number of table cells per row. If the `
 
 Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.
 
-Below is an example of table mark-up that covers most of the details explained above.
+Below is an example of table markup that covers most of the details explained above.
 
 ```html
 <table>
