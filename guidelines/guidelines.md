@@ -47,9 +47,9 @@ Note that the [`mimetype` file](https://www.w3.org/TR/epub-33/#sec-zip-container
 
 ### META-INF
 
-The container file must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
+The [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-container.xml) must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
 
-The container file shall look like this, unless indicated otherwise:
+The file shall look like this, unless indicated otherwise:
 
 <aside class="example" title="The container file">
 
@@ -74,7 +74,7 @@ All [=publication resources=] are required to be located in a directory called `
 
 The name of the [=package document=] file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the package document.
 
-The following xml declaration must be placed at the first line of the document:
+The following XML declaration must be placed at the first line of the document:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -113,9 +113,9 @@ The following metadata are required to be placed in the [^metadata^] element:
 <meta property="nordic:guidelines">2024-1</meta>
 ```
 
-Note that the default value to use in `dc:publisher` [[dcterms]] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
+Note that the default value to use in [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) [[dcterms]] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
 
-If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the `dc:source` element [[dcterms]] will be a string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.  
+If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the [`dc:source`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) element will be a string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.
 
 #### Accessibility Metadata
 
@@ -161,7 +161,7 @@ The metadata will vary depending on the content and properties of the publicatio
 
 </aside>
 
-As with `dc:publisher`, the default value of `a11y:certifiedBy` [[epub-a11y-11]] is the shorthand for the Ordering Agency.
+As with [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher), the default value of [`a11y:certifiedBy`](https://www.w3.org/TR/epub-a11y-11/#certifiedBy) [[epub-a11y-11]] is the shorthand for the Ordering Agency.
 
 Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
 
@@ -185,7 +185,7 @@ If the book contains page break markers and a page list, the following metadata 
 
 The [`pageBreakSource`](https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/#pageBreakSource) property [[pagesourceid]] identifies the pagination source, typically using the ISBN of a print edition. See also the Daisy Accessible Publishing Knwoledge Base, [Page Source](https://kb.daisy.org/publishing/docs/navigation/pagesrc.html) for more information and examples.
 
-The `schema:accessibilitySummary` property can be used to provide information taht complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
+The [`schema:accessibilitySummary`](https://schema.org/accessibilitySummary) property can be used to provide information that complements, but does not duplicate, the other metadata. The summary also describes any known deficiencies. It should be used only if indicated by the Ordering Agency, which will provide the summary text.
 
 #### Optional Increased Title and Creator Metadata Granularity
 
@@ -256,16 +256,16 @@ Refer to the [manifest properties vocabulary of EPUB 3.3](https://www.w3.org/TR/
 
 ### Spine
 
-In the [^spine^] all content documents are listed in the correct reading order. This is done by using an [^itemref^] element for each content document and simply listing them in the desired order. The [^itemref^] element is associated with the corresponding [^item^] for the content document in the [^manifest^] by using the [`idref`](https://www.w3.org/TR/epub-33/#attrdef-itemref-idref) attribute and setting the value to the [`id`](https://www.w3.org/TR/epub-33/#sec-item-elem) attribute of the [^item^] element. The `idref` attribute is a required attribute and the id it refers to must be unique. Here is an example:
+In the [^spine^] all content documents are listed in the correct reading order. This is done by using an [^itemref^] element for each content document and simply listing them in the desired order. The `itemref` element is associated with the corresponding [^item^] for the content document in the [^manifest^] by using the [`idref`](https://www.w3.org/TR/epub-33/#attrdef-itemref-idref) attribute and setting the value to the [`id`](https://www.w3.org/TR/epub-33/#sec-item-elem) attribute of the `item` element. The `idref` attribute is a required attribute and the id it refers to must be unique. Here is an example:
 
 <aside class="example" title="manifest and spine items linking">
-In [^manifest^]:
+In `manifest`:
 
 ```xml
 <item id="item_7" href="007-chapter.xhtml" media-type="application/xhtml+xml"/>
 ```
 
-In [^spine^]:
+In `spine`:
 
 ```xml
 <itemref idref="item_7"/>
@@ -273,11 +273,11 @@ In [^spine^]:
 
 </aside>
 
-[^itemref^] has an optional attribute called [`linear`](https://www.w3.org/TR/epub-33/#attrdef-itemref-linear). The `linear` attribute can have the values `yes` (default) or `no`. If the attribute is omitted it is set to `yes`. The `linear` attribute indicates whether the referenced item contains content that contributes to the primary reading order and has to be read sequentially (`yes`) or auxiliary content that enhances or augments the primary content and can be accessed out of sequence (`no`). Examples of auxiliary content include: notes, descriptions and answer keys.
+The `itemref` element has an optional attribute called [`linear`](https://www.w3.org/TR/epub-33/#attrdef-itemref-linear). The `linear` attribute can have the values `yes` (default) or `no`. If the attribute is omitted it is set to `yes`. The `linear` attribute indicates whether the referenced item contains content that contributes to the primary reading order and has to be read sequentially (`yes`) or auxiliary content that enhances or augments the primary content and can be accessed out of sequence (`no`). Examples of auxiliary content include: notes, descriptions and answer keys.
 
 As a general rule `linear="no"` should only be applied to the cover file of a title. This is to ensure a reader does not miss out on any of the content, no matter which reading system they are using. Agency-specific guidelines might have other requirements than this.
 
-If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) is included in the EPUB package, this is required to be referenced by adding the `toc` attribute to the [^spine^] element and assign as value the `id` attribute of the [^item^] referring to the ncx file, like this:
+If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) is included in the EPUB package, this is required to be referenced by adding the `toc` attribute to the `spine` element and assign as value the `id` attribute of the `item` referring to the ncx file, like this:
 
 <aside class="example" title="Spine referencing in case of an ncx file">
 
@@ -354,13 +354,13 @@ The production UID must match the [^dc:identifier^] of the [=package document=].
 
 ### EPUB 3.3 Navigation Document
 
-The principal [=EPUB navigation document=] of the EPUB package is the `xhtml` file with the `properties` attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
+The principal [=EPUB navigation document=] of the EPUB package is the `xhtml` file with the [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
 
 [Section 5.2.1](#nav-xhtml-headings) of this document contains language-specific headings for the [^nav^] sections of the navigation document that are listed below.
 
 #### The Table Of Contents
 
-The first required [^nav^] element in the file is for the main table of contents. The element is required to have a [^h1^] as the first child element. The element must have the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute set to the `id` of that [^h1^] element. The [^/role^] and [^/epub:type^] attributes must be set as follows:
+The first required [^nav^] element in the file is for the main table of contents. The element is required to have a [^h1^] as the first child element. The element must have the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute set to the `id` of that `h1` element. The [^/role^] and [^/epub:type^] attributes must be set as follows:
 
 ```html
 <nav role="doc-toc" aria-labelledby="n1" epub:type="toc">
@@ -390,7 +390,7 @@ The links must always reference the corresponding sectioning element for the hea
 
 A section without any heading must be referenced using its [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value.
 
-Note that this is not a representation of the table of contents in the source material. Only headings, or references using the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value of the corresponding [^section^] element, should be included.
+Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `section` element, should be included.
 
 If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the [^a^] element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
 
@@ -433,11 +433,11 @@ It is recommended that the list of landmarks include a link to the start of the 
     - Answers
     - Glossary
 
-Introductory sections such as a prologue, preface, foreword or introduction can also be included in the landmarks. It should be noted, however, that they are considered bodymatter. In the landmarks `<nav>`, the first bodymatter section should be referenced using [^/epub:type^] `bodymatter` and a label indicating that it is the start of the main content, regardless of any other applicable [^/epub:type^] value.
+Introductory sections such as a prologue, preface, foreword or introduction can also be included in the landmarks. It should be noted, however, that they are considered bodymatter. In the landmarks `<nav>`, the first bodymatter section should be referenced using [^/epub:type^] `bodymatter` and a label indicating that it is the start of the main content, regardless of any other applicable `epub:type` value.
 
 ### NCX Navigation Document
 
-The EPUB package may include an `ncx` navigation document as fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
+The EPUB package may include an [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) as a fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
 
 Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[[opf201]]] for information about how the `ncx` file should be formed. Required elements are:
 
@@ -537,13 +537,13 @@ In addition, the Ordering Agencies have developed a specific validation tool bas
 
 The [=EPUB content document=] structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual [=XHTML content documents=]. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
 
-The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in [^section^] elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a [^section^] element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
+The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in [^section^] elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `section` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
-The semantic role of each content document must be specified, when possible. This is done by adding the [^/role^] and [^/epub:type^] attributes to the top level [^section^] element of each content file. The available [^/role^] attribute values are listed in the [[[dpub-aria-1.1]]].
+The semantic role of each content document must be specified, when possible. This is done by adding the [^/role^] and [^/epub:type^] attributes to the top level `section` element of each content file. The available `role` attribute values are listed in the [[[dpub-aria-1.1]]].
 
-When the content file can be matched to one of the roles listed, the top level [^section^] element is required to have the [^/role^] attribute with that matching value set. If no suitable role exists, [^/role^] may be omitted.
+When the content file can be matched to one of the roles listed, the top level `section` element is required to have the `role` attribute with that matching value set. If no suitable role exists, `role` may be omitted.
 
-The [^/epub:type^] attribute is also required for the top level [^section^] element of each content file and must first contain one of the following partition values:
+The `epub:type` attribute is also required for the top level `section` element of each content file and must first contain one of the following partition values:
 
 - `cover`
 - `frontmatter`
@@ -552,11 +552,11 @@ The [^/epub:type^] attribute is also required for the top level [^section^] elem
 
 The `frontmatter`, `bodymatter` and `backmatter` partition values must, where possible, be combined with a divisioning or sectioning value found in the [[[epub-ssv-11]]]. Note that according to this vocabulary, introductory sections such as foreword, introduction, preface and prologue are typically part of the publication bodymatter.
 
-If no matching divisioning or sectioning value can be found, [^/epub:type^] will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
+If no matching divisioning or sectioning value can be found, `epub:type` will be set to only the appropriate partition value. Also, the content file containing the cover image of the printed book will have simply `epub:type="cover"`.
 
-If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level [^section^] elements, which will contain the chapters.
+If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `section` elements, which will contain the chapters.
 
-Furthermore, the top-level [^section^] element for every content file is required to have a label. When the [^section^] has a heading it will serve as a label, but must be associated with the [^section^] element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute and referencing the [^global/id^] value of the associated heading:
+Furthermore, the top-level `section` element for every content file is required to have a label. When the `section` has a heading it will serve as a label, but must be associated with the `section` element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute and referencing the [^global/id^] value of the associated heading:
 
 <aside class="example" title="Linking a section and its heading with aria-labelledby">
 
@@ -569,7 +569,7 @@ Furthermore, the top-level [^section^] element for every content file is require
 
 </aside>
 
-Note that for the most part it will only by [^sections^] with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
+Note that for the most part it will only by `section` with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
 
 Note that if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
 
@@ -584,17 +584,17 @@ In rare cases, the same method can be used to label untitled subsections. Such c
 #### Default `aria-label` values for standard sections
 The following table lists default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) values for standard sections.
 
-| Section identification   | Default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value |
-|--------------------------|--------------------------------------------------------------------------|
-| `@epub:type="cover"`     | Cover                                                                    |
-| `@class="frontcover"`    | Front cover                                                              |
-| `@class="backcover"`     | Back cover                                                               |
-| `@class="leftflap"`      | Jacket left flap                                                         |
-| `@class="rightflap"`     | Jacket right flap                                                        |
-| `@role="doc-colophon"`   | Publisher information                                                    |
-| `@role="doc-dedication"` | Dedication                                                               |
-| `@role="doc-epigraph"`   | Epigraph                                                                 |
-| `@role="doc-toc"`        | Contents                                                                 |
+| Section identification   | Default [`aria-label`] value |
+|--------------------------|------------------------------|
+| `@epub:type="cover"`     | Cover                        |
+| `@class="frontcover"`    | Front cover                  |
+| `@class="backcover"`     | Back cover                   |
+| `@class="leftflap"`      | Jacket left flap             |
+| `@class="rightflap"`     | Jacket right flap            |
+| `@role="doc-colophon"`   | Publisher information        |
+| `@role="doc-dedication"` | Dedication                   |
+| `@role="doc-epigraph"`   | Epigraph                     |
+| `@role="doc-toc"`        | Contents                     |
 
 The section [aria-label and TOC values](#aria-label-and-toc-values) of this document contains language specific values.
 
@@ -612,7 +612,7 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of the [[dc:identifier] metadata element of the [=package document=]. _XXX_ is a three-digit numeric string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of an [^/role^] for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple [^/epub:type^] values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
+The _UID_ must be identical to the value of the [[dc:identifier] metadata element of the [=package document=]. _XXX_ is a three-digit numeric string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of a `role` for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple `epub:type` values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
 
 <aside class="example" title="Correctly named content file">
 
