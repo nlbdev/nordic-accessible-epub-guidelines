@@ -1304,6 +1304,9 @@ The following resources could be valuable for verifying commonly used special ch
 
 Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
+### Ligatures
+Depending on the typography of the source material, ligatures may be present in source text. These may **not** be captured as dedicated ligature unicode characters, e.g. "ﬆ" (U+FB06). Rather, ligatures should be normalised to their separate letter components (e.g. "st") upon capture.
+
 # Specific Requirements for Advanced Content
 
 ## Numbers and STEM Content
@@ -1321,9 +1324,6 @@ If standard HTML is unable to represent the expression exactly as it looks in th
 In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user. These guidelines will not go into details about the MathML language. Please refer to the specification.
 
 For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. [ASCIIMath notation](https://asciimath.org) may be requested instead or in combination with MathML markup.
-
-### Ligatures
-Depending on the typography of the source material, ligatures may be present in source text. These may **not** be captured as dedicated ligature unicode characters, e.g. "ﬆ" (U+FB06). Rather, ligatures should be normalised to their separate letter components (e.g. "st") upon capture.
 
 ## Placeholders for User Input Areas
 
