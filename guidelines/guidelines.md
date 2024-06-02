@@ -857,7 +857,7 @@ The section [Image Alternative Text Values](#image-alternative-text-values) cont
 
 If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `Figure.`.
 
-<div class="note">
+<div class="note" title="WCAG warning">
 
 The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
 
@@ -1249,9 +1249,13 @@ In circumstances where depth of structure is not amenable to structural markup u
 
 ### Language Tagging
 
-Content documents may contain text in other languages than the main language, as defined in the root element (see section [Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include `<p>`, `<ol>`, `<ul>`, `<blockquote>`, `<aside>` and `<section>`. Inline text is not marked up unless specifically indicated by the Ordering Agency.
+Content documents may contain text in other languages than the main language, as defined in the root element (see section [Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include [^p^], [^ol^], [^ul^], [^blockquote^], [^aside^] and [^section^]. Inline text is not marked up with language tags unless specifically indicated by the Ordering Agency.
+
+<div class="note" title="WCAG warning">
 
 Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG/#language-of-parts).
+
+</note>
 
 ### Uppercase text
 
@@ -1267,33 +1271,37 @@ All caps or small caps may also be used to emphasise words or short passages of 
 
 ### Styling
 
-In general, styling and layout properties must be ignored. The styling and layout of the EPUB file will be handled by standard CSS files provided by the the Ordering Agencies. However, there are cases when styling used in the source material carries a meaning. In these cases styling classes may be required. Typical examples of this can be:
+In general, styling and layout properties must be ignored. The styling and layout of the EPUB production will be handled by standard CSS files provided by the the Ordering Agencies. However, there are cases when styling used in the source material carries a meaning. In these cases styling classes may be required. Typical examples of this can be:
 
 - Words, phrases or expressions written in a different colour and being referred to elsewhere in the text
 - Text boxes with a certain background colour that explains the function of the box
 - Words or phrases written in a different font for some specific reason
 
-Note that these are only examples and other types of significant styling may occur. The `class` attributes must be placed in a `<span>` element wrapping the words or phrases in question, or in an already present element where that is applicable. Only `class` attributes defined by the Ordering Agency may be used. The `style` attribute is not allowed. The Suppliers must only apply styling classes when given specific instructions by the Ordering Agency.
+Note that these are only examples and other types of significant styling may occur. The [^global/class^] attributes must be placed in a [^span^] element wrapping the words or phrases in question, or in an already present element where that is applicable. Only `class` attributes defined by the Ordering Agency may be used. The [^/style^] attribute is not allowed. The Suppliers must only apply styling classes when given specific instructions by the Ordering Agency.
+
+<div class="note" title="WCAG warning">
 
 Since the meaning conveyed through styling will not be accessible to all readers of the EPUB file, there may be a need for post production editing to ensure full WCAG compliance.
+
+</div>
 
 # Specific Requirements for Advanced Content
 
 ## Numbers and STEM Content
 
-Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note, that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with `<sup>`, unless the number is part of a mathematical expression.
+Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note, that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with [^sup^], unless the number is part of a mathematical expression.
 
 Simple mathematical expressions or other simple STEM related content in non-STEM contexts can be captured as regular text with standard HTML used to mark up exponents or indices. The correct Unicode characters must be used to represent mathematical operators or special characters. Typical examples of this may be:
 
-- Simple arithmetic expressions written in linear form, like 1 + 2 = 3
+- Simple arithmetic expressions written in linear form, like "1 + 2 = 3"
 - Chemical formulae for common substances, like `CO<sub>2</sub>`
 - Greek letters
 
 If standard HTML is unable to represent the expression exactly as it looks in the source material, [[MathML3]] must be used. Therefore, more complex expressions are required to be marked up with MathML, even in non-STEM contexts. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must ask the Ordering Agency for clarification. 
 
-In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user.  These guidelines will not go into details about the MathML language. Please refer to the specification.
+In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user. These guidelines will not go into details about the MathML language. Please refer to the specification.
 
-For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. ASCIIMath notation may be requested instead or in combination with MathML markup. See [https://asciimath.org](https://asciimath.org) for information about the ASCIIMath notation. 
+For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. [ASCIIMath notation](https://asciimath.org) may be requested instead or in combination with MathML markup.
 
 ## Special characters, punctuation, etc.
 ### Representation of characters
@@ -1317,11 +1325,11 @@ Depending on the typography of the source material, ligatures may be present in 
 
 ## Placeholders for User Input Areas
 
-In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the `<span>` element to provide placeholders for these input fields in one of the following three ways:
+In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the [^span^] element to provide placeholders for these input fields in one of the following three ways:
 
 - `<span class="answer">---</span>` for a horizontal line or box where any amount of text or numbers are meant to be inserted. Multiple lines in succession must be represented by a single `<span class="answer">---</span>` unless other instructions are given by the Ordering Agency.
 - `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
-- `<span class="box">---</span>` for check boxes.  
+- `<span class="box">---</span>` for check boxes.
 
 # Appendix
 
