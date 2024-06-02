@@ -628,9 +628,9 @@ Some content files have certain contents that are required to be included and ma
 
 ### Cover and back cover
 
-The cover should be captured in a separate file from the back cover and only contain the cover image. The [^/linear^] attribute with value `"no"` must be applied to the [^itemref^] element in the package [^spine^] corresponding to the cover file. 
+The cover should be captured in a separate file from the back cover and only contain the cover image. The [`linear`](https://www.w3.org/TR/epub-33/#attrdef-itemref-linear) attribute with value `"no"` must be applied to the [^itemref^] element in the package [^spine^] corresponding to the cover file. 
 
-The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The attribute [^/properties^] with value `"cover-image"` attribute must be applied to the [^manifest^] [^item^] element corresponding to this image. The [^img^] element referencing the cover image must have a [^/role^] attribute set to `"doc-cover"`.
+The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The attribute [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) with value `"cover-image"` attribute must be applied to the [^manifest^] [^item^] element corresponding to this image. The [^img^] element referencing the cover image must have a [^/role^] attribute set to `"doc-cover"`.
 
 The back cover should be captured as the first frontmatter file in the title with the right- and left flaps as subsections. The following [^global/class^] attribute values must be applied to the parent and child [^section^] elements where appropriate:
 - `<section class="backcover">`
