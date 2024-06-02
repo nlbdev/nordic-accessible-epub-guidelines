@@ -702,15 +702,15 @@ In general, block page break markers are used when the page break occurs between
 
 Additionally required attributes:
 
-- `aria-label=""`
-- `class=""`
-- `id=""`
+- [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label)
+- [^global/class^]
+- [^global/id^]
 
-The value for the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
+The value for the `aria-label` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
 
 In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
 
-The class attribute must have either of the following values:
+The `class` attribute must have either of the following values:
 
 - `page-front`
 - `page-normal`
@@ -720,20 +720,37 @@ The attribute value `page-normal` is required for the pagination of the main con
 
 The attribute value `page-front` is required when the page numbering series of the frontmatter is not logically continued in the publication bodymatter, i.e. roman numerals.
 
-The attribute value `page-special` is required for any parts of the book not numbered in a standard manner, for example appendices, suites of photography etc.
+The attribute value `page-special` is required for any parts of the book not numbered in a standard manner, for example appendices, suites of photography, etc.
 
 The attribute `id` is simply a unique identifier.
 
-By default, the pagebreak elements are required to be empty, like in the following examples:
+By default, the page break elements are required to be empty, like in the following examples:
 
-- Inline: `<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></span>`
-- Block: `<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></div>`
+<aside class="example" title="Inline page break">
 
-However, there may be agency specific instructions to place the page number, as it is displayed in the source material, as content in the pagebreak elements. For example:
+```html
+<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></span>
+```
+
+</aside>
+
+<aside class="example" title="Block page break">
+
+```html
+<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></div>
+```
+
+</aside>
+
+However, there may be agency specific instructions to place the page number as it is displayed in the source material, or as content in the pagebreak elements. For example:
+
+<aside class="example" title="Inline page break with page number as text content">
 
 ```html
 <span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38">38</span>`
 ```
+
+</aside>
 
 This is only to be done if specific instructions are given by the Ordering Agency.
 
