@@ -1193,7 +1193,7 @@ Please take care that text marked up with `em` or `strong` is identical with the
 
 Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
 
-Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. HTML line breaks, `<br/>`, must be added between consecutive lines within a line group. Indented lines may be marked up using `<span class="line_indent">` or `<span class="line_longindent">`.
+Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. HTML line breaks, [^br^], must be added between consecutive lines within a line group. Indented lines may be marked up using `<span class="line_indent">` or `<span class="line_longindent">`.
 
 Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with `<span class="linenum">`.
 
@@ -1201,7 +1201,7 @@ If the content written in verse has a title it may be handled as a normal headin
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
-In some cases, where poetry has figurative or otherwise non-standard disposition of the text, it may be requested by the Ordering Agency to also capture the verse as an image. It may also be requested that the verse is captured as pre-formatted text, using the `<pre>` element. Neither of these options must be used unless specific instructions are given by the Ordering Agency. 
+In some cases, where poetry has figurative or otherwise non-standard disposition of the text, it may be requested by the Ordering Agency to also capture the verse as an image. It may also be requested that the verse is captured as pre-formatted text, using the [^pre^] element. Neither of these options must be used unless specific instructions are given by the Ordering Agency. 
 
 #### Use of line/linenum-formatted content in non-verse content. 
 
