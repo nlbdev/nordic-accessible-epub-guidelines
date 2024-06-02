@@ -914,28 +914,32 @@ If an inline image require text extraction the extracted text must be used as va
 
 #### Image Series
 
-If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate `<figure>` elements. The whole series must then be wrapped in a `<figure>` element where the `class` attribute is set to `image-series`.
+If the source material contains a series of images, images that are linked in some way, each individual image must be marked up as described above with each image wrapped in separate [^figure^] elements. The whole series must then be wrapped in a `<figure>` element where the [^global/class^] attribute is set to `image-series`.
 
-If there is a caption for the image series as a whole, this must be marked up with the `<figcaption>` element and placed inside the outer `<figure>` element, before the individual `<figure>` elements containing the images. Any caption for individual images are placed together with that image as described above.
+If there is a caption for the image series as a whole, this must be marked up with the [^figcaption^] element and placed inside the outer `<figure>` element, before the individual `<figure>` elements containing the images. Any caption for individual images are placed together with that image as described above.
 
 This is how the markup will look like:
 
+<aside class="example" title="Image series markup">
+
 ```html
 <figure class="image-series">
-   <figcaption>...</figcaption>
+   <figcaption>…</figcaption>
    <figure class="image">
-      <figcaption>...</figcaption>
+      <figcaption>…</figcaption>
       <img src="images/X41001A-012.jpg" alt="figure" aria-describedby="desc012" />
       <aside class="fig-desc" id="desc012">
-         <p>...</p>
+         <p>…</p>
       </aside>
    </figure>
    <figure class="image">
-      ...
+      …
    </figure>
-   ...
+   …
 </figure>
 ```
+
+</aside>
 
 ### Lists
 
