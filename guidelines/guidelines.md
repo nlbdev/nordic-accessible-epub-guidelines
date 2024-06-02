@@ -984,7 +984,7 @@ Sometimes, mostly in educational books, the table of contents can be more compli
 
 All tables or table-like structures are required to be marked up as [^table^]. If the table has a caption it is required to be marked up with [^caption^] and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
-The [^tbody^] element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use [^thead^] for any column heading at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element [^tfoot^] can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note, that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See the code example at the end of this section.
+The [^tbody^] element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use [^thead^] for any column heading at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element [^tfoot^] can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note, that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See [the code example](#table-example-01) at the end of this section.
 
 Each row of the table, with all its table cells, must be placed inside a [^tr^] element and each individual table cell must be placed inside either a [^td^] element for regular table data, or inside a [^th^] element for column or row headings. Headings are typically found in the top-most row and the left-most column of the table, but there may be heading cells elsewhere and there may be headings for groups of rows or columns. The `<th>` element is required to have the attribute [^th/scope^] with  a value that specifies what the header is for in the following cases:
 
@@ -999,7 +999,7 @@ Never use tables solely for the purpose of mimicking the layout of the source ma
 
 Below is an example of table markup that covers most of the details explained above.
 
-<aside class="example" title="Extensive table sample">
+<aside class="example" title="Extensive table sample" id="table-example-01">
 
 ```html
 <table>
@@ -1108,7 +1108,7 @@ If, for some reason, an ordered list can't be used, each note text is required t
 
 #### Footnotes
 
-Footnotes that are sequentially numbered are required to be handled as end notes (see the section above). The note texts must be placed at the end of the content file, in its own [^section^] element and all [^/role^] and [^/epub:type^] attributes must be set as end notes. This goes for the note references as well.
+Footnotes that are sequentially numbered are required to be handled as end notes (see the [section above](#end-notes)). The note texts must be placed at the end of the content file, in its own [^section^] element and all [^/role^] and [^/epub:type^] attributes must be set as end notes. This goes for the note references as well.
 
 Other types of footnotes are to be placed in an [^aside^] at the end of the relevant `<section>` or before the next `<section>`, whichever is the nearest to the note reference. These would typically be notes referenced by an asterisk or some other symbol. If there are more than one note reference in the section, notes must **not** be grouped in a single `<aside>`, but separated so that each note is contained in its own `<aside>`. The hyperlink of the note reference is required to point to the [^global/id^] attribute of the `<aside>` element containing the note text. The `<aside>` element is required to have the `role` set to `doc-footnote` and `epub:type` set to `footnote`.
 
@@ -1169,7 +1169,7 @@ At the time of publication, the EPUB accessibility validation tool [Ace by DAISY
 </div>
 
 #### Nested text boxes
-In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of [^aside^] elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see above). Another possibility is to consider whether the parent text box could actually be a [^div^] element, and then the inner level box an `<aside>`.
+In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of [^aside^] elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see [above](#sidebars-text-boxes-etc)). Another possibility is to consider whether the parent text box could actually be a [^div^] element, and then the inner level box an `<aside>`.
 
 ### Computer Code
 
