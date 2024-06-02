@@ -689,7 +689,7 @@ These guidelines will not give highly detailed descriptions of how to correctly 
 
 For further information about the common HTML elements and their attributes, please refer to [[[html5]]].
 
-Note that, [again](#h-note-1#), if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the markup of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
+Note that, [again](#h-note-1), if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the markup of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
 
 ### Pagination
 
