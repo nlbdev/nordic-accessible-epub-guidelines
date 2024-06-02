@@ -165,7 +165,7 @@ As with [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/d
 
 Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
 
-<div class="note" title="Note on accessMode">
+<div class="note" title="On accessMode">
 
 The `visual` value indicates that the book contains visual content such as images, graphics or video that is relevant to understanding the content. The value must not be set if the only visual elements are decorative images, the cover image or corporate logos.
 
@@ -571,7 +571,7 @@ Furthermore, the top-level `section` element for every content file is required 
 
 Note that for the most part it will only by `section` with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
 
-<div class="note" title="Note on production using EPUB source material">
+<div class="note" title="On production using EPUB source material">
 
 If the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
 
