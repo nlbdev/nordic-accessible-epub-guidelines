@@ -834,7 +834,7 @@ Sometimes an author name appears before or after the chapter heading. Use the ma
 
 All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see [section 2.7](#images). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
 
-Unless the image occurs inline in the source material, any image is required to be placed inside a [^figure^] element with a [^global/class^] attribute set to `image`. If the image has a caption, the caption is required to be marked up with the [^figaption^] element and placed as either the first or the last child of the `<figure>` element.
+Unless the image occurs inline in the source material, any image is required to be placed inside a [^figure^] element with a [^global/class^] attribute set to `image`. If the image has a caption, the caption is required to be marked up with the [^figcaption^] element and placed as either the first or the last child of the `<figure>` element.
 
 Small symbols or other non-typographical content that might occur inline, are required to be represented with [^img^] elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
 
