@@ -1169,13 +1169,13 @@ At the time of publication, the EPUB accessibility validation tool [Ace by DAISY
 </div>
 
 #### Nested text boxes
-In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of `<aside>` elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see above). Another possibility is to consider whether the parent text box could actually be a `<div>`, and then the inner level box an `<aside>`.
+In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of [^aside^] elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see above). Another possibility is to consider whether the parent text box could actually be a [^div^] element, and then the inner level box an `<aside>`.
 
 ### Computer Code
 
-Suppliers are required to mark up code content with the `<code>` element. For block instances containing several lines of code, the `<code>` element must be contained in a `<pre>` element.
+Suppliers are required to mark up code content with the [^code^] element. For block instances containing several lines of code, the `<code>` element must be contained in a [^pre^] element.
 
-In blocks of computer code, spaces, line breaks and empty lines must be preserved. It should be noted, however, that the correct markup for code blocks involves interpretation alongside the principle of capturing the text verbatim. For example, programming books may sometimes use a mix of semantic line breaks, which must be preserved, and line breaks necessitated by the print layout.
+In blocks of computer code, spaces, line breaks, and empty lines must be preserved. It should be noted, however, that the correct markup for code blocks involves interpretation alongside the principle of capturing the text verbatim. For example, programming books may sometimes use a mix of semantic line breaks, which must be preserved, and line breaks necessitated by the print layout.
 
 ### Bolding and Italics
 
