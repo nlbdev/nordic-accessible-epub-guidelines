@@ -1205,7 +1205,7 @@ In some cases, where poetry has figurative or otherwise non-standard disposition
 
 #### Use of line/linenum-formatted content in non-verse content. 
 
-In some titles, line-by-line based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line>` should be used instead. 
+In some titles, line-by-line-based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line>` should be used instead. 
 
 In the cases where `<div class="line-by-line>` are used, the same rules as for `<div class="verse">` are applied. Any variations to the markup in `<div class="line-by-line>` are given by the Ordering Agency.
 
