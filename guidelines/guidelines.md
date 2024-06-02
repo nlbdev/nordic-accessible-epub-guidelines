@@ -1257,7 +1257,7 @@ Content documents may contain text in other languages than the main language, as
 
 Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG/#language-of-parts).
 
-</note>
+</div>
 
 ### Uppercase text
 
