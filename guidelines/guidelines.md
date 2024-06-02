@@ -859,7 +859,7 @@ If there are any doubts about which value to assign the `alt` attribute, supplie
 
 <div class="note" title="WCAG warning">
 
-The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
+The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
 
 </div>
 
@@ -1255,7 +1255,7 @@ Content documents may contain text in other languages than the main language, as
 
 <div class="note" title="WCAG warning">
 
-Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG/#language-of-parts).
+Please note that the level of language markup required by suppliers in these guidelines may not in all cases meet the [WCAG success criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG22/#language-of-parts).
 
 </div>
 
