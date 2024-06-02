@@ -1298,9 +1298,9 @@ Unicode character accuracy for special characters, e.g. phonetic characters, is 
 
 The following resources could be valuable for verifying commonly used special characters:
 
-- Phonetics: [https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm](The International Phonetic Alphabet in Unicode (UCL))
-- The Greek alphabet: [https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm](Unicode Characters in the Greek and Coptic Block (FileFormat.info))
-- Emojis: [https://unicode.org/emoji/charts/full-emoji-list.html]
+- Phonetics: [The International Phonetic Alphabet in Unicode (UCL)](https://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm)
+- The Greek alphabet: [Unicode Characters in the Greek and Coptic Block (FileFormat.info)](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
+- Emojis: [Full Emoji List (unicode.org)](https://unicode.org/emoji/charts/full-emoji-list.html)
 
 Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
