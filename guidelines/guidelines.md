@@ -842,7 +842,7 @@ Images in tables or lists may be handled as inline images if there are no captio
 
 #### Alt-texts
 
-Accessibility guidelines require images to be supplied with a short, descriptive text as value of the [^/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
+Accessibility guidelines require images to be supplied with a short, descriptive text as value of the [^img/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
 - `Photo.` – for photographs
 - `Illustration.` – for illustrations
