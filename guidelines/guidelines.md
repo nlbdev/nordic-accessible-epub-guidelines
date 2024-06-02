@@ -245,14 +245,14 @@ The `media-type` attribute specifies what type of resource it is and what format
 
 Refer to the [core media types table of EPUB 3.3](https://www.w3.org/TR/epub-33/#sec-core-media-types) for additional information about various media types.
 
-Some resources have additional properties that need to be identified in the corresponding item in order for a reading system to be able to implement these properties. This is done by using the properties attribute. Common examples are:
+Some resources have additional properties that need to be identified in the corresponding item in order for a reading system to be able to implement these properties. This is done by using the `properties` attribute. Common examples are:
 
 - `nav` for the `xhtml` navigation document
 - `cover-image` for the cover image
 - `scripted` for any content document where javascripts are being used
 - `mathml` for any content document containing MathML
 
-Refer to the [manifest properties vocabulary of EPUB 3.3](https://www.w3.org/TR/epub-33/#app-item-properties-vocab) for additional information about the properties attribute.
+Refer to the [manifest properties vocabulary of EPUB 3.3](https://www.w3.org/TR/epub-33/#app-item-properties-vocab) for additional information about the `properties` attribute.
 
 ### Spine
 
