@@ -571,7 +571,11 @@ Furthermore, the top-level `section` element for every content file is required 
 
 Note that for the most part it will only by `section` with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
 
-Note that if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+<div class="note" title="Note on production using EPUB source material">
+
+If the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+
+</div>
 
 ### Subsections
 No sub-sections of any content document should have an [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) or [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute, unless specific instructions are given by the Ordering Agency.
@@ -681,12 +685,9 @@ Ordering Agencies might give instructions to keep whole parts in single content 
 
 ## Mark-up Requirements
 
-These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like `<p>`, `<blockquote>`, `<aside>`, `<ul>`, `<ol>`, `<dl>`, `<table>`, `<figure>` etc. and the common structural elements like `<section>` and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.
+These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like [^p^], [^blockquote^], [^aside^], [^ul^], [^ol^], [^dl^], [^table^], [^figure^], etc., and the common structural elements like [^section^] and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.
 
-For further information about the common HTML elements and their attributes, please refer to any online resource on HTML 5, for instance:
-
-- The formal HTML(5) specification: [https://html.spec.whatwg.org/multipage/](https://html.spec.whatwg.org/multipage/)
-- [https://www.w3schools.com/](https://www.w3schools.com/)
+For further information about the common HTML elements and their attributes, please refer to [[[html5]]].
 
 Note that, again, if the source material for an EPUB production is an EPUB file, or any other HTML or XML based material, it can not be assumed that the mark-up of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
 
