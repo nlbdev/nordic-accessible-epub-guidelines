@@ -968,11 +968,11 @@ Any table of contents in the source material is required to be marked up in the 
 ```html
 <ol class="plain" epub:type="toc" role="doc-toc">
    <li><span class="lic">_[Heading 1]_</span> <span class="lic">_[Page number]_</span></li>
-   ...
+   …
 </ol>
 ```
 
-This is typically used for the main table of contents that most books have somewhere in the frontmatter part, but it could also be a table of content for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only `<li>`, without any `<span class="lic">`.
+This is typically used for the main table of contents that most books have somewhere in the frontmatter part, but it could also be a table of contents for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only [^li^], without any `<span class="lic">`.
 
 Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.
 
