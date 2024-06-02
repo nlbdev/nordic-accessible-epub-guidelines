@@ -742,7 +742,7 @@ By default, the page break elements are required to be empty, like in the follow
 
 </aside>
 
-However, there may be agency specific instructions to place the page number as it is displayed in the source material, or as content in the pagebreak elements. For example:
+However, there may be agency specific instructions to place the page number as it is displayed in the source material, or as content in the page break elements. For example:
 
 <aside class="example" title="Inline page break with page number as text content">
 
