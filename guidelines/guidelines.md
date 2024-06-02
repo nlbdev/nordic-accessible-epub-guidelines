@@ -1106,6 +1106,8 @@ If, for some reason, an ordered list can't be used, each note text is required t
 </section>
 ```
 
+</aside>
+
 #### Footnotes
 
 Footnotes that are sequentially numbered are required to be handled as end notes (see the [section above](#end-notes)). The note texts must be placed at the end of the content file, in its own [^section^] element and all [^/role^] and [^/epub:type^] attributes must be set as end notes. This goes for the note references as well.
