@@ -1168,7 +1168,7 @@ Structurally insignificant headings should be marked up with `<h[x]>` with the a
 
 <div class="note">
 
-At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside) [[html-aam-1.0]], which considers the aside element a [[WAI-ARIA]] [landmark](https://www.w3.org/TR/wai-aria/#dfn-landmark) ([complementary](https://www.w3.org/TR/wai-aria/#complementary)) only when it has an accessible name. When triggered by non-labelled `aside` elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
+At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled <code>&lt;aside&gt;</code> elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside) [[html-aam-1.0]], which considers the aside element a [[WAI-ARIA]] [landmark](https://www.w3.org/TR/wai-aria/#dfn-landmark) ([complementary](https://www.w3.org/TR/wai-aria/#complementary)) only when it has an accessible name. When triggered by non-labelled `aside` elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
 
 </div>
 
