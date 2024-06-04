@@ -1166,7 +1166,7 @@ If headings in text boxes can be seen as part of the hierarchical heading struct
 
 Structurally insignificant headings should be marked up with `<h[x]>` with the attribute `class="no-toc"`, or, for instance if they are often repeated, marked up as `<p class="faux-hd">`. Both of these options must only be used if specific instructions are given by the Ordering Agency.
 
-<div class="note">
+<div class="note" title="Validation warning for unlabelled aside elements">
 
 At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside) [[html-aam-1.0]], which considers the aside element a [[WAI-ARIA]] [landmark](https://www.w3.org/TR/wai-aria/#dfn-landmark) ([complementary](https://www.w3.org/TR/wai-aria/#complementary)) only when it has an accessible name. When triggered by non-labelled `aside` elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
 
