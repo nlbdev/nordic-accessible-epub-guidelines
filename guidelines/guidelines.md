@@ -1,6 +1,6 @@
 # Introduction
 
-This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NLB](https://www.nlb.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](https://statped.no/).
+This guidelines document is a joint effort between the (mostly) Nordic agencies dedicated to providing accessible literature in different formats – e.g. talking books, braille, and accessible e-books – to children and adults with various reading impairments or special needs. The participating organisations are [Celia](https://www.celia.fi/), [Dedicon](https://www.dedicon.nl/), [HBS](https://hbs.is/), [MTM](https://mtm.se), [NB](https://tibi.no/), [Nota](https://nota.dk/), [SBS](https://www.sbs.ch/), [SPSM](https://www.spsm.se/), and [Statped](https://statped.no/).
 
 Making book content accessible starts in well-structured and granular semantic markup using available markup and accessibility standards. For the Nordic agencies, a starting point in their production of accessible literature is a base production file in EPUB 3, from which further transformations are made, and/or additional layers of accessibility features are added. This guidelines document collects instructions for the application of EPUB 3 ([[[epub-33]]]) and [[[epub-a11y-11]]], bridging the gap between general standards and the local context(s) of the Nordic agencies.
 
@@ -1167,7 +1167,9 @@ If headings in text boxes can be seen as part of the hierarchical heading struct
 Structurally insignificant headings should be marked up with `<h[x]>` with the attribute `class="no-toc"`, or, for instance if they are often repeated, marked up as `<p class="faux-hd">`. Both of these options must only be used if specific instructions are given by the Ordering Agency.
 
 <div class="note">
+
 At the time of publication, the EPUB accessibility validation tool [Ace by DAISY](https://daisy.github.io/ace/) raises moderate best practice violations for multiple unlabelled `<aside>` elements in the same content file. This is expected to change, as available tools and best practices are updated to reflect [the mapping of the HTML aside element to accessibility APIs](https://www.w3.org/TR/html-aam-1.0/#el-aside) [[html-aam-1.0]], which considers the aside element a [[WAI-ARIA]] [landmark](https://www.w3.org/TR/wai-aria/#dfn-landmark) ([complementary](https://www.w3.org/TR/wai-aria/#complementary)) only when it has an accessible name. When triggered by non-labelled `aside` elements, Suppliers can safely ignore the violation presented by Ace by DAISY.
+
 </div>
 
 #### Nested text boxes
