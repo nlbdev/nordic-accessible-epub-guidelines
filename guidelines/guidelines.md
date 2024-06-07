@@ -667,7 +667,7 @@ For the author of the publication, use `<p class="docauthor">`. For titles where
 
 In some titles, more detailed classes for titlepage can be required: 
 
-- `<p class="seriestitle>`
+- `<p class="seriestitle">`
 - `<p class="contributor">`
 - `<p class="publisher">`
 - `<figure class="logo">`
