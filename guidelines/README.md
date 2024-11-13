@@ -1,7 +1,7 @@
 Update of the Nordic EPUB 3 guidelines, work items
 ================================================
 
-Editors: Martin, Anders, Oscar, Jonas
+Editors: Martin, Anders, Oscar, Jonas, Linda
 
 Open guidelines issues: https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues?q=is%3Aopen+label%3Aguidelines
 
