@@ -505,6 +505,10 @@ Images are required to be captured exactly as they are in the scans or publisher
 
 When whole sections or parts of text is placed on top of a background image, the text may need to be edited out of the background, if possible. However, no advanced restoration of lost image details are required. Note that if a publisher file is provided, images and text may have been placed in different layers and the image can be extracted without any text.
 
+### SVG Images
+
+If a digital source material contains SVG images, they may be included as SVG if it is specifically requested by the Ordering Agency. The Ordering Agency must then provide instructions for how to embed the images in the HTML documents and any other details.
+
 ## CSS
 
 Suppliers are required to include the standard CSS [[css-2023]] file issued by the Ordering Agency. The CSS file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
