@@ -121,9 +121,11 @@ If the source material does not have an ISBN, ISSN or any other systematic sourc
 
 The supplier is also expected to add accessibility metadata. Some Ordering Agencies may, however, have their own workflows for creating this metadata. If it is not to be included, this will be indicated in agency-specific guidelines. The agency may also give instructions about accessibility metadata in title-specific editing instructions.
 
+As a rule, the supplier's metadata should reflect the state of the publication at delivery. Since meaningful alt texts and long descriptions, when needed, are added by the Ordering Agency, metadata indicating their presence should only be included if explicitly instructed. The `schema:accessMode` value `visual` and the `schema:accessModeSufficient` value `textual` should likewise only be added if the Ordering Agency has specified them, as they depend on determinations about the nature of any image content and whether it has been adequately described.
+
 A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) of [[[epub-a11y-11]]] and in [[[schemaprop]]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](https://kb.daisy.org/publishing/docs/metadata/).
 
-The metadata will vary depending on the content and properties of the publication. The examples below show what it may look like for a simple and a more complex book.
+The metadata will vary depending on the content and properties of the publication. The examples below show what the final metadata may look like for a simple and a more complex book.
 
 <aside class="example" title="Metadata for a simple book without images">
 
