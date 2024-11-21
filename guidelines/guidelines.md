@@ -1225,7 +1225,7 @@ Quotes, citations, excerpts from other sources and similar content are required 
 
 ### Hyperlinks and URLs
 
-Any URLs in printed source material are required to be represented as plain text in the EPUB file and not be made into an active hyperlink. In digital sources, already active hyperlinks are required to be preserved, but an URL that is just plain text is required to remain as such.
+Any URLs in printed source material are required to be represented as plain text in the EPUB file and not be made into an active hyperlink. In digital sources, already active hyperlinks are required to be preserved, but an URL that is just plain text is required to remain as such. The Ordering Agency may, however, give specific instructions to handle URLs differently, but these rules are the default.
 
 ### Numbered paragraphs
 
