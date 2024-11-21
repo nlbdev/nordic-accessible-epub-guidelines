@@ -809,7 +809,7 @@ Consider the following example:
 
 </aside>
 
-Here, there is more content belonging to the outer [^section^] element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the [^global/class^] attribute values  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text " (continued)" added. Note that this addition is language dependent, and language-specific terms can be found in [section 5.2.4](#continuation-heading-identifiers). The example above would then be:
+Here, there is more content belonging to the outer [^section^] element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the [^global/class^] attribute values  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text " (continued)" added. Note that this addition is language dependent, and language-specific terms can be found in [section 5.2.4](#continuation-heading-identifiers). Also, the section corresponding to the initial heading must be closed and a new section corresponding to the continuation heading must be opened. This section should be on the same level as the one containing the initial heading and must also have the [^global/class^] attribute value `cont-hd`. The example above would then be:
 
 <aside class="example" title="Continued parent section, with continuation heading">
 
@@ -822,6 +822,8 @@ Here, there is more content belonging to the outer [^section^] element after the
         <h[x+1]>Sub-section heading</h[x+1]>
         …
     </section>
+</section>
+<section class="cont-hd">
     <h[x] class="no-toc cont-hd">Section heading (continued)</h[x]>
     <p>Content belonging to the section on level x.</p>
     …
