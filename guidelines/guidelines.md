@@ -1361,7 +1361,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Back cover            | Baksida            | Bakside            | Bakside             | Takakansi      | Achterkant          | Bagside               | Bakhlið          | Buchrückseite        |
 | Jacket left flap      | Vänsterflik        | Venstre innbrett   | Venstre innbrett    | Etulieve       | Linker flaptekst    | Venstre inderflap     | Vinstra innábrot | Vorderer Klappentext |
 | Jacket right flap     | Högerflik          | Høyre innbrett     | Høgre innbrett      | Takalieve      | Rechter flaptekst   | Højre inderflap       | Hægra innábrot   | Hinterer Klappentext |
-| Title page            | Titelsida          | [to be added]      | [to be added]       | Nimiö          | [to be added]       | Titelside             | [to be added]    | Titelseite           |
+| Title page            | Titelsida          | Tittelside	  | Tittelside		| Nimiö          | [to be added]       | Titelside             | [to be added]    | Titelseite           |
 | Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot | Uitgeversinformatie | Kolofon               | Útgefandi        | Verlagsangaben       |
 | Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        | Opdracht            | Dedikation            | Tileinkun        | Widmung              |
 | Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
@@ -1384,21 +1384,21 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### Continuation Heading Identifiers
 
-| English (default) | Swedish        | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
-|-------------------|----------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| (continued)       | (fortsättning) | [to be added] | (jatkuu)      | [to be added] | [to be added] | [to be added] | [to be added] |
+| English (default) | Swedish        | Norwegian      | Finnish       | Dutch         | Danish        | Icelandic     | German        |
+|-------------------|----------------|----------------|---------------|---------------|---------------|---------------|---------------|
+| (continued)       | (fortsättning) | (fortsettelse) | (jatkuu)      | [to be added] | [to be added] | [to be added] | [to be added] |
 
 ### End Note Heading
 
-| English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
-|-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Notes             | Noter    | [to be added] | Viitteet      | [to be added] | [to be added] | [to be added] | [to be added] |
+| English (default) | Swedish  | Norwegian      | Finnish       | Dutch         | Danish        | Icelandic     | German        |
+|-------------------|----------|----------------|---------------|---------------|---------------|---------------|---------------|
+| Notes             | Noter    | Noter		| Viitteet      | [to be added] | [to be added] | [to be added] | [to be added] |
 
 ### Footnote and Endnote Backlink
 
 | English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
-| Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferans #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
+| Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferanse #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
 ## Additional valid markup
 In addition to the features documented above, the Nordic Guidelines recognise some additional markup constructions that are allowed in valid 2024-1 files.
