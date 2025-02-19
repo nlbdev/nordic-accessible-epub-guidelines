@@ -1347,9 +1347,9 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 | English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish       | Dutch            | Danish           | Icelandic   | German              |
 |-------------------|--------------|--------------------|---------------------|---------------|------------------|------------------|-------------|---------------------|
-| Pages             | Sidindelning | Liste over sider   | Liste over sider    | Sivut         | Paginering       | Liste over sider | Blaðsíður   | Seiten              |
+| Pages             | Sidindelning | Sideinndeling	| Sideinndeling	      | Sivut         | Paginering       | Liste over sider | Blaðsíður   | Seiten              |
 | Contents          | Innehåll     | Innhold            | Innhald             | Sisällys      | Inhoud           | Indhold          | Efni        | Inhalt              |
-| Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Kiintopisteet | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
+| Landmarks         | Navigation   | Navigering         | Navigering          | Kiintopisteet | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
 
 
 ### aria-label and TOC Values
@@ -1362,11 +1362,11 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Jacket left flap      | Vänsterflik        | Venstre innbrett   | Venstre innbrett    | Etulieve       | Linker flaptekst    | Venstre inderflap     | Vinstra innábrot | Vorderer Klappentext |
 | Jacket right flap     | Högerflik          | Høyre innbrett     | Høgre innbrett      | Takalieve      | Rechter flaptekst   | Højre inderflap       | Hægra innábrot   | Hinterer Klappentext |
 | Title page            | Titelsida          | Tittelside	  | Tittelside		| Nimiö          | [to be added]       | Titelside             | [to be added]    | Titelseite           |
-| Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot | Uitgeversinformatie | Kolofon               | Útgefandi        | Verlagsangaben       |
+| Publisher information | Förlagsinformation | Kolofon		  | Kolofon  | Julkaisutiedot | Uitgeversinformatie | Kolofon               | Útgefandi        | Verlagsangaben       |
 | Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        | Opdracht            | Dedikation            | Tileinkun        | Widmung              |
-| Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
+| Epigraph              | Epigraf            | Innskrift          | Innskrift             | Epigrafi       | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
 | Contents              | Innehåll           | Innhold            | Innhald             | Sisällys       | Inhoud              | Indhold               | Efni             | Inhalt               |
-| Start of Content      | Innehållets början | Start av innhold   | Start av innhald    | Sisällön alku  | Begin inhoud        | Indholdets begyndelse | Byrjun           | Beginn des Inhalts   |
+| Start of Content      | Innehållets början | Start på innhold   | Start på innhald    | Sisällön alku  | Begin inhoud        | Indholdets begyndelse | Byrjun           | Beginn des Inhalts   |
 
 
 ### Image Alternative Text Values
@@ -1396,9 +1396,9 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### Footnote and Endnote Backlink
 
-| English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
-|-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
-| Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferanse #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
+| English (default)       | Swedish                         | Norwegian			        | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
+|-------------------------|---------------------------------|----------------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
+| Go to note reference #. | Gå tillbaka till notreferens #. | Gå tilbake til notereferansen #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
 ## Additional valid markup
 In addition to the features documented above, the Nordic Guidelines recognise some additional markup constructions that are allowed in valid 2024-1 files.
