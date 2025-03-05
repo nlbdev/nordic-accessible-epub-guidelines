@@ -268,7 +268,7 @@ The `itemref` element has an optional attribute called [`linear`](https://www.w3
 
 As a general rule `linear="no"` should only be applied to the cover file of a title. This is to ensure a reader does not miss out on any of the content, no matter which reading system they are using. Agency-specific guidelines might have other requirements than this.
 
-If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) is included in the EPUB package, this is required to be referenced by adding the `toc` attribute to the `spine` element and assign as value the `id` attribute of the `item` referring to the ncx file, like this:
+If a fall-back [NCX navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) is included in the EPUB package, this is required to be referenced by adding the `toc` attribute to the `spine` element and assign as value the `id` attribute of the `item` referring to the ncx file, like this:
 
 <aside class="example" title="Spine referencing in case of an ncx file">
 
@@ -282,7 +282,7 @@ If a fall-back [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-op
 
 ### XHTML
 
-The [=xhtml content document=] files specified by [[[epub-33]]] are based on [[[HTML5]]]. Suppliers are required to use the extension `.xhtml`.
+The [XHTML content documents](https://www.w3.org/TR/epub-33/#dfn-xhtml-content-document) specified by [[[epub-33]]] are based on [[[HTML5]]]. Suppliers must use the file extension `.xhtml`.
 
 #### XML Declaration and Encoding
 
