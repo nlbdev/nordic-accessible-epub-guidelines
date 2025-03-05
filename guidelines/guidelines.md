@@ -37,13 +37,11 @@ Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, a
 
 Suppliers are required to refer to the specifications provided in [[[epub-33]]].
 
-## Container
+## EPUB Naming and Identification
 
-The EPUB [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-container.xml) must be given the production number provided with the order and correspond with the identifier stored in the [^dc:identifier^] located in the [^package^] metadata.
+The EPUB file must be named using the production number provided with the order. This production number must also be stored in the [^dc:identifier^] element in the [^package^] metadata.
 
-The container archive is required to have the `.epub` extension. The file extension must be lowercase.
-
-Note that the [`mimetype` file](https://www.w3.org/TR/epub-33/#sec-zip-container-mime) must be archived as the first file in the container.
+The file must use the `.epub` extension in lowercase.
 
 ### META-INF
 
