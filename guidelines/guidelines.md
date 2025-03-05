@@ -43,11 +43,11 @@ The EPUB file must be named using the production number provided with the order.
 
 The file must use the `.epub` extension in lowercase.
 
-### META-INF
+### META-INF Directory
 
-The [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-container.xml) must identify no more than one media alternative, unless indicated otherwise by the Ordering Agency.
+The [container file](https://www.w3.org/TR/epub-33/#sec-container-metainf-container.xml) (container.xml) in the `META-INF` directory must reference no more than one package document, unless otherwise indicated by the Ordering Agency.
 
-The file shall look like this, unless indicated otherwise:
+The file must have the following content, unless otherwise indicated:
 
 <aside class="example" title="The container file">
 
@@ -62,7 +62,7 @@ The file shall look like this, unless indicated otherwise:
 
 </aside>
 
-No other files, optional or otherwise, are allowed in the [META-INF directory](https://www.w3.org/TR/epub-33/#sec-container-metainf) unless specifically indicated by the Ordering Agency.
+No other files, optional or otherwise, may be included in the [META-INF directory](https://www.w3.org/TR/epub-33/#sec-container-metainf) unless specifically indicated by the Ordering Agency.
 
 ## Publication Resources
 
