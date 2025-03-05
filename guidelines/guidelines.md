@@ -8,11 +8,11 @@ The target audience of the document is mainly the Nordic agencies’ contracted 
 
 ## For readers looking for general e-book accessibility advice
 
-Readers should note that these guidelines build on available standards and best practices for accessible e-book production documented elsewhere. This document does not provide general e-book accessibility advice, please have a look at the [DAISY Consortium's Accessible Publishing Knowledge Base](https://kb.daisy.org/publishing/docs/) for a comprehensive resource on current best practices for e-book accessibility in general. Many of the techniques used in this document are based on DAISY Accessible Publishing Knowledge Base examples and guidance. The Nordic agencies are indebted to the [DAISY Consortium](https://daisy.org/) for providing this valuable resource.
+Readers should note that these guidelines build on available standards and best practices for accessible e-book production documented elsewhere. This document does not provide general e-book accessibility advice. Please have a look at the [DAISY Accessible Publishing Knowledge Base](https://kb.daisy.org/publishing/docs/) for a comprehensive resource on current best practices for e-book accessibility in general. Many of the techniques used in this document are based on examples and guidance from the DAISY Accessible Publishing Knowledge Base. The Nordic agencies are indebted to the [DAISY Consortium](https://daisy.org/) for providing this valuable resource.
 
 <div class="note" title="About WCAG compliance">
 
-Please note that some of the instructions given here do not provide sufficient accessible markup to satisfy the accessibility requirements of [[[WCAG22]]], even on the [base conformance level (A)](https://www.w3.org/TR/WCAG22/#cc1). These sections presume post-markup editing to make productions fully WCAG-compliant. A note of warning is attached to these sections.
+Please note that some of the instructions given here are not sufficient to meet the requirements of the [[[WCAG22]]], even at the [base conformance level (A)](https://www.w3.org/TR/WCAG22/#cc1). Instructions that may require post-production editing to achieve full WCAG compliance are marked with a warning note.
 
 </div>
 
@@ -22,20 +22,20 @@ As described above, the Nordic Guidelines work as an application of higher-level
 
 The application of the Nordic Guidelines can also be further specified on lower levels, e.g. instructions on a per-Ordering Agency and/or per-title basis.
 
-The different levels of specification can be expressed as the following hierarchy:
+The levels of specification can be expressed as follows:
 
 1. High-level specifications, e.g. [[[epub-33]]], [[[epub-a11y-11]]], [[[HTML5]]] etc.
 2. The Nordic Guidelines (this document)
 3. General Ordering Agency-specific guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
 
-Note that the forms of levels 3 and 4 will vary between the Ordering Agencies, and their standardisation is outside the scope of this document.
+The format and implementation of levels 3 and 4 vary between Ordering Agencies, and their standardisation is beyond the scope of this document.
 
 # Format Requirements
 
 ## Required EPUB Standard
 
-Suppliers are required to refer to the specifications provided in [[[epub-33]]].
+Suppliers must refer to the specifications defined in [[[epub-33]]].
 
 ## EPUB Naming and Identification
 
@@ -70,7 +70,7 @@ All [=publication resources=] are required to be located in a directory called `
 
 ## Package Document
 
-The name of the [=package document=] file is required to be `package.opf`. Suppliers are required to use the file extension `.opf` for the package document.
+The name of the [=package document=] file is required to be `package.opf`.
 
 The following XML declaration must be placed at the first line of the document:
 
@@ -95,20 +95,20 @@ Required child elements to the package element are:
 
 ### Metadata
 
-The following metadata are required to be placed in the [^metadata^] element:
+The following metadata must be placed in the [^metadata^] element:
 
 ```xml
-<dc:title id="title">_[the title of the publication]_</dc:title>
-<dc:language>_[language code for the main language]_</dc:language>
-<dc:identifier id="pub-identifier">_[production UID provided by the ordering agency]_</dc:identifier>
-<dc:source>_[ISBN or ISSN of the publication]_</dc:source>
-<dc:creator>_[author of the publication (one element for each author)]_</dc:creator>
+<dc:title id="title">[the title of the publication]</dc:title>
+<dc:language>[language code for the main language]</dc:language>
+<dc:identifier id="pub-identifier">[production number provided by the ordering agency]</dc:identifier>
+<dc:source>[ISBN or ISSN of the publication]</dc:source>
+<dc:creator>[author of the publication (one element for each author)]</dc:creator>
 <dc:format>application/epub+zip</dc:format>
-<dc:publisher>_[the ordering agency]_</dc:publisher>
-<dc:date>_[date of completion]_</dc:date>
-<meta property="dcterms:modified"> _[date of completion]_ </meta>
-<meta property="nordic:supplier"> _[company name of supplier]_ </meta>
-<meta property="nordic:guidelines">2024-1</meta>
+<dc:publisher>[the ordering agency]</dc:publisher>
+<dc:date>[date of completion]</dc:date>
+<meta property="dcterms:modified">[date of completion]</meta>
+<meta property="nordic:supplier">[company name of supplier]</meta>
+<meta property="nordic:guidelines">2025-1</meta>
 ```
 
 Note that the default value to use in [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) [[dcterms]] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
@@ -121,7 +121,7 @@ The supplier is also expected to add accessibility metadata. Some Ordering Agenc
 
 As a rule, the supplier's metadata should reflect the state of the publication at delivery. Since meaningful alt texts and long descriptions, when needed, are added by the Ordering Agency, metadata indicating their presence should only be included if explicitly instructed. The `schema:accessMode` value `visual` and the `schema:accessModeSufficient` value `textual` should likewise only be added if the Ordering Agency has specified them, as they depend on determinations about the nature of any image content and whether it has been adequately described.
 
-A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) of [[[epub-a11y-11]]] and in [[[schemaprop]]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](https://kb.daisy.org/publishing/docs/metadata/).
+A full description of accessibility metadata in EPUB can be found in sections [2. Discoverability](https://www.w3.org/TR/epub-a11y-11/#sec-discovery) and [3.5 Conformance reporting](https://www.w3.org/TR/epub-a11y-11/#sec-conf-reporting) of [[[epub-a11y-11]]] and in [[[schemaprop]]]. See also the Daisy Accessible Publishing Knowledge Base, [Metadata](https://kb.daisy.org/publishing/docs/metadata/).
 
 The metadata will vary depending on the content and properties of the publication. The examples below show what the final metadata may look like for a simple and a more complex book.
 
@@ -135,7 +135,7 @@ The metadata will vary depending on the content and properties of the publicatio
 <meta property="schema:accessibilityFeature">tableOfContents</meta>
 <meta property="schema:accessibilityFeature">readingOrder</meta>
 <meta property="schema:accessibilityHazard">none</meta>
-<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2024-1"/><!--Check url-->
+<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2025-1"/><!--Check url-->
 <meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
 ```
 
@@ -229,27 +229,18 @@ Additional metadata for inclusion can be supplied by the Ordering Agency on a pe
 
 ### Manifest
 
-In [^manifest^] all publication resources are declared. Each resource is declared using the [^item^] element with required attributes [`id`](https://www.w3.org/TR/epub-33/#attrdef-id), [`href`](https://www.w3.org/TR/epub-33/#attrdef-href) and [`media-type`](https://www.w3.org/TR/epub-33/#attrdef-media-type). Some items must also have a [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute.
+In the [^manifest^] all publication resources are declared. Each resource is declared using the [^item^] element with required attributes [`id`](https://www.w3.org/TR/epub-33/#attrdef-id), [`href`](https://www.w3.org/TR/epub-33/#attrdef-href) and [`media-type`](https://www.w3.org/TR/epub-33/#attrdef-media-type). Some items also require a [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute.
 
-The `id` attribute is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but the Ordering Agency will require certain naming conventions to be applied.
+The `id` attribute is a unique identifier used to address a particular publication resource. The only formal requirement here is its uniqueness, but the Ordering Agency may require certain naming conventions.
 
 The `href` attribute is simply a path to the publication resource. The path will be relative to where the package document is located.
 
-The `media-type` attribute specifies what type of resource it is and what format. Here are some of the more common examples:
-
-- `application/xhtml+xml`
-- `text/css`
-- `image/jpeg`
-- `application/x-dtbncx+xml`
-- `application/javascript`
-
-Refer to the [core media types table of EPUB 3.3](https://www.w3.org/TR/epub-33/#sec-core-media-types) for additional information about various media types.
+The `media-type` attribute specifies what type of resource it is and what format. Refer to the [core media types table of EPUB 3.3](https://www.w3.org/TR/epub-33/#sec-core-media-types) for information about various media types.
 
 Some resources have additional properties that need to be identified in the corresponding item in order for a reading system to be able to implement these properties. This is done by using the `properties` attribute. Common examples are:
 
 - `nav` for the `xhtml` navigation document
 - `cover-image` for the cover image
-- `scripted` for any content document where javascripts are being used
 - `mathml` for any content document containing MathML
 
 Refer to the [manifest properties vocabulary of EPUB 3.3](https://www.w3.org/TR/epub-33/#app-item-properties-vocab) for additional information about the `properties` attribute.
@@ -329,7 +320,7 @@ The following namespace values are required to be applied to the namespace attri
 
 Suppliers are required to identify the primary language of each content document using the `xml:lang` and `lang` attributes. On how to tag language change within a document, see section [Language Tagging](#language-tagging).
 
-If not requested otherwise by the Ordering Agency, language should be coded using values from the [IANA registry of valid language codes](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+Unless the Ordering Agency requests otherwise, language should be coded using values from the [IANA registry of valid language codes](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
 Please note that the most granular language tag should be used, e.g. the macrolanguage value `no` for Norwegian could be used, but only in instances where the sublanguages Norwegian Nynorsk (`nn`) or Norwegian Bokmål (`nb`) are not known.
 
@@ -337,30 +328,30 @@ The accuracy of language coding is vital, and Suppliers are instructed to contac
 
 ### Title
 
-The [^title^] element of every [=xhtml content document=] must match the main heading of the content document in question. For front- and backmatter content, if the document does not have a heading, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) [[wai-aria]] attribute value of the main [^section^] element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
+The [^title^] element of every [=XHTML content document|xhtml content document=] must match the main heading of the content document in question. For front- and backmatter content, if the document does not have a heading, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) [[wai-aria]] attribute value of the main [^section^] element is to be used instead. If bodymatter content does not have headings, use the three first words of the content, followed by a space and en ellipsis character (not three points).
 
 ### Metadata
 
 The content documents are required to contain two <a data-cite="HTML5#meta"><code>meta</code></a> elements.
 
 ```html
-<meta name="dc:identifier" content="_[production UID]_"/>
+<meta name="dc:identifier" content="[production number]"/>
 <meta name="viewport" content="width=device-width"/>
 ```
 
-The production UID must match the [^dc:identifier^] of the [=package document=].
+The production number must match the [^dc:identifier^] of the [=package document=].
 
 ## Navigation Documents
 
 ### EPUB 3 Navigation Document
 
-The principal [=EPUB navigation document=] of the EPUB package is the `xhtml` file with the [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute attribute set to `nav` in the [^manifest^] section of the package document.  For matters of convenience mostly, this file is required to be named `nav.xhtml`.
+The principal [=EPUB navigation document=] is the XHTML file with the [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute attribute set to `nav` in the [^manifest^] section of the package document. While the EPUB specification does not mandate a specific filename, these guidelines require that the navigation document be named `nav.xhtml`.
 
 The section [nav.xhtml Headings](#nav-xhtml-headings) contains language-specific headings for the [^nav^] sections of the navigation document that are listed below.
 
-#### The Table Of Contents
+#### The Table of Contents
 
-The first required [^nav^] element in the file is for the main table of contents. The element is required to have a [^h1^] as the first child element. The element must have the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute set to the `id` of that `h1` element. The [^/role^] and [^/epub:type^] attributes must be set as follows:
+The first required [^nav^] element in the file is for the main table of contents. The element is required to have an [^h1^] as the first child element. The `<nav>` element must also include an [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) [[wai-aria]] attribute that references `id` of that `h1`. The [^/role^] and [^/epub:type^] attributes must be set as follows:
 
 ```html
 <nav role="doc-toc" aria-labelledby="n1" epub:type="toc">
@@ -377,7 +368,7 @@ Some headings consist of a main heading and a subtitle grouped in an [^hgroup^] 
 <li><a href="…">Main heading. Subtitle</a></li>
 ```
 
-The links must always reference the corresponding sectioning element for the heading in the content file, not the `h[x]` element directly. This is usually a [^section^] element, but can also be an [^aside^] or any other sectioning element. Thus, in the example below, the link should point to the id `level3_2` in that content file:
+The links must always reference the corresponding sectioning element for the heading in the content file, not the heading element directly. This is usually a [^section^] element, but can also be an [^aside^] or any other sectioning element. Thus, in the example below, the link should point to the id `level3_2` in that content file:
 
 <aside class="example" title="Target section for navigation document">
 
@@ -390,9 +381,9 @@ The links must always reference the corresponding sectioning element for the hea
 
 A section without any heading must be referenced using its [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) value.
 
-Note that this is not a representation of the table of contents in the source material. Only headings, or references using the `aria-label` value of the corresponding `section` element, should be included.
+Note that this is not a representation of the table of contents in the source material.
 
-If, for some reason, unlinked content must be added to the  table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the [^a^] element. Unlinked entries must only be added if specific instructions are given by The Ordering Agency.
+Only headings, or references using the `aria-label` value of the corresponding `section` element, should be included. If, for some reason, unlinked content must be added to the table of contents, this must be marked up with `<span class="toc-unlinked">`, instead of the [^a^] element. Unlinked entries must only be added if specific instructions are given by the Ordering Agency.
 
 #### Page List
 
@@ -437,7 +428,7 @@ Introductory sections such as a prologue, preface, foreword or introduction can 
 
 ### NCX Navigation Document
 
-The EPUB package may include an [`ncx` navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) as a fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No `ncx` file should be included unless specifically requested. If requested, the file is required to be named `nav.ncx`.
+The EPUB package may include an [NCX navigation document](https://www.w3.org/TR/epub-33/#sec-opf2-ncx) as a fallback for older reading systems that have not implemented functionality for the EPUB 3 [=EPUB navigation document=]. It is not required by the EPUB specification, but it may be requested by the Ordering Agency. No NCX file should be included unless specifically requested. If requested, the file must be named `nav.ncx`.
 
 Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4) of [[[opf201]]] for information about how the `ncx` file should be formed. Required elements are:
 
@@ -449,16 +440,16 @@ Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Sec
 The `<head>` element must contain the following `<meta>` element:
 
 ```xml
-<meta name="dtb:uid" content=" _[production UID provided by the ordering agency]_ "/>
+<meta name="dtb:uid" content="[production number provided by the Ordering Agency]"/>
 ```
 
-All headings must be included in the `<navMap>` element and the heading levels must be implied through nesting.
+All headings in the main body of text must be included in the `<navMap>` element and the heading levels must be implied through nesting.
 
 ## Images
 
-Image content is required to be captured in JPEG or PNG. The format extension is required to be `.jpg` or `.png`. Photos, drawings and illustrations must be captured in JPEG. For line graphics, charts and diagrams the preferred format is PNG.
+Image content must be captured in JPEG or PNG. The file extension is required to be `.jpg` or `.png`. Photos, drawings and illustrations must be captured in JPEG. For line graphics, charts and diagrams the preferred format is PNG.
 
-Suppliers are required to maintain the highest possible image quality. The quality requirements are the following:
+Suppliers must maintain the highest possible image quality. The quality requirements are the following:
 
 1. The aspect ratio of the original image must always be maintained.
 2. Colours must be reproduced and rendered accurately.
@@ -468,15 +459,15 @@ Suppliers are required to maintain the highest possible image quality. The quali
 
 ### Image File Naming and Directory Structure
 
-Image files are required to be stored in a folder named _images_ placed at the same level relative to the package document. The images folder must not contain subfolders.
+Image files must be stored in a folder named _images_, located at the same level as the package document. The image folder must not contain subfolders.
 
-Image files should be named according to the following file naming convention:
+Image files must follow this naming convention:
 
 ```
 [UID]-[XXX].[png|jpg]
 ```
 
-The _UID_ must be identical to the value of the [^dc:identifier^] metadata element in the package document. _XXX_ is a three-digit numeric string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
+The _UID_ must match the value of the [^dc:identifier^] metadata element in the package document. _XXX_ is a three-digit string corresponding to the order of the image in the content, with leading zeros as needed. (If the number of images in a single book exceeds 999, a four-digit number should be used.)
 
 <aside class="example" title="Image filename">
 
@@ -488,52 +479,52 @@ X41001A-013.png
 
 An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
-### Image id:s for loi
-In cases where a title contains a list of illustrations (`loi`), or where a list of ilustrations should be included in `nav.xhtml`, the figure element should be provided with an id. These id:s should be named `"fig-XXX"` in sequential order, where _XXX_ is the number of the figure in the file.
+### `id` Attributes for Figures and Images
+If a title includes a list of illustrations (`loi`) or if a list of ilustrations should be included in `nav.xhtml`, each figure element must have an `id`. The `id` values should follow the naming convention `"fig-XXX"`, where _XXX_ is the sequential number of the figure in the file.
 
-Instances may occur where id:s are required for images. In those cases the id should be `"img-XXX"` and follow the same pattern as for figures.
+In some cases, `id` attributes may be required for images. In those cases, the `id` value should be `"img-XXX"` and follow the same pattern as for figures.
 
-### Resizing of Images
+### Image Size
 
-The maximum image size is set to 800 pixels on the longest side of the image, unless an increase in the size of an image is required to achieve the legibility of text rich images, see [item 4 above](#images), or other small details.
+The maximum image size is 800 pixels on its longest side, unless a larger size is needed to ensure the legibility of text in images or to preserve other small details (see [item 4 above](#images)).
 
-In those circumstances where this requirement conflicts with requirements for legibility, the Supplier is required to contact the Ordering Agency.
+In circumstances a larger size is needed to ensure legibility, the Supplier is required to contact the Ordering Agency.
 
 ### Image Editing
 
-Images are required to be captured exactly as they are in the scans or publisher files provided by the Ordering Agency. There is generally no need for editing images to enhance them above the quality of the originals (e.g. cloning to smooth edge of images spanning over spread, enhancing bad scans or old photos with bad quality already in print, etc.).
+Images must be captured exactly as they appear in the scans or publisher files provided by the Ordering Agency. Generally, no enhancement is needed beyond the quality of the originals (e.g., cloning to smooth the edges of images spanning a spread, improving poor scans, or enhancing low-quality printed photos).
 
 When whole sections or parts of text is placed on top of a background image, the text may need to be edited out of the background, if possible. However, no advanced restoration of lost image details are required. Note that if a publisher file is provided, images and text may have been placed in different layers and the image can be extracted without any text.
 
 ### SVG Images
 
-If a digital source material contains SVG images, they may be included as SVG if it is specifically requested by the Ordering Agency. The Ordering Agency must then provide instructions for how to embed the images in the HTML documents and any other details.
+If a digital source material contains SVG images, they may be included as SVG if it is specifically requested by the Ordering Agency. The Ordering Agency must then provide instructions for how to embed the images in the XHTML documents and any other details.
 
 ## CSS
 
-Suppliers are required to include the standard CSS [[css-2023]] file issued by the Ordering Agency. The CSS file is required to be stored in a folder named _css_ and placed at the same level relative to the package document.
+Suppliers are required to include the standard CSS file issued by the Ordering Agency. The CSS file is must be stored in a folder named _css_, located at the same level as the package document.
 
-The <a data-cite="HTML5#link"><code>link</code></a> element is required to be applied to the relevant content documents.
+Each relevant content document must include a <a data-cite="HTML5#link"><code>link</code></a> element to reference the CSS file.
 
 ## Fonts
 
 Fonts present in PDF source material must not be included in the EPUB package, unless specifically indicated by the Ordering Agency.
 
-Fonts, when present, must be stored in a folder named _fonts_ and placed at the same level relative to the package document.
+Fonts, when present, must be stored in a folder named _fonts_, located at the same level as the package document.
 
 ## JavaScript
 
-Javascript files requested by the Ordering Agency are required to be stored in a folder named _javascript_ and placed on the same level relative to the package document.
+Javascript files requested by the Ordering Agency must be stored in a folder named _javascript_, located at the same level as the package document.
 
-The [^script^] element is required to be applied to the relevant content documents.
+Each relevant content document must include a [^script^] element to reference the required JavaScript files.
 
-Suppliers must not include JavaScript files in the EPUB package unless specifically instructed to do so by the Ordering Agency.
+Suppliers must not include JavaScript files in the EPUB package unless specifically instructed by the Ordering Agency.
 
 ## Validation
 
 Validation of EPUB files should be done using [EPUBCheck](https://www.w3.org/publishing/epubcheck/) for structural validity and conformance to the EPUB standard, and the [Ace by DAISY](https://daisy.github.io/ace/) tool for accessibility evaluation. The latest distributions of these tools should be used.
 
-In addition, the Ordering Agencies have developed a specific validation tool based on these guidelines. This tool, currently part of the [Nordic EPUB3/DTBook Migrator](https://nlbdev.github.io/nordic-epub3-dtbook-migrator/), or any similar validation-tool provided by the agencies based on the same ruleset, should be the primary validation method.
+In addition, the Ordering Agencies have developed a specific validation tool based on these guidelines. This tool, currently part of the [Nordic EPUB3/DTBook Migrator](https://nlbdev.github.io/nordic-epub3-dtbook-migrator/), or any similar validation tool provided by the agencies based on the same ruleset, should be the primary validation method.
 
 # General Requirements for Content Documents
 
