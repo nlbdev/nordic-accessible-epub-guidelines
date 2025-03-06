@@ -530,7 +530,7 @@ In addition, the Ordering Agencies have developed a specific validation tool bas
 
 ## Structural Divisons and Semantics
 
-The [=EPUB content document=] structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual [=XHTML content documents=]. The individual content files will typically correspond to _Part_ or _Chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in front-matter and back-matter, will normally be stored in separate files as well.
+The [=EPUB content document=] structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual [=XHTML content documents=]. The individual content files will typically correspond to _part_ or _chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in frontmatter and backmatter, will normally be stored in separate files as well.
 
 The structural divisions of the publication are required to be semantically inflected by wrapping every structural part of the main text body in [^section^] elements, with proper nesting of subsections. Usually, a subsection ends whenever a new heading of the same level or higher occurs in the source material. However, there may be situations where a `section` element needs to be closed sooner. If so, this should be specified in the Editing Instructions given by the Ordering Agency. If the structure of the source material is unclear and the Editing Instructions do not provide answers, please contact the Ordering Agency. 
 
@@ -551,7 +551,7 @@ If no matching divisioning or sectioning value can be found, `epub:type` will be
 
 If an EPUB file contains both parts and chapters, and each part and all its chapters is contained in a single content file, the above is also required for the second level `section` elements, which will contain the chapters.
 
-Furthermore, the top-level `section` element for every content file is required to have a label. When the `section` has a heading it will serve as a label, but must be associated with the `section` element.  This is done by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute and referencing the [^global/id^] value of the associated heading:
+Furthermore, the top-level `section` element for every content file is required to have a label. When the `section` has a heading it will serve as a label, but must be associated with the `section` element.  This is achieved by using the [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute to reference the [^global/id^] of the associated heading:
 
 <aside class="example" title="Linking a section and its heading with aria-labelledby">
 
@@ -564,19 +564,19 @@ Furthermore, the top-level `section` element for every content file is required 
 
 </aside>
 
-Note that for the most part it will only by `section` with [^h1^] headings that must be done this way, but if a production is split into parts, chapters will have [^h2^] headings and these will then be the top-level headings of those content documents.
+Note that, in most cases, only sections with [^h1^] headings must be handled this way. However, if a publication is split into parts, chapters will use [^h2^] headings, which will then serve as the top-level headings of those content documents.
 
 <div class="note" title="On production using EPUB source material">
 
-If the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
+If the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it cannot be assumed that the structural semantics is already correct. Proper analysis of the structural division and semantics must always be performed by the Supplier in accordance with this document.
 
 </div>
 
 ### Subsections
-No sub-sections of any content document should have an [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) or [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute, unless specific instructions are given by the Ordering Agency.
+No subsections of any content document should have an [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) or [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute, unless specific instructions are given by the Ordering Agency.
 
 ### Untitled sections
-If a major section, e.g. a chapter, is untitled, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute is required to be used instead of a regular heading element, and have an appropriate label assigned to it. The value of the label is either a default value for specific standard sections, a standardised value derived from the start of the first paragraph in the section, or a custom value upon request from the Ordering Agency.
+If a major section, e.g. a chapter, is untitled, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute must be used instead of a heading element and have an appropriate text value. The label value is either a default for specific standard sections, a standardised value derived from the start of the first paragraph, or a custom value requested by the Ordering Agency.
 
 In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructions specifically requesting this treatment.
 
@@ -611,7 +611,7 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of the [[dc:identifier] metadata element of the [=package document=]. _XXX_ is a three-digit numeric string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of a `role` for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple `epub:type` values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
+The _UID_ must be identical to the value of the [[dc:identifier]] metadata element of the [=package document=]. _XXX_ is a three-digit string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of a `role` for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple `epub:type` values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
 
 <aside class="example" title="Correctly named content file">
 
@@ -623,23 +623,23 @@ X41001A-010-chapter.xhtml
 
 ## Special Content Requirements
 
-Some content files have certain contents that are required to be included and marked up correctly.
+This section outlines markup requirements for covers, title pages, and parts.
 
 ### Cover and back cover
 
-The cover should be captured in a separate file from the back cover and only contain the cover image. The [`linear`](https://www.w3.org/TR/epub-33/#attrdef-itemref-linear) attribute with value `"no"` must be applied to the [^itemref^] element in the package [^spine^] corresponding to the cover file. 
+If a front cover is present, it must be placed in a separate XHTML file that should contain only the cover image. In the package [^spine^], the corresponding [^itemref^] element must have the attribute `linear="no"` to exclude it from the main reading order.
 
-The front cover, when available, must be captured as a `.jpg` or `.png` image file and given the name `cover.jpg/png`. The attribute [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) with value `"cover-image"` attribute must be applied to the [^manifest^] [^item^] element corresponding to this image. The [^img^] element referencing the cover image must have a [^/role^] attribute set to `"doc-cover"`.
+The front cover image, when available, must be a `.jpg` or `.png` file named `cover.jpg` or `cover.png`. The corresponding [^item^] element in the [^manifest^] must include the attribute `properties="cover-image"`. Additionally, the [^img^] element referencing the cover image must have the attribute `role="doc-cover"`.
 
-The back cover should be captured as the first frontmatter file in the title with the right- and left flaps as subsections. The following [^global/class^] attribute values must be applied to the parent and child [^section^] elements where appropriate:
+The back cover should be included as the first frontmatter file in the publication, with right and left flaps as subsections. The following [^global/class^] attributes must be applied where appropriate:
+
 - `<section class="backcover">`
 - `<section class="leftflap">`
 - `<section class="rightflap">`
 
-The placement of the back cover file might vary between agency-specific guidelines.
+Placement of the back cover file may vary based on agency-specific guidelines.
 
-Ordering Agencies may require a "legal page" or other frontmatter content to be inserted into the title. The specifications and placing of this will be up to the Ordering Agency.
-
+Ordering Agencies may also require a legal page or other frontmatter content to be inserted. The specifications and placement of such content will be determined by the Ordering Agency.
 
 ### Title Page
 
@@ -660,7 +660,7 @@ For subtitles, use a [^p^] element with `epub:type="subtitle"` and `role="doc-su
 
 For the author of the publication, use `<p class="docauthor">`. For titles where there are more than one author, repeat this for each instance.
 
-In some titles, more detailed classes for titlepage can be required: 
+In some publications, more detailed classes for the titlepage may be required: 
 
 - `<p class="seriestitle>`
 - `<p class="contributor">`
@@ -674,17 +674,17 @@ In some titles, more detailed classes for titlepage can be required:
 
 ### Parts
 
-Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the [^section^] element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings must be marked up as [^h2^], even though they are the first heading of its content file. Semantic attributes [^/role^] and [^/epub:type^], must be given to the `<section>` elements of both part and chapters.
+Some publications are divided into parts, each containing a number of chapters. By default, the part heading and any associated contents must be placed in a separate content file and the [^section^] element associated with the part heading must be closed at the end of that file. Each chapter of the part must then have its own content file. Note that chapter headings within parts must be marked up as [^h2^], even though they are the first heading of the content file. Semantic [^/role^] and [^/epub:type^] attributes must be given to the `<section>` elements of both parts and chapters.
 
-Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the `<h1>` and the chapter headings `<h2>` and the `<section>` element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, `role` and `epub:type`, must still be given to the `<section>` elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.
+Ordering Agencies might give instructions to keep whole parts in single content files, if the size of the content is small enough to not inhibit the performance of reading systems. The part heading will be the `<h1>` and the chapter headings `<h2>`, and the `<section>` element associated with the part heading will wrap all the contained chapters. Of course, semantic attributes, `role` and `epub:type`, must still be given to the `<section>` elements of both part and chapters. Note that this alternative option is only to be used if cleared by the Ordering Agency.
 
 ## Markup Requirements
 
-These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is almost always the best solution. Using common elements like [^p^], [^blockquote^], [^aside^], [^ul^], [^ol^], [^dl^], [^table^], [^figure^], etc., and the common structural elements like [^section^] and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally, though. Some of the more common cases will be described below, and more obscure ones will be covered specifically in Editing Instructions.
+These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is the best solution. Using common elements like [^p^], [^blockquote^], [^aside^], [^ul^], [^ol^], [^dl^], [^table^], [^figure^], etc., and structural markup like [^section^] and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally. Some of the more common cases will be described below, and more obscure ones will be covered in Editing Instructions.
 
-For further information about the common HTML elements and their attributes, please refer to [[[html5]]].
+For further information about HTML elements and their attributes, please refer to [[[html5]]].
 
-Note that, [again](#h-note-1), if the source material for an EPUB production is an EPUB file, or any other HTML- or XML-based material, it can not be assumed that the markup of the contents is already correct. Proper analysis of the content and its semantics must always be performed by the Supplier in accordance with this document.
+Note that, again, [if the source material is an EPUB file](#h-note-1), or any other HTML- or XML-based material, it cannot be assumed that the markup is already correct. Proper analysis of the content must always be performed by the Supplier in accordance with this document.
 
 ### Pagination
 
@@ -695,31 +695,31 @@ All page breaks occurring in the source copy are required to be indicated with o
 
 In general, block page break markers are used when the page break occurs between two block level elements. Lists are an exception. If a page break occurs between list items, an inline marker is placed at the end of the last item on the page. If a page break occurs in a table, an inline marker is placed in the last cell of the last row on the page.
 
-Additionally required attributes:
+Other required attributes:
 
 - [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label)
 - [^global/class^]
 - [^global/id^]
 
-The value for the `aria-label` attribute must be identical to the page number in the source copy. For empty pages occurring for example between chapters, this attribute must have a value corresponding to the number implicit for that page.
+The `aria-label` value must match the page number in the source copy. For empty pages, such as those between chapters, the value must reflect the page’s implicit number.
 
-In those cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
+In cases where pagination of a text cannot be effectively represented using the following rules, the Supplier is required to contact the Ordering Agency.
 
-The `class` attribute must have either of the following values:
+The `class` attribute must have one of the following values:
 
 - `page-front`
 - `page-normal`
 - `page-special`
 
-The attribute value `page-normal` is required for the pagination of the main contents of the book, basically the bodymatter, but can also be used for the frontmatter and backmatter if the pagination is continuous.
+The class `page-normal` is required for the pagination of the main content of the book and should be used for for all content if pagination is continuous.
 
-The attribute value `page-front` is required when the page numbering series of the frontmatter is not logically continued in the publication bodymatter, i.e. roman numerals.
+The class `page-front` is required when the frontmatter has a separate page numbering series, such as Roman numerals, that does not continue into the bodymatter.
 
-The attribute value `page-special` is required for any parts of the book not numbered in a standard manner, for example appendices, suites of photography, etc.
+The class `page-special` is required for any other parts of the book with non-standard page numbering, such as appendices or photography suites.
 
-The attribute `id` is simply a unique identifier.
+The `id` is simply a unique identifier.
 
-By default, the page break elements are required to be empty, like in the following examples:
+By default, the page break elements should be empty.
 
 <aside class="example" title="Inline page break">
 
@@ -747,13 +747,11 @@ However, there may be agency specific instructions to place the page number as i
 
 </aside>
 
-This is only to be done if specific instructions are given by the Ordering Agency.
-
 There must be no unnumbered pages. If unnumbered pages in the source material are implicitly numbered, for instance the initial pages of a book, they must be numbered accordingly. That is, if the pagination starts with page 9 in the source material, the previous pages must be numbered 1-8. If there are other unnumbered pages in the source material they must be assigned numbers and given the `class` attribute `page-special`. This will be specified by the Ordering Agency via Editing Instructions.
 
 ### Headings
 
-The [^h1^]-[^h6^] elements are used to reflect the heading structure present in the source copy. Note that `<h[x]>` tag must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, [^section^], [^aside^] and [^nav^].
+The [^h1^]-[^h6^] elements are used to reflect the heading structure present in the source copy. Note that the heading element must be contained within its respective sectioning element. Sectioning elements that may require headings are, for instance, [^section^], [^aside^] and [^nav^].
 
 Some chapter or part headings consist of a main heading and a subtitle. For subtitles, use a [^p^] element with `epub:type="subtitle"` and `role="doc-subtitle"`. Group the main heading and subtitle in an [^hgroup^] element.
 
@@ -766,7 +764,7 @@ Some chapter or part headings consist of a main heading and a subtitle. For subt
 
 Note that the subtitle should be included in the section's navigation TOC entry. See the section [EPUB 3 Navigation Document](#epub-3-navigation-document) for detailed instructions.
 
-Sometimes the source material has a chapter or part number, or a phrase indicating the number, followed by a chapter or part heading as two distinct block elements. In this case, the number is included in the same `h[x]` element as the heading that follows it. The number is marked up with a [^span^] with `class="chnum"` or `class="partnum"`. A [^br^] element is inserted after the `<span>`.
+In some cases, the source material includes a chapter or part number — often preceded by a word like Chapter or Part — followed by the chapter or part heading as separate elements. In such cases, the number must be included within the same `h[x]` element as the heading. The number is marked up with a [^span^] with `class="chnum"` or `class="partnum"`. A [^br^] element is inserted after the `<span>`.
 
 ```html
 <h1><span class="chnum">Chapter 1</span><br/>Chapter heading</h1>
@@ -798,7 +796,7 @@ Consider the following example:
 
 </aside>
 
-Here, there is more content belonging to the outer [^section^] element after the closing of the sub-section. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the [^global/class^] attribute values  `no-toc` and `cont-hd`. The contents of the heading  must be the same as the initial heading with the text " (continued)" added. Note that this addition is language dependent, and language-specific terms can be found in [section 5.2.4](#continuation-heading-identifiers). Also, the section corresponding to the initial heading must be closed and a new section corresponding to the continuation heading must be opened. This section should be on the same level as the one containing the initial heading and must also have the [^global/class^] attribute value `cont-hd`. The example above would then be:
+Here, there is more content belonging to the outer [^section^] element after the closing of the subsection. In cases like this, there may be a need for a continuation heading, that tells the user that text belonging to the `<h[x]>` heading will continue. This heading will have the same level as the initial heading of the section, but must  also have the [^global/class^] attribute values  `no-toc` and `cont-hd`. The content of the heading  must be the same as the initial heading with the text " (continued)" added. Note that this addition is language dependent, and language-specific terms can be found in [section 5.1.4](#continuation-heading-identifiers). Also, the section corresponding to the initial heading must be closed and a new section corresponding to the continuation heading must be opened. This section should be on the same level as the one containing the initial heading and must also have the [^global/class^] attribute value `cont-hd`. The example above would then be:
 
 <aside class="example" title="Continued parent section, with continuation heading">
 
@@ -829,11 +827,11 @@ Sometimes an author name appears before or after the chapter heading. Use the ma
 
 ### Figures
 
-All proper figures, illustrations, photographs, icons and other symbols must be captured as images and stored in the EPUB file, unless other instructions are given (see the [Images](#images) section). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier is required to contact the Ordering Agency.
+All proper figures, illustrations, photographs, icons and other symbols must be captured as images and included in the EPUB file, unless other instructions are given (see the [Images](#images) section). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier must contact the Ordering Agency.
 
-Unless the image occurs inline in the source material, any image is required to be placed inside a [^figure^] element with a [^global/class^] attribute set to `image`. If the image has a caption, the caption is required to be marked up with the [^figcaption^] element and placed as either the first or the last child of the `<figure>` element.
+Unless the image occurs inline in the source material, any image is required to be placed inside a [^figure^] element with a [^global/class^] attribute set to `image`. If the image has a caption, the caption must be marked up with the [^figcaption^] element and placed as either the first or the last child of the `<figure>` element.
 
-Small symbols or other non-typographical content that might occur inline, are required to be represented with [^img^] elements alone, without the `<figure>` container. There may be cases where it is unclear whether to regard symbols or icons as inline or not, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier is required to handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
+Small symbols or other non-typographical content that may occur inline must be represented with [^img^] elements alone, without the `<figure>` container. In some cases, it may be unclear whether symbols or icons should be treated as inline elements, for instance small icons in connection with exercises. Specific instructions on how to handle these may be given in Editing Instructions. If doubt remains, the Supplier should handle the image as a block element and use `<figure>` or, alternatively, contact the Ordering Agency.
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
