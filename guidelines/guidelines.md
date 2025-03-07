@@ -480,9 +480,9 @@ X41001A-013.png
 An exception to this is the cover image, which should be named simply `cover.png` or `cover.jpg`.
 
 ### `id` Attributes for Figures and Images
-If a title includes a list of illustrations (`loi`) or if a list of ilustrations should be included in `nav.xhtml`, each figure element must have an `id`. The `id` values should follow the naming convention `"fig-XXX"`, where _XXX_ is the sequential number of the figure in the file.
+If a title includes a list of illustrations (`loi`) or if a list of ilustrations should be included in `nav.xhtml`, each figure element must have an `id`. The `id` values should follow the naming convention `"figXXX"`, where _XXX_ is the sequential number of the figure in the file.
 
-In some cases, `id` attributes may be required for images. In those cases, the `id` value should be `"img-XXX"` and follow the same pattern as for figures.
+In some cases, `id` attributes may be required for images. In those cases, the `id` value should be `"imgXXX"` and follow the same pattern as for figures.
 
 ### Image Size
 
@@ -611,7 +611,7 @@ The basic scheme for naming individual files is:
 [UID]-[XXX]-[role].xhtml
 ```
 
-The _UID_ must be identical to the value of the [[dc:identifier]] metadata element of the [=package document=]. _XXX_ is a three-digit string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of a `role` for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple `epub:type` values (e.g. `frontmatter titlepage`), the most specific (e.g. `titlepage`) should be used.
+The _UID_ must match the value of the [^dc:identifier^] metadata element in the [=package document=]. _XXX_ is a three-digit string corresponding to the order in the [^spine^], with leading zeros as needed. _role_ corresponds to the ARIA [^/role^] of the main section element in the content file, minus the "`doc-`" part. In the absence of a `role` for the top-level section of the content document, the value from the [^/epub:type^] attribute should be used instead. In the case of multiple `epub:type` values (e.g., `frontmatter titlepage`), the most specific (e.g., `titlepage`) should be used.
 
 <aside class="example" title="Correctly named content file">
 
@@ -837,7 +837,7 @@ Images in tables or lists may be handled as inline images if there are no captio
 
 #### Alt-texts
 
-Accessibility guidelines require images to be supplied with a short, descriptive text as value of the [^img/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
+Accessibility guidelines require images to have a short, descriptive text in the [^img/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
 - `Photo.` – for photographs
 - `Illustration.` – for illustrations
@@ -850,17 +850,11 @@ Accessibility guidelines require images to be supplied with a short, descriptive
 
 The section [Image Alternative Text Values](#image-alternative-text-values) contains language specific alt-text values.
 
-If there are any doubts about which value to assign the `alt` attribute, suppliers are required to use `Figure.`.
+If unsure which value to assign to the `alt` attribute, suppliers must use `Figure.`.
 
 <div class="note" title="WCAG warning">
 
-The list of generic categories for Supplier to apply as alt-text values do not alone satisfy [WCAG's success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content), as they are in most cases not sufficient textual alternatives to the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
-
-</div>
-
-<div class="note">
-
-For alt-texts provided by the Supplier to be properly read by screen-readers they should always end with a punctuation mark.
+The list of generic categories for Suppliers to apply as alt-text values do not alone satisfy the [WCAG success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content), as they are not in most cases sufficient textual alternatives for the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
 
 </div>
 
@@ -868,20 +862,20 @@ For alt-texts provided by the Supplier to be properly read by screen-readers the
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder element, either within the [^figure^] element of the image or directly after it. The placeholder elements can be:
 
-- [^aside^]: This is the default option. It can be placed inside the `<figure>` element or directly after it. If it is placed inside it must be placed after the [^img^] element, before the closing `</figure>` tag. If there is also a [^figcaption^], this must be placed before the `<img>` element. If the `<aside>` is placed after the closing `</figure>` tag, there is no restriction on the placement of the `<figcaption>`. It is up to the Ordering Agency to specify which option to be used, either in Agency-specific Guidelines or in Editing Instructions.
-- [^details^]: This element must only be used if specific instructions are given by the Ordering Agency. It is required to be placed directly after the `<figure>` element, never inside it.
+- [^aside^]: This is the default option. It can be placed inside the `<figure>` element or directly after it. If it is placed inside it must be placed after the [^img^] element, before the closing `</figure>` tag. If there is also a [^figcaption^], this must be placed before the `<img>` element. If the `<aside>` is placed after the closing `</figure>` tag, there is no restriction on the placement of the `<figcaption>`. It is up to the Ordering Agency to specify which option to be used, either in agency-specific guidelines or in Editing Instructions.
+- [^details^]: This element must only be used if specific instructions are given by the Ordering Agency. It is placed directly after the `<figure>` element, never inside it.
 
-The placeholder  element is required to have the following attributes:
+The placeholder element must have the following attributes:
 
 - `class="fig-desc"`
 - `id=""`
 
-where `id` is a unique identifier. Furthermore, the corresponding `<img>` element must then be given the following attribute:
+where `id` is a unique identifier. Furthermore, the corresponding `<img>` element must be given the following attribute:
 
 - [`aria-describedby`](https://www.w3.org/TR/wai-aria/#aria-describedby) if the placeholder is `<aside>`
 - [`aria-details`](https://www.w3.org/TR/wai-aria/#aria-details) if the placeholder is `<details>`
 
-The value for this attribet should correspond to the id of the `<aside>` placeholder.
+The value of this attribute must reference the `id` of the placeholder element.
 
 The extracted text is then placed inside the placeholder, marked up correctly and placed in a logical reading order, if there is any. Here is an example of how a figure with extracted text can be handled using the `<aside>` option:
 
@@ -905,7 +899,7 @@ Note that this is the construction that is used by several Ordering Agencies for
 
 </div>
 
-If an inline image require text extraction the extracted text must be used as value for the `alt` attribute. The text then replaces the generic value described above.
+If an inline image requires text extraction, the extracted text must be used as value for the `alt` attribute. The text then replaces the generic value described above.
 
 #### Image Series
 
@@ -938,17 +932,17 @@ This is how the markup will look like:
 
 ### Lists
 
-Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Any such content is required to be marked up with either [^ol^] (ordered list) or [^ul^] (unordered list). Each item of any list must be marked up with [^li^].
+Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Lists are marked up with either [^ol^] (ordered list) or [^ul^] (unordered list). Each list item is up with [^li^].
 
 A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more [^p^] elements inside every list item of the list.
 
 #### Numbered Lists
 
-The numbering of an ordered list ([^ol^]) must not be included as content in the [^li^] elements of the list. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the [^ol/type^] attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the [^ol/start^] attribute.
+The numbering of an ordered list ([^ol^]) must not be included as content in the [^li^] elements. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the [^ol/type^] attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the [^ol/start^] attribute.
 
-#### Unnumbered Lists
+#### Unordered Lists
 
-Unnumbered lists ([^ul^]) often have some sort of bullet markers for each list item. The default is a solid black circle. The `type` attribute has been used before, to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
+Unnumbered lists ([^ul^]) often have some sort of bullet markers for each list item. The default is a solid black circle. The `type` attribute has been used before to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
 
 Lists without any bullet markers are required to have the attribute:
 
@@ -956,45 +950,45 @@ Lists without any bullet markers are required to have the attribute:
 
 By default, `<ul>` should be used for lists without any bullet markers, but Ordering Agencies may give specific instructions to use [^ol^].
 
-#### Definition Lists
+#### Description Lists
 
 All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as [^dl^]. Note that language attributes may be required, for example with glossaries.
 
 #### Tables of Contents
 
-Any table of contents in the source material is required to be marked up in the following way:
+Any table of contents in the source material must be marked up in the following way:
 
 ```html
 <ol class="plain" epub:type="toc" role="doc-toc">
-   <li><span class="lic">_[Heading 1]_</span> <span class="lic">_[Page number]_</span></li>
+   <li><span class="lic">[Heading 1]</span> <span class="lic">[Page number]</span></li>
    …
 </ol>
 ```
 
-This is typically used for the main table of contents that most books have somewhere in the frontmatter part, but it could also be a table of contents for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only [^li^], without any `<span class="lic">`.
+This is typically used for the main table of contents that most books have somewhere in the frontmatter, but it could also be a table of contents for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only [^li^], without any `<span class="lic">`.
 
-Sometimes, mostly in educational books, the table of contents can be more complicated, including other type of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency of how to handle that. Contact the Ordering Agency if anything is unclear.
+Sometimes, mostly in educational books, the table of contents can be more complicated, including other types of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency. Contact the Ordering Agency if anything is unclear.
 
 ### Tables
 
 All tables or table-like structures are required to be marked up as [^table^]. If the table has a caption it is required to be marked up with [^caption^] and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
-The [^tbody^] element is required to be used for containing the main body of table data. It is recommended, although not formally required, to use [^thead^] for any column heading at the top of the table. For the sake of consistency, it is required to use `<thead>` if there is at least one row of column heading at the top of the table, unless specific instructions are given to omit it. The element [^tfoot^] can be used if there are, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note, that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See [the code example](#table-example-01) at the end of this section.
+The [^tbody^] element must be used to contain the main body of table data. Rows of column headings at the top of the table must be wrapped in `<thead>`, unless specific instructions state otherwise. The [^tfoot^] element may be used if there is, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See [the code example](#table-example-01) at the end of this section.
 
-Each row of the table, with all its table cells, must be placed inside a [^tr^] element and each individual table cell must be placed inside either a [^td^] element for regular table data, or inside a [^th^] element for column or row headings. Headings are typically found in the top-most row and the left-most column of the table, but there may be heading cells elsewhere and there may be headings for groups of rows or columns. The `<th>` element is required to have the attribute [^th/scope^] with  a value that specifies what the header is for in the following cases:
+Each row of the table, with all its table cells, must be placed inside a [^tr^] element and each individual table cell is represented by a [^td^] element for regular table data, or a [^th^] element for column or row headings. Headings are typically found in the top-most row and the left-most column of the table, but there may be heading cells elsewhere and there may be headings for groups of rows or columns. The `<th>` element must have a [^th/scope^] attribute specifying what the header applies to in the following cases:
 
 - when heading cells are merged with [^th/colspan^] or [^th/rowspan^], or
 - when column headings are present anywhere else than in the first (topmost) row, or row headings are present anywhere else than in the first (leftmost) column.
 
 The possible values are `col` or `row`, for column and row, respectively, and `colgroup` and `rowgroup`, if the table has headings spanning multiple columns or rows with individual sub-headings. If none of the criteria mentioned above is fulfilled, `scope` is not required. 
 
-Tables are required to have a consistent number of table cells per row. If the `colspan` or `rowspan` attributes are used, take extra care that the total number of cells is correct. 
+Tables must have a consistent number of cells per row. If the `colspan` or `rowspan` attributes are used, take extra care that the total number of cells is correct. 
 
-Never use tables solely for the purpose of mimicking the layout of the source material.  The `colspan` and `rowspan` attributes may be used with `<td>` or `<th>` elements, if necessary, but if the purpose of the layout in the source material is unclear and no instructions are given, Suppliers are required to contact the Ordering Agency for clarification.
+Never use tables solely for the purpose of mimicking the layout of the source material. If the purpose of the layout in the source material is unclear and no instructions are given, Suppliers should contact the Ordering Agency for clarification.
 
 Below is an example of table markup that covers most of the details explained above.
 
-<aside class="example" title="Extensive table sample" id="table-example-01">
+<aside class="example" title="Complex table" id="table-example-01">
 
 ```html
 <table>
@@ -1048,22 +1042,22 @@ Below is an example of table markup that covers most of the details explained ab
 
 Large tables may give rise to visual display issues where content overflows the page area. One way to handle this is to add scroll bars to the table through CSS. For this to be possible, the table needs to be wrapped in a [^div^] with `class="table-wrapper"`. The Ordering Agency will specify in Editing Instructions if this optional markup is needed.
 
-##### Table id:s for lot
-In cases where a title contains a list of tables (`lot`) or where a list of tables should be included in the `nav.xhtml` file, the table element should be provided with an id. These id:s should be named `"tab-XXX"` in sequential order, where XXX is the number of the table in the file.
+##### `id` Attributes for Tables
+If a publication includes a list of tables (`lot`) or if a list of tables should be included in the `nav.xhtml` file, each `table` element must have an `id`. The `id` values should follow the naming convention `"tableXXX"`, where XXX is the table’s sequential number in the file.
 
-Instances may occur where id:s are required for tables without it being included in the `nav.xhtml` file.
+In some cases, `id` attributes may be required for tables even if they are not included in the navigation document.
 
 ### Notes and Note References
 
 #### Note References
 
-Note references are required to be marked up as hyperlinks with the [^/role^] attribute set to `doc-noteref` and [^/epub:type^] set to `noteref`. The [^a^] element must also have a unique [^global/id^] attribute. Note references are not to be marked up with [^sup^] as styling will be handled by a default CSS file provided by the Ordering Agency.
+Note references must be marked up as hyperlinks with the [^/role^] attribute set to `doc-noteref` and [^/epub:type^] set to `noteref`. The [^a^] element must also have a unique [^global/id^] attribute. Note references are not to be marked up with [^sup^] as styling will be handled by a default CSS file provided by the Ordering Agency.
 
-#### End notes
+#### End Notes
 
-End notes or chapter notes must be placed in a [^section^] element at the end of the content file, before the closing of the top-level `<section>` element. The `<section>` element containing the notes is required to have the [^/role^] attribute set to `doc-endnotes` and [^/epub:type^] set to `endnotes`. If the source material has a section like this and it has a heading, this heading is required to be preserved and marked up as [^h2^]. If there is not a heading for the note section present in the source, it is required to be added. The section [End Note Heading](#end-note-heading) contains language-specific headings to be used.
+End notes or chapter notes must be placed in a [^section^] element at the end of the content file, before the closing of the top-level `<section>` element. The section containing the notes must have the [^/role^] attribute set to `doc-endnotes` and [^/epub:type^] set to `endnotes`. If the source includes a section like this with a heading, the heading must be preserved and marked up with a heading element at an appropriate level. If the source does not include a heading for the note section, one must be added. The section [End Note Heading](#end-note-heading) contains language-specific headings to be used.
 
-If the notes have sequential numbers, the note texts are required to be marked up as an ordered list. The list items containing the note texts must have unique [^global/id^] attributes that the note references can link to. Note that the note numbers will be automatically generated by the [^ol^] markup and must not be included in the text.
+If the notes have sequential numbers, the note texts must be marked up as an ordered list. The list items containing the note texts must have unique [^global/id^] attributes that the note references can link to. Note that the note numbers will be automatically generated by the [^ol^] markup and must not be included in the text.
 
 <aside class="example" title="End notes section">
 
@@ -1105,9 +1099,9 @@ If, for some reason, an ordered list can't be used, each note text is required t
 
 #### Footnotes
 
-Footnotes that are sequentially numbered are required to be handled as end notes (see the [section above](#end-notes)). The note texts must be placed at the end of the content file, in its own [^section^] element and all [^/role^] and [^/epub:type^] attributes must be set as end notes. This goes for the note references as well.
+Footnotes that are sequentially numbered are handled as end notes (see the [section above](#end-notes)). The notes are placed at the end of the content file, wrapped in a [^section^] element and all [^/role^] and [^/epub:type^] attributes must be set as end notes. This goes for the note references as well.
 
-Other types of footnotes are to be placed in an [^aside^] at the end of the relevant `<section>` or before the next `<section>`, whichever is the nearest to the note reference. These would typically be notes referenced by an asterisk or some other symbol. If there are more than one note reference in the section, notes must **not** be grouped in a single `<aside>`, but separated so that each note is contained in its own `<aside>`. The hyperlink of the note reference is required to point to the [^global/id^] attribute of the `<aside>` element containing the note text. The `<aside>` element is required to have the `role` set to `doc-footnote` and `epub:type` set to `footnote`.
+Other types of footnotes are placed in an [^aside^] at the end of the relevant `<section>` or before the next `<section>`, whichever is closest to the note reference. These would typically be notes referenced by an asterisk or some other symbol. If there are more than one note reference in the section, notes must **not** be grouped in a single `<aside>`, but separated so that each note is contained in its own `<aside>`. The hyperlink of the note reference is required to point to the [^global/id^] attribute of the `<aside>` element containing the note text. The `<aside>` element is required to have the `role` set to `doc-footnote` and `epub:type` set to `footnote`.
 
 <aside class="example" title="Note reference and footnote">
 
@@ -1125,7 +1119,7 @@ If notes occur in tables, the note texts are required to be handled as footnotes
 
 #### Backlinks
 
-Backlinks are required for each note, pointing back to the note reference. The [^a^] element is required to have [^/role^] set to `doc-backlink`. For both footnotes and endnotes, the backlink is required to be placed in its own paragraph, after the note text. The backlink text must contain the number or identifier of the note.
+Backlinks are required for each note, pointing back to the note reference. The [^a^] element is required to have [^/role^] set to `doc-backlink`. For both footnotes and endnotes, the backlink must be placed in its own paragraph, after the note text. The backlink text must contain the number or identifier of the note.
 
 <aside class="example" title="Backlink">
 
@@ -1143,21 +1137,21 @@ Backlinks are required for each note, pointing back to the note reference. The [
 
 The section [Footnote and Endnote Backlink](#footnote-and-endnote-backlink) contains language-specific backlink texts. Unless other instructions are given by the Ordering Agency, these texts are to be used, based on the language of the publication. Note that the "#" character must be replaced by the number or other identifier for the note in question.
 
-If there are more than one note reference for a single note text, the note text must be repeated for each note reference so that there is a one-to-one relationship between note references and note texts, and all backlinks are unique. This may cause one or more numbers to be repeated and, if so, note texts must be marked up using [^div^] elements instead of and ordered list.
+If there is more than one note reference for a single note text, the note text must be repeated for each note reference so that there is a one-to-one relationship between note references and note texts, and all backlinks are unique. This may cause one or more numbers to be repeated and, if so, note texts must be marked up using [^div^] elements instead of an ordered list.
 
-### Sidebars, Text Boxes etc.
+### Sidebars and Text Boxes
 
-The [^aside^] element is required to be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
+The [^aside^] element must be used for any material that is placed in the margin, breaks the flow of the main text or is in some other way to be considered optional or non-essential.
 
-Any material that is in some way contained or has a clearly visible beginning and end, but is still an integral part of the main text or content is required to be marked up with [^div^]. This could be, for instance, examples, definitions, tips, boxes containing words or phrases in exercises etc.
+Any material that is in some way contained or has a clearly visible beginning and end, but is still an integral part of the main text or content, must be marked up with [^div^]. This could be, for instance, examples, definitions, tips, boxes containing words or phrases in exercises etc.
 
-In both cases the elements are required to have a [^global/class^] attribute. The default value of the `class` attribute is `text-box`, but other values can be given in Editing Instructions.
+In both cases the elements must have a [^global/class^] attribute. The default value of the `class` attribute is `text-box`, but other values can be given in Editing Instructions.
 
 For certain publications there may be instructions given to add [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attributes to either of the elements, but unless such instructions are given no `aria-label` attributes are to be included.
 
 If there are any doubts about which element to use and there are no further instructions available in the Editing Instructions, Suppliers are required to contact the Ordering Agency.
 
-If headings in text boxes can be seen as part of the hierarchical heading structure of the book, they should be marked up using a `<h[x]>` element of an appropriate level, following the level structure of the surrounding text, and should be included in the navigation document.
+If headings in text boxes can be seen as part of the hierarchical heading structure of the book, they should be marked up using a `<h[x]>` element at an appropriate level, following the level structure of the surrounding text, and should be included in the navigation document.
 
 Structurally insignificant headings should be marked up with `<h[x]>` with the attribute `class="no-toc"`, or, for instance if they are often repeated, marked up as `<p class="faux-hd">`. Both of these options must only be used if specific instructions are given by the Ordering Agency.
 
@@ -1168,7 +1162,7 @@ At the time of publication, the EPUB accessibility validation tool [Ace by DAISY
 </div>
 
 #### Nested text boxes
-In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of [^aside^] elements, e.g. not nest two or more `<aside>`s. Instead, `<div class="text-box">` can be used for the inner level box (see [above](#sidebars-text-boxes-etc)). Another possibility is to consider whether the parent text box could actually be a [^div^] element, and then the inner level box an `<aside>`.
+In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of [^aside^] elements, e.g. not nest two or more `<aside>` elements. Instead, `<div class="text-box">` can be used for the inner level box (see [3.4.7 Sidebars and Text Boxes](#sidebars-and-text-boxes)). Another option is to consider whether the parent text box could be a [^div^] element and the inner box an `<aside>`.
 
 ### Computer Code
 
@@ -1176,9 +1170,9 @@ Suppliers are required to mark up code content with the [^code^] element. For bl
 
 In blocks of computer code, spaces, line breaks, and empty lines must be preserved. It should be noted, however, that the correct markup for code blocks involves interpretation alongside the principle of capturing the text verbatim. For example, programming books may sometimes use a mix of semantic line breaks, which must be preserved, and line breaks necessitated by the print layout.
 
-### Bolding and Italics
+### Bold and Italics
 
-The only elements to be used are [^strong^] for bold and [^em^] for italics. Other type of formatting may be required in certain publications and, if such is the case, specific instructions will be given in the Editing Instructions.
+The only elements to be used are [^strong^] for bold and [^em^] for italics. Other types of markup may be required in certain publications. If so, specific instructions will be provided in the Editing Instructions.
 
 Principles for how `<strong>` and `<em>` are used can be found in the Daisy Accessible Publishing Knowledge Base, [Bolding and Italics](https://kb.daisy.org/publishing/docs/html/emphasis.html).
 
