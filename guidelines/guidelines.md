@@ -1184,27 +1184,27 @@ Please take care that text marked up with `em` or `strong` is identical with the
 
 ### Poetry and Verse
 
-Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, is required to be marked up with `<div class="verse">`.
+Poetry, song lyrics or any content written in verse, where lines of text must be preserved just as they are in the source material, must be marked up with `<div class="verse">`.
 
-Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. HTML line breaks, [^br^], must be added between consecutive lines within a line group. Indented lines may be marked up using `<span class="line_indent">` or `<span class="line_longindent">`.
+Each group of lines of text must be contained in a separate `<p class="linegroup">` element and each line of text must be marked up with `<span class="line">`. HTML line breaks, [^br^], must be added between consecutive lines within a line group. Indented lines may be marked up using `<span class="line-indent">` or `<span class="line-longindent">`.
 
-Line numbers must only be included if specific instructions are given about it, even if they are present in the source material. If line numbers are to be included, they must be marked up with `<span class="linenum">`.
+Line numbers must be included only if specifically instructed, even if they are present in the source material. If line numbers are included, they must be marked up with `<span class="linenum">`.
 
 If the content written in verse has a title it may be handled as a normal heading, with `<section class="verse">` wrapping the content. Note that `class="verse"` must be used here as well. However, if it does not make sense to use a proper heading, it may be marked up with `<p class="faux-hd">` and placed within the `<div class="verse">` container. This option must not be used unless specific instructions are given by the Ordering Agency.
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
-In some cases, where poetry has figurative or otherwise non-standard disposition of the text, it may be requested by the Ordering Agency to also capture the verse as an image. It may also be requested that the verse is captured as pre-formatted text, using the [^pre^] element. Neither of these options must be used unless specific instructions are given by the Ordering Agency. 
+In some cases, when poetry has a figurative or non-standard text layout, the Ordering Agency may request that the verse be captured either as an image or as pre-formatted text using the [^pre^] element. Neither of these options must be used unless specific instructions are given by the Ordering Agency.
 
-#### Use of line/linenum-formatted content in non-verse content. 
+#### Use of Line-by-Line Markup Outside of Verse 
 
 In some titles, line-by-line-based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line>` should be used instead. 
 
-In the cases where `<div class="line-by-line>` are used, the same rules as for `<div class="verse">` are applied. Any variations to the markup in `<div class="line-by-line>` are given by the Ordering Agency.
+In the cases where `<div class="line-by-line>` are used, the same rules as for `<div class="verse">` are applied. Any variations in the markup of `<div class="line-by-line>` are provided by the Ordering Agency.
 
-### Quotes
+### Quotations
 
-Quotes, citations, excerpts from other sources and similar content are required to be marked up using the [^blockquote^] element whenever the content is separated from the regular text. Often, this type of content is distinguished from the regular text via indentation or some type of different styling. The `<blockquote>` element is required to wrap everything that connects to the quote or citation. For instance, if there is a source reference underneath the quote itself, this must also be included in the `<blockquote>` element, marked up with a separate [^p^].
+Quotations and excerpts from other sources must be marked up with the [^blockquote^] element when separated from the main text. This type of content is often distinguished from regular text through indentation or other styling. The `<blockquote>` element must wrap all content related to the quotation or excerpt. For example, if a source reference appears beneath the quotation, this must also be included within the `<blockquote>` element and marked up with a separate [^p^].
 
 ### Hyperlinks and URLs
 
@@ -1235,10 +1235,10 @@ Some books, such as editions of classical literary works, may have numbered para
 
 ### Thematic Breaks in the Text Flow
 
-In circumstances where depth of structure is not amenable to structural markup using [^section^] elements, Suppliers are required to use the [^hr^] element to provide distinguishable paragraph-level thematic breaks in one of the following two ways:
+When [^section^] elements are not suitable for marking structural divisions, Suppliers must use the [^hr^] element to indicate paragraph-level thematic breaks in one of two ways:
 
 - `<hr class="emptyline"/>` indicates thematic breaks represented by a vertical space between paragraphs.
-- `<hr class="separator"/>` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or any other type of graphical symbol. The visual marker must not be rendered as content.
+- `<hr class="separator"/>` indicates thematic breaks represented by a visual marker such as an asterisk, horizontal rule or other graphical symbol. The visual marker must not be part of the HTML content.
 
 ### Language Tagging
 
@@ -1250,7 +1250,7 @@ Please note that the level of language markup required by suppliers in these gui
 
 </div>
 
-### Uppercase text
+### Uppercase Text
 
 As a general rule, all text in the XHTML files should be written in sentence case: The first word of the sentence or heading is capitalised, as well as proper nouns and other words as required by a more specific rule. Some acronyms are written in all uppercase. If all caps (or small caps) formatting is desired in cases where the use of capital letters is not required by ortography, it should taken care of through CSS.
 
@@ -1268,24 +1268,24 @@ In general, styling and layout properties must be ignored. The styling and layou
 
 - Words, phrases or expressions written in a different colour and being referred to elsewhere in the text
 - Text boxes with a certain background colour that explains the function of the box
-- Words or phrases written in a different font for some specific reason
+- Words or phrases typeset in a different font for a specific reason
 
 Note that these are only examples and other types of significant styling may occur. The [^global/class^] attributes must be placed in a [^span^] element wrapping the words or phrases in question, or in an already present element where that is applicable. Only `class` attributes defined by the Ordering Agency may be used. The [^html-global/style^] attribute is not allowed. The Suppliers must only apply styling classes when given specific instructions by the Ordering Agency.
 
 <div class="note" title="WCAG warning">
 
-Since the meaning conveyed through styling will not be accessible to all readers of the EPUB file, there may be a need for post production editing to ensure full WCAG compliance.
+Since the meaning conveyed through styling will not be accessible to all readers of the EPUB file, there may be a need for post-production editing to ensure full WCAG compliance.
 
 </div>
 
-## Special characters, punctuation, etc.
+## Special Characters and Punctuation
 ### Representation of characters
-If not requested otherwise by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference using e.g. decimal or hexadecimal notation. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
+Unless otherwise requested by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
 
-### Character accuracy
-Unicode character accuracy for special characters, e.g. phonetic characters, is vital for a correct representation of the source material. A visual likeness to the characters used in the printed source material is not enough, as the characters may be used by assistive technology to present text information to the user, or being used in various conversions to other types of end-user formats. If there is a Unicode representation for any character or symbol used in an inline context this should be used, rather than capturing the symbol as an image. Emojis are an example of where it is important to use the Unicode representation instead of capturing them as images.
+### Character Accuracy
+Unicode character accuracy for special characters, e.g. phonetic characters, is vital for a correct representation of the source material. A visual resemblance to the characters used in the printed source material is not enough, as the characters may be used by assistive technology to present text information to the user, or being used in various conversions to other formats. If there is a Unicode representation for any character or symbol this should be used, rather than capturing the symbol as an image. Emojis are an example of where it is important to use the Unicode representation instead of capturing them as images.
 
 The following resources could be valuable for verifying commonly used special characters:
 
@@ -1293,16 +1293,16 @@ The following resources could be valuable for verifying commonly used special ch
 - The Greek alphabet: [Unicode Characters in the Greek and Coptic Block (FileFormat.info)](https://www.fileformat.info/info/unicode/block/greek_and_coptic/list.htm)
 - Emojis: [Full Emoji List (unicode.org)](https://unicode.org/emoji/charts/full-emoji-list.html)
 
-Similarly to phonetics and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.
+Similarly to phonetic and other special characters, punctuation, such as quotation marks, dashes, etc., should be preserved as they are represented in the source material. This means that careful attention needs to be payed to ensure correct representation of e.g. hyphen minus (- (U+002D)) vs. en dash (– (U+2013)) vs. em dash (— (U+2014)), hyphen minus vs. mathematical minus sign (− (U+2212)), simple quotation marks ("" (U+0022)) vs. typographic quotation marks (”“ (U+201D, U+201C)), etc. Any exceptions to this general rule will be noted in Editing Instructions.
 
 ### Ligatures
-Depending on the typography of the source material, ligatures may be present in source text. These may **not** be captured as dedicated ligature unicode characters, e.g. "ﬆ" (U+FB06). Rather, ligatures should be normalised to their separate letter components (e.g. "st") upon capture.
+Depending on the typography of the source material, ligatures may be present in source text. These must not be captured as dedicated ligature unicode characters, e.g. "ﬆ" (U+FB06). Instead, ligatures must be normalised to their separate letter components (e.g. "st") upon capture.
 
 # Specific Requirements for Advanced Content
 
 ## Numbers and STEM Content
 
-Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note, that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with [^sup^], unless the number is part of a mathematical expression.
+Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note that the HTML entity `&nbsp;` is not allowed. If a number has a unit attached to it, the unit should be captured as regular text and any exponents marked up with [^sup^], unless the number is part of a mathematical expression.
 
 Simple mathematical expressions or other simple STEM related content in non-STEM contexts can be captured as regular text with standard HTML used to mark up exponents or indices. The correct Unicode characters must be used to represent mathematical operators or special characters. Typical examples of this may be:
 
@@ -1314,11 +1314,12 @@ If standard HTML is unable to represent the expression exactly as it looks in th
 
 In STEM-related materials, all STEM content, excluding stand-alone numbers or single-letter variables, must be marked up using MathML to ensure a uniform presentation of the content to the user. These guidelines will not go into details about the MathML language. Please refer to the specification.
 
-For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not require MathML at all, at present. [ASCIIMath notation](https://asciimath.org) may be requested instead or in combination with MathML markup.
+For more detail about the MathML structure, please refer to each individual Ordering Agency's requirements. Note that some Ordering Agencies may not currently require MathML at all. [ASCIIMath notation](https://asciimath.org) may be requested instead of or in combination with MathML markup.
 
 ## Placeholders for User Input Areas
 
-In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book.  Usually, this is indicated by printed lines where the user can write text or boxes that can be ticked etc. Suppliers are required to use the [^span^] element to provide placeholders for these input fields in one of the following three ways:
+In educational material, especially for younger children, it is common that the user is supposed to answer questions or solve problems by writing directly in the printed book. Usually, this is indicated by printed lines for writing or boxes for ticking.
+ Suppliers must use the [^span^] element to provide placeholders for these input fields in one of the following three ways:
 
 - `<span class="answer">---</span>` for a horizontal line or box where any amount of text or numbers are meant to be inserted. Multiple lines in succession must be represented by a single `<span class="answer">---</span>` unless other instructions are given by the Ordering Agency.
 - `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
@@ -1328,7 +1329,7 @@ In educational material, especially for younger children, it is common that the 
 
 ## Language Dependent Fixed Text Values
 
-The default text values given in this document are, for practical reasons, only given in English. Unless otherwise instructed by the Ordering Agency, these values, when applied to a specific publication, should follow the primary language of that publication.
+For practical reasons, the default text values in this document are provided only in English. Unless otherwise instructed by the Ordering Agency, these values should match the primary language of the publication they are applied to.
 
 For convenience, the values for all the main languages of the Ordering Agencies are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations if the main language of a title is not one of those listed here.
 
@@ -1371,7 +1372,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Comic.            | Tecknad serie. | Tegneserie.   | Sarjakuva. | Stripverhaal. | Tegneserie.   | Myndasaga. | Comic.        |
 | Logo.             | Logotyp.       | Logo.         | Logo.      | Logo.         | Logo.         | Lógó.      | Logo.         |
 
-### Continuation Heading Identifiers
+### Continuation Headings
 
 | English (default) | Swedish        | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------------|---------------|---------------|---------------|---------------|---------------|---------------|
@@ -1390,11 +1391,11 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferans #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
 ## Additional valid markup
-In addition to the features documented above, the Nordic Guidelines recognise some additional markup constructions that are allowed in valid 2024-1 files.
+In addition to the features documented above, the Nordic Guidelines allow certain additional markup in valid 2025-1 files.
 
-Suppliers do not need to observe these unless specifically requested by Ordering Agencies, as they will mostly be used in post production at the Ordering Agencies. They are listed here primarily for documentational purposes.
+Suppliers do not need to observe these unless specifically requested by the Ordering Agency, as they will mostly be used in post-production at the Ordering Agencies. They are listed here primarily for documentational purposes.
 
-### Sentence markup
+### Sentence Markup
 Sentence markup using [^span^] and `@class="sentence"` is allowed. This is used in [=media overlay documents=] talking book production, as targets for SMIL references when providing sentence-level synchronised audio.
 
 <section class="appendix">
