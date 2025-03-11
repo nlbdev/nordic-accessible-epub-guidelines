@@ -1174,8 +1174,6 @@ In blocks of computer code, spaces, line breaks, and empty lines must be preserv
 
 The only elements to be used are [^strong^] for bold and [^em^] for italics. Other types of markup may be required in certain publications. If so, specific instructions will be provided in the Editing Instructions.
 
-Principles for how `<strong>` and `<em>` are used can be found in the Daisy Accessible Publishing Knowledge Base, [Bolding and Italics](https://kb.daisy.org/publishing/docs/html/emphasis.html).
-
 <div class="note" title="About em/strong boundaries, space and punctuation">
 
 Please take care that text marked up with `em` or `strong` is identical with the original book. Do not include space or punctuation which is not emphasised in the original. Words in `em` or `strong` at the end of sentences should not include end-of-sentence punctuation, like full stops, unless the whole sentence is emphasised. If a sentence ends with an emphasised word, and the next sentence begins with a new emphasised word, make sure the words are marked up using separate instances of `em` or `strong`, and that the end-of-sentence punctuation is not included.
