@@ -101,9 +101,8 @@ The following metadata must be placed in the [^metadata^] element:
 <dc:title id="title">[the title of the publication]</dc:title>
 <dc:language>[language code for the main language]</dc:language>
 <dc:identifier id="pub-identifier">[production number provided by the ordering agency]</dc:identifier>
-<dc:source>[ISBN or ISSN of the publication]</dc:source>
+<dc:source>[ISBN of the publication]</dc:source>
 <dc:creator>[author of the publication (one element for each author)]</dc:creator>
-<dc:format>application/epub+zip</dc:format>
 <dc:publisher>[the ordering agency]</dc:publisher>
 <dc:date>[date of completion]</dc:date>
 <meta property="dcterms:modified">[date of completion]</meta>
@@ -111,9 +110,15 @@ The following metadata must be placed in the [^metadata^] element:
 <meta property="nordic:guidelines">2025-1</meta>
 ```
 
-Note that the default value to use in [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) [[dcterms]] is the shorthand for the Ordering Agency, e.g. "NLB", "MTM", etc. Optionally, the Ordering Agency can request the original source publisher to be expressed in `<meta property="dc:publisher.original">`.
+The default value for the [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) [[dcterms]] element is the shorthand for the Ordering Agency, such as "NLB" or "MTM".
 
-If the source material does not have an ISBN, ISSN or any other systematic source identifier the content of the [`dc:source`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) element will be a string based on whatever available information about the source there is (publisher, year of publication etc.). This will be provided by the Ordering Agency via Editing Instructions.
+Optionally, the Ordering Agency may request that the original source publisher be specified using the following markup:
+
+```xml
+<meta property="nordic:original-publisher">[original publisher]</meta>
+```
+
+If the source material lacks an ISBN or any other systematic identifier, the [`dc:source`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) element should contain a string based on  available information about the source, typically including the title, publisher, and year of publication, or other relevant details. This information will be provided by the Ordering Agency via Editing Instructions.
 
 #### Accessibility Metadata
 
