@@ -522,9 +522,9 @@ Suppliers must not include JavaScript files in the EPUB package unless specifica
 
 ## Validation
 
-Validation of EPUB files should be done using [EPUBCheck](https://www.w3.org/publishing/epubcheck/) for structural validity and conformance to the EPUB standard, and the [Ace by DAISY](https://daisy.github.io/ace/) tool for accessibility evaluation. The latest distributions of these tools should be used.
+EPUB files should be validated using [EPUBCheck](https://www.w3.org/publishing/epubcheck/) for structural validity and conformance to the EPUB standard. Additionally, [Ace by DAISY](https://daisy.github.io/ace/) may be used for accessibility evaluation. The latest distributions of these tools should be used.
 
-In addition, the Ordering Agencies have developed a specific validation tool based on these guidelines. This tool, currently part of the [Nordic EPUB3/DTBook Migrator](https://nlbdev.github.io/nordic-epub3-dtbook-migrator/), or any similar validation tool provided by the agencies based on the same ruleset, should be the primary validation method.
+The Ordering Agencies have also developed a validation tool based on these guidelines. This tool, currently part of the [Nordic EPUB3/DTBook Migrator](https://nlbdev.github.io/nordic-epub3-dtbook-migrator/), or any similar validation tool provided by the agencies based on the same ruleset, should be the primary validation method.
 
 # General Requirements for Content Documents
 
