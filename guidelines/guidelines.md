@@ -1375,7 +1375,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Comic.            | Tecknad serie. | Tegneserie.   | Sarjakuva. | Stripverhaal. | Tegneserie.   | Myndasaga. | Comic.        |
 | Logo.             | Logotyp.       | Logo.         | Logo.      | Logo.         | Logo.         | Lógó.      | Logo.         |
 
-### Continuation Headings
+### Continuation Heading Identifiers
 
 | English (default) | Swedish        | Norwegian      | Finnish       | Dutch          | Danish         | Icelandic     | German        |
 |-------------------|----------------|----------------|---------------|----------------|----------------|---------------|---------------|
