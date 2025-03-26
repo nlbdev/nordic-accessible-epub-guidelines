@@ -363,7 +363,7 @@ The first required [^nav^] element in the file is for the main table of contents
 <h1 id="n1">Contents</h1>
 ```
 
-The general rule is that all headings in the main body of text must be included in the `<nav role="doc-toc" …>` element and the heading levels must be implied through nesting. However, there may be some headings, like headings of sidebars, text boxes or other secondary content, that are marked up with the attribute `class="no-toc"` (see sections [Sidebars and Text Boxes](#sidebars-and-text-boxes)). These must be excluded from the navigation document.
+The general rule is that all headings in the main body of text must be included in the `<nav role="doc-toc" …>` element and the heading levels must be implied through nesting. However, there may be some headings, like headings of sidebars, text boxes or other secondary content, that are marked up with the attribute `class="no-toc"` (see section [Sidebars and Text Boxes](#sidebars-and-text-boxes)). These must be excluded from the navigation document.
 
 The title page is referenced using the label "Title page" in the language of the publication (see section [aria-label and TOC Values](#aria-label-and-toc-values)). The book title is not included in the TOC.
 
