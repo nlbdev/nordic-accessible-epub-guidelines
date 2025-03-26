@@ -1377,15 +1377,15 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### Continuation Headings
 
-| English (default) | Swedish        | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
-|-------------------|----------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| (continued)       | (fortsättning) | [to be added] | (jatkuu)      | [to be added] | [to be added] | [to be added] | [to be added] |
+| English (default) | Swedish        | Norwegian      | Finnish       | Dutch          | Danish         | Icelandic     | German        |
+|-------------------|----------------|----------------|---------------|----------------|----------------|---------------|---------------|
+| (continued)       | (fortsättning) | (fortsettelse) | (jatkuu)      | (voortzetting) | (fortsættelse) | (framhald)    | (Fortsetzung) |
 
 ### End Note Heading
 
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Notes             | Noter    | [to be added] | Viitteet      | [to be added] | [to be added] | [to be added] | [to be added] |
+| Notes             | Noter    | Noter         | Viitteet      | Eindnoten     | Noter         | Skýringar     | Endnoten      |
 
 ### Footnote and Endnote Backlink
 
