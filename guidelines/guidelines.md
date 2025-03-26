@@ -1385,7 +1385,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Notes             | Noter    | Noter         | Viitteet      | Eindnoten     | Noter         | Skýringar     | Endnoten      |
+| Notes             | Noter    | Noter         | Viitteet      | Eindnoten     | Noter         | Lokaskýringar | Endnoten      |
 
 ### Footnote and Endnote Backlink
 
