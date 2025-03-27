@@ -869,6 +869,14 @@ For alt-texts provided by the Supplier to be properly read by screen-readers the
 
 </div>
 
+#### Figure attributes
+
+The figure element can be used in other instances than in relation to images: both tables with table descriptions and text boxes with captions are both required to be placed in a ``<figure>`` tag.
+The following attributes can be required or requested by the ordering agencies to be included in a figure tag:
+- class="image"
+- class="table"
+- class="other"
+
 #### Text Extraction from Images
 
 When images contain text that is integral to the image itself, i.e. not a caption or similar, this text is required to be extracted as accessible text. This text must be placed in a placeholder element, either within the [^figure^] element of the image or directly after it. The placeholder elements can be:
