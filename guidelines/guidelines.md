@@ -1357,7 +1357,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Title page            | Titelsida          | Tittelside         | Tittelside          | Nimiö          | Titelpagina         | Titelside             | Titilsíða        | Titelseite           |
 | Publisher information | Förlagsinformation | Utgiverinformasjon | Utgivarinformasjon  | Julkaisutiedot | Uitgeversinformatie | Kolofon               | Útgefandi        | Verlagsangaben       |
 | Dedication            | Dedikation         | Dedikasjon         | Dedikasjon          | Omistus        | Opdracht            | Dedikation            | Tileinkun        | Widmung              |
-| Epigraph              | Epigraf            | Epigraf            | Epigraf             | Epigrafi       | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
+| Epigraph              | Motto              | Epigraf            | Epigraf             | Motto          | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
 | Contents              | Innehåll           | Innhold            | Innhald             | Sisällys       | Inhoud              | Indhold               | Efni             | Inhalt               |
 | Start of Content      | Innehållets början | Start av innhold   | Start av innhald    | Sisällön alku  | Begin inhoud        | Indholdets begyndelse | Byrjun           | Beginn des Inhalts   |
 
@@ -1385,13 +1385,13 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Notes             | Noter    | Noter         | Viitteet      | Eindnoten     | Noter         | Lokaskýringar | Endnoten      |
+| Notes             | Noter    | Noter         | Viitteet      | Noten     | Noter         | Lokaskýringar | Endnoten      |
 
 ### Footnote and Endnote Backlink
 
 | English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
-| Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferans #. | Siirry viitteeseen #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
+| Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferans #. | Palaa viittauskohtaan #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
 ## Additional valid markup
 In addition to the features documented above, the Nordic Guidelines allow certain additional markup in valid 2025-1 files.
