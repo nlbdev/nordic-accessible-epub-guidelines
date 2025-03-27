@@ -1325,7 +1325,7 @@ In educational material, especially for younger children, it is common that the 
  Suppliers must use the [^span^] element to provide placeholders for these input fields in one of the following three ways:
 
 - `<span class="answer">---</span>` for a horizontal line or box where any amount of text or numbers are meant to be inserted. Multiple lines in succession must be represented by a single `<span class="answer">---</span>` unless other instructions are given by the Ordering Agency.
-- `<span class="answer_1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer_1">-</span>` elements, without space between them.
+- `<span class="answer1">-</span>` for a single space where only one character is meant to be inserted, typically a missing letter in a word or similar. If there are two missing letters in a word, there must be two `<span class="answer1">-</span>` elements, without space between them.
 - `<span class="box">---</span>` for check boxes.
 
 # Appendix
