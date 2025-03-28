@@ -1201,7 +1201,9 @@ Each group of lines of text must be contained in a separate `<p class="linegroup
 
 Line numbers must be included only if specifically instructed, even if they are present in the source material. If line numbers are included, they must be marked up with `<span class="linenum">`.
 
-If the content written in verse has a title it may be handled as a normal heading, with `<section class="verse">` wrapping the content. Note that `class="verse"` must be used here as well. However, if it does not make sense to use a proper heading, it may be marked up with `<p class="faux-hd">` and placed within the `<div class="verse">` container. This option must not be used unless specific instructions are given by the Ordering Agency.
+If the content written in verse has a title it may be handled as a normal heading, with `<section class="verse">` wrapping the content. Note that `class="verse"` must be used here as well. This heading must then, subsequently, be added to the table of contents in the navigation document. If, for some reason, the titles should not be included in the table of contents, they can be excluded by adding `class="no-toc"` to the heading elements. This must only be done upon specific instructions by the Ordering Agency.
+
+However, if it does not make sense using proper headings at all, they may be marked up with `<p class="faux-hd">` and placed within the `<div class="verse">` container. This option must also not be used unless specific instructions are given by the Ordering Agency.
 
 If there is an author name placed under the verse it may be marked up with `<p class="verse-author">` and placed at the end of the `<div class="verse">` container.
 
