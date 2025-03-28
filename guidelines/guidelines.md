@@ -1391,9 +1391,9 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### End Note Heading
 
-| English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic     | German        |
-|-------------------|----------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Notes             | Noter    | Noter         | Viitteet      | Noten     | Noter         | Lokaskýringar | Endnoten      |
+| English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic        | German        |
+|-------------------|----------|---------------|---------------|---------------|---------------|------------------|---------------|
+| Notes             | Noter    | Noter         | Viitteet      | Noten     | Noter         | Aftanmálsgreinar | Anmerkungen   |
 
 ### Footnote and Endnote Backlink
 
