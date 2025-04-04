@@ -1183,9 +1183,9 @@ Suppliers are required to mark up code content with the [^code^] element. For bl
 
 In blocks of computer code, spaces, line breaks, and empty lines must be preserved. It should be noted, however, that the correct markup for code blocks involves interpretation alongside the principle of capturing the text verbatim. For example, programming books may sometimes use a mix of semantic line breaks, which must be preserved, and line breaks necessitated by the print layout.
 
-### Bold and Italics
+### Bold, Italics and Underline
 
-The only elements to be used are [^strong^] for bold and [^em^] for italics. Other types of markup may be required in certain publications. If so, specific instructions will be provided in the Editing Instructions.
+Use [^strong^] for bold, [^em^] for italics, and `<span class="underline">` for underlined text. Other types of markup may be required in certain publications. If so, specific instructions will be provided in the Editing Instructions.
 
 <div class="note" title="About em/strong boundaries, space and punctuation">
 
