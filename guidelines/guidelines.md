@@ -943,45 +943,6 @@ This is how the markup will look like:
 
 </aside>
 
-### Lists
-
-Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Lists are marked up with either [^ol^] (ordered list) or [^ul^] (unordered list). Each list item is up with [^li^].
-
-A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more [^p^] elements inside every list item of the list.
-
-#### Numbered Lists
-
-The numbering of an ordered list ([^ol^]) must not be included as content in the [^li^] elements. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the [^ol/type^] attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the [^ol/start^] attribute.
-
-#### Unordered Lists
-
-Unnumbered lists ([^ul^]) often have some sort of bullet markers for each list item. The default is a solid black circle. The `type` attribute has been used before to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
-
-Lists without any bullet markers are required to have the attribute:
-
-- `class="plain"`
-
-By default, `<ul>` should be used for lists without any bullet markers, but Ordering Agencies may give specific instructions to use [^ol^].
-
-#### Description Lists
-
-All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as [^dl^]. Note that language attributes may be required, for example with glossaries.
-
-#### Tables of Contents
-
-Any table of contents in the source material must be marked up in the following way:
-
-```html
-<ol class="plain" epub:type="toc" role="doc-toc">
-   <li><span class="lic">[Heading 1]</span> <span class="lic">[Page number]</span></li>
-   …
-</ol>
-```
-
-This is typically used for the main table of contents that most books have somewhere in the frontmatter, but it could also be a table of contents for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only [^li^], without any `<span class="lic">`.
-
-Sometimes, mostly in educational books, the table of contents can be more complicated, including other types of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency. Contact the Ordering Agency if anything is unclear.
-
 ### Tables
 
 All tables or table-like structures are required to be marked up as [^table^]. If the table has a caption it is required to be marked up with [^caption^] and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
@@ -1059,6 +1020,45 @@ Large tables may give rise to visual display issues where content overflows the 
 If a publication includes a list of tables (`lot`) or if a list of tables should be included in the `nav.xhtml` file, each `table` element must have an `id`. The `id` values should follow the naming convention `"tableXXX"`, where XXX is the table’s sequential number in the file.
 
 In some cases, `id` attributes may be required for tables even if they are not included in the navigation document.
+
+### Lists
+
+Lists are a number of connected items (single words, sentences or whole paragraphs) written consecutively. They can be numbered or unnumbered. Lists are marked up with either [^ol^] (ordered list) or [^ul^] (unordered list). Each list item is up with [^li^].
+
+A list item may either contain inline content or block elements, but not a mixture of both. As a rule of thumb, if all items in the list consist of single words or short phrases no further block elements are needed. If one or more of the list items consist of sentences or paragraphs, use one or more [^p^] elements inside every list item of the list.
+
+#### Numbered Lists
+
+The numbering of an ordered list ([^ol^]) must not be included as content in the [^li^] elements. The numbering will be rendered by the reading system. The default type for the numbering is numeric. This can be changed by using the [^ol/type^] attribute. The default starting point is `1` (regardless of which type of numbering the ordered list uses), but can be changed using the [^ol/start^] attribute.
+
+#### Unordered Lists
+
+Unnumbered lists ([^ul^]) often have some sort of bullet markers for each list item. The default is a solid black circle. The `type` attribute has been used before to change the type of bullet symbol, but this is not supported in HTML 5. Using CSS is the proposed method of controlling this. Suppliers are not required to modify the CSS file to match the bullet markers of the source material unless specifically instructed to do so.
+
+Lists without any bullet markers are required to have the attribute:
+
+- `class="plain"`
+
+By default, `<ul>` should be used for lists without any bullet markers, but Ordering Agencies may give specific instructions to use [^ol^].
+
+#### Description Lists
+
+All paired lists of words, phrases, expressions etc. and corresponding definitions, translations etc. are required to be marked up as [^dl^]. Note that language attributes may be required, for example with glossaries.
+
+#### Tables of Contents
+
+Any table of contents in the source material must be marked up in the following way:
+
+```html
+<ol class="plain" epub:type="toc" role="doc-toc">
+   <li><span class="lic">[Heading 1]</span> <span class="lic">[Page number]</span></li>
+   …
+</ol>
+```
+
+This is typically used for the main table of contents that most books have somewhere in the frontmatter, but it could also be a table of contents for a single part or chapter. The `<span class="lic">` element, used to separate the headings from the page references, must not be used in any other context. Any line that does not have a page reference must be marked up using only [^li^], without any `<span class="lic">`.
+
+Sometimes, mostly in educational books, the table of contents can be more complicated, including other types of content than simply headings and page references. In these cases, specific instructions will be given by the Ordering Agency. Contact the Ordering Agency if anything is unclear.
 
 ### Notes and Note References
 
