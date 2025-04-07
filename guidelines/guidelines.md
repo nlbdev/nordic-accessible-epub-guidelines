@@ -6,7 +6,7 @@ Making book content accessible starts in well-structured and granular semantic m
 
 The target audience of the document is mainly the Nordic agencies’ contracted EPUB 3 suppliers, but the guidelines will also be used by staff at the Nordic agencies, other vendors and interested parties, etc.
 
-## For readers looking for general e-book accessibility advice
+## For Readers Looking for General E-Book Accessibility Advice
 
 Readers should note that these guidelines build on available standards and best practices for accessible e-book production documented elsewhere. This document does not provide general e-book accessibility advice. Please have a look at the [DAISY Accessible Publishing Knowledge Base](https://kb.daisy.org/publishing/docs/) for a comprehensive resource on current best practices for e-book accessibility in general. Many of the techniques used in this document are based on examples and guidance from the DAISY Accessible Publishing Knowledge Base. The Nordic agencies are indebted to the [DAISY Consortium](https://daisy.org/) for providing this valuable resource.
 
@@ -201,11 +201,11 @@ The following is an example of a more granular way of expressing title metadata,
 <aside class="example" title="Granular title metadata">
 
 ```xml
-<dc:title id="maintitle"> _[the main title of the publication]_ </dc:title>
+<dc:title id="maintitle">[the main title of the publication]</dc:title>
 <meta refines="#maintitle" property="title-type">main</meta>
-<dc:title id="subtitle"> _[the subtitle of the publication]_ </dc:title>
+<dc:title id="subtitle">[the subtitle of the publication]</dc:title>
 <meta refines="#subtitle" property="title-type">subtitle</meta>
-<dc:title id="edition"> _[the edition part of publication title, e.g. "1st ed."</dc:title>
+<dc:title id="edition">[the edition part of publication title, e.g. "1st ed."]</dc:title>
 <meta refines="#edition" property="title-type">edition</meta>
 ```
 
@@ -216,11 +216,11 @@ Similarly, creator/author information can be expressed with explicit refinement 
 <aside class="example" title="Granular creator metadata">
 
 ```xml
-<dc:creator id="creator1"> _[coauthor of the publication]_ </dc:creator>
+<dc:creator id="creator1">[coauthor of the publication]</dc:creator>
 <meta refines="#creator1" property="role" scheme="marc:relators" id="role">aut</meta>
-<dc:creator id="creator2"> _[coauthor of the publication]_ </dc:creator>
+<dc:creator id="creator2">[coauthor of the publication]</dc:creator>
 <meta refines="#creator1" property="role" scheme="marc:relators" id="role">aut</meta>
-<dc:creator id="creator3"> _[illustrator of the publication]_ </dc:creator>
+<dc:creator id="creator3">[illustrator of the publication]</dc:creator>
 <meta refines="#creator1" property="role" scheme="marc:relators" id="role">ill</meta>
 ```
 
@@ -278,7 +278,7 @@ If a fall-back [NCX navigation document](https://www.w3.org/TR/epub-33/#sec-opf2
 <aside class="example" title="Spine referencing in case of an ncx file">
 
 ```xml
-<spine toc="_[id value of the manifest item that refers to the ncx file]_">
+<spine toc="[id value of the manifest item that refers to the ncx file]">
 ```
 
 </aside>
@@ -580,12 +580,12 @@ If the source material for an EPUB production is an EPUB file, or any other HTML
 ### Subsections
 No subsections of any content document should have an [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) or [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) attribute, unless specific instructions are given by the Ordering Agency.
 
-### Untitled sections
+### Untitled Sections
 If a major section, e.g. a chapter, is untitled, the [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) attribute must be used instead of a heading element and have an appropriate text value. The label value is either a default for specific standard sections, a standardised value derived from the start of the first paragraph, or a custom value requested by the Ordering Agency.
 
 In rare cases, the same method can be used to label untitled subsections. Such cases will be accompanied by Editing Instructions specifically requesting this treatment.
 
-#### Default `aria-label` values for standard sections
+#### Default `aria-label` Values for Standard Sections
 The following table lists default [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) values for standard sections.
 
 | Section identification   | Default [`aria-label`] value |
@@ -602,10 +602,10 @@ The following table lists default [`aria-label`](https://www.w3.org/TR/wai-aria/
 
 The section [aria-label and TOC values](#aria-label-and-toc-values) of this document contains language specific values.
 
-##### `aria-label` values using the first three words
+##### `aria-label` Values Using the First Three Words
 If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
 
-##### Custom `aria-label` values
+##### Custom `aria-label` Values
 If none of the two methods above fits, the Ordering Agency may request custom [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) values in Editing Instructions.
 
 ## File Naming Convention
@@ -630,7 +630,7 @@ X41001A-010-chapter.xhtml
 
 This section outlines markup requirements for covers, title pages, and parts.
 
-### Cover and back cover
+### Cover and Back Cover
 
 If a front cover is present, it must be placed in a separate XHTML file that should contain only the cover image. In the package [^spine^], the corresponding [^itemref^] element must have the attribute `linear="no"` to exclude it from the main reading order.
 
@@ -826,7 +826,7 @@ Here, there is more content belonging to the outer [^section^] element after the
 
 Continuation headings must only be used if specific instructions are given by the Ordering Agency.
 
-#### Chapter authors
+#### Chapter Authors
 
 Sometimes an author name appears before or after the chapter heading. Use the markup `<p class="chapter-author">` for a paragraph containing one or more author names. Note that this markup should not be used for author names at the end of a section.
 
@@ -840,7 +840,7 @@ Small symbols or other non-typographical content that may occur inline must be r
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
-#### Alt-texts
+#### Alt-Texts
 
 Accessibility guidelines require images to have a short, descriptive text in the [^img/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
 
@@ -1174,7 +1174,7 @@ At the time of publication, the EPUB accessibility validation tool [Ace by DAISY
 
 </div>
 
-#### Nested text boxes
+#### Nested Text Boxes
 In some cases, books contain text boxes containing other text boxes. In those cases, Suppliers should generally only use one level of [^aside^] elements, e.g. not nest two or more `<aside>` elements. Instead, `<div class="text-box">` can be used for the inner level box (see [3.4.7 Sidebars and Text Boxes](#sidebars-and-text-boxes)). Another option is to consider whether the parent text box could be a [^div^] element and the inner box an `<aside>`.
 
 ### Computer Code
@@ -1223,7 +1223,7 @@ Quotations and excerpts from other sources must be marked up with the [^blockquo
 
 Any URLs in printed source material are required to be represented as plain text in the EPUB file and not be made into an active hyperlink. In digital sources, already active hyperlinks are required to be preserved, but an URL that is just plain text is required to remain as such. The Ordering Agency may, however, give specific instructions to handle URLs differently, but these rules are the default.
 
-### Numbered paragraphs
+### Numbered Paragraphs
 
 Some books, such as editions of classical literary works, may have numbered paragraphs or stanzas in the source material. Unless the ordering agency gives instructions to exclude the numbering, the supplier is required to preserve it. The numbers are placed at the beginning of the paragraph and marked up with `<span class="parnum">`. The paragraph is given `class="numbered"`.
 
@@ -1292,7 +1292,7 @@ Since the meaning conveyed through styling will not be accessible to all readers
 </div>
 
 ## Special Characters and Punctuation
-### Representation of characters
+### Representation of Characters
 Unless otherwise requested by the Ordering Agency, Unicode characters should be represented by the correct Unicode character rather than an entity reference. An inverted question mark, used in for example Spanish, should be represented as `¿` rather than `&#191;`, `&#xbf;`, or similar.
 
 Note that entity reference coding of special characters may be requested on a per-production or per-Ordering Agency basis.
@@ -1355,7 +1355,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Landmarks         | Navigation   | Navigasjon         | Navigasjon          | Kiintopisteet | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
 
 
-### aria-label and TOC Values
+### `aria-label` and TOC Values
 
 | English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | Danish                | Icelandic        | German               |
 |-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-----------------------|------------------|----------------------|
@@ -1403,7 +1403,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
 | Go to note reference #. | Gå tillbaka till notreferens #. | Gå til notereferans #. | Palaa viittauskohtaan #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
-## Additional valid markup
+## Additional Valid Markup
 In addition to the features documented above, the Nordic Guidelines allow certain additional markup in valid 2025-1 files.
 
 Suppliers do not need to observe these unless specifically requested by the Ordering Agency, as they will mostly be used in post-production at the Ordering Agencies. They are listed here primarily for documentational purposes.
@@ -1424,7 +1424,7 @@ This guidelines document has been jointly produced with input and feedback from 
 
 <section class="appendix">
 
-## Change log
+## Change Log
 This version is a major update to the [2020-1 version of the Nordic Guidelines](https://format.mtm.se/nordic_epub/2020-1).
 
 The following substantive changes have been made since 2020-1:
