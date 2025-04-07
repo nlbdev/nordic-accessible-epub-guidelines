@@ -863,13 +863,13 @@ The list of generic categories for Suppliers to apply as alt-text values do not 
 
 </div>
 
-#### Figure attributes
+#### Figure Attributes
 
-The figure element can be used in other instances than in relation to images: both tables with table descriptions and text boxes with captions are both required to be placed in a ``<figure>`` tag.
-The following attributes can be required or requested by the ordering agencies to be included in a figure tag:
-- "image"
-- "table"
-- "other"
+The [^figure^] element can be used in contexts beyond images: both tables with descriptions and text boxes with captions must be placed within a `<figure>` tag. The following class attribute values may be required or requested by the Ordering Agency to be added to the tag:
+
+- `image`
+- `table`
+- `other`
 
 #### Text Extraction from Images
 
