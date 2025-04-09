@@ -323,7 +323,7 @@ The following namespace values are required to be applied to the namespace attri
 
 #### Language Definition
 
-Suppliers are required to identify the primary language of each content document using the `xml:lang` and `lang` attributes. On how to tag language change within a document, see section [Language Tagging](#language-tagging).
+Suppliers are required to identify the primary language of each content document using the `xml:lang` and `lang` attributes. On how to tag language change within a document, see section [3.4.15 Language Tagging](#language-tagging).
 
 Unless the Ordering Agency requests otherwise, language should be coded using values from the [IANA registry of valid language codes](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
@@ -352,7 +352,7 @@ The production number must match the [^dc:identifier^] of the [=package document
 
 The principal [=EPUB navigation document=] is the XHTML file with the [`properties`](https://www.w3.org/TR/epub-33/#attrdef-properties) attribute attribute set to `nav` in the [^manifest^] section of the package document. While the EPUB specification does not mandate a specific filename, these guidelines require that the navigation document be named `nav.xhtml`.
 
-The section [nav.xhtml Headings](#nav-xhtml-headings) contains language-specific headings for the [^nav^] sections of the navigation document that are listed below.
+Section [5.1.1 nav.xhtml Headings](#nav-xhtml-headings) contains language-specific headings for the [^nav^] sections of the navigation document that are listed below.
 
 #### The Table of Contents
 
@@ -363,11 +363,11 @@ The first required [^nav^] element in the file is for the main table of contents
 <h1 id="n1">Contents</h1>
 ```
 
-The general rule is that all headings in the main body of text must be included in the `<nav role="doc-toc" …>` element and the heading levels must be implied through nesting. However, there may be some headings, like headings of sidebars, text boxes or other secondary content, that are marked up with the attribute `class="no-toc"` (see section [Sidebars and Text Boxes](#sidebars-and-text-boxes)). These must be excluded from the navigation document.
+The general rule is that all headings in the main body of text must be included in the `<nav role="doc-toc" …>` element and the heading levels must be implied through nesting. However, there may be some headings, like headings of sidebars, text boxes or other secondary content, that are marked up with the attribute `class="no-toc"` (see section [3.4.7 Sidebars and Text Boxes](#sidebars-and-text-boxes)). These must be excluded from the navigation document.
 
-The title page is referenced using the label "Title page" in the language of the publication (see section [aria-label and TOC Values](#aria-label-and-toc-values)). The book title is not included in the TOC.
+The title page is referenced using the label "Title page" in the language of the publication (see section [5.1.2 `aria-label` and TOC Values](#aria-label-and-toc-values)). The book title is not included in the TOC.
 
-Some headings consist of a main heading and a subtitle grouped in an [^hgroup^] element (see section [Headings](#headings) for details on the markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
+Some headings consist of a main heading and a subtitle grouped in an [^hgroup^] element (see section [3.4.2 Headings](#headings) for details on the markup). The subtitle should be included in the same TOC entry as the main heading. The text of both heading elements is concatenated into one string with a word space separating them. If the main heading does not end in a suitable punctuation mark, a period is also added:
 
 ```html
 <li><a href="…">Main heading. Subtitle</a></li>
@@ -491,7 +491,7 @@ In some cases, `id` attributes may be required for images. In those cases, the `
 
 ### Image Size
 
-The maximum image size is 800 pixels on its longest side, unless a larger size is needed to ensure the legibility of text in images or to preserve other small details (see [item 4 above](#images)).
+The maximum image size is 800 pixels on its longest side, unless a larger size is needed to ensure the legibility of text in images or to preserve other small details (see item 4 in section [2.8 Images](#images)).
 
 In circumstances a larger size is needed to ensure legibility, the Supplier is required to contact the Ordering Agency.
 
@@ -600,7 +600,7 @@ The following table lists default [`aria-label`](https://www.w3.org/TR/wai-aria/
 | `@role="doc-epigraph"`   | Epigraph                     |
 | `@role="doc-toc"`        | Contents                     |
 
-The section [aria-label and TOC values](#aria-label-and-toc-values) of this document contains language specific values.
+Section [5.1.2 aria-label and TOC values](#aria-label-and-toc-values) contains language specific values.
 
 ##### `aria-label` Values Using the First Three Words
 If nothing else is mentioned in the accompanying Editing Instructions for the specific title, untitled chapter sections should be named with [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) using the first three words of the chapter text, followed by a space and an ellipsis, e.g. `aria-label="Det var längesedan …"` for a chapter section where the first three words of the body text are "Det var längesedan".
@@ -767,7 +767,7 @@ Some chapter or part headings consist of a main heading and a subtitle. For subt
 </hgroup>
 ```
 
-Note that the subtitle should be included in the section's navigation TOC entry. See the section [EPUB 3 Navigation Document](#epub-3-navigation-document) for detailed instructions.
+Note that the subtitle should be included in the section's navigation TOC entry. See section [2.7.1 EPUB 3 Navigation Document](#epub-3-navigation-document) for detailed instructions.
 
 In some cases, the source material includes a chapter or part number — often preceded by a word like Chapter or Part — followed by the chapter or part heading as separate elements. In such cases, the number must be included within the same `h[x]` element as the heading. The number is marked up with a [^span^] with `class="chnum"` or `class="partnum"`. A [^br^] element is inserted after the `<span>`.
 
@@ -832,7 +832,7 @@ Sometimes an author name appears before or after the chapter heading. Use the ma
 
 ### Figures
 
-All proper figures, illustrations, photographs, icons and other symbols must be captured as images and included in the EPUB file, unless other instructions are given (see the [Images](#images) section). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier must contact the Ordering Agency.
+All proper figures, illustrations, photographs, icons and other symbols must be captured as images and included in the EPUB file, unless other instructions are given (see section [2.8 Images](#images)). Purely decorative graphics that have no other purpose than layout can be ignored. If there are any doubts about whether to include certain graphics or not, the Supplier must contact the Ordering Agency.
 
 Unless the image occurs inline in the source material, any image is required to be placed inside a [^figure^] element with a [^global/class^] attribute set to `image`. If the image has a caption, the caption must be marked up with the [^figcaption^] element and placed as either the first or the last child of the `<figure>` element.
 
@@ -853,7 +853,7 @@ Accessibility guidelines require images to have a short, descriptive text in the
 - `Comic.` – for comic strips and panels
 - `Logo.` – for logos
 
-The section [Image Alternative Text Values](#image-alternative-text-values) contains language specific alt-text values.
+Section [5.1.3 Image Alternative Text Values](#image-alternative-text-values) contains language specific alt-text values.
 
 If unsure which value to assign to the `alt` attribute, suppliers must use `Figure.`.
 
@@ -947,7 +947,7 @@ This is how the markup will look like:
 
 All tables or table-like structures are required to be marked up as [^table^]. If the table has a caption it is required to be marked up with [^caption^] and placed just after the starting tag of the `<table>` element. It can sometimes be unclear what content should go into the `<caption>` element. Sometimes there is a title in the table itself, spanning the entire width. This must be removed from the table structure and placed in the `<caption>` element. Sometimes there could be a regular caption above the table and a source reference at the bottom. These must both go into the `<caption>` element in individual paragraphs. Non-standard use of the `<caption>` element should be specified by the Ordering Agency in the Editing Instructions.
 
-The [^tbody^] element must be used to contain the main body of table data. Rows of column headings at the top of the table must be wrapped in `<thead>`, unless specific instructions state otherwise. The [^tfoot^] element may be used if there is, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See [the code example](#table-example-01) at the end of this section.
+The [^tbody^] element must be used to contain the main body of table data. Rows of column headings at the top of the table must be wrapped in `<thead>`, unless specific instructions state otherwise. The [^tfoot^] element may be used if there is, for instance, a row at the bottom of the table where columns are summed up. This is not required, but can be included in Editing Instructions. Note that `<tbody>` can be used multiple times in the same table, if the table is divided into sections. Usually there will also be a section heading for each section. See [Example 20](#table-example-01).
 
 Each row of the table, with all its table cells, must be placed inside a [^tr^] element and each individual table cell is represented by a [^td^] element for regular table data, or a [^th^] element for column or row headings. Headings are typically found in the top-most row and the left-most column of the table, but there may be heading cells elsewhere and there may be headings for groups of rows or columns. The `<th>` element must have a [^th/scope^] attribute specifying what the header applies to in the following cases:
 
@@ -1068,7 +1068,7 @@ Note references must be marked up as hyperlinks with the [^/role^] attribute set
 
 #### End Notes
 
-End notes or chapter notes must be placed in a [^section^] element at the end of the content file, before the closing of the top-level `<section>` element. The section containing the notes must have the [^/role^] attribute set to `doc-endnotes` and [^/epub:type^] set to `endnotes`. If the source includes a section like this with a heading, the heading must be preserved and marked up with a heading element at an appropriate level. If the source does not include a heading for the note section, one must be added. The section [End Note Heading](#end-note-heading) contains language-specific headings to be used.
+End notes or chapter notes must be placed in a [^section^] element at the end of the content file, before the closing of the top-level `<section>` element. The section containing the notes must have the [^/role^] attribute set to `doc-endnotes` and [^/epub:type^] set to `endnotes`. If the source includes a section like this with a heading, the heading must be preserved and marked up with a heading element at an appropriate level. If the source does not include a heading for the note section, one must be added. Section [5.1.5 End Note Heading](#end-note-heading) contains language-specific headings to be used.
 
 If the notes have sequential numbers, the note texts must be marked up as an ordered list. The list items containing the note texts must have unique [^global/id^] attributes that the note references can link to. Note that the note numbers will be automatically generated by the [^ol^] markup and must not be included in the text.
 
@@ -1148,7 +1148,7 @@ Backlinks are required for each note, pointing back to the note reference. The [
 
 </aside>
 
-The section [Footnote and Endnote Backlink](#footnote-and-endnote-backlink) contains language-specific backlink texts. Unless other instructions are given by the Ordering Agency, these texts are to be used, based on the language of the publication. Note that the "#" character must be replaced by the number or other identifier for the note in question.
+Section [5.1.6 Footnote and Endnote Backlink](#footnote-and-endnote-backlink) contains language-specific backlink texts. Unless other instructions are given by the Ordering Agency, these texts are to be used, based on the language of the publication. Note that the "#" character must be replaced by the number or other identifier for the note in question.
 
 If there is more than one note reference for a single note text, the note text must be repeated for each note reference so that there is a one-to-one relationship between note references and note texts, and all backlinks are unique. This may cause one or more numbers to be repeated and, if so, note texts must be marked up using [^div^] elements instead of an ordered list.
 
@@ -1255,7 +1255,7 @@ When [^section^] elements are not suitable for marking structural divisions, Sup
 
 ### Language Tagging
 
-Content documents may contain text in other languages than the main language, as defined in the root element (see section [Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include [^p^], [^ol^], [^ul^], [^blockquote^], [^aside^] and [^section^]. Inline text is not marked up with language tags unless specifically indicated by the Ordering Agency.
+Content documents may contain text in other languages than the main language, as defined in the root element (see section [2.6.1.5 Language Definition](#language-definition)). For longer passages comprising one or more block elements, the language must be specified using the `lang` and `xml:lang` attributes. Elements that may require these attributes include [^p^], [^ol^], [^ul^], [^blockquote^], [^aside^] and [^section^]. Inline text is not marked up with language tags unless specifically indicated by the Ordering Agency.
 
 <div class="note" title="WCAG warning">
 
