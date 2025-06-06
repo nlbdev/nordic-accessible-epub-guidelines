@@ -840,9 +840,9 @@ Small symbols or other non-typographical content that may occur inline must be r
 
 Images in tables or lists may be handled as inline images if there are no captions or similar.
 
-#### Alt-Texts
+#### Alt Texts
 
-Accessibility guidelines require images to have a short, descriptive text in the [^img/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt-texts, these must, however, be preserved. For images that do not already have an alt-text, the supplier should use one of the following generic values:
+Accessibility guidelines require images to have a short, descriptive text in the [^img/alt^] attribute of the [^img^] element. Suppliers are not required to provide these descriptive texts. If the source material is a publisher file that includes alt texts, these must, however, be preserved. For images that do not already have an alt text, the supplier should use one of the following generic values:
 
 - `Photo.` – for photographs
 - `Illustration.` – for illustrations
@@ -853,13 +853,13 @@ Accessibility guidelines require images to have a short, descriptive text in the
 - `Comic.` – for comic strips and panels
 - `Logo.` – for logos
 
-Section [5.1.3 Image Alternative Text Values](#image-alternative-text-values) contains language specific alt-text values.
+Section [5.1.3 Image Alternative Text Values](#image-alternative-text-values) contains language specific alt text values.
 
 If unsure which value to assign to the `alt` attribute, suppliers must use `Figure.`.
 
 <div class="note" title="WCAG warning">
 
-The list of generic categories for Suppliers to apply as alt-text values do not alone satisfy the [WCAG success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content), as they are not in most cases sufficient textual alternatives for the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
+The list of generic categories for Suppliers to apply as alt text values do not alone satisfy the [WCAG success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content), as they are not in most cases sufficient textual alternatives for the images. The guidelines here presume post-markup editing to make productions fully WCAG-compliant, by editing the alt text values and/or adding extended image descriptions.
 
 </div>
 
