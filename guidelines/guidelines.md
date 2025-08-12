@@ -1429,8 +1429,23 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 
 The following substantive changes have been made since 2020-1:
 
-- change 1 in plain language (perhaps with reference to GH issue?)
-- change 2 in plain language (perhaps with reference to GH issue?)
-- change 3 in plain language \[etc …\]
+- **2.5.1 Metadata**: Removed `dc:format` from the required metadata. See [issue 82](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/82).
+- **2.5.1 Metadata**: Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
+- **2.5.1.1 Accessibility Metadata**: Updated the section with new examples and guidance on specific properties, including `pageBreakSource`. See [issue 53](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/53).
+- **2.7.1.1 The Table of Contents**: Added instruction to label the title page as "Title page" in the language of the publication. See [issue 64](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/64).
+- **2.7.1.1 The Table of Contents**: Added instruction for handling headings with subtitles. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
+- **2.7.1.3 Landmarks**: Changed the `landmarks nav` to an optional element;  clarified its typical contents. See [issue 59](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/59).
+- **2.12 Validation**: Changed Ace by Daisy evaluation from recommended to optional. See [issue 73](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/73).
+- **3.3.2 Title Page**: Updated instruction for handling titles with subtitles, using the `hgroup` element. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
+- **3.4.1 Pagination**: Added instruction on page break positioning in lists and tables. See [issue 33](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/33).
+- **3.4.2 Headings**: Added instruction for handling headings with subtitles, using the `hgroup` element. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
+- **3.4.2.2 Chapter Authors**: Added instruction on markup for chapter authors. See [issue 69](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/69).
+- **3.4.3.1 Alt-Texts**: Added instruction to preserve alt texts from source material, such as publisher EPUBs, when present. See [issue 54](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/54).
+- **3.4.4 Tables**: Added instruction on using an optional `div` wrapper for large tables. See [issue 49](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/49).
+- **3.4.8 Computer Code**: Clarified the interpretation of code blocks, specifically regarding line breaks. See [issue 51](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/51).
+- **3.4.9 Bold, Italics and Underline**: Added instruction on markup for underlined text. See [issue 85](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/85#issue-2909805586).
+- **3.4.13 Numbered Paragraphs**: Added section about markup for numbered paragraphs. See [issue 52](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/52).
+- **3.4.15 Language Tagging**: Added section about tagging language changes within content documents [issue 56](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/56).
+- **3.4.16 Uppercase Text**: Added section about uppercase text, with markup requirements for lead-ins. See [issue 15](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/15), [issue 61](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/61).
 
 </section>
