@@ -1413,17 +1413,6 @@ Sentence markup using [^span^] and `@class="sentence"` is allowed. This is used 
 
 <section class="appendix">
 
-## Acknowledgements
-This guidelines document has been jointly produced with input and feedback from all participating organisations. In addition to the editors, the following people contributed to the document at various stages of its completion:
-
-- name name, organisation
-- name name, organisation
-- etc.
-
-</section>
-
-<section class="appendix">
-
 ## Change Log
 This version is a major update to the [2020-1 version of the Nordic Guidelines](https://format.mtm.se/nordic_epub/2020-1).
 
