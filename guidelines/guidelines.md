@@ -1424,7 +1424,9 @@ Sentence markup using [^span^] and `@class="sentence"` is allowed. This is used 
 ## Change Log
 This version is a major update to the [2020-1 version of the Nordic Guidelines](https://format.mtm.se/nordic_epub/2020-1).
 
-<details name="Substantive changes made since 2020-1">
+<details>
+
+<summary>Substantive changes made since 2020-1</summary>
 
 - **2.5.1 Metadata**: Removed `dc:format` from the required metadata. See [issue 82](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/82).
 - **2.5.1 Metadata**: Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
