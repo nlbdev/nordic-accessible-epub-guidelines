@@ -1,106 +1,108 @@
 <html>
-  <title>Nordic Guidelines for the Production of Accessible EPUB 3 (2025-1)</title>
-  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
-  <script>
-    var respecConfig = {
-	format: "markdown",
-	xref: {
-	    specs: ["epub-33", "dcterms", "wai-aria"],
-	    profile: "web-platform",
-	},
-	edDraftURI: null,
-	latestVersion: "https://format.mtm.se/nordic_epub/latest",
-	editors: [
-	    {
-		name: "Oscar Lagerström Carlsson",
-		company: "MTM",
-		companyURL: "https://www.mtm.se/",
-	    },
-	    {
-		name: "Anders Eklund",
-		company: "SPSM",
-		companyURL: "https://www.spsm.se/",
-	    },
-	    {
-		name: "Jonas Lillqvist",
-		company: "Celia",
-		companyURL: "https://www.celia.fi/",
-	    },
-	    {
-		name: "Linda Lindhé",
-		company: "MTM",
-		companyURL: "https://www.mtm.se/",
-	    },
-	    {
-		name: "Martin Persson",
-		company: "MTM",
-		companyURL: "https://www.mtm.se/",
-	    },
-	],
-	publishDate: "2025-09-19",
-	github: {
-	    repoURL: "https://github.com/nlbdev/nordic-accessible-epub-guidelines",
-	    branch: "2025-1"
-	},
-	localBiblio: {
-	    schemaprop: {
-		title: "Schema.org Accessibility Properties for Discoverability Vocabulary",
-		href: "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20241209/",
-		status: "CG-FINAL",
-		publisher: "Publishing Community Group, W3C",
-	    },
-	    pagesourceid: {
-		title: "Page Source Identification",
-		href: "https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/",
-		status: "CG-FINAL",
-		publisher: "Publishing Community Group, W3C",
-	    },
-	    opf201: {
-		title: "Open Packaging Format 2.0.1",
-		href: "https://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm",
-		publisher: "IDPF",
-	    },
-	},
-	otherLinks: [
-	    {
-		key: "Previous versions:",
-		data: [
-		    {
-			value: "2020-1",
-			href: "https://format.mtm.se/nordic_epub/2020-1/",
-		    },
-		    {
-			value: "2015-1",
-			href: "https://format.mtm.se/nordic_epub/2015-1/",
-		    },
-		],
-	    },
-	],
-	logos: [
-	    {
-		src: "https://raw.githubusercontent.com/nlbdev/nordic-accessible-epub-guidelines/2025-1-branding/guidelines/doc_tools/styling/mtm_logo.svg",
-		url: "https://mtm.se/", 
-		alt: "MTM, Myndigheten för tillgängliga medier",
-		height: 50,
-		id: "mtm-logo",
-	    },
-	    {
-		src: "https://raw.githubusercontent.com/nlbdev/nordic-accessible-epub-guidelines/2025-1-branding/guidelines/doc_tools/styling/spsm_logo.svg",
-		url: "https://spsm.se/",
-		alt: "SPSM",
-		height: 50,
-		id: "spsm-logo",
-	    },
-            {
-		src: "https://raw.githubusercontent.com/nlbdev/nordic-accessible-epub-guidelines/2025-1-branding/guidelines/doc_tools/styling/celia_logo.svg",
-		url: "https://celia.fi/",
-		alt: "Celia",
-		height: 50,	    
-		id: "celia-logo",
-	    },
-	],
-    }
-  </script>
+  <head>
+    <title>Nordic Guidelines for the Production of Accessible EPUB 3 (2025-1)</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script>
+      var respecConfig = {
+	  format: "markdown",
+	  xref: {
+	      specs: ["epub-33", "dcterms", "wai-aria"],
+	      profile: "web-platform",
+	  },
+	  edDraftURI: null,
+	  latestVersion: "https://format.mtm.se/nordic_epub/latest",
+	  editors: [
+	      {
+		  name: "Oscar Lagerström Carlsson",
+		  company: "MTM",
+		  companyURL: "https://www.mtm.se/",
+	      },
+	      {
+		  name: "Anders Eklund",
+		  company: "SPSM",
+		  companyURL: "https://www.spsm.se/",
+	      },
+	      {
+		  name: "Jonas Lillqvist",
+		  company: "Celia",
+		  companyURL: "https://www.celia.fi/",
+	      },
+	      {
+		  name: "Linda Lindhé",
+		  company: "MTM",
+		  companyURL: "https://www.mtm.se/",
+	      },
+	      {
+		  name: "Martin Persson",
+		  company: "MTM",
+		  companyURL: "https://www.mtm.se/",
+	      },
+	  ],
+	  publishDate: "2025-09-19",
+	  github: {
+	      repoURL: "https://github.com/nlbdev/nordic-accessible-epub-guidelines",
+	      branch: "2025-1"
+	  },
+	  localBiblio: {
+	      schemaprop: {
+		  title: "Schema.org Accessibility Properties for Discoverability Vocabulary",
+		  href: "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20241209/",
+		  status: "CG-FINAL",
+		  publisher: "Publishing Community Group, W3C",
+	      },
+	      pagesourceid: {
+		  title: "Page Source Identification",
+		  href: "https://www.w3.org/community/reports/publishingcg/CG-FINAL-page-source-id-20230314/",
+		  status: "CG-FINAL",
+		  publisher: "Publishing Community Group, W3C",
+	      },
+	      opf201: {
+		  title: "Open Packaging Format 2.0.1",
+		  href: "https://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm",
+		  publisher: "IDPF",
+	      },
+	  },
+	  otherLinks: [
+	      {
+		  key: "Previous versions:",
+		  data: [
+		      {
+			  value: "2020-1",
+			  href: "https://format.mtm.se/nordic_epub/2020-1/",
+		      },
+		      {
+			  value: "2015-1",
+			  href: "https://format.mtm.se/nordic_epub/2015-1/",
+		      },
+		  ],
+	      },
+	  ],
+	  logos: [
+	      {
+		  src: "https://raw.githubusercontent.com/nlbdev/nordic-accessible-epub-guidelines/2025-1-branding/guidelines/doc_tools/styling/mtm_logo.svg",
+		  url: "https://mtm.se/", 
+		  alt: "MTM, Myndigheten för tillgängliga medier",
+		  height: 50,
+		  id: "mtm-logo",
+	      },
+	      {
+		  src: "https://raw.githubusercontent.com/nlbdev/nordic-accessible-epub-guidelines/2025-1-branding/guidelines/doc_tools/styling/spsm_logo.svg",
+		  url: "https://spsm.se/",
+		  alt: "SPSM",
+		  height: 50,
+		  id: "spsm-logo",
+	      },
+              {
+		  src: "https://raw.githubusercontent.com/nlbdev/nordic-accessible-epub-guidelines/2025-1-branding/guidelines/doc_tools/styling/celia_logo.svg",
+		  url: "https://celia.fi/",
+		  alt: "Celia",
+		  height: 50,	    
+		  id: "celia-logo",
+	      },
+	  ],
+      }
+    </script>
+  </head>
   <body>
     <p class="copyright">[Copyright placeholder, perhaps consider a CC license?]</p>
     <section id="abstract">
