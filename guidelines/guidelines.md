@@ -1426,6 +1426,8 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 
 The following substantive changes have been made since 2020-1:
 
+<details>
+
 - **2.5.1 Metadata**: Removed `dc:format` from the required metadata. See [issue 82](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/82).
 - **2.5.1 Metadata**: Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
 - **2.5.1.1 Accessibility Metadata**: Updated the section with new examples and guidance on specific properties, including `pageBreakSource`. See [issue 53](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/53).
@@ -1444,5 +1446,7 @@ The following substantive changes have been made since 2020-1:
 - **3.4.13 Numbered Paragraphs**: Added section about markup for numbered paragraphs. See [issue 52](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/52).
 - **3.4.15 Language Tagging**: Added section about tagging language changes within content documents [issue 56](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/56).
 - **3.4.16 Uppercase Text**: Added section about uppercase text, with markup requirements for lead-ins. See [issue 15](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/15), [issue 61](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/61).
+
+</details>
 
 </section>
