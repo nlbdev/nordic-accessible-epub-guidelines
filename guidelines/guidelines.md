@@ -160,7 +160,7 @@ The metadata will vary depending on the content and properties of the publicatio
 <meta property="schema:accessibilityFeature">longDescription</meta>
 <meta property="schema:accessibilityFeature">MathML</meta>
 <meta property="schema:accessibilityHazard">none</meta>
-<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2024-1"/>
+<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2025-1"/>
 <meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
 ```
 
@@ -168,7 +168,7 @@ The metadata will vary depending on the content and properties of the publicatio
 
 As with [`dc:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher), the default value of [`a11y:certifiedBy`](https://www.w3.org/TR/epub-a11y-11/#certifiedBy) [[epub-a11y-11]] is the shorthand for the Ordering Agency.
 
-Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2024-1".
+Please note that the version number forming the end of the `dcterms:conformsTo` URL must match the value of the `nordic:guidelines` property, i.e. (for this version of the guidelines) "2025-1".
 
 <div class="note" title="On accessMode">
 
