@@ -1430,7 +1430,7 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 - **2.7.1.1 The Table of Contents**: Added the `class="no-toc"` option for verse headings that shouldn't be included in the toc. See [issue 79](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/79).
 - **2.7.1.1 The Table of Contents**: Added instruction on how to handle unlinked entries in the table of contents. See [issue 9](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/9).
 - **2.7.1.3 Landmarks**: Changed the `landmarks nav` to an optional element;  clarified its typical contents. See [issue 59](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/59).
-- **2.8.2 id Attributes for Figures and Images**: Added instruction on `id` attributes for figures and images. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
+- **2.8.2 `id` Attributes for Figures and Images**: Added instruction on `id` attributes for figures and images. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
 - **2.12 Validation**: Changed Ace by Daisy evaluation from recommended to optional. See [issue 73](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/73).
 - **3.1 Structural Division and Semantics**: Revised instructions on how to apply labels to section elements. See [issue 2](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/2).
 - **3.3.1 Cover and Back Cover**: Specified that the front cover, when present, must be placed in a separate XHTML file that only contains the cover image. See [issue 63](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/63).
@@ -1446,7 +1446,7 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 - **3.4.3.3 Text Extraction from Images**: Revised instructions on placeholder elements for extracted text and image descriptions. See [issue 4](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/4).
 - **3.4.4 Tables**: Revised the table section. See [issue 5](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/5).
 - **3.4.4 Tables**: Added instruction on using an optional `div` wrapper for large tables. See [issue 49](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/49).
-- **3.4.4.1 id Attributes for Tables**: Added instruction on `id` attributes for tables. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
+- **3.4.4.1 `id` Attributes for Tables**: Added instruction on `id` attributes for tables. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
 - **3.4.6 Notes and Note References**: Updated and clarified instructions on notes and note references, including back-links in notes. See [issue 3](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/3), [issue 18](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/18), [issue 29](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/29).
 - **3.4.8 Computer Code**: Clarified the interpretation of code blocks, specifically regarding line breaks. See [issue 51](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/51).
 - **3.4.9 Bold, Italics and Underline**: Added instruction on markup for underlined text. See [issue 85](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/85).
