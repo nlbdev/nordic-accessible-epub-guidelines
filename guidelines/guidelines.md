@@ -1211,9 +1211,9 @@ In some cases, when poetry has a figurative or non-standard text layout, the Ord
 
 #### Use of Line-by-Line Markup Outside of Verse 
 
-In some titles, line-by-line-based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line>` should be used instead. 
+In some titles, line-by-line-based markup will be needed where `<div class="verse">` is not applicable (e.g. easy-to-read book content, latin original texts, verbatim reproductions of text for analysis in methodology literature). For these titles `<div class="line-by-line">` should be used instead.
 
-In the cases where `<div class="line-by-line>` are used, the same rules as for `<div class="verse">` are applied. Any variations in the markup of `<div class="line-by-line>` are provided by the Ordering Agency.
+In the cases where `<div class="line-by-line">` are used, the same rules as for `<div class="verse">` are applied. Any variations in the markup of `<div class="line-by-line">` are provided by the Ordering Agency.
 
 ### Quotations
 
