@@ -1440,7 +1440,7 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 - **3.4.2.1 Continuation Headings**: Added instructions on handling parent sections continuing after the end of a sub-section. See [issue 34](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/34).
 - **3.4.2.2 Chapter Authors**: Added instruction on markup for chapter authors. See [issue 69](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/69).
 - **3.4.3.1 Alt Texts**: Added instruction to preserve alt texts from source material, such as publisher EPUBs, when present. See [issue 54](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/54).
-- **3.4.3.1 Alt Texts**: Standardized generic alt text values using initial capitals and ending periods. See [issue 24](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/24).
+- **3.4.3.1 Alt Texts**: Standardised generic alt text values using initial capitals and ending periods. See [issue 24](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/24).
 - **3.4.3.3 Text Extraction from Images**: Revised instructions on placeholder elements for extracted text and image descriptions. See [issue 4](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/4).
 - **3.4.4 Tables**: Revised the table section. See [issue 5](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/5).
 - **3.4.4 Tables**: Added instruction on using an optional `div` wrapper for large tables. See [issue 49](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/49).
@@ -1458,7 +1458,7 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 - **3.4.16 Uppercase Text**: Added section on uppercase text, with markup requirements for lead-ins. See [issue 15](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/15), [issue 61](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/61).
 - **3.4.17 Styling**: Added instructions on capturing specific styling of content. See [issue 44](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/44).
 - **3.5.2 Character Accuracy**: Added more detailed instructions on correct character representation, including emojis. See [issue 19](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/19)
-- **3.5.3 Ligatures**: Added instructions for capturing ligatures as normalized text. See [issue 48](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/48).
+- **3.5.3 Ligatures**: Added instructions for capturing ligatures as normalised text. See [issue 48](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/48).
 - **5.1 Language Dependent Fixed Text Values**: Added new values and modified some of the existing ones. See [issue 83](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/83).
 - **5.2 Additional Valid Markup**: Added section documenting additional valid markup in 2025-1 files, specifically sentence markup that might be added in postproduction. See [issue 50](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/50).
 - Meta: Implemented ReSpec as guidelines document framework. See [issue 47](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/47).
