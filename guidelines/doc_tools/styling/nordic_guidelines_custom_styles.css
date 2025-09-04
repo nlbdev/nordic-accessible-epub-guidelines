@@ -1,3 +1,10 @@
+/* Color customizations */
+:root {
+    --heading-text: #8d308b;
+}
+
+/* Head div customizations */
+
 div.head {
     display: flex;
     flex-direction: column;
