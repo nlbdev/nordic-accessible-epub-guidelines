@@ -1,6 +1,7 @@
 /* Color customizations */
 :root {
-    --heading-text: #8d308b;
+    --heading-text: #8d308b !important;
+    --a-normal-text: var(--heading-text) !important;
 }
 
 /* Head div customizations */
