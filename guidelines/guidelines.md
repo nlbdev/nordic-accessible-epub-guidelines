@@ -1401,7 +1401,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 | English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
-| Go to note reference #. | Gå tillbaka till notreferens #. | Gå tilbake til notereferansen #. | Palaa viittauskohtaan #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
+| Go to note reference #. | Gå tillbaka till notreferens #. | Tilbake til notereferansen #. | Palaa viittauskohtaan #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
 
 ## Additional Valid Markup
 In addition to the features documented above, the Nordic Guidelines allow certain additional markup in valid 2025-1 files.
