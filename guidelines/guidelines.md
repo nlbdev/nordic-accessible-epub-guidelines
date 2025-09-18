@@ -140,7 +140,7 @@ The metadata will vary depending on the content and properties of the publicatio
 <meta property="schema:accessibilityFeature">tableOfContents</meta>
 <meta property="schema:accessibilityFeature">readingOrder</meta>
 <meta property="schema:accessibilityHazard">none</meta>
-<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2025-1"/><!--Check url-->
+<link rel="dcterms:conformsTo" href="https://format.mtm.se/nordic_epub/2025-1"/>
 <meta property="a11y:certifiedBy">[the ordering agency's name]</meta>
 ```
 
