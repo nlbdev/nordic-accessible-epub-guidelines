@@ -1309,7 +1309,7 @@ Depending on the typography of the source material, ligatures may be present in 
 
 ## Numbers and STEM Content
 
-If [[MathML3]] markup is to be used or not is covered by the [Nordic Guidelines for Mathematical Content in HTML Files, Using MathML](https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md). This document also goes into detail on how to use MathML markup. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must ask the Ordering Agency for clarification.
+If [[[MathML3]]] markup is to be used or not is covered by the [Nordic Guidelines for Mathematical Content in HTML Files, Using MathML](https://github.com/nlbdev/mathml-guidelines/blob/main/Nordic%20MathML%20Guidelines.md). This document also goes into detail on how to use MathML markup. If it is unclear whether to use MathML or not, and no specific instructions are given, the Supplier must ask the Ordering Agency for clarification.
 
 Numbers are required to be captured exactly as they are in the source material. Decimal and thousand separators must be preserved as they are, using the exact same characters. If space is used as thousand separator in large numbers, non-breaking space, the character `&#160;`, must be used. Note that the HTML entity `&nbsp;` is not allowed.
 
