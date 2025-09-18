@@ -1410,9 +1410,11 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 
 <details>
 
-<summary>Changes made since 2020-1, excluding minor editorial work</summary>
+<summary>Changes since version 2020-1</summary>
 
-- [1. Introduction](#introduction) and [2. Format Requirements](#format-requirements): Bumped references to EPUB 3 and EPUB Accessibility to new versions ([[[epub-33]]]) and [[[epub-a11y-11]]]).
+Minor editorial changes are not listed.
+
+- [1. Introduction](#introduction) and [2. Format Requirements](#format-requirements): Updated references to EPUB 3 and EPUB Accessibility to new versions ([[[epub-33]]]) and [[[epub-a11y-11]]]).
 - [1. Introduction](#introduction): Rewrote introduction, clarifying that these guidelines are based on other resources, and added the section [1.1 For Readers Looking for General E-Book Accessibility Advice](#for-readers-looking-for-general-e-book-accessibility-advice) and a note about WCAG compliance. See [issue 43](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/43) and [issue 46](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/46).
 - [2.5.1 Metadata](#metadata): Removed `dc:format` from the required metadata. See [issue 82](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/82).
 - [2.5.1 Metadata](#metadata): Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
