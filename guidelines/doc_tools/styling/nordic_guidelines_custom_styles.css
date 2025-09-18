@@ -1,0 +1,39 @@
+/* Color customizations */
+:root {
+    --heading-text: #8d308b !important;
+    --a-normal-text: var(--heading-text) !important;
+}
+
+/* Head div customizations */
+
+div.head {
+    display: flex;
+    flex-direction: column;
+}
+
+div.head h1.title {
+    order: 1;
+}
+
+div.head p#w3c-state {
+    order: 2;
+    margin-bottom: 0;
+}
+
+div.head p.logos {
+    order: 3;
+}
+
+div.head details {
+    order: 4;
+}
+
+div.head p.copyright {
+    order: 5;
+}
+
+div.head hr {
+    order: 6;
+    width: 100%;
+    border-style: solid;
+}
