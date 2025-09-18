@@ -1341,16 +1341,19 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 ### nav.xhtml Headings
 
 <div class="nordic-table-wrapper">
+
 | English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish       | Dutch            | Danish           | Icelandic   | German              |
 |-------------------|--------------|--------------------|---------------------|---------------|------------------|------------------|-------------|---------------------|
 | Pages             | Sidindelning | Sideinndeling	| Sideinndeling	      | Sivut         | Paginering       | Liste over sider | Blaðsíður   | Seiten              |
 | Contents          | Innehåll     | Innhold            | Innhald             | Sisällys      | Inhoud           | Indhold          | Efni        | Inhalt              |
 | Landmarks         | Navigation   | Navigering         | Navigering          | Kiintopisteet | Oriëntatiepunten | Navigation       | Leiðarmerki | Orientierungspunkte |
+
 </div>
 
 ### `aria-label` and TOC Values
 
 <div class="nordic-table-wrapper">
+
 | English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | Danish                | Icelandic        | German               |
 |-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-----------------------|------------------|----------------------|
 | Cover                 | Omslag             | Omslag             | Omslag              | Kansi          | Omslag              | Omslag                | Kápa             | Umschlag             |
@@ -1364,11 +1367,13 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Epigraph              | Motto              | Epigraf            | Epigraf             | Motto          | Epigraaf            | Epigraf               | Tilvitnun        | Epigraf              |
 | Contents              | Innehåll           | Innhold            | Innhald             | Sisällys       | Inhoud              | Indhold               | Efni             | Inhalt               |
 | Start of Content      | Innehållets början | Start på innhold   | Start på innhald    | Sisällön alku  | Begin inhoud        | Indholdets begyndelse | Byrjun           | Beginn des Inhalts   |
+
 </div>
 
 ### Image Alternative Text Values
 
 <div class="nordic-table-wrapper">
+
 | English (default) | Swedish        | Norwegian     | Finnish    | Dutch         | Danish        | Icelandic  | German        |
 | ----------------- | -------------- | ------------- | ---------- | ------------- | ------------- | ---------- | ------------- |
 | Photo.            | Foto.          | Foto.         | Valokuva.  | Foto.         | Foto.         | Ljósmynd.  | Foto.         |
@@ -1379,30 +1384,37 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 | Drawing.          | Teckning.      | Tegning.      | Piirros.   | Tekening.     | Tegning.      | Teikning.  | Zeichnung.    |
 | Comic.            | Tecknad serie. | Tegneserie.   | Sarjakuva. | Stripverhaal. | Tegneserie.   | Myndasaga. | Comic.        |
 | Logo.             | Logotyp.       | Logo.         | Logo.      | Logo.         | Logo.         | Lógó.      | Logo.         |
+
 </div>
 
 ### Continuation Heading Identifiers
 
 <div class="nordic-table-wrapper">
+
 | English (default) | Swedish        | Norwegian      | Finnish       | Dutch          | Danish         | Icelandic     | German        |
 |-------------------|----------------|----------------|---------------|----------------|----------------|---------------|---------------|
 | (continued)       | (fortsättning) | (fortsettelse) | (jatkuu)      | (voortzetting) | (fortsættelse) | (framhald)    | (Fortsetzung) |
+
 </div>
 
 ### End Note Heading
 
 <div class="nordic-table-wrapper">
+
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic        | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|------------------|---------------|
 | Notes             | Noter    | Noter         | Viitteet      | Noten     | Noter         | Aftanmálsgreinar | Anmerkungen   |
+
 </div>
 
 ### Footnote and Endnote Backlink
 
 <div class="nordic-table-wrapper">
+
 | English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
 | Go to note reference #. | Gå tillbaka till notreferens #. | Tilbake til notereferansen #. | Palaa viittauskohtaan #. | Ga naar nootreferentie #. | Gå til notereference #. | Aftur í tilvísun #. | Gehe zur Referenz #. |
+
 </div>
 
 ## Additional Valid Markup
