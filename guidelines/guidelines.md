@@ -507,7 +507,7 @@ If a digital source material contains SVG images, they may be included as SVG if
 
 ## CSS
 
-Suppliers are required to include the standard CSS file issued by the Ordering Agency. The CSS file is must be stored in a folder named _css_, located at the same level as the package document.
+Suppliers are required to include the standard CSS file [[css]] issued by the Ordering Agency. The CSS file is must be stored in a folder named _css_, located at the same level as the package document.
 
 Each relevant content document must include a <a data-cite="HTML5#link"><code>link</code></a> element to reference the CSS file.
 
