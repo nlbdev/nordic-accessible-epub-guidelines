@@ -36,3 +36,16 @@ div.head hr {
     width: 100%;
     border-style: solid;
 }
+
+/* Table customisations */
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    text-align: left;
+    border: thin solid #e5e7eb;
+}
