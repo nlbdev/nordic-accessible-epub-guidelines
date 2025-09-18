@@ -1,9 +1,9 @@
-/* Color customizations */
+/* Color customisations */
 :root {
     --heading-text: #8d308b !important;
 }
 
-/* Head div customizations */
+/* Head div customisations */
 
 div.head {
     display: flex;
