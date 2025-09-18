@@ -533,7 +533,7 @@ The Ordering Agencies have also developed a validation tool based on these guide
 
 # General Requirements for Content Documents
 
-## Structural Divisons and Semantics
+## Structural Divisions and Semantics
 
 The [=EPUB content document=] structure specified in these guidelines is generally made up of a multi-page HTML file set. Major divisions of the publication are to be captured in individual [=XHTML content documents=]. The individual content files will typically correspond to _part_ or _chapter_ divisions of the book. Other major book components such as colophon, index or appendix, which can be found in frontmatter and backmatter, will normally be stored in separate files as well.
 
@@ -1412,54 +1412,54 @@ This version is a major update to the [2020-1 version of the Nordic Guidelines](
 
 <summary>Changes made since 2020-1, excluding minor editorial work</summary>
 
-- **1. Introduction** and **2. Format Requirements**: Bumped references to EPUB 3 and EPUB Accessibility to new versions ([[[epub-33]]]) and [[[epub-a11y-11]]]).
-- **1. Introduction**: Rewrote introduction, clarifying that these guidelines are based on other resources, and added the section **1.1 For Readers Looking for General E-Book Accessibility Advice** and a note about WCAG compliance. See [issue 43](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/43) and [issue 46](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/46).
-- **2.5.1 Metadata**: Removed `dc:format` from the required metadata. See [issue 82](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/82).
-- **2.5.1 Metadata**: Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
-- **2.5.1.1 Accessibility Metadata**: Updated the section with new examples and guidance on specific properties, including `pageBreakSource`. See [issue 53](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/53).
-- **2.5.3 Spine**: Limited the application of `linear="no"` to the cover file. See [issue 25](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/25).
-- **2.6.2 Title**: Added instruction on what goes into the title element of each content document. See [issue 6](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/6).
-- **2.7.1.1 The Table of Contents**: Added instruction to label the title page as "Title page" in the language of the publication. See [issue 64](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/64).
-- **2.7.1.1 The Table of Contents**: Added instruction for handling headings with subtitles. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
-- **2.7.1.1 The Table of Contents**: Added the `class="no-toc"` option for verse headings that shouldn't be included in the toc. See [issue 79](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/79).
-- **2.7.1.1 The Table of Contents**: Added instruction on how to handle unlinked entries in the table of contents. See [issue 9](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/9).
-- **2.7.1.3 Landmarks**: Changed the `landmarks nav` to an optional element;  clarified its typical contents. See [issue 59](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/59).
-- **2.8.2 `id` Attributes for Figures and Images**: Added instruction on `id` attributes for figures and images. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
-- **2.12 Validation**: Changed Ace by Daisy evaluation from recommended to optional. See [issue 73](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/73).
-- **3.1 Structural Division and Semantics**: Revised instructions on how to apply labels to section elements. See [issue 2](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/2).
-- **3.1.2 Untitled Sections**: Added instructions for untitled sections. See [issue 62](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/62).
-- **3.3.1 Cover and Back Cover**: Specified that the front cover, when present, must be placed in a separate XHTML file that only contains the cover image. See [issue 63](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/63).
-- **3.3.1 Cover and Back Cover**: Replacing `class="rearcover"` with `class="backcover"`. See [issue 30](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/30).
-- **3.3.2 Title Page**: Updated instruction for handling titles with subtitles, using the `hgroup` element. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
-- **3.3.2 Title Page**: Specified class attributes for identifying authors, contributors, series titles, publishers, and logos on the title page. See [issue 26](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/26).
-- **3.4.1 Pagination**: Added instruction on page break positioning in lists and tables. See [issue 33](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/33).
-- **3.4.2 Headings**: Added instruction for handling headings with subtitles, using the `hgroup` element. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
-- **3.4.2 Headings**: Added instruction on markup of structurally insignificant headings. See [issue 66](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/66), [issue 27](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/27).
-- **3.4.2.1 Continuation Headings**: Added instructions on handling parent sections continuing after the end of a sub-section. See [issue 34](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/34).
-- **3.4.2.2 Chapter Authors**: Added instruction on markup for chapter authors. See [issue 69](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/69).
-- **3.4.3.1 Alt Texts**: Added instruction to preserve alt texts from source material, such as publisher EPUBs, when present. See [issue 54](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/54).
-- **3.4.3.1 Alt Texts**: Standardised generic alt text values using initial capitals and ending periods. See [issue 24](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/24).
-- **3.4.3.3 Text Extraction from Images**: Revised instructions on placeholder elements for extracted text and image descriptions. See [issue 4](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/4).
-- **3.4.4 Tables**: Revised the table section. See [issue 5](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/5).
-- **3.4.4 Tables**: Added instruction on using an optional `div` wrapper for large tables. See [issue 49](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/49).
-- **3.4.4.1 `id` Attributes for Tables**: Added instruction on `id` attributes for tables. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
-- **3.4.6 Notes and Note References**: Updated and clarified instructions on notes and note references, including back-links in notes. See [issue 3](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/3), [issue 18](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/18), [issue 29](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/29).
-- **3.4.7.1 Nested Text Boxes**: Added instructions for how to handle nested text boxes. See [issue 12](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/12).
-- **3.4.8 Computer Code**: Clarified the interpretation of code blocks, specifically regarding line breaks. See [issue 51](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/51).
-- **3.4.9 Bold, Italics and Underline**: Added instruction on markup for underlined text. See [issue 85](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/85).
-- **3.4.10 Poetry and Verse**: Added the `class="no-toc"` option for verse headings that shouldn't be included in the toc. See [issue 81](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/81).
-- **3.4.10 Poetry and Verse**: Added instruction on how to handle non-standard disposition of text in poetry. See [issue 7](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/7).
-- **3.4.10.1 Use of Line-by-Line Markup Outside of Verse**: Added guidance on line-by-line markup for non-verse content. See [issue 28](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/28).
-- **3.4.12 Hyperlinks and URLs**: Added instruction on how to handle URLs in source material. See [issue 11](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/11).
-- **3.4.13 Numbered Paragraphs**: Added section on markup for numbered paragraphs. See [issue 52](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/52).
-- **3.4.15 Language Tagging**: Added section on tagging language changes within content documents [issue 56](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/56).
-- **3.4.16 Uppercase Text**: Added section on uppercase text, with markup requirements for lead-ins. See [issue 15](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/15), [issue 61](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/61).
-- **3.4.17 Styling**: Added instructions on capturing specific styling of content. See [issue 44](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/44).
-- **3.5.2 Character Accuracy**: Added more detailed instructions on correct character representation, including emojis. See [issue 19](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/19)
-- **3.5.3 Ligatures**: Added instructions for capturing ligatures as normalised text. See [issue 48](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/48).
-- **5.1 Language Dependent Fixed Text Values**: Added new values and modified some of the existing ones. See [issue 83](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/83).
-- **5.2 Additional Valid Markup**: Added section documenting additional valid markup in 2025-1 files, specifically sentence markup that might be added in postproduction. See [issue 50](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/50).
-- Meta: Implemented ReSpec as guidelines document framework. See [issue 47](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/47).
+- [1. Introduction](#introduction) and [2. Format Requirements](#format-requirements): Bumped references to EPUB 3 and EPUB Accessibility to new versions ([[[epub-33]]]) and [[[epub-a11y-11]]]).
+- [1. Introduction](#introduction): Rewrote introduction, clarifying that these guidelines are based on other resources, and added the section [1.1 For Readers Looking for General E-Book Accessibility Advice](#for-readers-looking-for-general-e-book-accessibility-advice) and a note about WCAG compliance. See [issue 43](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/43) and [issue 46](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/46).
+- [2.5.1 Metadata](#metadata): Removed `dc:format` from the required metadata. See [issue 82](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/82).
+- [2.5.1 Metadata](#metadata): Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
+- [2.5.1.1 Accessibility Metadata](#accessibility-metadata): Updated the section with new examples and guidance on specific properties, including `pageBreakSource`. See [issue 53](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/53).
+- [2.5.3 Spine](#spine): Limited the application of `linear="no"` to the cover file. See [issue 25](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/25).
+- [2.6.2 Title](#title): Added instruction on what goes into the title element of each content document. See [issue 6](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/6).
+- [2.7.1.1 The Table of Contents](#the-table-of-contents): Added instruction to label the title page as "Title page" in the language of the publication. See [issue 64](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/64).
+- [2.7.1.1 The Table of Contents](#the-table-of-contents): Added instruction for handling headings with subtitles. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
+- [2.7.1.1 The Table of Contents](#the-table-of-contents): Added the `class="no-toc"` option for verse headings that shouldn't be included in the toc. See [issue 79](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/79).
+- [2.7.1.1 The Table of Contents](#the-table-of-contents): Added instruction on how to handle unlinked entries in the table of contents. See [issue 9](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/9).
+- [2.7.1.3 Landmarks](#landmarks): Changed the `landmarks nav` to an optional element;  clarified its typical contents. See [issue 59](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/59).
+- [2.8.2 `id` Attributes for Figures and Images](#id-attributes-for-figures-and-images): Added instruction on `id` attributes for figures and images. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
+- [2.12 Validation](#validation): Changed Ace by Daisy evaluation from recommended to optional. See [issue 73](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/73).
+- [3.1 Structural Divisions and Semantics](#structural-divisions-and-semantics): Revised instructions on how to apply labels to section elements. See [issue 2](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/2).
+- [3.1.2 Untitled Sections](#untitled-sections): Added instructions for untitled sections. See [issue 62](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/62).
+- [3.3.1 Cover and Back Cover](#cover-and-back-cover): Specified that the front cover, when present, must be placed in a separate XHTML file that only contains the cover image. See [issue 63](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/63).
+- [3.3.1 Cover and Back Cover](#cover-and-back-cover): Replacing `class="rearcover"` with `class="backcover"`. See [issue 30](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/30).
+- [3.3.2 Title Page](#title-page): Updated instruction for handling titles with subtitles, using the `hgroup` element. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
+- [3.3.2 Title Page](#title-page): Specified class attributes for identifying authors, contributors, series titles, publishers, and logos on the title page. See [issue 26](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/26).
+- [3.4.1 Pagination](#pagination): Added instruction on page break positioning in lists and tables. See [issue 33](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/33).
+- [3.4.2 Headings](#headings): Added instruction for handling headings with subtitles, using the `hgroup` element. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
+- [3.4.2 Headings](#headings): Added instruction on markup of structurally insignificant headings. See [issue 66](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/66), [issue 27](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/27).
+- [3.4.2.1 Continuation Headings](#continuation-headings): Added instructions on handling parent sections continuing after the end of a sub-section. See [issue 34](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/34).
+- [3.4.2.2 Chapter Authors](#chapter-authors): Added instruction on markup for chapter authors. See [issue 69](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/69).
+- [3.4.3.1 Alt Texts](#alt-texts): Added instruction to preserve alt texts from source material, such as publisher EPUBs, when present. See [issue 54](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/54).
+- [3.4.3.1 Alt Texts](#alt-texts): Standardised generic alt text values using initial capitals and ending periods. See [issue 24](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/24).
+- [3.4.3.3 Text Extraction from Images](#text-extraction-from-images): Revised instructions on placeholder elements for extracted text and image descriptions. See [issue 4](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/4).
+- [3.4.4 Tables](#tables): Revised the table section. See [issue 5](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/5).
+- [3.4.4 Tables](#tables): Added instruction on using an optional `div` wrapper for large tables. See [issue 49](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/49).
+- [3.4.4.1 `id` Attributes for Tables](#id-attributes-for-tables): Added instruction on `id` attributes for tables. See [issue 21](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/21).
+- [3.4.6 Notes and Note References](#notes-and-note-references): Updated and clarified instructions on notes and note references, including back-links in notes. See [issue 3](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/3), [issue 18](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/18), [issue 29](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/29).
+- [3.4.7.1 Nested Text Boxes](#nested-text-boxes): Added instructions for how to handle nested text boxes. See [issue 12](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/12).
+- [3.4.8 Computer Code](#computer-code): Clarified the interpretation of code blocks, specifically regarding line breaks. See [issue 51](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/51).
+- [3.4.9 Bold, Italics and Underline](#bold-italics-and-underline): Added instruction on markup for underlined text. See [issue 85](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/85).
+- [3.4.10 Poetry and Verse](#poetry-and-verse): Added the `class="no-toc"` option for verse headings that shouldn't be included in the toc. See [issue 81](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/81).
+- [3.4.10 Poetry and Verse](#poetry-and-verse): Added instruction on how to handle non-standard disposition of text in poetry. See [issue 7](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/7).
+- [3.4.10.1 Use of Line-by-Line Markup Outside of Verse](#use-of-line-by-line-markup-outside-of-verse): Added guidance on line-by-line markup for non-verse content. See [issue 28](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/28).
+- [3.4.12 Hyperlinks and URLs](#hyperlinks-and-urls): Added instruction on how to handle URLs in source material. See [issue 11](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/11).
+- [3.4.13 Numbered Paragraphs](#numbered-paragraphs): Added section on markup for numbered paragraphs. See [issue 52](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/52).
+- [3.4.15 Language Tagging](#language-tagging): Added section on tagging language changes within content documents [issue 56](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/56).
+- [3.4.16 Uppercase Text](#uppercase-text): Added section on uppercase text, with markup requirements for lead-ins. See [issue 15](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/15), [issue 61](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/61).
+- [3.4.17 Styling](#styling): Added instructions on capturing specific styling of content. See [issue 44](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/44).
+- [3.5.2 Character Accuracy](#character-accuracy): Added more detailed instructions on correct character representation, including emojis. See [issue 19](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/19)
+- [3.5.3 Ligatures](#ligatures): Added instructions for capturing ligatures as normalised text. See [issue 48](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/48).
+- [5.1 Language Dependent Fixed Text Values](#language-dependent-fixed-text-values): Added new values and modified some of the existing ones. See [issue 83](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/83).
+- [5.2 Additional Valid Markup](#additional-valid-markup): Added section documenting additional valid markup in 2025-1 files, specifically sentence markup that might be added in postproduction. See [issue 50](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/50).
+- Implemented ReSpec as guidelines document framework. See [issue 47](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/47).
 </details>
 
 </section>
