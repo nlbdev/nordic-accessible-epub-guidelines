@@ -39,6 +39,12 @@ div.head hr {
 
 /* Table customisations */
 
+div.nordic-table-wrapper {
+    with: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 table {
     border-collapse: collapse;
 }
