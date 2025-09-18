@@ -24,7 +24,7 @@ The application of the Nordic Guidelines can also be further specified on lower 
 
 The levels of specification can be expressed as follows:
 
-1. High-level specifications, e.g. [[[epub-33]]], [[[epub-a11y-11]]], [[[html]]] (5) etc.
+1. High-level specifications, e.g. [[[epub-33]]], [[[epub-a11y-11]]], the [[[html]]] (HTML5) etc.
 2. The Nordic Guidelines (this document)
 3. General Ordering Agency-specific guidelines (usually these build on the Nordic Guidelines, but might also contain some deviations from them)
 4. Title-specific instructions, usually expressed in the form of Editing Instructions, containing further guidance on how to treat a specific title
@@ -287,7 +287,7 @@ If a fall-back [NCX navigation document](https://www.w3.org/TR/epub-33/#sec-opf2
 
 ### XHTML
 
-The [XHTML content documents](https://www.w3.org/TR/epub-33/#dfn-xhtml-content-document) specified by [[[epub-33]]] are based on [[[html]]]. Suppliers must use the file extension `.xhtml`.
+The [XHTML content documents](https://www.w3.org/TR/epub-33/#dfn-xhtml-content-document) specified by [[[epub-33]]] are based on the [[[html]]]. Suppliers must use the file extension `.xhtml`.
 
 #### XML Declaration and Encoding
 
@@ -687,7 +687,7 @@ Ordering Agencies might give instructions to keep whole parts in single content 
 
 These guidelines will not give highly detailed descriptions of how to correctly handle general content. Common recommendations for making valid and accessible HTML content will apply. As a general rule, the simple solution is the best solution. Using common elements like [^p^], [^blockquote^], [^aside^], [^ul^], [^ol^], [^dl^], [^table^], [^figure^], etc., and structural markup like [^section^] and headings will almost always be sufficient. More specialised elements, or special attributes, may be needed occasionally. Some of the more common cases will be described below, and more obscure ones will be covered in Editing Instructions.
 
-For further information about HTML elements and their attributes, please refer to [[[html]]].
+For further information about HTML elements and their attributes, please refer to the [[[html]]].
 
 Note that, again, [if the source material is an EPUB file](#h-note-1), or any other HTML- or XML-based material, it cannot be assumed that the markup is already correct. Proper analysis of the content must always be performed by the Supplier in accordance with this document.
 
