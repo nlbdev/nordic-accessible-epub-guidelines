@@ -729,7 +729,7 @@ By default, the page break elements should be empty.
 <aside class="example" title="Inline page break">
 
 ```html
-<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></span>
+<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"/>
 ```
 
 </aside>
@@ -737,7 +737,7 @@ By default, the page break elements should be empty.
 <aside class="example" title="Block page break">
 
 ```html
-<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"></div>
+<div epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38"/>
 ```
 
 </aside>
