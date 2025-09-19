@@ -21,6 +21,9 @@ div.head p#w3c-state {
 
 div.head p.logos {
     order: 3;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;
 }
 
 div.head details {
