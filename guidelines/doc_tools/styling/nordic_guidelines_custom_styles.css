@@ -25,7 +25,7 @@ div.head p.logos {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 1rem 0 1rem 0;
+    padding: 2rem 0 2rem 0;
 }
 
 div.head details {
