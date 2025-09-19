@@ -747,7 +747,7 @@ However, there may be agency specific instructions to place the page number as i
 <aside class="example" title="Inline page break with page number as text content">
 
 ```html
-<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38">38</span>`
+<span epub:type="pagebreak" role="doc-pagebreak" class="page-normal" id="page-38" aria-label="38">38</span>
 ```
 
 </aside>
