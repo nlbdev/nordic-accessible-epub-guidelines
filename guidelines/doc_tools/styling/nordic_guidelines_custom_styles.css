@@ -1,6 +1,7 @@
 /* Color customisations */
 :root {
     --heading-text: #8d308b !important;
+    --tocsidebar-heading-text: #444 !important;
 }
 
 /* Head div customisations */
