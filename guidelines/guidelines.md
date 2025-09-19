@@ -1336,7 +1336,7 @@ In educational material, especially for younger children, it is common that the 
 
 For practical reasons, the default text values in this document are provided only in English. Unless otherwise instructed by the Ordering Agency, these values should match the primary language of the publication they are applied to.
 
-For convenience, the values for all the main languages of the Ordering Agencies are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations if the main language of a title is not one of those listed here.
+For convenience, the values for all the main languages (these are: English, Swedish, Norwegian (Bokmål), Norwegian (Nynorsk), Finnish, Dutch, Danish, Icelandic, and German) of the Ordering Agencies are listed in the tables below. The Ordering Agencies will provide Suppliers with canonical translations if the main language of a title is not one of those listed here.
 
 ### nav.xhtml Headings
 
