@@ -1442,7 +1442,7 @@ Minor editorial changes are not listed.
 - [2.5.1 Metadata](#metadata): Changed the XML format for original publisher information. See [issue 78](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/78).
 - [2.5.1.1 Accessibility Metadata](#accessibility-metadata): Updated the section with new examples and guidance on specific properties, including `pageBreakSource`. See [issue 53](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/53).
 - [2.5.3 Spine](#spine): Limited the application of `linear="no"` to the cover file. See [issue 25](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/25).
-- [2.6.2 Title](#title): Added instruction on what goes into the title element of each content document. See [issue 6](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/6).
+- [2.6.2 Title](#title-0): Added instruction on what goes into the title element of each content document. See [issue 6](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/6).
 - [2.7.1.1 The Table of Contents](#the-table-of-contents): Added instruction to label the title page as "Title page" in the language of the publication. See [issue 64](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/64).
 - [2.7.1.1 The Table of Contents](#the-table-of-contents): Added instruction for handling headings with subtitles. See [issue 58](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/58).
 - [2.7.1.1 The Table of Contents](#the-table-of-contents): Added the `class="no-toc"` option for verse headings that shouldn't be included in the toc. See [issue 79](https://github.com/nlbdev/nordic-accessible-epub-guidelines/issues/79).
