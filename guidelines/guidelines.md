@@ -1340,7 +1340,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### nav.xhtml Headings
 
-<div class="nordic-table-wrapper">
+<div class="nordic-table-wrapper" tabindex="0">
 
 | English (default) | Swedish      | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish       | Dutch            | Danish           | Icelandic   | German              |
 |-------------------|--------------|--------------------|---------------------|---------------|------------------|------------------|-------------|---------------------|
@@ -1352,7 +1352,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### `aria-label` and TOC Values
 
-<div class="nordic-table-wrapper">
+<div class="nordic-table-wrapper" tabindex="0">
 
 | English (default)     | Swedish            | Norwegian (Bokmål) | Norwegian (Nynorsk) | Finnish        | Dutch               | Danish                | Icelandic        | German               |
 |-----------------------|--------------------|--------------------|---------------------|----------------|---------------------|-----------------------|------------------|----------------------|
@@ -1372,7 +1372,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### Image Alternative Text Values
 
-<div class="nordic-table-wrapper">
+<div class="nordic-table-wrapper" tabindex="0">
 
 | English (default) | Swedish        | Norwegian     | Finnish    | Dutch         | Danish        | Icelandic  | German        |
 | ----------------- | -------------- | ------------- | ---------- | ------------- | ------------- | ---------- | ------------- |
@@ -1389,7 +1389,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### Continuation Heading Identifiers
 
-<div class="nordic-table-wrapper">
+<div class="nordic-table-wrapper" tabindex="0">
 
 | English (default) | Swedish        | Norwegian      | Finnish       | Dutch          | Danish         | Icelandic     | German        |
 |-------------------|----------------|----------------|---------------|----------------|----------------|---------------|---------------|
@@ -1399,7 +1399,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### End Note Heading
 
-<div class="nordic-table-wrapper">
+<div class="nordic-table-wrapper" tabindex="0">
 
 | English (default) | Swedish  | Norwegian     | Finnish       | Dutch         | Danish        | Icelandic        | German        |
 |-------------------|----------|---------------|---------------|---------------|---------------|------------------|---------------|
@@ -1409,7 +1409,7 @@ For convenience, the values for all the main languages of the Ordering Agencies 
 
 ### Footnote and Endnote Backlink
 
-<div class="nordic-table-wrapper">
+<div class="nordic-table-wrapper" tabindex="0">
 
 | English (default)       | Swedish                         | Norwegian              | Finnish               | Dutch                     | Danish                  | Icelandic           | German               |
 |-------------------------|---------------------------------|------------------------|-----------------------|---------------------------|-------------------------|---------------------|----------------------|
