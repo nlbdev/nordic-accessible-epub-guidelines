@@ -100,7 +100,7 @@ The following metadata must be placed in the [^metadata^] element:
 ```xml
 <dc:title id="title">[the title of the publication]</dc:title>
 <dc:language>[language code for the main language]</dc:language>
-<dc:identifier id="pub-identifier">[production number provided by the ordering agency]</dc:identifier>
+<dc:identifier id="pub-identifier">[production number]</dc:identifier>
 <dc:source>[ISBN of the publication]</dc:source>
 <dc:creator>[author of the publication (one element for each author)]</dc:creator>
 <dc:publisher>[the ordering agency]</dc:publisher>
@@ -445,7 +445,7 @@ Refer to [Section 2.4](https://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Sec
 The `<head>` element must contain the following `<meta>` element:
 
 ```xml
-<meta name="dtb:uid" content="[production number provided by the Ordering Agency]"/>
+<meta name="dtb:uid" content="[production number]"/>
 ```
 
 All headings in the main body of text must be included in the `<navMap>` element and the heading levels must be implied through nesting.
